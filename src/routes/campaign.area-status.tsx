@@ -1,6 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ModuleStub } from "@/components/dash/ModuleStub";
 
-export const Route = createFileRoute("/hr")({
-  component: ModuleStub,
-});
+export const Route = createFileRoute("/campaign/area-status")({ component: ModuleStub });
