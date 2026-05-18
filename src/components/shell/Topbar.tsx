@@ -2,8 +2,9 @@ import { Bell, Command, Search, Globe2, Activity } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export function Topbar({ onOpenCommand }: { onOpenCommand: () => void }) {
-  const [time, setTime] = useState(() => new Date());
+  const [time, setTime] = useState<Date | null>(null);
   useEffect(() => {
+    setTime(new Date());
     const t = setInterval(() => setTime(new Date()), 1000);
     return () => clearInterval(t);
   }, []);
