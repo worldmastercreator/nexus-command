@@ -2,8 +2,9 @@ import { Bell, Command, Search, Globe2, Activity } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export function Topbar({ onOpenCommand }: { onOpenCommand: () => void }) {
-  const [time, setTime] = useState(() => new Date());
+  const [time, setTime] = useState<Date | null>(null);
   useEffect(() => {
+    setTime(new Date());
     const t = setInterval(() => setTime(new Date()), 1000);
     return () => clearInterval(t);
   }, []);
@@ -29,8 +30,8 @@ export function Topbar({ onOpenCommand }: { onOpenCommand: () => void }) {
       </div>
 
       <div className="ml-auto flex items-center gap-3">
-        <div className="hidden font-mono text-[11px] text-muted-foreground lg:block">
-          {time.toUTCString().slice(17, 25)} UTC · {time.toLocaleDateString(undefined, { weekday: "short", day: "2-digit", month: "short" })}
+        <div suppressHydrationWarning className="hidden font-mono text-[11px] text-muted-foreground lg:block">
+          {time ? `${time.toUTCString().slice(17, 25)} UTC · ${time.toLocaleDateString(undefined, { weekday: "short", day: "2-digit", month: "short" })}` : "—"}
         </div>
         <button className="relative grid h-9 w-9 place-items-center rounded-lg border border-border bg-surface-2/60 hover:bg-surface-2">
           <Bell className="h-4 w-4" />

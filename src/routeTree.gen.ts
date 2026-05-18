@@ -34,7 +34,6 @@ import { Route as QueueRouteImport } from './routes/queue'
 import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as ProductsRouteImport } from './routes/products'
 import { Route as PlayRouteImport } from './routes/play'
-import { Route as PayrollRouteImport } from './routes/payroll'
 import { Route as PaymentsRouteImport } from './routes/payments'
 import { Route as OrdersRouteImport } from './routes/orders'
 import { Route as OnboardingRouteImport } from './routes/onboarding'
@@ -101,6 +100,19 @@ import { Route as PortalFranchiseRouteImport } from './routes/portal.franchise'
 import { Route as PortalDevRouteImport } from './routes/portal.dev'
 import { Route as PortalAuthorRouteImport } from './routes/portal.author'
 import { Route as PortalAffiliateRouteImport } from './routes/portal.affiliate'
+import { Route as PayrollTaxRouteImport } from './routes/payroll.tax'
+import { Route as PayrollSettingsRouteImport } from './routes/payroll.settings'
+import { Route as PayrollSalaryRouteImport } from './routes/payroll.salary'
+import { Route as PayrollReportsRouteImport } from './routes/payroll.reports'
+import { Route as PayrollProcessingRouteImport } from './routes/payroll.processing'
+import { Route as PayrollPayslipsRouteImport } from './routes/payroll.payslips'
+import { Route as PayrollLoansRouteImport } from './routes/payroll.loans'
+import { Route as PayrollEmployeesRouteImport } from './routes/payroll.employees'
+import { Route as PayrollDisbursementsRouteImport } from './routes/payroll.disbursements'
+import { Route as PayrollDeductionsRouteImport } from './routes/payroll.deductions'
+import { Route as PayrollDashboardRouteImport } from './routes/payroll.dashboard'
+import { Route as PayrollBonusesRouteImport } from './routes/payroll.bonuses'
+import { Route as PayrollAttendanceRouteImport } from './routes/payroll.attendance'
 import { Route as HrSettingsRouteImport } from './routes/hr.settings'
 import { Route as HrPerformanceRouteImport } from './routes/hr.performance'
 import { Route as HrLeaveRouteImport } from './routes/hr.leave'
@@ -112,6 +124,28 @@ import { Route as HrCompanyRouteImport } from './routes/hr.company'
 import { Route as HrAuthRouteImport } from './routes/hr.auth'
 import { Route as HrAttendanceRouteImport } from './routes/hr.attendance'
 import { Route as HrAdminRouteImport } from './routes/hr.admin'
+import { Route as CreatorWorkshopsRouteImport } from './routes/creator.workshops'
+import { Route as CreatorVideoRouteImport } from './routes/creator.video'
+import { Route as CreatorTrainersRouteImport } from './routes/creator.trainers'
+import { Route as CreatorSupportRouteImport } from './routes/creator.support'
+import { Route as CreatorStudentsRouteImport } from './routes/creator.students'
+import { Route as CreatorStudentProfileRouteImport } from './routes/creator.student-profile'
+import { Route as CreatorSettingsRouteImport } from './routes/creator.settings'
+import { Route as CreatorReportsRouteImport } from './routes/creator.reports'
+import { Route as CreatorPaymentsRouteImport } from './routes/creator.payments'
+import { Route as CreatorNotificationsRouteImport } from './routes/creator.notifications'
+import { Route as CreatorLibraryRouteImport } from './routes/creator.library'
+import { Route as CreatorForumRouteImport } from './routes/creator.forum'
+import { Route as CreatorFeesRouteImport } from './routes/creator.fees'
+import { Route as CreatorExamsRouteImport } from './routes/creator.exams'
+import { Route as CreatorDashboardRouteImport } from './routes/creator.dashboard'
+import { Route as CreatorCoursesRouteImport } from './routes/creator.courses'
+import { Route as CreatorCourseDetailRouteImport } from './routes/creator.course-detail'
+import { Route as CreatorCourseBuilderRouteImport } from './routes/creator.course-builder'
+import { Route as CreatorCertificatesRouteImport } from './routes/creator.certificates'
+import { Route as CreatorAttendanceRouteImport } from './routes/creator.attendance'
+import { Route as CreatorAssignmentsRouteImport } from './routes/creator.assignments'
+import { Route as CreatorAnalyticsRouteImport } from './routes/creator.analytics'
 import { Route as CampaignWireframeRouteImport } from './routes/campaign.wireframe'
 import { Route as CampaignWhiteLabelRouteImport } from './routes/campaign.white-label'
 import { Route as CampaignVotersRouteImport } from './routes/campaign.voters'
@@ -304,11 +338,6 @@ const ProductsRoute = ProductsRouteImport.update({
 const PlayRoute = PlayRouteImport.update({
   id: '/play',
   path: '/play',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PayrollRoute = PayrollRouteImport.update({
-  id: '/payroll',
-  path: '/payroll',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PaymentsRoute = PaymentsRouteImport.update({
@@ -641,6 +670,71 @@ const PortalAffiliateRoute = PortalAffiliateRouteImport.update({
   path: '/portal/affiliate',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PayrollTaxRoute = PayrollTaxRouteImport.update({
+  id: '/payroll/tax',
+  path: '/payroll/tax',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PayrollSettingsRoute = PayrollSettingsRouteImport.update({
+  id: '/payroll/settings',
+  path: '/payroll/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PayrollSalaryRoute = PayrollSalaryRouteImport.update({
+  id: '/payroll/salary',
+  path: '/payroll/salary',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PayrollReportsRoute = PayrollReportsRouteImport.update({
+  id: '/payroll/reports',
+  path: '/payroll/reports',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PayrollProcessingRoute = PayrollProcessingRouteImport.update({
+  id: '/payroll/processing',
+  path: '/payroll/processing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PayrollPayslipsRoute = PayrollPayslipsRouteImport.update({
+  id: '/payroll/payslips',
+  path: '/payroll/payslips',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PayrollLoansRoute = PayrollLoansRouteImport.update({
+  id: '/payroll/loans',
+  path: '/payroll/loans',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PayrollEmployeesRoute = PayrollEmployeesRouteImport.update({
+  id: '/payroll/employees',
+  path: '/payroll/employees',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PayrollDisbursementsRoute = PayrollDisbursementsRouteImport.update({
+  id: '/payroll/disbursements',
+  path: '/payroll/disbursements',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PayrollDeductionsRoute = PayrollDeductionsRouteImport.update({
+  id: '/payroll/deductions',
+  path: '/payroll/deductions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PayrollDashboardRoute = PayrollDashboardRouteImport.update({
+  id: '/payroll/dashboard',
+  path: '/payroll/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PayrollBonusesRoute = PayrollBonusesRouteImport.update({
+  id: '/payroll/bonuses',
+  path: '/payroll/bonuses',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PayrollAttendanceRoute = PayrollAttendanceRouteImport.update({
+  id: '/payroll/attendance',
+  path: '/payroll/attendance',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const HrSettingsRoute = HrSettingsRouteImport.update({
   id: '/hr/settings',
   path: '/hr/settings',
@@ -694,6 +788,116 @@ const HrAttendanceRoute = HrAttendanceRouteImport.update({
 const HrAdminRoute = HrAdminRouteImport.update({
   id: '/hr/admin',
   path: '/hr/admin',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CreatorWorkshopsRoute = CreatorWorkshopsRouteImport.update({
+  id: '/creator/workshops',
+  path: '/creator/workshops',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CreatorVideoRoute = CreatorVideoRouteImport.update({
+  id: '/creator/video',
+  path: '/creator/video',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CreatorTrainersRoute = CreatorTrainersRouteImport.update({
+  id: '/creator/trainers',
+  path: '/creator/trainers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CreatorSupportRoute = CreatorSupportRouteImport.update({
+  id: '/creator/support',
+  path: '/creator/support',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CreatorStudentsRoute = CreatorStudentsRouteImport.update({
+  id: '/creator/students',
+  path: '/creator/students',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CreatorStudentProfileRoute = CreatorStudentProfileRouteImport.update({
+  id: '/creator/student-profile',
+  path: '/creator/student-profile',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CreatorSettingsRoute = CreatorSettingsRouteImport.update({
+  id: '/creator/settings',
+  path: '/creator/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CreatorReportsRoute = CreatorReportsRouteImport.update({
+  id: '/creator/reports',
+  path: '/creator/reports',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CreatorPaymentsRoute = CreatorPaymentsRouteImport.update({
+  id: '/creator/payments',
+  path: '/creator/payments',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CreatorNotificationsRoute = CreatorNotificationsRouteImport.update({
+  id: '/creator/notifications',
+  path: '/creator/notifications',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CreatorLibraryRoute = CreatorLibraryRouteImport.update({
+  id: '/creator/library',
+  path: '/creator/library',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CreatorForumRoute = CreatorForumRouteImport.update({
+  id: '/creator/forum',
+  path: '/creator/forum',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CreatorFeesRoute = CreatorFeesRouteImport.update({
+  id: '/creator/fees',
+  path: '/creator/fees',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CreatorExamsRoute = CreatorExamsRouteImport.update({
+  id: '/creator/exams',
+  path: '/creator/exams',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CreatorDashboardRoute = CreatorDashboardRouteImport.update({
+  id: '/creator/dashboard',
+  path: '/creator/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CreatorCoursesRoute = CreatorCoursesRouteImport.update({
+  id: '/creator/courses',
+  path: '/creator/courses',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CreatorCourseDetailRoute = CreatorCourseDetailRouteImport.update({
+  id: '/creator/course-detail',
+  path: '/creator/course-detail',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CreatorCourseBuilderRoute = CreatorCourseBuilderRouteImport.update({
+  id: '/creator/course-builder',
+  path: '/creator/course-builder',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CreatorCertificatesRoute = CreatorCertificatesRouteImport.update({
+  id: '/creator/certificates',
+  path: '/creator/certificates',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CreatorAttendanceRoute = CreatorAttendanceRouteImport.update({
+  id: '/creator/attendance',
+  path: '/creator/attendance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CreatorAssignmentsRoute = CreatorAssignmentsRouteImport.update({
+  id: '/creator/assignments',
+  path: '/creator/assignments',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CreatorAnalyticsRoute = CreatorAnalyticsRouteImport.update({
+  id: '/creator/analytics',
+  path: '/creator/analytics',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CampaignWireframeRoute = CampaignWireframeRouteImport.update({
@@ -1096,7 +1300,6 @@ export interface FileRoutesByFullPath {
   '/onboarding': typeof OnboardingRoute
   '/orders': typeof OrdersRoute
   '/payments': typeof PaymentsRoute
-  '/payroll': typeof PayrollRoute
   '/play': typeof PlayRoute
   '/products': typeof ProductsRoute
   '/projects': typeof ProjectsRoute
@@ -1190,6 +1393,28 @@ export interface FileRoutesByFullPath {
   '/campaign/voters': typeof CampaignVotersRoute
   '/campaign/white-label': typeof CampaignWhiteLabelRoute
   '/campaign/wireframe': typeof CampaignWireframeRoute
+  '/creator/analytics': typeof CreatorAnalyticsRoute
+  '/creator/assignments': typeof CreatorAssignmentsRoute
+  '/creator/attendance': typeof CreatorAttendanceRoute
+  '/creator/certificates': typeof CreatorCertificatesRoute
+  '/creator/course-builder': typeof CreatorCourseBuilderRoute
+  '/creator/course-detail': typeof CreatorCourseDetailRoute
+  '/creator/courses': typeof CreatorCoursesRoute
+  '/creator/dashboard': typeof CreatorDashboardRoute
+  '/creator/exams': typeof CreatorExamsRoute
+  '/creator/fees': typeof CreatorFeesRoute
+  '/creator/forum': typeof CreatorForumRoute
+  '/creator/library': typeof CreatorLibraryRoute
+  '/creator/notifications': typeof CreatorNotificationsRoute
+  '/creator/payments': typeof CreatorPaymentsRoute
+  '/creator/reports': typeof CreatorReportsRoute
+  '/creator/settings': typeof CreatorSettingsRoute
+  '/creator/student-profile': typeof CreatorStudentProfileRoute
+  '/creator/students': typeof CreatorStudentsRoute
+  '/creator/support': typeof CreatorSupportRoute
+  '/creator/trainers': typeof CreatorTrainersRoute
+  '/creator/video': typeof CreatorVideoRoute
+  '/creator/workshops': typeof CreatorWorkshopsRoute
   '/hr/admin': typeof HrAdminRoute
   '/hr/attendance': typeof HrAttendanceRoute
   '/hr/auth': typeof HrAuthRoute
@@ -1201,6 +1426,19 @@ export interface FileRoutesByFullPath {
   '/hr/leave': typeof HrLeaveRoute
   '/hr/performance': typeof HrPerformanceRoute
   '/hr/settings': typeof HrSettingsRoute
+  '/payroll/attendance': typeof PayrollAttendanceRoute
+  '/payroll/bonuses': typeof PayrollBonusesRoute
+  '/payroll/dashboard': typeof PayrollDashboardRoute
+  '/payroll/deductions': typeof PayrollDeductionsRoute
+  '/payroll/disbursements': typeof PayrollDisbursementsRoute
+  '/payroll/employees': typeof PayrollEmployeesRoute
+  '/payroll/loans': typeof PayrollLoansRoute
+  '/payroll/payslips': typeof PayrollPayslipsRoute
+  '/payroll/processing': typeof PayrollProcessingRoute
+  '/payroll/reports': typeof PayrollReportsRoute
+  '/payroll/salary': typeof PayrollSalaryRoute
+  '/payroll/settings': typeof PayrollSettingsRoute
+  '/payroll/tax': typeof PayrollTaxRoute
   '/portal/affiliate': typeof PortalAffiliateRoute
   '/portal/author': typeof PortalAuthorRoute
   '/portal/dev': typeof PortalDevRoute
@@ -1269,7 +1507,6 @@ export interface FileRoutesByTo {
   '/onboarding': typeof OnboardingRoute
   '/orders': typeof OrdersRoute
   '/payments': typeof PaymentsRoute
-  '/payroll': typeof PayrollRoute
   '/play': typeof PlayRoute
   '/products': typeof ProductsRoute
   '/projects': typeof ProjectsRoute
@@ -1363,6 +1600,28 @@ export interface FileRoutesByTo {
   '/campaign/voters': typeof CampaignVotersRoute
   '/campaign/white-label': typeof CampaignWhiteLabelRoute
   '/campaign/wireframe': typeof CampaignWireframeRoute
+  '/creator/analytics': typeof CreatorAnalyticsRoute
+  '/creator/assignments': typeof CreatorAssignmentsRoute
+  '/creator/attendance': typeof CreatorAttendanceRoute
+  '/creator/certificates': typeof CreatorCertificatesRoute
+  '/creator/course-builder': typeof CreatorCourseBuilderRoute
+  '/creator/course-detail': typeof CreatorCourseDetailRoute
+  '/creator/courses': typeof CreatorCoursesRoute
+  '/creator/dashboard': typeof CreatorDashboardRoute
+  '/creator/exams': typeof CreatorExamsRoute
+  '/creator/fees': typeof CreatorFeesRoute
+  '/creator/forum': typeof CreatorForumRoute
+  '/creator/library': typeof CreatorLibraryRoute
+  '/creator/notifications': typeof CreatorNotificationsRoute
+  '/creator/payments': typeof CreatorPaymentsRoute
+  '/creator/reports': typeof CreatorReportsRoute
+  '/creator/settings': typeof CreatorSettingsRoute
+  '/creator/student-profile': typeof CreatorStudentProfileRoute
+  '/creator/students': typeof CreatorStudentsRoute
+  '/creator/support': typeof CreatorSupportRoute
+  '/creator/trainers': typeof CreatorTrainersRoute
+  '/creator/video': typeof CreatorVideoRoute
+  '/creator/workshops': typeof CreatorWorkshopsRoute
   '/hr/admin': typeof HrAdminRoute
   '/hr/attendance': typeof HrAttendanceRoute
   '/hr/auth': typeof HrAuthRoute
@@ -1374,6 +1633,19 @@ export interface FileRoutesByTo {
   '/hr/leave': typeof HrLeaveRoute
   '/hr/performance': typeof HrPerformanceRoute
   '/hr/settings': typeof HrSettingsRoute
+  '/payroll/attendance': typeof PayrollAttendanceRoute
+  '/payroll/bonuses': typeof PayrollBonusesRoute
+  '/payroll/dashboard': typeof PayrollDashboardRoute
+  '/payroll/deductions': typeof PayrollDeductionsRoute
+  '/payroll/disbursements': typeof PayrollDisbursementsRoute
+  '/payroll/employees': typeof PayrollEmployeesRoute
+  '/payroll/loans': typeof PayrollLoansRoute
+  '/payroll/payslips': typeof PayrollPayslipsRoute
+  '/payroll/processing': typeof PayrollProcessingRoute
+  '/payroll/reports': typeof PayrollReportsRoute
+  '/payroll/salary': typeof PayrollSalaryRoute
+  '/payroll/settings': typeof PayrollSettingsRoute
+  '/payroll/tax': typeof PayrollTaxRoute
   '/portal/affiliate': typeof PortalAffiliateRoute
   '/portal/author': typeof PortalAuthorRoute
   '/portal/dev': typeof PortalDevRoute
@@ -1443,7 +1715,6 @@ export interface FileRoutesById {
   '/onboarding': typeof OnboardingRoute
   '/orders': typeof OrdersRoute
   '/payments': typeof PaymentsRoute
-  '/payroll': typeof PayrollRoute
   '/play': typeof PlayRoute
   '/products': typeof ProductsRoute
   '/projects': typeof ProjectsRoute
@@ -1537,6 +1808,28 @@ export interface FileRoutesById {
   '/campaign/voters': typeof CampaignVotersRoute
   '/campaign/white-label': typeof CampaignWhiteLabelRoute
   '/campaign/wireframe': typeof CampaignWireframeRoute
+  '/creator/analytics': typeof CreatorAnalyticsRoute
+  '/creator/assignments': typeof CreatorAssignmentsRoute
+  '/creator/attendance': typeof CreatorAttendanceRoute
+  '/creator/certificates': typeof CreatorCertificatesRoute
+  '/creator/course-builder': typeof CreatorCourseBuilderRoute
+  '/creator/course-detail': typeof CreatorCourseDetailRoute
+  '/creator/courses': typeof CreatorCoursesRoute
+  '/creator/dashboard': typeof CreatorDashboardRoute
+  '/creator/exams': typeof CreatorExamsRoute
+  '/creator/fees': typeof CreatorFeesRoute
+  '/creator/forum': typeof CreatorForumRoute
+  '/creator/library': typeof CreatorLibraryRoute
+  '/creator/notifications': typeof CreatorNotificationsRoute
+  '/creator/payments': typeof CreatorPaymentsRoute
+  '/creator/reports': typeof CreatorReportsRoute
+  '/creator/settings': typeof CreatorSettingsRoute
+  '/creator/student-profile': typeof CreatorStudentProfileRoute
+  '/creator/students': typeof CreatorStudentsRoute
+  '/creator/support': typeof CreatorSupportRoute
+  '/creator/trainers': typeof CreatorTrainersRoute
+  '/creator/video': typeof CreatorVideoRoute
+  '/creator/workshops': typeof CreatorWorkshopsRoute
   '/hr/admin': typeof HrAdminRoute
   '/hr/attendance': typeof HrAttendanceRoute
   '/hr/auth': typeof HrAuthRoute
@@ -1548,6 +1841,19 @@ export interface FileRoutesById {
   '/hr/leave': typeof HrLeaveRoute
   '/hr/performance': typeof HrPerformanceRoute
   '/hr/settings': typeof HrSettingsRoute
+  '/payroll/attendance': typeof PayrollAttendanceRoute
+  '/payroll/bonuses': typeof PayrollBonusesRoute
+  '/payroll/dashboard': typeof PayrollDashboardRoute
+  '/payroll/deductions': typeof PayrollDeductionsRoute
+  '/payroll/disbursements': typeof PayrollDisbursementsRoute
+  '/payroll/employees': typeof PayrollEmployeesRoute
+  '/payroll/loans': typeof PayrollLoansRoute
+  '/payroll/payslips': typeof PayrollPayslipsRoute
+  '/payroll/processing': typeof PayrollProcessingRoute
+  '/payroll/reports': typeof PayrollReportsRoute
+  '/payroll/salary': typeof PayrollSalaryRoute
+  '/payroll/settings': typeof PayrollSettingsRoute
+  '/payroll/tax': typeof PayrollTaxRoute
   '/portal/affiliate': typeof PortalAffiliateRoute
   '/portal/author': typeof PortalAuthorRoute
   '/portal/dev': typeof PortalDevRoute
@@ -1618,7 +1924,6 @@ export interface FileRouteTypes {
     | '/onboarding'
     | '/orders'
     | '/payments'
-    | '/payroll'
     | '/play'
     | '/products'
     | '/projects'
@@ -1712,6 +2017,28 @@ export interface FileRouteTypes {
     | '/campaign/voters'
     | '/campaign/white-label'
     | '/campaign/wireframe'
+    | '/creator/analytics'
+    | '/creator/assignments'
+    | '/creator/attendance'
+    | '/creator/certificates'
+    | '/creator/course-builder'
+    | '/creator/course-detail'
+    | '/creator/courses'
+    | '/creator/dashboard'
+    | '/creator/exams'
+    | '/creator/fees'
+    | '/creator/forum'
+    | '/creator/library'
+    | '/creator/notifications'
+    | '/creator/payments'
+    | '/creator/reports'
+    | '/creator/settings'
+    | '/creator/student-profile'
+    | '/creator/students'
+    | '/creator/support'
+    | '/creator/trainers'
+    | '/creator/video'
+    | '/creator/workshops'
     | '/hr/admin'
     | '/hr/attendance'
     | '/hr/auth'
@@ -1723,6 +2050,19 @@ export interface FileRouteTypes {
     | '/hr/leave'
     | '/hr/performance'
     | '/hr/settings'
+    | '/payroll/attendance'
+    | '/payroll/bonuses'
+    | '/payroll/dashboard'
+    | '/payroll/deductions'
+    | '/payroll/disbursements'
+    | '/payroll/employees'
+    | '/payroll/loans'
+    | '/payroll/payslips'
+    | '/payroll/processing'
+    | '/payroll/reports'
+    | '/payroll/salary'
+    | '/payroll/settings'
+    | '/payroll/tax'
     | '/portal/affiliate'
     | '/portal/author'
     | '/portal/dev'
@@ -1791,7 +2131,6 @@ export interface FileRouteTypes {
     | '/onboarding'
     | '/orders'
     | '/payments'
-    | '/payroll'
     | '/play'
     | '/products'
     | '/projects'
@@ -1885,6 +2224,28 @@ export interface FileRouteTypes {
     | '/campaign/voters'
     | '/campaign/white-label'
     | '/campaign/wireframe'
+    | '/creator/analytics'
+    | '/creator/assignments'
+    | '/creator/attendance'
+    | '/creator/certificates'
+    | '/creator/course-builder'
+    | '/creator/course-detail'
+    | '/creator/courses'
+    | '/creator/dashboard'
+    | '/creator/exams'
+    | '/creator/fees'
+    | '/creator/forum'
+    | '/creator/library'
+    | '/creator/notifications'
+    | '/creator/payments'
+    | '/creator/reports'
+    | '/creator/settings'
+    | '/creator/student-profile'
+    | '/creator/students'
+    | '/creator/support'
+    | '/creator/trainers'
+    | '/creator/video'
+    | '/creator/workshops'
     | '/hr/admin'
     | '/hr/attendance'
     | '/hr/auth'
@@ -1896,6 +2257,19 @@ export interface FileRouteTypes {
     | '/hr/leave'
     | '/hr/performance'
     | '/hr/settings'
+    | '/payroll/attendance'
+    | '/payroll/bonuses'
+    | '/payroll/dashboard'
+    | '/payroll/deductions'
+    | '/payroll/disbursements'
+    | '/payroll/employees'
+    | '/payroll/loans'
+    | '/payroll/payslips'
+    | '/payroll/processing'
+    | '/payroll/reports'
+    | '/payroll/salary'
+    | '/payroll/settings'
+    | '/payroll/tax'
     | '/portal/affiliate'
     | '/portal/author'
     | '/portal/dev'
@@ -1964,7 +2338,6 @@ export interface FileRouteTypes {
     | '/onboarding'
     | '/orders'
     | '/payments'
-    | '/payroll'
     | '/play'
     | '/products'
     | '/projects'
@@ -2058,6 +2431,28 @@ export interface FileRouteTypes {
     | '/campaign/voters'
     | '/campaign/white-label'
     | '/campaign/wireframe'
+    | '/creator/analytics'
+    | '/creator/assignments'
+    | '/creator/attendance'
+    | '/creator/certificates'
+    | '/creator/course-builder'
+    | '/creator/course-detail'
+    | '/creator/courses'
+    | '/creator/dashboard'
+    | '/creator/exams'
+    | '/creator/fees'
+    | '/creator/forum'
+    | '/creator/library'
+    | '/creator/notifications'
+    | '/creator/payments'
+    | '/creator/reports'
+    | '/creator/settings'
+    | '/creator/student-profile'
+    | '/creator/students'
+    | '/creator/support'
+    | '/creator/trainers'
+    | '/creator/video'
+    | '/creator/workshops'
     | '/hr/admin'
     | '/hr/attendance'
     | '/hr/auth'
@@ -2069,6 +2464,19 @@ export interface FileRouteTypes {
     | '/hr/leave'
     | '/hr/performance'
     | '/hr/settings'
+    | '/payroll/attendance'
+    | '/payroll/bonuses'
+    | '/payroll/dashboard'
+    | '/payroll/deductions'
+    | '/payroll/disbursements'
+    | '/payroll/employees'
+    | '/payroll/loans'
+    | '/payroll/payslips'
+    | '/payroll/processing'
+    | '/payroll/reports'
+    | '/payroll/salary'
+    | '/payroll/settings'
+    | '/payroll/tax'
     | '/portal/affiliate'
     | '/portal/author'
     | '/portal/dev'
@@ -2138,7 +2546,6 @@ export interface RootRouteChildren {
   OnboardingRoute: typeof OnboardingRoute
   OrdersRoute: typeof OrdersRoute
   PaymentsRoute: typeof PaymentsRoute
-  PayrollRoute: typeof PayrollRoute
   PlayRoute: typeof PlayRoute
   ProductsRoute: typeof ProductsRoute
   ProjectsRoute: typeof ProjectsRoute
@@ -2223,6 +2630,28 @@ export interface RootRouteChildren {
   CampaignVotersRoute: typeof CampaignVotersRoute
   CampaignWhiteLabelRoute: typeof CampaignWhiteLabelRoute
   CampaignWireframeRoute: typeof CampaignWireframeRoute
+  CreatorAnalyticsRoute: typeof CreatorAnalyticsRoute
+  CreatorAssignmentsRoute: typeof CreatorAssignmentsRoute
+  CreatorAttendanceRoute: typeof CreatorAttendanceRoute
+  CreatorCertificatesRoute: typeof CreatorCertificatesRoute
+  CreatorCourseBuilderRoute: typeof CreatorCourseBuilderRoute
+  CreatorCourseDetailRoute: typeof CreatorCourseDetailRoute
+  CreatorCoursesRoute: typeof CreatorCoursesRoute
+  CreatorDashboardRoute: typeof CreatorDashboardRoute
+  CreatorExamsRoute: typeof CreatorExamsRoute
+  CreatorFeesRoute: typeof CreatorFeesRoute
+  CreatorForumRoute: typeof CreatorForumRoute
+  CreatorLibraryRoute: typeof CreatorLibraryRoute
+  CreatorNotificationsRoute: typeof CreatorNotificationsRoute
+  CreatorPaymentsRoute: typeof CreatorPaymentsRoute
+  CreatorReportsRoute: typeof CreatorReportsRoute
+  CreatorSettingsRoute: typeof CreatorSettingsRoute
+  CreatorStudentProfileRoute: typeof CreatorStudentProfileRoute
+  CreatorStudentsRoute: typeof CreatorStudentsRoute
+  CreatorSupportRoute: typeof CreatorSupportRoute
+  CreatorTrainersRoute: typeof CreatorTrainersRoute
+  CreatorVideoRoute: typeof CreatorVideoRoute
+  CreatorWorkshopsRoute: typeof CreatorWorkshopsRoute
   HrAdminRoute: typeof HrAdminRoute
   HrAttendanceRoute: typeof HrAttendanceRoute
   HrAuthRoute: typeof HrAuthRoute
@@ -2234,6 +2663,19 @@ export interface RootRouteChildren {
   HrLeaveRoute: typeof HrLeaveRoute
   HrPerformanceRoute: typeof HrPerformanceRoute
   HrSettingsRoute: typeof HrSettingsRoute
+  PayrollAttendanceRoute: typeof PayrollAttendanceRoute
+  PayrollBonusesRoute: typeof PayrollBonusesRoute
+  PayrollDashboardRoute: typeof PayrollDashboardRoute
+  PayrollDeductionsRoute: typeof PayrollDeductionsRoute
+  PayrollDisbursementsRoute: typeof PayrollDisbursementsRoute
+  PayrollEmployeesRoute: typeof PayrollEmployeesRoute
+  PayrollLoansRoute: typeof PayrollLoansRoute
+  PayrollPayslipsRoute: typeof PayrollPayslipsRoute
+  PayrollProcessingRoute: typeof PayrollProcessingRoute
+  PayrollReportsRoute: typeof PayrollReportsRoute
+  PayrollSalaryRoute: typeof PayrollSalaryRoute
+  PayrollSettingsRoute: typeof PayrollSettingsRoute
+  PayrollTaxRoute: typeof PayrollTaxRoute
   PortalAffiliateRoute: typeof PortalAffiliateRoute
   PortalAuthorRoute: typeof PortalAuthorRoute
   PortalDevRoute: typeof PortalDevRoute
@@ -2420,13 +2862,6 @@ declare module '@tanstack/react-router' {
       path: '/play'
       fullPath: '/play'
       preLoaderRoute: typeof PlayRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/payroll': {
-      id: '/payroll'
-      path: '/payroll'
-      fullPath: '/payroll'
-      preLoaderRoute: typeof PayrollRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/payments': {
@@ -2891,6 +3326,97 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PortalAffiliateRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/payroll/tax': {
+      id: '/payroll/tax'
+      path: '/payroll/tax'
+      fullPath: '/payroll/tax'
+      preLoaderRoute: typeof PayrollTaxRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/payroll/settings': {
+      id: '/payroll/settings'
+      path: '/payroll/settings'
+      fullPath: '/payroll/settings'
+      preLoaderRoute: typeof PayrollSettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/payroll/salary': {
+      id: '/payroll/salary'
+      path: '/payroll/salary'
+      fullPath: '/payroll/salary'
+      preLoaderRoute: typeof PayrollSalaryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/payroll/reports': {
+      id: '/payroll/reports'
+      path: '/payroll/reports'
+      fullPath: '/payroll/reports'
+      preLoaderRoute: typeof PayrollReportsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/payroll/processing': {
+      id: '/payroll/processing'
+      path: '/payroll/processing'
+      fullPath: '/payroll/processing'
+      preLoaderRoute: typeof PayrollProcessingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/payroll/payslips': {
+      id: '/payroll/payslips'
+      path: '/payroll/payslips'
+      fullPath: '/payroll/payslips'
+      preLoaderRoute: typeof PayrollPayslipsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/payroll/loans': {
+      id: '/payroll/loans'
+      path: '/payroll/loans'
+      fullPath: '/payroll/loans'
+      preLoaderRoute: typeof PayrollLoansRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/payroll/employees': {
+      id: '/payroll/employees'
+      path: '/payroll/employees'
+      fullPath: '/payroll/employees'
+      preLoaderRoute: typeof PayrollEmployeesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/payroll/disbursements': {
+      id: '/payroll/disbursements'
+      path: '/payroll/disbursements'
+      fullPath: '/payroll/disbursements'
+      preLoaderRoute: typeof PayrollDisbursementsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/payroll/deductions': {
+      id: '/payroll/deductions'
+      path: '/payroll/deductions'
+      fullPath: '/payroll/deductions'
+      preLoaderRoute: typeof PayrollDeductionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/payroll/dashboard': {
+      id: '/payroll/dashboard'
+      path: '/payroll/dashboard'
+      fullPath: '/payroll/dashboard'
+      preLoaderRoute: typeof PayrollDashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/payroll/bonuses': {
+      id: '/payroll/bonuses'
+      path: '/payroll/bonuses'
+      fullPath: '/payroll/bonuses'
+      preLoaderRoute: typeof PayrollBonusesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/payroll/attendance': {
+      id: '/payroll/attendance'
+      path: '/payroll/attendance'
+      fullPath: '/payroll/attendance'
+      preLoaderRoute: typeof PayrollAttendanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/hr/settings': {
       id: '/hr/settings'
       path: '/hr/settings'
@@ -2966,6 +3492,160 @@ declare module '@tanstack/react-router' {
       path: '/hr/admin'
       fullPath: '/hr/admin'
       preLoaderRoute: typeof HrAdminRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/creator/workshops': {
+      id: '/creator/workshops'
+      path: '/creator/workshops'
+      fullPath: '/creator/workshops'
+      preLoaderRoute: typeof CreatorWorkshopsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/creator/video': {
+      id: '/creator/video'
+      path: '/creator/video'
+      fullPath: '/creator/video'
+      preLoaderRoute: typeof CreatorVideoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/creator/trainers': {
+      id: '/creator/trainers'
+      path: '/creator/trainers'
+      fullPath: '/creator/trainers'
+      preLoaderRoute: typeof CreatorTrainersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/creator/support': {
+      id: '/creator/support'
+      path: '/creator/support'
+      fullPath: '/creator/support'
+      preLoaderRoute: typeof CreatorSupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/creator/students': {
+      id: '/creator/students'
+      path: '/creator/students'
+      fullPath: '/creator/students'
+      preLoaderRoute: typeof CreatorStudentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/creator/student-profile': {
+      id: '/creator/student-profile'
+      path: '/creator/student-profile'
+      fullPath: '/creator/student-profile'
+      preLoaderRoute: typeof CreatorStudentProfileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/creator/settings': {
+      id: '/creator/settings'
+      path: '/creator/settings'
+      fullPath: '/creator/settings'
+      preLoaderRoute: typeof CreatorSettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/creator/reports': {
+      id: '/creator/reports'
+      path: '/creator/reports'
+      fullPath: '/creator/reports'
+      preLoaderRoute: typeof CreatorReportsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/creator/payments': {
+      id: '/creator/payments'
+      path: '/creator/payments'
+      fullPath: '/creator/payments'
+      preLoaderRoute: typeof CreatorPaymentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/creator/notifications': {
+      id: '/creator/notifications'
+      path: '/creator/notifications'
+      fullPath: '/creator/notifications'
+      preLoaderRoute: typeof CreatorNotificationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/creator/library': {
+      id: '/creator/library'
+      path: '/creator/library'
+      fullPath: '/creator/library'
+      preLoaderRoute: typeof CreatorLibraryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/creator/forum': {
+      id: '/creator/forum'
+      path: '/creator/forum'
+      fullPath: '/creator/forum'
+      preLoaderRoute: typeof CreatorForumRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/creator/fees': {
+      id: '/creator/fees'
+      path: '/creator/fees'
+      fullPath: '/creator/fees'
+      preLoaderRoute: typeof CreatorFeesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/creator/exams': {
+      id: '/creator/exams'
+      path: '/creator/exams'
+      fullPath: '/creator/exams'
+      preLoaderRoute: typeof CreatorExamsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/creator/dashboard': {
+      id: '/creator/dashboard'
+      path: '/creator/dashboard'
+      fullPath: '/creator/dashboard'
+      preLoaderRoute: typeof CreatorDashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/creator/courses': {
+      id: '/creator/courses'
+      path: '/creator/courses'
+      fullPath: '/creator/courses'
+      preLoaderRoute: typeof CreatorCoursesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/creator/course-detail': {
+      id: '/creator/course-detail'
+      path: '/creator/course-detail'
+      fullPath: '/creator/course-detail'
+      preLoaderRoute: typeof CreatorCourseDetailRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/creator/course-builder': {
+      id: '/creator/course-builder'
+      path: '/creator/course-builder'
+      fullPath: '/creator/course-builder'
+      preLoaderRoute: typeof CreatorCourseBuilderRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/creator/certificates': {
+      id: '/creator/certificates'
+      path: '/creator/certificates'
+      fullPath: '/creator/certificates'
+      preLoaderRoute: typeof CreatorCertificatesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/creator/attendance': {
+      id: '/creator/attendance'
+      path: '/creator/attendance'
+      fullPath: '/creator/attendance'
+      preLoaderRoute: typeof CreatorAttendanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/creator/assignments': {
+      id: '/creator/assignments'
+      path: '/creator/assignments'
+      fullPath: '/creator/assignments'
+      preLoaderRoute: typeof CreatorAssignmentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/creator/analytics': {
+      id: '/creator/analytics'
+      path: '/creator/analytics'
+      fullPath: '/creator/analytics'
+      preLoaderRoute: typeof CreatorAnalyticsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/campaign/wireframe': {
@@ -3531,7 +4211,6 @@ const rootRouteChildren: RootRouteChildren = {
   OnboardingRoute: OnboardingRoute,
   OrdersRoute: OrdersRoute,
   PaymentsRoute: PaymentsRoute,
-  PayrollRoute: PayrollRoute,
   PlayRoute: PlayRoute,
   ProductsRoute: ProductsRoute,
   ProjectsRoute: ProjectsRoute,
@@ -3616,6 +4295,28 @@ const rootRouteChildren: RootRouteChildren = {
   CampaignVotersRoute: CampaignVotersRoute,
   CampaignWhiteLabelRoute: CampaignWhiteLabelRoute,
   CampaignWireframeRoute: CampaignWireframeRoute,
+  CreatorAnalyticsRoute: CreatorAnalyticsRoute,
+  CreatorAssignmentsRoute: CreatorAssignmentsRoute,
+  CreatorAttendanceRoute: CreatorAttendanceRoute,
+  CreatorCertificatesRoute: CreatorCertificatesRoute,
+  CreatorCourseBuilderRoute: CreatorCourseBuilderRoute,
+  CreatorCourseDetailRoute: CreatorCourseDetailRoute,
+  CreatorCoursesRoute: CreatorCoursesRoute,
+  CreatorDashboardRoute: CreatorDashboardRoute,
+  CreatorExamsRoute: CreatorExamsRoute,
+  CreatorFeesRoute: CreatorFeesRoute,
+  CreatorForumRoute: CreatorForumRoute,
+  CreatorLibraryRoute: CreatorLibraryRoute,
+  CreatorNotificationsRoute: CreatorNotificationsRoute,
+  CreatorPaymentsRoute: CreatorPaymentsRoute,
+  CreatorReportsRoute: CreatorReportsRoute,
+  CreatorSettingsRoute: CreatorSettingsRoute,
+  CreatorStudentProfileRoute: CreatorStudentProfileRoute,
+  CreatorStudentsRoute: CreatorStudentsRoute,
+  CreatorSupportRoute: CreatorSupportRoute,
+  CreatorTrainersRoute: CreatorTrainersRoute,
+  CreatorVideoRoute: CreatorVideoRoute,
+  CreatorWorkshopsRoute: CreatorWorkshopsRoute,
   HrAdminRoute: HrAdminRoute,
   HrAttendanceRoute: HrAttendanceRoute,
   HrAuthRoute: HrAuthRoute,
@@ -3627,6 +4328,19 @@ const rootRouteChildren: RootRouteChildren = {
   HrLeaveRoute: HrLeaveRoute,
   HrPerformanceRoute: HrPerformanceRoute,
   HrSettingsRoute: HrSettingsRoute,
+  PayrollAttendanceRoute: PayrollAttendanceRoute,
+  PayrollBonusesRoute: PayrollBonusesRoute,
+  PayrollDashboardRoute: PayrollDashboardRoute,
+  PayrollDeductionsRoute: PayrollDeductionsRoute,
+  PayrollDisbursementsRoute: PayrollDisbursementsRoute,
+  PayrollEmployeesRoute: PayrollEmployeesRoute,
+  PayrollLoansRoute: PayrollLoansRoute,
+  PayrollPayslipsRoute: PayrollPayslipsRoute,
+  PayrollProcessingRoute: PayrollProcessingRoute,
+  PayrollReportsRoute: PayrollReportsRoute,
+  PayrollSalaryRoute: PayrollSalaryRoute,
+  PayrollSettingsRoute: PayrollSettingsRoute,
+  PayrollTaxRoute: PayrollTaxRoute,
   PortalAffiliateRoute: PortalAffiliateRoute,
   PortalAuthorRoute: PortalAuthorRoute,
   PortalDevRoute: PortalDevRoute,
