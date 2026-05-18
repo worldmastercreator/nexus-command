@@ -11,6 +11,14 @@ import {
   NotebookText, UserSquare, Coins, Settings, Scale, Gavel, Building, Plug2, Radio, Radar,
   Router as RouterIcon, Palette, LayoutDashboard, FileBarChart, GaugeCircle, Headset,
   SearchCheck, UserCog, Star, Code2, Library,
+  // HR / People Hub
+  CalendarCheck, CalendarDays, FileBadge, Award, UserPlus, Files,
+  // Campaign Compass
+  Vote, MapPin, Users, Megaphone as Bullhorn, Video, Car, Sparkles, MessageCircle,
+  Newspaper, BadgeCheck, Crosshair, Camera, Truck as VanIcon, ClipboardCheck,
+  Flag, Trophy, Banknote, BarChart, Tv2, MapPinned as GeoIcon, Map, Component,
+  Layers, Workflow as FlowIcon, BookMarked, FileSpreadsheet, Compass, Wallet as Money,
+  Building2 as College, GraduationCap, ShieldCheck, Boxes as Stack, ChartBar,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
