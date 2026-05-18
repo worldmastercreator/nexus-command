@@ -34,7 +34,6 @@ import { Route as QueueRouteImport } from './routes/queue'
 import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as ProductsRouteImport } from './routes/products'
 import { Route as PlayRouteImport } from './routes/play'
-import { Route as PayrollRouteImport } from './routes/payroll'
 import { Route as PaymentsRouteImport } from './routes/payments'
 import { Route as OrdersRouteImport } from './routes/orders'
 import { Route as OnboardingRouteImport } from './routes/onboarding'
@@ -337,11 +336,6 @@ const ProductsRoute = ProductsRouteImport.update({
 const PlayRoute = PlayRouteImport.update({
   id: '/play',
   path: '/play',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PayrollRoute = PayrollRouteImport.update({
-  id: '/payroll',
-  path: '/payroll',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PaymentsRoute = PaymentsRouteImport.update({
@@ -1294,7 +1288,6 @@ export interface FileRoutesByFullPath {
   '/onboarding': typeof OnboardingRoute
   '/orders': typeof OrdersRoute
   '/payments': typeof PaymentsRoute
-  '/payroll': typeof PayrollRouteWithChildren
   '/play': typeof PlayRoute
   '/products': typeof ProductsRoute
   '/projects': typeof ProjectsRoute
@@ -1500,7 +1493,6 @@ export interface FileRoutesByTo {
   '/onboarding': typeof OnboardingRoute
   '/orders': typeof OrdersRoute
   '/payments': typeof PaymentsRoute
-  '/payroll': typeof PayrollRouteWithChildren
   '/play': typeof PlayRoute
   '/products': typeof ProductsRoute
   '/projects': typeof ProjectsRoute
@@ -1707,7 +1699,6 @@ export interface FileRoutesById {
   '/onboarding': typeof OnboardingRoute
   '/orders': typeof OrdersRoute
   '/payments': typeof PaymentsRoute
-  '/payroll': typeof PayrollRouteWithChildren
   '/play': typeof PlayRoute
   '/products': typeof ProductsRoute
   '/projects': typeof ProjectsRoute
@@ -1915,7 +1906,6 @@ export interface FileRouteTypes {
     | '/onboarding'
     | '/orders'
     | '/payments'
-    | '/payroll'
     | '/play'
     | '/products'
     | '/projects'
@@ -2121,7 +2111,6 @@ export interface FileRouteTypes {
     | '/onboarding'
     | '/orders'
     | '/payments'
-    | '/payroll'
     | '/play'
     | '/products'
     | '/projects'
@@ -2327,7 +2316,6 @@ export interface FileRouteTypes {
     | '/onboarding'
     | '/orders'
     | '/payments'
-    | '/payroll'
     | '/play'
     | '/products'
     | '/projects'
@@ -2534,7 +2522,6 @@ export interface RootRouteChildren {
   OnboardingRoute: typeof OnboardingRoute
   OrdersRoute: typeof OrdersRoute
   PaymentsRoute: typeof PaymentsRoute
-  PayrollRoute: typeof PayrollRouteWithChildren
   PlayRoute: typeof PlayRoute
   ProductsRoute: typeof ProductsRoute
   ProjectsRoute: typeof ProjectsRoute
@@ -2827,13 +2814,6 @@ declare module '@tanstack/react-router' {
       path: '/play'
       fullPath: '/play'
       preLoaderRoute: typeof PlayRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/payroll': {
-      id: '/payroll'
-      path: '/payroll'
-      fullPath: '/payroll'
-      preLoaderRoute: typeof PayrollRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/payments': {
@@ -4111,39 +4091,6 @@ const AiRouteChildren: AiRouteChildren = {
 
 const AiRouteWithChildren = AiRoute._addFileChildren(AiRouteChildren)
 
-interface PayrollRouteChildren {
-  PayrollAttendanceRoute: typeof PayrollAttendanceRoute
-  PayrollBonusesRoute: typeof PayrollBonusesRoute
-  PayrollDeductionsRoute: typeof PayrollDeductionsRoute
-  PayrollDisbursementsRoute: typeof PayrollDisbursementsRoute
-  PayrollEmployeesRoute: typeof PayrollEmployeesRoute
-  PayrollLoansRoute: typeof PayrollLoansRoute
-  PayrollPayslipsRoute: typeof PayrollPayslipsRoute
-  PayrollProcessingRoute: typeof PayrollProcessingRoute
-  PayrollReportsRoute: typeof PayrollReportsRoute
-  PayrollSalaryRoute: typeof PayrollSalaryRoute
-  PayrollSettingsRoute: typeof PayrollSettingsRoute
-  PayrollTaxRoute: typeof PayrollTaxRoute
-}
-
-const PayrollRouteChildren: PayrollRouteChildren = {
-  PayrollAttendanceRoute: PayrollAttendanceRoute,
-  PayrollBonusesRoute: PayrollBonusesRoute,
-  PayrollDeductionsRoute: PayrollDeductionsRoute,
-  PayrollDisbursementsRoute: PayrollDisbursementsRoute,
-  PayrollEmployeesRoute: PayrollEmployeesRoute,
-  PayrollLoansRoute: PayrollLoansRoute,
-  PayrollPayslipsRoute: PayrollPayslipsRoute,
-  PayrollProcessingRoute: PayrollProcessingRoute,
-  PayrollReportsRoute: PayrollReportsRoute,
-  PayrollSalaryRoute: PayrollSalaryRoute,
-  PayrollSettingsRoute: PayrollSettingsRoute,
-  PayrollTaxRoute: PayrollTaxRoute,
-}
-
-const PayrollRouteWithChildren =
-  PayrollRoute._addFileChildren(PayrollRouteChildren)
-
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AffiliatesRoute: AffiliatesRoute,
@@ -4202,7 +4149,6 @@ const rootRouteChildren: RootRouteChildren = {
   OnboardingRoute: OnboardingRoute,
   OrdersRoute: OrdersRoute,
   PaymentsRoute: PaymentsRoute,
-  PayrollRoute: PayrollRouteWithChildren,
   PlayRoute: PlayRoute,
   ProductsRoute: ProductsRoute,
   ProjectsRoute: ProjectsRoute,
