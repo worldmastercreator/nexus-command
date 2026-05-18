@@ -38,21 +38,18 @@ function ControlRoom() {
           </Panel>
           <Panel kicker="WAR ROOM" title="Live channels">
             <ul className="space-y-2 text-[12.5px]">
-              {[
+              {([
                 ["Press · TV-1", "live", Tv2, "var(--danger)"],
                 ["Social · X stream", "active", Megaphone, "var(--ai)"],
                 ["Booth ops · CMD", "active", Vote, "var(--success)"],
                 ["Volunteer radio", "57 nodes", Radio, "var(--info)"],
-              ].map(([n, s, Icon, c]) => {
-                const Comp = Icon as any;
-                return (
-                  <li key={n as string} className="flex items-center gap-3 rounded-md border border-border/60 bg-background/40 p-2">
-                    <Comp className="h-3.5 w-3.5" style={{ color: c as string }} />
-                    <span>{n}</span>
-                    <span className="ml-auto font-mono text-[10.5px]" style={{ color: c as string }}>{s}</span>
-                  </li>
-                );
-              })}
+              ] as const).map(([n, s, Icon, c]) => (
+                <li key={n} className="flex items-center gap-3 rounded-md border border-border/60 bg-background/40 p-2">
+                  <Icon className="h-3.5 w-3.5" style={{ color: c }} />
+                  <span>{n}</span>
+                  <span className="ml-auto font-mono text-[10.5px]" style={{ color: c }}>{s}</span>
+                </li>
+              ))}
             </ul>
             <div className="mt-3 grid grid-cols-2 gap-2">
               <Radial value={86} label="REACH" />

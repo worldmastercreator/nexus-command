@@ -642,59 +642,59 @@ const PortalAffiliateRoute = PortalAffiliateRouteImport.update({
   getParentRoute: () => rootRouteImport,
 } as any)
 const HrSettingsRoute = HrSettingsRouteImport.update({
-  id: '/settings',
-  path: '/settings',
-  getParentRoute: () => HrRoute,
+  id: '/hr/settings',
+  path: '/hr/settings',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const HrPerformanceRoute = HrPerformanceRouteImport.update({
-  id: '/performance',
-  path: '/performance',
-  getParentRoute: () => HrRoute,
+  id: '/hr/performance',
+  path: '/hr/performance',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const HrLeaveRoute = HrLeaveRouteImport.update({
-  id: '/leave',
-  path: '/leave',
-  getParentRoute: () => HrRoute,
+  id: '/hr/leave',
+  path: '/hr/leave',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const HrEmployeesRoute = HrEmployeesRouteImport.update({
-  id: '/employees',
-  path: '/employees',
-  getParentRoute: () => HrRoute,
+  id: '/hr/employees',
+  path: '/hr/employees',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const HrDocumentsSharedRoute = HrDocumentsSharedRouteImport.update({
-  id: '/documents-shared',
-  path: '/documents-shared',
-  getParentRoute: () => HrRoute,
+  id: '/hr/documents-shared',
+  path: '/hr/documents-shared',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const HrDocumentsRoute = HrDocumentsRouteImport.update({
-  id: '/documents',
-  path: '/documents',
-  getParentRoute: () => HrRoute,
+  id: '/hr/documents',
+  path: '/hr/documents',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const HrDashboardRoute = HrDashboardRouteImport.update({
-  id: '/dashboard',
-  path: '/dashboard',
-  getParentRoute: () => HrRoute,
+  id: '/hr/dashboard',
+  path: '/hr/dashboard',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const HrCompanyRoute = HrCompanyRouteImport.update({
-  id: '/company',
-  path: '/company',
-  getParentRoute: () => HrRoute,
+  id: '/hr/company',
+  path: '/hr/company',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const HrAuthRoute = HrAuthRouteImport.update({
-  id: '/auth',
-  path: '/auth',
-  getParentRoute: () => HrRoute,
+  id: '/hr/auth',
+  path: '/hr/auth',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const HrAttendanceRoute = HrAttendanceRouteImport.update({
-  id: '/attendance',
-  path: '/attendance',
-  getParentRoute: () => HrRoute,
+  id: '/hr/attendance',
+  path: '/hr/attendance',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const HrAdminRoute = HrAdminRouteImport.update({
-  id: '/admin',
-  path: '/admin',
-  getParentRoute: () => HrRoute,
+  id: '/hr/admin',
+  path: '/hr/admin',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const CampaignWireframeRoute = CampaignWireframeRouteImport.update({
   id: '/campaign/wireframe',
@@ -2223,6 +2223,17 @@ export interface RootRouteChildren {
   CampaignVotersRoute: typeof CampaignVotersRoute
   CampaignWhiteLabelRoute: typeof CampaignWhiteLabelRoute
   CampaignWireframeRoute: typeof CampaignWireframeRoute
+  HrAdminRoute: typeof HrAdminRoute
+  HrAttendanceRoute: typeof HrAttendanceRoute
+  HrAuthRoute: typeof HrAuthRoute
+  HrCompanyRoute: typeof HrCompanyRoute
+  HrDashboardRoute: typeof HrDashboardRoute
+  HrDocumentsRoute: typeof HrDocumentsRoute
+  HrDocumentsSharedRoute: typeof HrDocumentsSharedRoute
+  HrEmployeesRoute: typeof HrEmployeesRoute
+  HrLeaveRoute: typeof HrLeaveRoute
+  HrPerformanceRoute: typeof HrPerformanceRoute
+  HrSettingsRoute: typeof HrSettingsRoute
   PortalAffiliateRoute: typeof PortalAffiliateRoute
   PortalAuthorRoute: typeof PortalAuthorRoute
   PortalDevRoute: typeof PortalDevRoute
@@ -2882,80 +2893,80 @@ declare module '@tanstack/react-router' {
     }
     '/hr/settings': {
       id: '/hr/settings'
-      path: '/settings'
+      path: '/hr/settings'
       fullPath: '/hr/settings'
       preLoaderRoute: typeof HrSettingsRouteImport
-      parentRoute: typeof HrRoute
+      parentRoute: typeof rootRouteImport
     }
     '/hr/performance': {
       id: '/hr/performance'
-      path: '/performance'
+      path: '/hr/performance'
       fullPath: '/hr/performance'
       preLoaderRoute: typeof HrPerformanceRouteImport
-      parentRoute: typeof HrRoute
+      parentRoute: typeof rootRouteImport
     }
     '/hr/leave': {
       id: '/hr/leave'
-      path: '/leave'
+      path: '/hr/leave'
       fullPath: '/hr/leave'
       preLoaderRoute: typeof HrLeaveRouteImport
-      parentRoute: typeof HrRoute
+      parentRoute: typeof rootRouteImport
     }
     '/hr/employees': {
       id: '/hr/employees'
-      path: '/employees'
+      path: '/hr/employees'
       fullPath: '/hr/employees'
       preLoaderRoute: typeof HrEmployeesRouteImport
-      parentRoute: typeof HrRoute
+      parentRoute: typeof rootRouteImport
     }
     '/hr/documents-shared': {
       id: '/hr/documents-shared'
-      path: '/documents-shared'
+      path: '/hr/documents-shared'
       fullPath: '/hr/documents-shared'
       preLoaderRoute: typeof HrDocumentsSharedRouteImport
-      parentRoute: typeof HrRoute
+      parentRoute: typeof rootRouteImport
     }
     '/hr/documents': {
       id: '/hr/documents'
-      path: '/documents'
+      path: '/hr/documents'
       fullPath: '/hr/documents'
       preLoaderRoute: typeof HrDocumentsRouteImport
-      parentRoute: typeof HrRoute
+      parentRoute: typeof rootRouteImport
     }
     '/hr/dashboard': {
       id: '/hr/dashboard'
-      path: '/dashboard'
+      path: '/hr/dashboard'
       fullPath: '/hr/dashboard'
       preLoaderRoute: typeof HrDashboardRouteImport
-      parentRoute: typeof HrRoute
+      parentRoute: typeof rootRouteImport
     }
     '/hr/company': {
       id: '/hr/company'
-      path: '/company'
+      path: '/hr/company'
       fullPath: '/hr/company'
       preLoaderRoute: typeof HrCompanyRouteImport
-      parentRoute: typeof HrRoute
+      parentRoute: typeof rootRouteImport
     }
     '/hr/auth': {
       id: '/hr/auth'
-      path: '/auth'
+      path: '/hr/auth'
       fullPath: '/hr/auth'
       preLoaderRoute: typeof HrAuthRouteImport
-      parentRoute: typeof HrRoute
+      parentRoute: typeof rootRouteImport
     }
     '/hr/attendance': {
       id: '/hr/attendance'
-      path: '/attendance'
+      path: '/hr/attendance'
       fullPath: '/hr/attendance'
       preLoaderRoute: typeof HrAttendanceRouteImport
-      parentRoute: typeof HrRoute
+      parentRoute: typeof rootRouteImport
     }
     '/hr/admin': {
       id: '/hr/admin'
-      path: '/admin'
+      path: '/hr/admin'
       fullPath: '/hr/admin'
       preLoaderRoute: typeof HrAdminRouteImport
-      parentRoute: typeof HrRoute
+      parentRoute: typeof rootRouteImport
     }
     '/campaign/wireframe': {
       id: '/campaign/wireframe'
@@ -3605,6 +3616,17 @@ const rootRouteChildren: RootRouteChildren = {
   CampaignVotersRoute: CampaignVotersRoute,
   CampaignWhiteLabelRoute: CampaignWhiteLabelRoute,
   CampaignWireframeRoute: CampaignWireframeRoute,
+  HrAdminRoute: HrAdminRoute,
+  HrAttendanceRoute: HrAttendanceRoute,
+  HrAuthRoute: HrAuthRoute,
+  HrCompanyRoute: HrCompanyRoute,
+  HrDashboardRoute: HrDashboardRoute,
+  HrDocumentsRoute: HrDocumentsRoute,
+  HrDocumentsSharedRoute: HrDocumentsSharedRoute,
+  HrEmployeesRoute: HrEmployeesRoute,
+  HrLeaveRoute: HrLeaveRoute,
+  HrPerformanceRoute: HrPerformanceRoute,
+  HrSettingsRoute: HrSettingsRoute,
   PortalAffiliateRoute: PortalAffiliateRoute,
   PortalAuthorRoute: PortalAuthorRoute,
   PortalDevRoute: PortalDevRoute,
@@ -3618,13 +3640,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
