@@ -110,6 +110,7 @@ import { Route as PayrollLoansRouteImport } from './routes/payroll.loans'
 import { Route as PayrollEmployeesRouteImport } from './routes/payroll.employees'
 import { Route as PayrollDisbursementsRouteImport } from './routes/payroll.disbursements'
 import { Route as PayrollDeductionsRouteImport } from './routes/payroll.deductions'
+import { Route as PayrollDashboardRouteImport } from './routes/payroll.dashboard'
 import { Route as PayrollBonusesRouteImport } from './routes/payroll.bonuses'
 import { Route as PayrollAttendanceRouteImport } from './routes/payroll.attendance'
 import { Route as HrSettingsRouteImport } from './routes/hr.settings'
@@ -137,6 +138,7 @@ import { Route as CreatorLibraryRouteImport } from './routes/creator.library'
 import { Route as CreatorForumRouteImport } from './routes/creator.forum'
 import { Route as CreatorFeesRouteImport } from './routes/creator.fees'
 import { Route as CreatorExamsRouteImport } from './routes/creator.exams'
+import { Route as CreatorDashboardRouteImport } from './routes/creator.dashboard'
 import { Route as CreatorCoursesRouteImport } from './routes/creator.courses'
 import { Route as CreatorCourseDetailRouteImport } from './routes/creator.course-detail'
 import { Route as CreatorCourseBuilderRouteImport } from './routes/creator.course-builder'
@@ -718,6 +720,11 @@ const PayrollDeductionsRoute = PayrollDeductionsRouteImport.update({
   path: '/payroll/deductions',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PayrollDashboardRoute = PayrollDashboardRouteImport.update({
+  id: '/payroll/dashboard',
+  path: '/payroll/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PayrollBonusesRoute = PayrollBonusesRouteImport.update({
   id: '/payroll/bonuses',
   path: '/payroll/bonuses',
@@ -851,6 +858,11 @@ const CreatorFeesRoute = CreatorFeesRouteImport.update({
 const CreatorExamsRoute = CreatorExamsRouteImport.update({
   id: '/creator/exams',
   path: '/creator/exams',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CreatorDashboardRoute = CreatorDashboardRouteImport.update({
+  id: '/creator/dashboard',
+  path: '/creator/dashboard',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CreatorCoursesRoute = CreatorCoursesRouteImport.update({
@@ -1388,6 +1400,7 @@ export interface FileRoutesByFullPath {
   '/creator/course-builder': typeof CreatorCourseBuilderRoute
   '/creator/course-detail': typeof CreatorCourseDetailRoute
   '/creator/courses': typeof CreatorCoursesRoute
+  '/creator/dashboard': typeof CreatorDashboardRoute
   '/creator/exams': typeof CreatorExamsRoute
   '/creator/fees': typeof CreatorFeesRoute
   '/creator/forum': typeof CreatorForumRoute
@@ -1415,6 +1428,7 @@ export interface FileRoutesByFullPath {
   '/hr/settings': typeof HrSettingsRoute
   '/payroll/attendance': typeof PayrollAttendanceRoute
   '/payroll/bonuses': typeof PayrollBonusesRoute
+  '/payroll/dashboard': typeof PayrollDashboardRoute
   '/payroll/deductions': typeof PayrollDeductionsRoute
   '/payroll/disbursements': typeof PayrollDisbursementsRoute
   '/payroll/employees': typeof PayrollEmployeesRoute
@@ -1593,6 +1607,7 @@ export interface FileRoutesByTo {
   '/creator/course-builder': typeof CreatorCourseBuilderRoute
   '/creator/course-detail': typeof CreatorCourseDetailRoute
   '/creator/courses': typeof CreatorCoursesRoute
+  '/creator/dashboard': typeof CreatorDashboardRoute
   '/creator/exams': typeof CreatorExamsRoute
   '/creator/fees': typeof CreatorFeesRoute
   '/creator/forum': typeof CreatorForumRoute
@@ -1620,6 +1635,7 @@ export interface FileRoutesByTo {
   '/hr/settings': typeof HrSettingsRoute
   '/payroll/attendance': typeof PayrollAttendanceRoute
   '/payroll/bonuses': typeof PayrollBonusesRoute
+  '/payroll/dashboard': typeof PayrollDashboardRoute
   '/payroll/deductions': typeof PayrollDeductionsRoute
   '/payroll/disbursements': typeof PayrollDisbursementsRoute
   '/payroll/employees': typeof PayrollEmployeesRoute
@@ -1799,6 +1815,7 @@ export interface FileRoutesById {
   '/creator/course-builder': typeof CreatorCourseBuilderRoute
   '/creator/course-detail': typeof CreatorCourseDetailRoute
   '/creator/courses': typeof CreatorCoursesRoute
+  '/creator/dashboard': typeof CreatorDashboardRoute
   '/creator/exams': typeof CreatorExamsRoute
   '/creator/fees': typeof CreatorFeesRoute
   '/creator/forum': typeof CreatorForumRoute
@@ -1826,6 +1843,7 @@ export interface FileRoutesById {
   '/hr/settings': typeof HrSettingsRoute
   '/payroll/attendance': typeof PayrollAttendanceRoute
   '/payroll/bonuses': typeof PayrollBonusesRoute
+  '/payroll/dashboard': typeof PayrollDashboardRoute
   '/payroll/deductions': typeof PayrollDeductionsRoute
   '/payroll/disbursements': typeof PayrollDisbursementsRoute
   '/payroll/employees': typeof PayrollEmployeesRoute
@@ -2006,6 +2024,7 @@ export interface FileRouteTypes {
     | '/creator/course-builder'
     | '/creator/course-detail'
     | '/creator/courses'
+    | '/creator/dashboard'
     | '/creator/exams'
     | '/creator/fees'
     | '/creator/forum'
@@ -2033,6 +2052,7 @@ export interface FileRouteTypes {
     | '/hr/settings'
     | '/payroll/attendance'
     | '/payroll/bonuses'
+    | '/payroll/dashboard'
     | '/payroll/deductions'
     | '/payroll/disbursements'
     | '/payroll/employees'
@@ -2211,6 +2231,7 @@ export interface FileRouteTypes {
     | '/creator/course-builder'
     | '/creator/course-detail'
     | '/creator/courses'
+    | '/creator/dashboard'
     | '/creator/exams'
     | '/creator/fees'
     | '/creator/forum'
@@ -2238,6 +2259,7 @@ export interface FileRouteTypes {
     | '/hr/settings'
     | '/payroll/attendance'
     | '/payroll/bonuses'
+    | '/payroll/dashboard'
     | '/payroll/deductions'
     | '/payroll/disbursements'
     | '/payroll/employees'
@@ -2416,6 +2438,7 @@ export interface FileRouteTypes {
     | '/creator/course-builder'
     | '/creator/course-detail'
     | '/creator/courses'
+    | '/creator/dashboard'
     | '/creator/exams'
     | '/creator/fees'
     | '/creator/forum'
@@ -2443,6 +2466,7 @@ export interface FileRouteTypes {
     | '/hr/settings'
     | '/payroll/attendance'
     | '/payroll/bonuses'
+    | '/payroll/dashboard'
     | '/payroll/deductions'
     | '/payroll/disbursements'
     | '/payroll/employees'
@@ -2613,6 +2637,7 @@ export interface RootRouteChildren {
   CreatorCourseBuilderRoute: typeof CreatorCourseBuilderRoute
   CreatorCourseDetailRoute: typeof CreatorCourseDetailRoute
   CreatorCoursesRoute: typeof CreatorCoursesRoute
+  CreatorDashboardRoute: typeof CreatorDashboardRoute
   CreatorExamsRoute: typeof CreatorExamsRoute
   CreatorFeesRoute: typeof CreatorFeesRoute
   CreatorForumRoute: typeof CreatorForumRoute
@@ -2640,6 +2665,7 @@ export interface RootRouteChildren {
   HrSettingsRoute: typeof HrSettingsRoute
   PayrollAttendanceRoute: typeof PayrollAttendanceRoute
   PayrollBonusesRoute: typeof PayrollBonusesRoute
+  PayrollDashboardRoute: typeof PayrollDashboardRoute
   PayrollDeductionsRoute: typeof PayrollDeductionsRoute
   PayrollDisbursementsRoute: typeof PayrollDisbursementsRoute
   PayrollEmployeesRoute: typeof PayrollEmployeesRoute
@@ -3370,6 +3396,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PayrollDeductionsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/payroll/dashboard': {
+      id: '/payroll/dashboard'
+      path: '/payroll/dashboard'
+      fullPath: '/payroll/dashboard'
+      preLoaderRoute: typeof PayrollDashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/payroll/bonuses': {
       id: '/payroll/bonuses'
       path: '/payroll/bonuses'
@@ -3557,6 +3590,13 @@ declare module '@tanstack/react-router' {
       path: '/creator/exams'
       fullPath: '/creator/exams'
       preLoaderRoute: typeof CreatorExamsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/creator/dashboard': {
+      id: '/creator/dashboard'
+      path: '/creator/dashboard'
+      fullPath: '/creator/dashboard'
+      preLoaderRoute: typeof CreatorDashboardRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/creator/courses': {
@@ -4262,6 +4302,7 @@ const rootRouteChildren: RootRouteChildren = {
   CreatorCourseBuilderRoute: CreatorCourseBuilderRoute,
   CreatorCourseDetailRoute: CreatorCourseDetailRoute,
   CreatorCoursesRoute: CreatorCoursesRoute,
+  CreatorDashboardRoute: CreatorDashboardRoute,
   CreatorExamsRoute: CreatorExamsRoute,
   CreatorFeesRoute: CreatorFeesRoute,
   CreatorForumRoute: CreatorForumRoute,
@@ -4289,6 +4330,7 @@ const rootRouteChildren: RootRouteChildren = {
   HrSettingsRoute: HrSettingsRoute,
   PayrollAttendanceRoute: PayrollAttendanceRoute,
   PayrollBonusesRoute: PayrollBonusesRoute,
+  PayrollDashboardRoute: PayrollDashboardRoute,
   PayrollDeductionsRoute: PayrollDeductionsRoute,
   PayrollDisbursementsRoute: PayrollDisbursementsRoute,
   PayrollEmployeesRoute: PayrollEmployeesRoute,
