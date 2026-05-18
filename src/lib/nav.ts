@@ -169,7 +169,7 @@ export const NAV_GROUPS: NavGroup[] = [
   {
     label: "Operations",
     items: [
-      { id: 71, title: "HR / Employees", clone: "Workday", path: "/hr", icon: Users2 },
+      { id: 71, title: "HR / Employees", clone: "Workday", path: "/hr-workday", icon: Users2 },
       { id: 72, title: "Payroll", clone: "ADP", path: "/payroll", icon: BadgeDollarSign },
       { id: 73, title: "Assets", clone: "SAP Asset", path: "/assets", icon: Briefcase },
       { id: 74, title: "Vendors", clone: "SAP Ariba", path: "/vendors", icon: Truck },
