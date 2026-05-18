@@ -58,7 +58,7 @@ function TickerRow() {
     <>
       {items.map(([k, v, tone], i) => (
         <span key={`${k}-${i}`} className="flex items-center gap-2">
-          <span className={`live-dot ${tone === "warning" ? "warn" : tone === "danger" ? "danger" : ""}`} />
+          <span className={`live-dot ${tone === "warning" ? "warn" : ""}`} />
           <span className="text-foreground/80">{k}</span>
           <span>{v}</span>
           <span className="text-border">/</span>
