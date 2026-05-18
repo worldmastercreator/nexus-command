@@ -669,94 +669,94 @@ const PortalAffiliateRoute = PortalAffiliateRouteImport.update({
   getParentRoute: () => rootRouteImport,
 } as any)
 const PayrollTaxRoute = PayrollTaxRouteImport.update({
-  id: '/tax',
-  path: '/tax',
-  getParentRoute: () => PayrollRoute,
+  id: '/payroll/tax',
+  path: '/payroll/tax',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const PayrollSettingsRoute = PayrollSettingsRouteImport.update({
-  id: '/settings',
-  path: '/settings',
-  getParentRoute: () => PayrollRoute,
+  id: '/payroll/settings',
+  path: '/payroll/settings',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const PayrollSalaryRoute = PayrollSalaryRouteImport.update({
-  id: '/salary',
-  path: '/salary',
-  getParentRoute: () => PayrollRoute,
+  id: '/payroll/salary',
+  path: '/payroll/salary',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const PayrollReportsRoute = PayrollReportsRouteImport.update({
-  id: '/reports',
-  path: '/reports',
-  getParentRoute: () => PayrollRoute,
+  id: '/payroll/reports',
+  path: '/payroll/reports',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const PayrollProcessingRoute = PayrollProcessingRouteImport.update({
-  id: '/processing',
-  path: '/processing',
-  getParentRoute: () => PayrollRoute,
+  id: '/payroll/processing',
+  path: '/payroll/processing',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const PayrollPayslipsRoute = PayrollPayslipsRouteImport.update({
-  id: '/payslips',
-  path: '/payslips',
-  getParentRoute: () => PayrollRoute,
+  id: '/payroll/payslips',
+  path: '/payroll/payslips',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const PayrollLoansRoute = PayrollLoansRouteImport.update({
-  id: '/loans',
-  path: '/loans',
-  getParentRoute: () => PayrollRoute,
+  id: '/payroll/loans',
+  path: '/payroll/loans',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const PayrollEmployeesRoute = PayrollEmployeesRouteImport.update({
-  id: '/employees',
-  path: '/employees',
-  getParentRoute: () => PayrollRoute,
+  id: '/payroll/employees',
+  path: '/payroll/employees',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const PayrollDisbursementsRoute = PayrollDisbursementsRouteImport.update({
-  id: '/disbursements',
-  path: '/disbursements',
-  getParentRoute: () => PayrollRoute,
+  id: '/payroll/disbursements',
+  path: '/payroll/disbursements',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const PayrollDeductionsRoute = PayrollDeductionsRouteImport.update({
-  id: '/deductions',
-  path: '/deductions',
-  getParentRoute: () => PayrollRoute,
+  id: '/payroll/deductions',
+  path: '/payroll/deductions',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const PayrollBonusesRoute = PayrollBonusesRouteImport.update({
-  id: '/bonuses',
-  path: '/bonuses',
-  getParentRoute: () => PayrollRoute,
+  id: '/payroll/bonuses',
+  path: '/payroll/bonuses',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const PayrollAttendanceRoute = PayrollAttendanceRouteImport.update({
-  id: '/attendance',
-  path: '/attendance',
-  getParentRoute: () => PayrollRoute,
+  id: '/payroll/attendance',
+  path: '/payroll/attendance',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const HrSettingsRoute = HrSettingsRouteImport.update({
-  id: '/settings',
-  path: '/settings',
-  getParentRoute: () => HrRoute,
+  id: '/hr/settings',
+  path: '/hr/settings',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const HrPerformanceRoute = HrPerformanceRouteImport.update({
-  id: '/performance',
-  path: '/performance',
-  getParentRoute: () => HrRoute,
+  id: '/hr/performance',
+  path: '/hr/performance',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const HrLeaveRoute = HrLeaveRouteImport.update({
-  id: '/leave',
-  path: '/leave',
-  getParentRoute: () => HrRoute,
+  id: '/hr/leave',
+  path: '/hr/leave',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const HrEmployeesRoute = HrEmployeesRouteImport.update({
-  id: '/employees',
-  path: '/employees',
-  getParentRoute: () => HrRoute,
+  id: '/hr/employees',
+  path: '/hr/employees',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const HrDocumentsSharedRoute = HrDocumentsSharedRouteImport.update({
-  id: '/documents-shared',
-  path: '/documents-shared',
-  getParentRoute: () => HrRoute,
+  id: '/hr/documents-shared',
+  path: '/hr/documents-shared',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const HrDocumentsRoute = HrDocumentsRouteImport.update({
-  id: '/documents',
-  path: '/documents',
-  getParentRoute: () => HrRoute,
+  id: '/hr/documents',
+  path: '/hr/documents',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const HrDashboardRoute = HrDashboardRouteImport.update({
   id: '/hr/dashboard',
@@ -764,24 +764,24 @@ const HrDashboardRoute = HrDashboardRouteImport.update({
   getParentRoute: () => rootRouteImport,
 } as any)
 const HrCompanyRoute = HrCompanyRouteImport.update({
-  id: '/company',
-  path: '/company',
-  getParentRoute: () => HrRoute,
+  id: '/hr/company',
+  path: '/hr/company',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const HrAuthRoute = HrAuthRouteImport.update({
-  id: '/auth',
-  path: '/auth',
-  getParentRoute: () => HrRoute,
+  id: '/hr/auth',
+  path: '/hr/auth',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const HrAttendanceRoute = HrAttendanceRouteImport.update({
-  id: '/attendance',
-  path: '/attendance',
-  getParentRoute: () => HrRoute,
+  id: '/hr/attendance',
+  path: '/hr/attendance',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const HrAdminRoute = HrAdminRouteImport.update({
-  id: '/admin',
-  path: '/admin',
-  getParentRoute: () => HrRoute,
+  id: '/hr/admin',
+  path: '/hr/admin',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const CreatorWorkshopsRoute = CreatorWorkshopsRouteImport.update({
   id: '/creator/workshops',
@@ -2627,7 +2627,29 @@ export interface RootRouteChildren {
   CreatorTrainersRoute: typeof CreatorTrainersRoute
   CreatorVideoRoute: typeof CreatorVideoRoute
   CreatorWorkshopsRoute: typeof CreatorWorkshopsRoute
+  HrAdminRoute: typeof HrAdminRoute
+  HrAttendanceRoute: typeof HrAttendanceRoute
+  HrAuthRoute: typeof HrAuthRoute
+  HrCompanyRoute: typeof HrCompanyRoute
   HrDashboardRoute: typeof HrDashboardRoute
+  HrDocumentsRoute: typeof HrDocumentsRoute
+  HrDocumentsSharedRoute: typeof HrDocumentsSharedRoute
+  HrEmployeesRoute: typeof HrEmployeesRoute
+  HrLeaveRoute: typeof HrLeaveRoute
+  HrPerformanceRoute: typeof HrPerformanceRoute
+  HrSettingsRoute: typeof HrSettingsRoute
+  PayrollAttendanceRoute: typeof PayrollAttendanceRoute
+  PayrollBonusesRoute: typeof PayrollBonusesRoute
+  PayrollDeductionsRoute: typeof PayrollDeductionsRoute
+  PayrollDisbursementsRoute: typeof PayrollDisbursementsRoute
+  PayrollEmployeesRoute: typeof PayrollEmployeesRoute
+  PayrollLoansRoute: typeof PayrollLoansRoute
+  PayrollPayslipsRoute: typeof PayrollPayslipsRoute
+  PayrollProcessingRoute: typeof PayrollProcessingRoute
+  PayrollReportsRoute: typeof PayrollReportsRoute
+  PayrollSalaryRoute: typeof PayrollSalaryRoute
+  PayrollSettingsRoute: typeof PayrollSettingsRoute
+  PayrollTaxRoute: typeof PayrollTaxRoute
   PortalAffiliateRoute: typeof PortalAffiliateRoute
   PortalAuthorRoute: typeof PortalAuthorRoute
   PortalDevRoute: typeof PortalDevRoute
@@ -3280,129 +3302,129 @@ declare module '@tanstack/react-router' {
     }
     '/payroll/tax': {
       id: '/payroll/tax'
-      path: '/tax'
+      path: '/payroll/tax'
       fullPath: '/payroll/tax'
       preLoaderRoute: typeof PayrollTaxRouteImport
-      parentRoute: typeof PayrollRoute
+      parentRoute: typeof rootRouteImport
     }
     '/payroll/settings': {
       id: '/payroll/settings'
-      path: '/settings'
+      path: '/payroll/settings'
       fullPath: '/payroll/settings'
       preLoaderRoute: typeof PayrollSettingsRouteImport
-      parentRoute: typeof PayrollRoute
+      parentRoute: typeof rootRouteImport
     }
     '/payroll/salary': {
       id: '/payroll/salary'
-      path: '/salary'
+      path: '/payroll/salary'
       fullPath: '/payroll/salary'
       preLoaderRoute: typeof PayrollSalaryRouteImport
-      parentRoute: typeof PayrollRoute
+      parentRoute: typeof rootRouteImport
     }
     '/payroll/reports': {
       id: '/payroll/reports'
-      path: '/reports'
+      path: '/payroll/reports'
       fullPath: '/payroll/reports'
       preLoaderRoute: typeof PayrollReportsRouteImport
-      parentRoute: typeof PayrollRoute
+      parentRoute: typeof rootRouteImport
     }
     '/payroll/processing': {
       id: '/payroll/processing'
-      path: '/processing'
+      path: '/payroll/processing'
       fullPath: '/payroll/processing'
       preLoaderRoute: typeof PayrollProcessingRouteImport
-      parentRoute: typeof PayrollRoute
+      parentRoute: typeof rootRouteImport
     }
     '/payroll/payslips': {
       id: '/payroll/payslips'
-      path: '/payslips'
+      path: '/payroll/payslips'
       fullPath: '/payroll/payslips'
       preLoaderRoute: typeof PayrollPayslipsRouteImport
-      parentRoute: typeof PayrollRoute
+      parentRoute: typeof rootRouteImport
     }
     '/payroll/loans': {
       id: '/payroll/loans'
-      path: '/loans'
+      path: '/payroll/loans'
       fullPath: '/payroll/loans'
       preLoaderRoute: typeof PayrollLoansRouteImport
-      parentRoute: typeof PayrollRoute
+      parentRoute: typeof rootRouteImport
     }
     '/payroll/employees': {
       id: '/payroll/employees'
-      path: '/employees'
+      path: '/payroll/employees'
       fullPath: '/payroll/employees'
       preLoaderRoute: typeof PayrollEmployeesRouteImport
-      parentRoute: typeof PayrollRoute
+      parentRoute: typeof rootRouteImport
     }
     '/payroll/disbursements': {
       id: '/payroll/disbursements'
-      path: '/disbursements'
+      path: '/payroll/disbursements'
       fullPath: '/payroll/disbursements'
       preLoaderRoute: typeof PayrollDisbursementsRouteImport
-      parentRoute: typeof PayrollRoute
+      parentRoute: typeof rootRouteImport
     }
     '/payroll/deductions': {
       id: '/payroll/deductions'
-      path: '/deductions'
+      path: '/payroll/deductions'
       fullPath: '/payroll/deductions'
       preLoaderRoute: typeof PayrollDeductionsRouteImport
-      parentRoute: typeof PayrollRoute
+      parentRoute: typeof rootRouteImport
     }
     '/payroll/bonuses': {
       id: '/payroll/bonuses'
-      path: '/bonuses'
+      path: '/payroll/bonuses'
       fullPath: '/payroll/bonuses'
       preLoaderRoute: typeof PayrollBonusesRouteImport
-      parentRoute: typeof PayrollRoute
+      parentRoute: typeof rootRouteImport
     }
     '/payroll/attendance': {
       id: '/payroll/attendance'
-      path: '/attendance'
+      path: '/payroll/attendance'
       fullPath: '/payroll/attendance'
       preLoaderRoute: typeof PayrollAttendanceRouteImport
-      parentRoute: typeof PayrollRoute
+      parentRoute: typeof rootRouteImport
     }
     '/hr/settings': {
       id: '/hr/settings'
-      path: '/settings'
+      path: '/hr/settings'
       fullPath: '/hr/settings'
       preLoaderRoute: typeof HrSettingsRouteImport
-      parentRoute: typeof HrRoute
+      parentRoute: typeof rootRouteImport
     }
     '/hr/performance': {
       id: '/hr/performance'
-      path: '/performance'
+      path: '/hr/performance'
       fullPath: '/hr/performance'
       preLoaderRoute: typeof HrPerformanceRouteImport
-      parentRoute: typeof HrRoute
+      parentRoute: typeof rootRouteImport
     }
     '/hr/leave': {
       id: '/hr/leave'
-      path: '/leave'
+      path: '/hr/leave'
       fullPath: '/hr/leave'
       preLoaderRoute: typeof HrLeaveRouteImport
-      parentRoute: typeof HrRoute
+      parentRoute: typeof rootRouteImport
     }
     '/hr/employees': {
       id: '/hr/employees'
-      path: '/employees'
+      path: '/hr/employees'
       fullPath: '/hr/employees'
       preLoaderRoute: typeof HrEmployeesRouteImport
-      parentRoute: typeof HrRoute
+      parentRoute: typeof rootRouteImport
     }
     '/hr/documents-shared': {
       id: '/hr/documents-shared'
-      path: '/documents-shared'
+      path: '/hr/documents-shared'
       fullPath: '/hr/documents-shared'
       preLoaderRoute: typeof HrDocumentsSharedRouteImport
-      parentRoute: typeof HrRoute
+      parentRoute: typeof rootRouteImport
     }
     '/hr/documents': {
       id: '/hr/documents'
-      path: '/documents'
+      path: '/hr/documents'
       fullPath: '/hr/documents'
       preLoaderRoute: typeof HrDocumentsRouteImport
-      parentRoute: typeof HrRoute
+      parentRoute: typeof rootRouteImport
     }
     '/hr/dashboard': {
       id: '/hr/dashboard'
@@ -3413,31 +3435,31 @@ declare module '@tanstack/react-router' {
     }
     '/hr/company': {
       id: '/hr/company'
-      path: '/company'
+      path: '/hr/company'
       fullPath: '/hr/company'
       preLoaderRoute: typeof HrCompanyRouteImport
-      parentRoute: typeof HrRoute
+      parentRoute: typeof rootRouteImport
     }
     '/hr/auth': {
       id: '/hr/auth'
-      path: '/auth'
+      path: '/hr/auth'
       fullPath: '/hr/auth'
       preLoaderRoute: typeof HrAuthRouteImport
-      parentRoute: typeof HrRoute
+      parentRoute: typeof rootRouteImport
     }
     '/hr/attendance': {
       id: '/hr/attendance'
-      path: '/attendance'
+      path: '/hr/attendance'
       fullPath: '/hr/attendance'
       preLoaderRoute: typeof HrAttendanceRouteImport
-      parentRoute: typeof HrRoute
+      parentRoute: typeof rootRouteImport
     }
     '/hr/admin': {
       id: '/hr/admin'
-      path: '/admin'
+      path: '/hr/admin'
       fullPath: '/hr/admin'
       preLoaderRoute: typeof HrAdminRouteImport
-      parentRoute: typeof HrRoute
+      parentRoute: typeof rootRouteImport
     }
     '/creator/workshops': {
       id: '/creator/workshops'
@@ -4254,7 +4276,29 @@ const rootRouteChildren: RootRouteChildren = {
   CreatorTrainersRoute: CreatorTrainersRoute,
   CreatorVideoRoute: CreatorVideoRoute,
   CreatorWorkshopsRoute: CreatorWorkshopsRoute,
+  HrAdminRoute: HrAdminRoute,
+  HrAttendanceRoute: HrAttendanceRoute,
+  HrAuthRoute: HrAuthRoute,
+  HrCompanyRoute: HrCompanyRoute,
   HrDashboardRoute: HrDashboardRoute,
+  HrDocumentsRoute: HrDocumentsRoute,
+  HrDocumentsSharedRoute: HrDocumentsSharedRoute,
+  HrEmployeesRoute: HrEmployeesRoute,
+  HrLeaveRoute: HrLeaveRoute,
+  HrPerformanceRoute: HrPerformanceRoute,
+  HrSettingsRoute: HrSettingsRoute,
+  PayrollAttendanceRoute: PayrollAttendanceRoute,
+  PayrollBonusesRoute: PayrollBonusesRoute,
+  PayrollDeductionsRoute: PayrollDeductionsRoute,
+  PayrollDisbursementsRoute: PayrollDisbursementsRoute,
+  PayrollEmployeesRoute: PayrollEmployeesRoute,
+  PayrollLoansRoute: PayrollLoansRoute,
+  PayrollPayslipsRoute: PayrollPayslipsRoute,
+  PayrollProcessingRoute: PayrollProcessingRoute,
+  PayrollReportsRoute: PayrollReportsRoute,
+  PayrollSalaryRoute: PayrollSalaryRoute,
+  PayrollSettingsRoute: PayrollSettingsRoute,
+  PayrollTaxRoute: PayrollTaxRoute,
   PortalAffiliateRoute: PortalAffiliateRoute,
   PortalAuthorRoute: PortalAuthorRoute,
   PortalDevRoute: PortalDevRoute,
@@ -4268,13 +4312,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
