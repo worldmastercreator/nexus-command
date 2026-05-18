@@ -19,6 +19,9 @@ import {
   Flag, Trophy, Banknote, BarChart, Tv2, MapPinned as GeoIcon, Map, Component,
   Layers, Workflow as FlowIcon, BookMarked, FileSpreadsheet, Compass, Wallet as Money,
   Building2 as College, GraduationCap, ShieldCheck, Boxes as Stack, ChartBar,
+  // Creator Hub (LMS) + Payroll
+  PlaySquare, BookOpenCheck, Presentation, NotepadText, PencilRuler, Receipt,
+  Calculator, PiggyBank, Landmark, FileCheck2, ScrollText as Pay, TrendingDown,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
