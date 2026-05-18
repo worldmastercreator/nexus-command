@@ -9,38 +9,1907 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WhiteLabelRouteImport } from './routes/white-label'
+import { Route as WebhooksRouteImport } from './routes/webhooks'
+import { Route as WarRoomRouteImport } from './routes/war-room'
+import { Route as VendorsRouteImport } from './routes/vendors'
+import { Route as TicketsRouteImport } from './routes/tickets'
+import { Route as TenantsRouteImport } from './routes/tenants'
+import { Route as TasksRouteImport } from './routes/tasks'
+import { Route as SupportRouteImport } from './routes/support'
+import { Route as SuccessRouteImport } from './routes/success'
+import { Route as SmsRouteImport } from './routes/sms'
+import { Route as SettingsRouteImport } from './routes/settings'
+import { Route as ServersRouteImport } from './routes/servers'
+import { Route as SecurityRouteImport } from './routes/security'
+import { Route as SearchRouteImport } from './routes/search'
+import { Route as SalesRouteImport } from './routes/sales'
+import { Route as SaasRouteImport } from './routes/saas'
+import { Route as RouterRouteImport } from './routes/router'
+import { Route as ResellersRouteImport } from './routes/resellers'
+import { Route as ReportingRouteImport } from './routes/reporting'
+import { Route as RemoteRouteImport } from './routes/remote'
+import { Route as RealtimeRouteImport } from './routes/realtime'
+import { Route as QueueRouteImport } from './routes/queue'
+import { Route as ProjectsRouteImport } from './routes/projects'
+import { Route as ProductsRouteImport } from './routes/products'
+import { Route as PlayRouteImport } from './routes/play'
+import { Route as PayrollRouteImport } from './routes/payroll'
+import { Route as PaymentsRouteImport } from './routes/payments'
+import { Route as OrdersRouteImport } from './routes/orders'
+import { Route as OnboardingRouteImport } from './routes/onboarding'
+import { Route as NotificationsRouteImport } from './routes/notifications'
+import { Route as MonitoringCoreRouteImport } from './routes/monitoring-core'
+import { Route as MonitoringRouteImport } from './routes/monitoring'
+import { Route as MarketplaceRouteImport } from './routes/marketplace'
+import { Route as LogsRouteImport } from './routes/logs'
+import { Route as LicensesRouteImport } from './routes/licenses'
+import { Route as LawyerProRouteImport } from './routes/lawyer-pro'
+import { Route as LawyerRouteImport } from './routes/lawyer'
+import { Route as LawRouteImport } from './routes/law'
+import { Route as KnowledgeRouteImport } from './routes/knowledge'
+import { Route as InfluencersRouteImport } from './routes/influencers'
+import { Route as HrRouteImport } from './routes/hr'
+import { Route as GitRouteImport } from './routes/git'
+import { Route as GeoRouteImport } from './routes/geo'
+import { Route as FraudRouteImport } from './routes/fraud'
+import { Route as FranchiseRouteImport } from './routes/franchise'
+import { Route as FinanceRouteImport } from './routes/finance'
+import { Route as FilesRouteImport } from './routes/files'
+import { Route as EventBusRouteImport } from './routes/event-bus'
+import { Route as EnterpriseApiRouteImport } from './routes/enterprise-api'
+import { Route as EmailRouteImport } from './routes/email'
+import { Route as DocsRouteImport } from './routes/docs'
+import { Route as DnsRouteImport } from './routes/dns'
+import { Route as DevicesRouteImport } from './routes/devices'
+import { Route as DesignSystemRouteImport } from './routes/design-system'
+import { Route as DeployRouteImport } from './routes/deploy'
+import { Route as DemosRouteImport } from './routes/demos'
+import { Route as DbRouteImport } from './routes/db'
+import { Route as DashEngineRouteImport } from './routes/dash-engine'
+import { Route as CustomersRouteImport } from './routes/customers'
+import { Route as CrmRouteImport } from './routes/crm'
+import { Route as CrashesRouteImport } from './routes/crashes'
+import { Route as CommsRouteImport } from './routes/comms'
+import { Route as CloudRouteImport } from './routes/cloud'
+import { Route as ClientsRouteImport } from './routes/clients'
+import { Route as CiRouteImport } from './routes/ci'
+import { Route as CdnRouteImport } from './routes/cdn'
+import { Route as BuilderRouteImport } from './routes/builder'
+import { Route as BooksRouteImport } from './routes/books'
+import { Route as BillingRouteImport } from './routes/billing'
+import { Route as BackupRouteImport } from './routes/backup'
+import { Route as AutomationRouteImport } from './routes/automation'
+import { Route as AuthorsRouteImport } from './routes/authors'
+import { Route as AuthRouteImport } from './routes/auth'
+import { Route as AuditRouteImport } from './routes/audit'
+import { Route as AssetsRouteImport } from './routes/assets'
+import { Route as AppBuilderRouteImport } from './routes/app-builder'
+import { Route as AppAnalyticsRouteImport } from './routes/app-analytics'
+import { Route as ApkRouteImport } from './routes/apk'
+import { Route as ApiRouteImport } from './routes/api'
+import { Route as AnalyticsRouteImport } from './routes/analytics'
+import { Route as AiRouteImport } from './routes/ai'
+import { Route as AffiliatesRouteImport } from './routes/affiliates'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as PortalUserRouteImport } from './routes/portal.user'
+import { Route as PortalSupportRouteImport } from './routes/portal.support'
+import { Route as PortalSeoRouteImport } from './routes/portal.seo'
+import { Route as PortalResellerRouteImport } from './routes/portal.reseller'
+import { Route as PortalInfluencerRouteImport } from './routes/portal.influencer'
+import { Route as PortalFranchiseRouteImport } from './routes/portal.franchise'
+import { Route as PortalDevRouteImport } from './routes/portal.dev'
+import { Route as PortalAuthorRouteImport } from './routes/portal.author'
+import { Route as PortalAffiliateRouteImport } from './routes/portal.affiliate'
+import { Route as AiWorkflowsRouteImport } from './routes/ai.workflows'
+import { Route as AiVoiceRouteImport } from './routes/ai.voice'
+import { Route as AiSupportRouteImport } from './routes/ai.support'
+import { Route as AiPromptsRouteImport } from './routes/ai.prompts'
+import { Route as AiModelsRouteImport } from './routes/ai.models'
+import { Route as AiBuilderRouteImport } from './routes/ai.builder'
+import { Route as AiBotsRouteImport } from './routes/ai.bots'
+import { Route as AiApiRouteImport } from './routes/ai.api'
+import { Route as AiAgentsRouteImport } from './routes/ai.agents'
 
+const WhiteLabelRoute = WhiteLabelRouteImport.update({
+  id: '/white-label',
+  path: '/white-label',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WebhooksRoute = WebhooksRouteImport.update({
+  id: '/webhooks',
+  path: '/webhooks',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WarRoomRoute = WarRoomRouteImport.update({
+  id: '/war-room',
+  path: '/war-room',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VendorsRoute = VendorsRouteImport.update({
+  id: '/vendors',
+  path: '/vendors',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TicketsRoute = TicketsRouteImport.update({
+  id: '/tickets',
+  path: '/tickets',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TenantsRoute = TenantsRouteImport.update({
+  id: '/tenants',
+  path: '/tenants',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TasksRoute = TasksRouteImport.update({
+  id: '/tasks',
+  path: '/tasks',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SupportRoute = SupportRouteImport.update({
+  id: '/support',
+  path: '/support',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SuccessRoute = SuccessRouteImport.update({
+  id: '/success',
+  path: '/success',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SmsRoute = SmsRouteImport.update({
+  id: '/sms',
+  path: '/sms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SettingsRoute = SettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServersRoute = ServersRouteImport.update({
+  id: '/servers',
+  path: '/servers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SecurityRoute = SecurityRouteImport.update({
+  id: '/security',
+  path: '/security',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SearchRoute = SearchRouteImport.update({
+  id: '/search',
+  path: '/search',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SalesRoute = SalesRouteImport.update({
+  id: '/sales',
+  path: '/sales',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SaasRoute = SaasRouteImport.update({
+  id: '/saas',
+  path: '/saas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RouterRoute = RouterRouteImport.update({
+  id: '/router',
+  path: '/router',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResellersRoute = ResellersRouteImport.update({
+  id: '/resellers',
+  path: '/resellers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReportingRoute = ReportingRouteImport.update({
+  id: '/reporting',
+  path: '/reporting',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RemoteRoute = RemoteRouteImport.update({
+  id: '/remote',
+  path: '/remote',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RealtimeRoute = RealtimeRouteImport.update({
+  id: '/realtime',
+  path: '/realtime',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QueueRoute = QueueRouteImport.update({
+  id: '/queue',
+  path: '/queue',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsRoute = ProjectsRouteImport.update({
+  id: '/projects',
+  path: '/projects',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductsRoute = ProductsRouteImport.update({
+  id: '/products',
+  path: '/products',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlayRoute = PlayRouteImport.update({
+  id: '/play',
+  path: '/play',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PayrollRoute = PayrollRouteImport.update({
+  id: '/payroll',
+  path: '/payroll',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PaymentsRoute = PaymentsRouteImport.update({
+  id: '/payments',
+  path: '/payments',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OrdersRoute = OrdersRouteImport.update({
+  id: '/orders',
+  path: '/orders',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OnboardingRoute = OnboardingRouteImport.update({
+  id: '/onboarding',
+  path: '/onboarding',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NotificationsRoute = NotificationsRouteImport.update({
+  id: '/notifications',
+  path: '/notifications',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MonitoringCoreRoute = MonitoringCoreRouteImport.update({
+  id: '/monitoring-core',
+  path: '/monitoring-core',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MonitoringRoute = MonitoringRouteImport.update({
+  id: '/monitoring',
+  path: '/monitoring',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MarketplaceRoute = MarketplaceRouteImport.update({
+  id: '/marketplace',
+  path: '/marketplace',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LogsRoute = LogsRouteImport.update({
+  id: '/logs',
+  path: '/logs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LicensesRoute = LicensesRouteImport.update({
+  id: '/licenses',
+  path: '/licenses',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LawyerProRoute = LawyerProRouteImport.update({
+  id: '/lawyer-pro',
+  path: '/lawyer-pro',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LawyerRoute = LawyerRouteImport.update({
+  id: '/lawyer',
+  path: '/lawyer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LawRoute = LawRouteImport.update({
+  id: '/law',
+  path: '/law',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KnowledgeRoute = KnowledgeRouteImport.update({
+  id: '/knowledge',
+  path: '/knowledge',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InfluencersRoute = InfluencersRouteImport.update({
+  id: '/influencers',
+  path: '/influencers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HrRoute = HrRouteImport.update({
+  id: '/hr',
+  path: '/hr',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GitRoute = GitRouteImport.update({
+  id: '/git',
+  path: '/git',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GeoRoute = GeoRouteImport.update({
+  id: '/geo',
+  path: '/geo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FraudRoute = FraudRouteImport.update({
+  id: '/fraud',
+  path: '/fraud',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FranchiseRoute = FranchiseRouteImport.update({
+  id: '/franchise',
+  path: '/franchise',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FinanceRoute = FinanceRouteImport.update({
+  id: '/finance',
+  path: '/finance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FilesRoute = FilesRouteImport.update({
+  id: '/files',
+  path: '/files',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EventBusRoute = EventBusRouteImport.update({
+  id: '/event-bus',
+  path: '/event-bus',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EnterpriseApiRoute = EnterpriseApiRouteImport.update({
+  id: '/enterprise-api',
+  path: '/enterprise-api',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EmailRoute = EmailRouteImport.update({
+  id: '/email',
+  path: '/email',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DocsRoute = DocsRouteImport.update({
+  id: '/docs',
+  path: '/docs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DnsRoute = DnsRouteImport.update({
+  id: '/dns',
+  path: '/dns',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DevicesRoute = DevicesRouteImport.update({
+  id: '/devices',
+  path: '/devices',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DesignSystemRoute = DesignSystemRouteImport.update({
+  id: '/design-system',
+  path: '/design-system',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DeployRoute = DeployRouteImport.update({
+  id: '/deploy',
+  path: '/deploy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DemosRoute = DemosRouteImport.update({
+  id: '/demos',
+  path: '/demos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DbRoute = DbRouteImport.update({
+  id: '/db',
+  path: '/db',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashEngineRoute = DashEngineRouteImport.update({
+  id: '/dash-engine',
+  path: '/dash-engine',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CustomersRoute = CustomersRouteImport.update({
+  id: '/customers',
+  path: '/customers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CrmRoute = CrmRouteImport.update({
+  id: '/crm',
+  path: '/crm',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CrashesRoute = CrashesRouteImport.update({
+  id: '/crashes',
+  path: '/crashes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CommsRoute = CommsRouteImport.update({
+  id: '/comms',
+  path: '/comms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CloudRoute = CloudRouteImport.update({
+  id: '/cloud',
+  path: '/cloud',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ClientsRoute = ClientsRouteImport.update({
+  id: '/clients',
+  path: '/clients',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CiRoute = CiRouteImport.update({
+  id: '/ci',
+  path: '/ci',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CdnRoute = CdnRouteImport.update({
+  id: '/cdn',
+  path: '/cdn',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BuilderRoute = BuilderRouteImport.update({
+  id: '/builder',
+  path: '/builder',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BooksRoute = BooksRouteImport.update({
+  id: '/books',
+  path: '/books',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BillingRoute = BillingRouteImport.update({
+  id: '/billing',
+  path: '/billing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BackupRoute = BackupRouteImport.update({
+  id: '/backup',
+  path: '/backup',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AutomationRoute = AutomationRouteImport.update({
+  id: '/automation',
+  path: '/automation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthorsRoute = AuthorsRouteImport.update({
+  id: '/authors',
+  path: '/authors',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthRoute = AuthRouteImport.update({
+  id: '/auth',
+  path: '/auth',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuditRoute = AuditRouteImport.update({
+  id: '/audit',
+  path: '/audit',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AssetsRoute = AssetsRouteImport.update({
+  id: '/assets',
+  path: '/assets',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AppBuilderRoute = AppBuilderRouteImport.update({
+  id: '/app-builder',
+  path: '/app-builder',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AppAnalyticsRoute = AppAnalyticsRouteImport.update({
+  id: '/app-analytics',
+  path: '/app-analytics',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApkRoute = ApkRouteImport.update({
+  id: '/apk',
+  path: '/apk',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiRoute = ApiRouteImport.update({
+  id: '/api',
+  path: '/api',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AnalyticsRoute = AnalyticsRouteImport.update({
+  id: '/analytics',
+  path: '/analytics',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AiRoute = AiRouteImport.update({
+  id: '/ai',
+  path: '/ai',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AffiliatesRoute = AffiliatesRouteImport.update({
+  id: '/affiliates',
+  path: '/affiliates',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PortalUserRoute = PortalUserRouteImport.update({
+  id: '/portal/user',
+  path: '/portal/user',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortalSupportRoute = PortalSupportRouteImport.update({
+  id: '/portal/support',
+  path: '/portal/support',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortalSeoRoute = PortalSeoRouteImport.update({
+  id: '/portal/seo',
+  path: '/portal/seo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortalResellerRoute = PortalResellerRouteImport.update({
+  id: '/portal/reseller',
+  path: '/portal/reseller',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortalInfluencerRoute = PortalInfluencerRouteImport.update({
+  id: '/portal/influencer',
+  path: '/portal/influencer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortalFranchiseRoute = PortalFranchiseRouteImport.update({
+  id: '/portal/franchise',
+  path: '/portal/franchise',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortalDevRoute = PortalDevRouteImport.update({
+  id: '/portal/dev',
+  path: '/portal/dev',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortalAuthorRoute = PortalAuthorRouteImport.update({
+  id: '/portal/author',
+  path: '/portal/author',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortalAffiliateRoute = PortalAffiliateRouteImport.update({
+  id: '/portal/affiliate',
+  path: '/portal/affiliate',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AiWorkflowsRoute = AiWorkflowsRouteImport.update({
+  id: '/workflows',
+  path: '/workflows',
+  getParentRoute: () => AiRoute,
+} as any)
+const AiVoiceRoute = AiVoiceRouteImport.update({
+  id: '/voice',
+  path: '/voice',
+  getParentRoute: () => AiRoute,
+} as any)
+const AiSupportRoute = AiSupportRouteImport.update({
+  id: '/support',
+  path: '/support',
+  getParentRoute: () => AiRoute,
+} as any)
+const AiPromptsRoute = AiPromptsRouteImport.update({
+  id: '/prompts',
+  path: '/prompts',
+  getParentRoute: () => AiRoute,
+} as any)
+const AiModelsRoute = AiModelsRouteImport.update({
+  id: '/models',
+  path: '/models',
+  getParentRoute: () => AiRoute,
+} as any)
+const AiBuilderRoute = AiBuilderRouteImport.update({
+  id: '/builder',
+  path: '/builder',
+  getParentRoute: () => AiRoute,
+} as any)
+const AiBotsRoute = AiBotsRouteImport.update({
+  id: '/bots',
+  path: '/bots',
+  getParentRoute: () => AiRoute,
+} as any)
+const AiApiRoute = AiApiRouteImport.update({
+  id: '/api',
+  path: '/api',
+  getParentRoute: () => AiRoute,
+} as any)
+const AiAgentsRoute = AiAgentsRouteImport.update({
+  id: '/agents',
+  path: '/agents',
+  getParentRoute: () => AiRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/affiliates': typeof AffiliatesRoute
+  '/ai': typeof AiRouteWithChildren
+  '/analytics': typeof AnalyticsRoute
+  '/api': typeof ApiRoute
+  '/apk': typeof ApkRoute
+  '/app-analytics': typeof AppAnalyticsRoute
+  '/app-builder': typeof AppBuilderRoute
+  '/assets': typeof AssetsRoute
+  '/audit': typeof AuditRoute
+  '/auth': typeof AuthRoute
+  '/authors': typeof AuthorsRoute
+  '/automation': typeof AutomationRoute
+  '/backup': typeof BackupRoute
+  '/billing': typeof BillingRoute
+  '/books': typeof BooksRoute
+  '/builder': typeof BuilderRoute
+  '/cdn': typeof CdnRoute
+  '/ci': typeof CiRoute
+  '/clients': typeof ClientsRoute
+  '/cloud': typeof CloudRoute
+  '/comms': typeof CommsRoute
+  '/crashes': typeof CrashesRoute
+  '/crm': typeof CrmRoute
+  '/customers': typeof CustomersRoute
+  '/dash-engine': typeof DashEngineRoute
+  '/db': typeof DbRoute
+  '/demos': typeof DemosRoute
+  '/deploy': typeof DeployRoute
+  '/design-system': typeof DesignSystemRoute
+  '/devices': typeof DevicesRoute
+  '/dns': typeof DnsRoute
+  '/docs': typeof DocsRoute
+  '/email': typeof EmailRoute
+  '/enterprise-api': typeof EnterpriseApiRoute
+  '/event-bus': typeof EventBusRoute
+  '/files': typeof FilesRoute
+  '/finance': typeof FinanceRoute
+  '/franchise': typeof FranchiseRoute
+  '/fraud': typeof FraudRoute
+  '/geo': typeof GeoRoute
+  '/git': typeof GitRoute
+  '/hr': typeof HrRoute
+  '/influencers': typeof InfluencersRoute
+  '/knowledge': typeof KnowledgeRoute
+  '/law': typeof LawRoute
+  '/lawyer': typeof LawyerRoute
+  '/lawyer-pro': typeof LawyerProRoute
+  '/licenses': typeof LicensesRoute
+  '/logs': typeof LogsRoute
+  '/marketplace': typeof MarketplaceRoute
+  '/monitoring': typeof MonitoringRoute
+  '/monitoring-core': typeof MonitoringCoreRoute
+  '/notifications': typeof NotificationsRoute
+  '/onboarding': typeof OnboardingRoute
+  '/orders': typeof OrdersRoute
+  '/payments': typeof PaymentsRoute
+  '/payroll': typeof PayrollRoute
+  '/play': typeof PlayRoute
+  '/products': typeof ProductsRoute
+  '/projects': typeof ProjectsRoute
+  '/queue': typeof QueueRoute
+  '/realtime': typeof RealtimeRoute
+  '/remote': typeof RemoteRoute
+  '/reporting': typeof ReportingRoute
+  '/resellers': typeof ResellersRoute
+  '/router': typeof RouterRoute
+  '/saas': typeof SaasRoute
+  '/sales': typeof SalesRoute
+  '/search': typeof SearchRoute
+  '/security': typeof SecurityRoute
+  '/servers': typeof ServersRoute
+  '/settings': typeof SettingsRoute
+  '/sms': typeof SmsRoute
+  '/success': typeof SuccessRoute
+  '/support': typeof SupportRoute
+  '/tasks': typeof TasksRoute
+  '/tenants': typeof TenantsRoute
+  '/tickets': typeof TicketsRoute
+  '/vendors': typeof VendorsRoute
+  '/war-room': typeof WarRoomRoute
+  '/webhooks': typeof WebhooksRoute
+  '/white-label': typeof WhiteLabelRoute
+  '/ai/agents': typeof AiAgentsRoute
+  '/ai/api': typeof AiApiRoute
+  '/ai/bots': typeof AiBotsRoute
+  '/ai/builder': typeof AiBuilderRoute
+  '/ai/models': typeof AiModelsRoute
+  '/ai/prompts': typeof AiPromptsRoute
+  '/ai/support': typeof AiSupportRoute
+  '/ai/voice': typeof AiVoiceRoute
+  '/ai/workflows': typeof AiWorkflowsRoute
+  '/portal/affiliate': typeof PortalAffiliateRoute
+  '/portal/author': typeof PortalAuthorRoute
+  '/portal/dev': typeof PortalDevRoute
+  '/portal/franchise': typeof PortalFranchiseRoute
+  '/portal/influencer': typeof PortalInfluencerRoute
+  '/portal/reseller': typeof PortalResellerRoute
+  '/portal/seo': typeof PortalSeoRoute
+  '/portal/support': typeof PortalSupportRoute
+  '/portal/user': typeof PortalUserRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/affiliates': typeof AffiliatesRoute
+  '/ai': typeof AiRouteWithChildren
+  '/analytics': typeof AnalyticsRoute
+  '/api': typeof ApiRoute
+  '/apk': typeof ApkRoute
+  '/app-analytics': typeof AppAnalyticsRoute
+  '/app-builder': typeof AppBuilderRoute
+  '/assets': typeof AssetsRoute
+  '/audit': typeof AuditRoute
+  '/auth': typeof AuthRoute
+  '/authors': typeof AuthorsRoute
+  '/automation': typeof AutomationRoute
+  '/backup': typeof BackupRoute
+  '/billing': typeof BillingRoute
+  '/books': typeof BooksRoute
+  '/builder': typeof BuilderRoute
+  '/cdn': typeof CdnRoute
+  '/ci': typeof CiRoute
+  '/clients': typeof ClientsRoute
+  '/cloud': typeof CloudRoute
+  '/comms': typeof CommsRoute
+  '/crashes': typeof CrashesRoute
+  '/crm': typeof CrmRoute
+  '/customers': typeof CustomersRoute
+  '/dash-engine': typeof DashEngineRoute
+  '/db': typeof DbRoute
+  '/demos': typeof DemosRoute
+  '/deploy': typeof DeployRoute
+  '/design-system': typeof DesignSystemRoute
+  '/devices': typeof DevicesRoute
+  '/dns': typeof DnsRoute
+  '/docs': typeof DocsRoute
+  '/email': typeof EmailRoute
+  '/enterprise-api': typeof EnterpriseApiRoute
+  '/event-bus': typeof EventBusRoute
+  '/files': typeof FilesRoute
+  '/finance': typeof FinanceRoute
+  '/franchise': typeof FranchiseRoute
+  '/fraud': typeof FraudRoute
+  '/geo': typeof GeoRoute
+  '/git': typeof GitRoute
+  '/hr': typeof HrRoute
+  '/influencers': typeof InfluencersRoute
+  '/knowledge': typeof KnowledgeRoute
+  '/law': typeof LawRoute
+  '/lawyer': typeof LawyerRoute
+  '/lawyer-pro': typeof LawyerProRoute
+  '/licenses': typeof LicensesRoute
+  '/logs': typeof LogsRoute
+  '/marketplace': typeof MarketplaceRoute
+  '/monitoring': typeof MonitoringRoute
+  '/monitoring-core': typeof MonitoringCoreRoute
+  '/notifications': typeof NotificationsRoute
+  '/onboarding': typeof OnboardingRoute
+  '/orders': typeof OrdersRoute
+  '/payments': typeof PaymentsRoute
+  '/payroll': typeof PayrollRoute
+  '/play': typeof PlayRoute
+  '/products': typeof ProductsRoute
+  '/projects': typeof ProjectsRoute
+  '/queue': typeof QueueRoute
+  '/realtime': typeof RealtimeRoute
+  '/remote': typeof RemoteRoute
+  '/reporting': typeof ReportingRoute
+  '/resellers': typeof ResellersRoute
+  '/router': typeof RouterRoute
+  '/saas': typeof SaasRoute
+  '/sales': typeof SalesRoute
+  '/search': typeof SearchRoute
+  '/security': typeof SecurityRoute
+  '/servers': typeof ServersRoute
+  '/settings': typeof SettingsRoute
+  '/sms': typeof SmsRoute
+  '/success': typeof SuccessRoute
+  '/support': typeof SupportRoute
+  '/tasks': typeof TasksRoute
+  '/tenants': typeof TenantsRoute
+  '/tickets': typeof TicketsRoute
+  '/vendors': typeof VendorsRoute
+  '/war-room': typeof WarRoomRoute
+  '/webhooks': typeof WebhooksRoute
+  '/white-label': typeof WhiteLabelRoute
+  '/ai/agents': typeof AiAgentsRoute
+  '/ai/api': typeof AiApiRoute
+  '/ai/bots': typeof AiBotsRoute
+  '/ai/builder': typeof AiBuilderRoute
+  '/ai/models': typeof AiModelsRoute
+  '/ai/prompts': typeof AiPromptsRoute
+  '/ai/support': typeof AiSupportRoute
+  '/ai/voice': typeof AiVoiceRoute
+  '/ai/workflows': typeof AiWorkflowsRoute
+  '/portal/affiliate': typeof PortalAffiliateRoute
+  '/portal/author': typeof PortalAuthorRoute
+  '/portal/dev': typeof PortalDevRoute
+  '/portal/franchise': typeof PortalFranchiseRoute
+  '/portal/influencer': typeof PortalInfluencerRoute
+  '/portal/reseller': typeof PortalResellerRoute
+  '/portal/seo': typeof PortalSeoRoute
+  '/portal/support': typeof PortalSupportRoute
+  '/portal/user': typeof PortalUserRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/affiliates': typeof AffiliatesRoute
+  '/ai': typeof AiRouteWithChildren
+  '/analytics': typeof AnalyticsRoute
+  '/api': typeof ApiRoute
+  '/apk': typeof ApkRoute
+  '/app-analytics': typeof AppAnalyticsRoute
+  '/app-builder': typeof AppBuilderRoute
+  '/assets': typeof AssetsRoute
+  '/audit': typeof AuditRoute
+  '/auth': typeof AuthRoute
+  '/authors': typeof AuthorsRoute
+  '/automation': typeof AutomationRoute
+  '/backup': typeof BackupRoute
+  '/billing': typeof BillingRoute
+  '/books': typeof BooksRoute
+  '/builder': typeof BuilderRoute
+  '/cdn': typeof CdnRoute
+  '/ci': typeof CiRoute
+  '/clients': typeof ClientsRoute
+  '/cloud': typeof CloudRoute
+  '/comms': typeof CommsRoute
+  '/crashes': typeof CrashesRoute
+  '/crm': typeof CrmRoute
+  '/customers': typeof CustomersRoute
+  '/dash-engine': typeof DashEngineRoute
+  '/db': typeof DbRoute
+  '/demos': typeof DemosRoute
+  '/deploy': typeof DeployRoute
+  '/design-system': typeof DesignSystemRoute
+  '/devices': typeof DevicesRoute
+  '/dns': typeof DnsRoute
+  '/docs': typeof DocsRoute
+  '/email': typeof EmailRoute
+  '/enterprise-api': typeof EnterpriseApiRoute
+  '/event-bus': typeof EventBusRoute
+  '/files': typeof FilesRoute
+  '/finance': typeof FinanceRoute
+  '/franchise': typeof FranchiseRoute
+  '/fraud': typeof FraudRoute
+  '/geo': typeof GeoRoute
+  '/git': typeof GitRoute
+  '/hr': typeof HrRoute
+  '/influencers': typeof InfluencersRoute
+  '/knowledge': typeof KnowledgeRoute
+  '/law': typeof LawRoute
+  '/lawyer': typeof LawyerRoute
+  '/lawyer-pro': typeof LawyerProRoute
+  '/licenses': typeof LicensesRoute
+  '/logs': typeof LogsRoute
+  '/marketplace': typeof MarketplaceRoute
+  '/monitoring': typeof MonitoringRoute
+  '/monitoring-core': typeof MonitoringCoreRoute
+  '/notifications': typeof NotificationsRoute
+  '/onboarding': typeof OnboardingRoute
+  '/orders': typeof OrdersRoute
+  '/payments': typeof PaymentsRoute
+  '/payroll': typeof PayrollRoute
+  '/play': typeof PlayRoute
+  '/products': typeof ProductsRoute
+  '/projects': typeof ProjectsRoute
+  '/queue': typeof QueueRoute
+  '/realtime': typeof RealtimeRoute
+  '/remote': typeof RemoteRoute
+  '/reporting': typeof ReportingRoute
+  '/resellers': typeof ResellersRoute
+  '/router': typeof RouterRoute
+  '/saas': typeof SaasRoute
+  '/sales': typeof SalesRoute
+  '/search': typeof SearchRoute
+  '/security': typeof SecurityRoute
+  '/servers': typeof ServersRoute
+  '/settings': typeof SettingsRoute
+  '/sms': typeof SmsRoute
+  '/success': typeof SuccessRoute
+  '/support': typeof SupportRoute
+  '/tasks': typeof TasksRoute
+  '/tenants': typeof TenantsRoute
+  '/tickets': typeof TicketsRoute
+  '/vendors': typeof VendorsRoute
+  '/war-room': typeof WarRoomRoute
+  '/webhooks': typeof WebhooksRoute
+  '/white-label': typeof WhiteLabelRoute
+  '/ai/agents': typeof AiAgentsRoute
+  '/ai/api': typeof AiApiRoute
+  '/ai/bots': typeof AiBotsRoute
+  '/ai/builder': typeof AiBuilderRoute
+  '/ai/models': typeof AiModelsRoute
+  '/ai/prompts': typeof AiPromptsRoute
+  '/ai/support': typeof AiSupportRoute
+  '/ai/voice': typeof AiVoiceRoute
+  '/ai/workflows': typeof AiWorkflowsRoute
+  '/portal/affiliate': typeof PortalAffiliateRoute
+  '/portal/author': typeof PortalAuthorRoute
+  '/portal/dev': typeof PortalDevRoute
+  '/portal/franchise': typeof PortalFranchiseRoute
+  '/portal/influencer': typeof PortalInfluencerRoute
+  '/portal/reseller': typeof PortalResellerRoute
+  '/portal/seo': typeof PortalSeoRoute
+  '/portal/support': typeof PortalSupportRoute
+  '/portal/user': typeof PortalUserRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/affiliates'
+    | '/ai'
+    | '/analytics'
+    | '/api'
+    | '/apk'
+    | '/app-analytics'
+    | '/app-builder'
+    | '/assets'
+    | '/audit'
+    | '/auth'
+    | '/authors'
+    | '/automation'
+    | '/backup'
+    | '/billing'
+    | '/books'
+    | '/builder'
+    | '/cdn'
+    | '/ci'
+    | '/clients'
+    | '/cloud'
+    | '/comms'
+    | '/crashes'
+    | '/crm'
+    | '/customers'
+    | '/dash-engine'
+    | '/db'
+    | '/demos'
+    | '/deploy'
+    | '/design-system'
+    | '/devices'
+    | '/dns'
+    | '/docs'
+    | '/email'
+    | '/enterprise-api'
+    | '/event-bus'
+    | '/files'
+    | '/finance'
+    | '/franchise'
+    | '/fraud'
+    | '/geo'
+    | '/git'
+    | '/hr'
+    | '/influencers'
+    | '/knowledge'
+    | '/law'
+    | '/lawyer'
+    | '/lawyer-pro'
+    | '/licenses'
+    | '/logs'
+    | '/marketplace'
+    | '/monitoring'
+    | '/monitoring-core'
+    | '/notifications'
+    | '/onboarding'
+    | '/orders'
+    | '/payments'
+    | '/payroll'
+    | '/play'
+    | '/products'
+    | '/projects'
+    | '/queue'
+    | '/realtime'
+    | '/remote'
+    | '/reporting'
+    | '/resellers'
+    | '/router'
+    | '/saas'
+    | '/sales'
+    | '/search'
+    | '/security'
+    | '/servers'
+    | '/settings'
+    | '/sms'
+    | '/success'
+    | '/support'
+    | '/tasks'
+    | '/tenants'
+    | '/tickets'
+    | '/vendors'
+    | '/war-room'
+    | '/webhooks'
+    | '/white-label'
+    | '/ai/agents'
+    | '/ai/api'
+    | '/ai/bots'
+    | '/ai/builder'
+    | '/ai/models'
+    | '/ai/prompts'
+    | '/ai/support'
+    | '/ai/voice'
+    | '/ai/workflows'
+    | '/portal/affiliate'
+    | '/portal/author'
+    | '/portal/dev'
+    | '/portal/franchise'
+    | '/portal/influencer'
+    | '/portal/reseller'
+    | '/portal/seo'
+    | '/portal/support'
+    | '/portal/user'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/affiliates'
+    | '/ai'
+    | '/analytics'
+    | '/api'
+    | '/apk'
+    | '/app-analytics'
+    | '/app-builder'
+    | '/assets'
+    | '/audit'
+    | '/auth'
+    | '/authors'
+    | '/automation'
+    | '/backup'
+    | '/billing'
+    | '/books'
+    | '/builder'
+    | '/cdn'
+    | '/ci'
+    | '/clients'
+    | '/cloud'
+    | '/comms'
+    | '/crashes'
+    | '/crm'
+    | '/customers'
+    | '/dash-engine'
+    | '/db'
+    | '/demos'
+    | '/deploy'
+    | '/design-system'
+    | '/devices'
+    | '/dns'
+    | '/docs'
+    | '/email'
+    | '/enterprise-api'
+    | '/event-bus'
+    | '/files'
+    | '/finance'
+    | '/franchise'
+    | '/fraud'
+    | '/geo'
+    | '/git'
+    | '/hr'
+    | '/influencers'
+    | '/knowledge'
+    | '/law'
+    | '/lawyer'
+    | '/lawyer-pro'
+    | '/licenses'
+    | '/logs'
+    | '/marketplace'
+    | '/monitoring'
+    | '/monitoring-core'
+    | '/notifications'
+    | '/onboarding'
+    | '/orders'
+    | '/payments'
+    | '/payroll'
+    | '/play'
+    | '/products'
+    | '/projects'
+    | '/queue'
+    | '/realtime'
+    | '/remote'
+    | '/reporting'
+    | '/resellers'
+    | '/router'
+    | '/saas'
+    | '/sales'
+    | '/search'
+    | '/security'
+    | '/servers'
+    | '/settings'
+    | '/sms'
+    | '/success'
+    | '/support'
+    | '/tasks'
+    | '/tenants'
+    | '/tickets'
+    | '/vendors'
+    | '/war-room'
+    | '/webhooks'
+    | '/white-label'
+    | '/ai/agents'
+    | '/ai/api'
+    | '/ai/bots'
+    | '/ai/builder'
+    | '/ai/models'
+    | '/ai/prompts'
+    | '/ai/support'
+    | '/ai/voice'
+    | '/ai/workflows'
+    | '/portal/affiliate'
+    | '/portal/author'
+    | '/portal/dev'
+    | '/portal/franchise'
+    | '/portal/influencer'
+    | '/portal/reseller'
+    | '/portal/seo'
+    | '/portal/support'
+    | '/portal/user'
+  id:
+    | '__root__'
+    | '/'
+    | '/affiliates'
+    | '/ai'
+    | '/analytics'
+    | '/api'
+    | '/apk'
+    | '/app-analytics'
+    | '/app-builder'
+    | '/assets'
+    | '/audit'
+    | '/auth'
+    | '/authors'
+    | '/automation'
+    | '/backup'
+    | '/billing'
+    | '/books'
+    | '/builder'
+    | '/cdn'
+    | '/ci'
+    | '/clients'
+    | '/cloud'
+    | '/comms'
+    | '/crashes'
+    | '/crm'
+    | '/customers'
+    | '/dash-engine'
+    | '/db'
+    | '/demos'
+    | '/deploy'
+    | '/design-system'
+    | '/devices'
+    | '/dns'
+    | '/docs'
+    | '/email'
+    | '/enterprise-api'
+    | '/event-bus'
+    | '/files'
+    | '/finance'
+    | '/franchise'
+    | '/fraud'
+    | '/geo'
+    | '/git'
+    | '/hr'
+    | '/influencers'
+    | '/knowledge'
+    | '/law'
+    | '/lawyer'
+    | '/lawyer-pro'
+    | '/licenses'
+    | '/logs'
+    | '/marketplace'
+    | '/monitoring'
+    | '/monitoring-core'
+    | '/notifications'
+    | '/onboarding'
+    | '/orders'
+    | '/payments'
+    | '/payroll'
+    | '/play'
+    | '/products'
+    | '/projects'
+    | '/queue'
+    | '/realtime'
+    | '/remote'
+    | '/reporting'
+    | '/resellers'
+    | '/router'
+    | '/saas'
+    | '/sales'
+    | '/search'
+    | '/security'
+    | '/servers'
+    | '/settings'
+    | '/sms'
+    | '/success'
+    | '/support'
+    | '/tasks'
+    | '/tenants'
+    | '/tickets'
+    | '/vendors'
+    | '/war-room'
+    | '/webhooks'
+    | '/white-label'
+    | '/ai/agents'
+    | '/ai/api'
+    | '/ai/bots'
+    | '/ai/builder'
+    | '/ai/models'
+    | '/ai/prompts'
+    | '/ai/support'
+    | '/ai/voice'
+    | '/ai/workflows'
+    | '/portal/affiliate'
+    | '/portal/author'
+    | '/portal/dev'
+    | '/portal/franchise'
+    | '/portal/influencer'
+    | '/portal/reseller'
+    | '/portal/seo'
+    | '/portal/support'
+    | '/portal/user'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AffiliatesRoute: typeof AffiliatesRoute
+  AiRoute: typeof AiRouteWithChildren
+  AnalyticsRoute: typeof AnalyticsRoute
+  ApiRoute: typeof ApiRoute
+  ApkRoute: typeof ApkRoute
+  AppAnalyticsRoute: typeof AppAnalyticsRoute
+  AppBuilderRoute: typeof AppBuilderRoute
+  AssetsRoute: typeof AssetsRoute
+  AuditRoute: typeof AuditRoute
+  AuthRoute: typeof AuthRoute
+  AuthorsRoute: typeof AuthorsRoute
+  AutomationRoute: typeof AutomationRoute
+  BackupRoute: typeof BackupRoute
+  BillingRoute: typeof BillingRoute
+  BooksRoute: typeof BooksRoute
+  BuilderRoute: typeof BuilderRoute
+  CdnRoute: typeof CdnRoute
+  CiRoute: typeof CiRoute
+  ClientsRoute: typeof ClientsRoute
+  CloudRoute: typeof CloudRoute
+  CommsRoute: typeof CommsRoute
+  CrashesRoute: typeof CrashesRoute
+  CrmRoute: typeof CrmRoute
+  CustomersRoute: typeof CustomersRoute
+  DashEngineRoute: typeof DashEngineRoute
+  DbRoute: typeof DbRoute
+  DemosRoute: typeof DemosRoute
+  DeployRoute: typeof DeployRoute
+  DesignSystemRoute: typeof DesignSystemRoute
+  DevicesRoute: typeof DevicesRoute
+  DnsRoute: typeof DnsRoute
+  DocsRoute: typeof DocsRoute
+  EmailRoute: typeof EmailRoute
+  EnterpriseApiRoute: typeof EnterpriseApiRoute
+  EventBusRoute: typeof EventBusRoute
+  FilesRoute: typeof FilesRoute
+  FinanceRoute: typeof FinanceRoute
+  FranchiseRoute: typeof FranchiseRoute
+  FraudRoute: typeof FraudRoute
+  GeoRoute: typeof GeoRoute
+  GitRoute: typeof GitRoute
+  HrRoute: typeof HrRoute
+  InfluencersRoute: typeof InfluencersRoute
+  KnowledgeRoute: typeof KnowledgeRoute
+  LawRoute: typeof LawRoute
+  LawyerRoute: typeof LawyerRoute
+  LawyerProRoute: typeof LawyerProRoute
+  LicensesRoute: typeof LicensesRoute
+  LogsRoute: typeof LogsRoute
+  MarketplaceRoute: typeof MarketplaceRoute
+  MonitoringRoute: typeof MonitoringRoute
+  MonitoringCoreRoute: typeof MonitoringCoreRoute
+  NotificationsRoute: typeof NotificationsRoute
+  OnboardingRoute: typeof OnboardingRoute
+  OrdersRoute: typeof OrdersRoute
+  PaymentsRoute: typeof PaymentsRoute
+  PayrollRoute: typeof PayrollRoute
+  PlayRoute: typeof PlayRoute
+  ProductsRoute: typeof ProductsRoute
+  ProjectsRoute: typeof ProjectsRoute
+  QueueRoute: typeof QueueRoute
+  RealtimeRoute: typeof RealtimeRoute
+  RemoteRoute: typeof RemoteRoute
+  ReportingRoute: typeof ReportingRoute
+  ResellersRoute: typeof ResellersRoute
+  RouterRoute: typeof RouterRoute
+  SaasRoute: typeof SaasRoute
+  SalesRoute: typeof SalesRoute
+  SearchRoute: typeof SearchRoute
+  SecurityRoute: typeof SecurityRoute
+  ServersRoute: typeof ServersRoute
+  SettingsRoute: typeof SettingsRoute
+  SmsRoute: typeof SmsRoute
+  SuccessRoute: typeof SuccessRoute
+  SupportRoute: typeof SupportRoute
+  TasksRoute: typeof TasksRoute
+  TenantsRoute: typeof TenantsRoute
+  TicketsRoute: typeof TicketsRoute
+  VendorsRoute: typeof VendorsRoute
+  WarRoomRoute: typeof WarRoomRoute
+  WebhooksRoute: typeof WebhooksRoute
+  WhiteLabelRoute: typeof WhiteLabelRoute
+  PortalAffiliateRoute: typeof PortalAffiliateRoute
+  PortalAuthorRoute: typeof PortalAuthorRoute
+  PortalDevRoute: typeof PortalDevRoute
+  PortalFranchiseRoute: typeof PortalFranchiseRoute
+  PortalInfluencerRoute: typeof PortalInfluencerRoute
+  PortalResellerRoute: typeof PortalResellerRoute
+  PortalSeoRoute: typeof PortalSeoRoute
+  PortalSupportRoute: typeof PortalSupportRoute
+  PortalUserRoute: typeof PortalUserRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/white-label': {
+      id: '/white-label'
+      path: '/white-label'
+      fullPath: '/white-label'
+      preLoaderRoute: typeof WhiteLabelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/webhooks': {
+      id: '/webhooks'
+      path: '/webhooks'
+      fullPath: '/webhooks'
+      preLoaderRoute: typeof WebhooksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/war-room': {
+      id: '/war-room'
+      path: '/war-room'
+      fullPath: '/war-room'
+      preLoaderRoute: typeof WarRoomRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vendors': {
+      id: '/vendors'
+      path: '/vendors'
+      fullPath: '/vendors'
+      preLoaderRoute: typeof VendorsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tickets': {
+      id: '/tickets'
+      path: '/tickets'
+      fullPath: '/tickets'
+      preLoaderRoute: typeof TicketsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tenants': {
+      id: '/tenants'
+      path: '/tenants'
+      fullPath: '/tenants'
+      preLoaderRoute: typeof TenantsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tasks': {
+      id: '/tasks'
+      path: '/tasks'
+      fullPath: '/tasks'
+      preLoaderRoute: typeof TasksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/support': {
+      id: '/support'
+      path: '/support'
+      fullPath: '/support'
+      preLoaderRoute: typeof SupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/success': {
+      id: '/success'
+      path: '/success'
+      fullPath: '/success'
+      preLoaderRoute: typeof SuccessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sms': {
+      id: '/sms'
+      path: '/sms'
+      fullPath: '/sms'
+      preLoaderRoute: typeof SmsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/settings': {
+      id: '/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof SettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/servers': {
+      id: '/servers'
+      path: '/servers'
+      fullPath: '/servers'
+      preLoaderRoute: typeof ServersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/security': {
+      id: '/security'
+      path: '/security'
+      fullPath: '/security'
+      preLoaderRoute: typeof SecurityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/search': {
+      id: '/search'
+      path: '/search'
+      fullPath: '/search'
+      preLoaderRoute: typeof SearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sales': {
+      id: '/sales'
+      path: '/sales'
+      fullPath: '/sales'
+      preLoaderRoute: typeof SalesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/saas': {
+      id: '/saas'
+      path: '/saas'
+      fullPath: '/saas'
+      preLoaderRoute: typeof SaasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/router': {
+      id: '/router'
+      path: '/router'
+      fullPath: '/router'
+      preLoaderRoute: typeof RouterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resellers': {
+      id: '/resellers'
+      path: '/resellers'
+      fullPath: '/resellers'
+      preLoaderRoute: typeof ResellersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reporting': {
+      id: '/reporting'
+      path: '/reporting'
+      fullPath: '/reporting'
+      preLoaderRoute: typeof ReportingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/remote': {
+      id: '/remote'
+      path: '/remote'
+      fullPath: '/remote'
+      preLoaderRoute: typeof RemoteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/realtime': {
+      id: '/realtime'
+      path: '/realtime'
+      fullPath: '/realtime'
+      preLoaderRoute: typeof RealtimeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/queue': {
+      id: '/queue'
+      path: '/queue'
+      fullPath: '/queue'
+      preLoaderRoute: typeof QueueRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects': {
+      id: '/projects'
+      path: '/projects'
+      fullPath: '/projects'
+      preLoaderRoute: typeof ProjectsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products': {
+      id: '/products'
+      path: '/products'
+      fullPath: '/products'
+      preLoaderRoute: typeof ProductsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/play': {
+      id: '/play'
+      path: '/play'
+      fullPath: '/play'
+      preLoaderRoute: typeof PlayRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/payroll': {
+      id: '/payroll'
+      path: '/payroll'
+      fullPath: '/payroll'
+      preLoaderRoute: typeof PayrollRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/payments': {
+      id: '/payments'
+      path: '/payments'
+      fullPath: '/payments'
+      preLoaderRoute: typeof PaymentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/orders': {
+      id: '/orders'
+      path: '/orders'
+      fullPath: '/orders'
+      preLoaderRoute: typeof OrdersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/onboarding': {
+      id: '/onboarding'
+      path: '/onboarding'
+      fullPath: '/onboarding'
+      preLoaderRoute: typeof OnboardingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/notifications': {
+      id: '/notifications'
+      path: '/notifications'
+      fullPath: '/notifications'
+      preLoaderRoute: typeof NotificationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/monitoring-core': {
+      id: '/monitoring-core'
+      path: '/monitoring-core'
+      fullPath: '/monitoring-core'
+      preLoaderRoute: typeof MonitoringCoreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/monitoring': {
+      id: '/monitoring'
+      path: '/monitoring'
+      fullPath: '/monitoring'
+      preLoaderRoute: typeof MonitoringRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/marketplace': {
+      id: '/marketplace'
+      path: '/marketplace'
+      fullPath: '/marketplace'
+      preLoaderRoute: typeof MarketplaceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/logs': {
+      id: '/logs'
+      path: '/logs'
+      fullPath: '/logs'
+      preLoaderRoute: typeof LogsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/licenses': {
+      id: '/licenses'
+      path: '/licenses'
+      fullPath: '/licenses'
+      preLoaderRoute: typeof LicensesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lawyer-pro': {
+      id: '/lawyer-pro'
+      path: '/lawyer-pro'
+      fullPath: '/lawyer-pro'
+      preLoaderRoute: typeof LawyerProRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lawyer': {
+      id: '/lawyer'
+      path: '/lawyer'
+      fullPath: '/lawyer'
+      preLoaderRoute: typeof LawyerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/law': {
+      id: '/law'
+      path: '/law'
+      fullPath: '/law'
+      preLoaderRoute: typeof LawRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/knowledge': {
+      id: '/knowledge'
+      path: '/knowledge'
+      fullPath: '/knowledge'
+      preLoaderRoute: typeof KnowledgeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/influencers': {
+      id: '/influencers'
+      path: '/influencers'
+      fullPath: '/influencers'
+      preLoaderRoute: typeof InfluencersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hr': {
+      id: '/hr'
+      path: '/hr'
+      fullPath: '/hr'
+      preLoaderRoute: typeof HrRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/git': {
+      id: '/git'
+      path: '/git'
+      fullPath: '/git'
+      preLoaderRoute: typeof GitRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/geo': {
+      id: '/geo'
+      path: '/geo'
+      fullPath: '/geo'
+      preLoaderRoute: typeof GeoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fraud': {
+      id: '/fraud'
+      path: '/fraud'
+      fullPath: '/fraud'
+      preLoaderRoute: typeof FraudRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/franchise': {
+      id: '/franchise'
+      path: '/franchise'
+      fullPath: '/franchise'
+      preLoaderRoute: typeof FranchiseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/finance': {
+      id: '/finance'
+      path: '/finance'
+      fullPath: '/finance'
+      preLoaderRoute: typeof FinanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/files': {
+      id: '/files'
+      path: '/files'
+      fullPath: '/files'
+      preLoaderRoute: typeof FilesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/event-bus': {
+      id: '/event-bus'
+      path: '/event-bus'
+      fullPath: '/event-bus'
+      preLoaderRoute: typeof EventBusRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/enterprise-api': {
+      id: '/enterprise-api'
+      path: '/enterprise-api'
+      fullPath: '/enterprise-api'
+      preLoaderRoute: typeof EnterpriseApiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/email': {
+      id: '/email'
+      path: '/email'
+      fullPath: '/email'
+      preLoaderRoute: typeof EmailRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/docs': {
+      id: '/docs'
+      path: '/docs'
+      fullPath: '/docs'
+      preLoaderRoute: typeof DocsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dns': {
+      id: '/dns'
+      path: '/dns'
+      fullPath: '/dns'
+      preLoaderRoute: typeof DnsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/devices': {
+      id: '/devices'
+      path: '/devices'
+      fullPath: '/devices'
+      preLoaderRoute: typeof DevicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/design-system': {
+      id: '/design-system'
+      path: '/design-system'
+      fullPath: '/design-system'
+      preLoaderRoute: typeof DesignSystemRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/deploy': {
+      id: '/deploy'
+      path: '/deploy'
+      fullPath: '/deploy'
+      preLoaderRoute: typeof DeployRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/demos': {
+      id: '/demos'
+      path: '/demos'
+      fullPath: '/demos'
+      preLoaderRoute: typeof DemosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/db': {
+      id: '/db'
+      path: '/db'
+      fullPath: '/db'
+      preLoaderRoute: typeof DbRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dash-engine': {
+      id: '/dash-engine'
+      path: '/dash-engine'
+      fullPath: '/dash-engine'
+      preLoaderRoute: typeof DashEngineRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/customers': {
+      id: '/customers'
+      path: '/customers'
+      fullPath: '/customers'
+      preLoaderRoute: typeof CustomersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/crm': {
+      id: '/crm'
+      path: '/crm'
+      fullPath: '/crm'
+      preLoaderRoute: typeof CrmRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/crashes': {
+      id: '/crashes'
+      path: '/crashes'
+      fullPath: '/crashes'
+      preLoaderRoute: typeof CrashesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/comms': {
+      id: '/comms'
+      path: '/comms'
+      fullPath: '/comms'
+      preLoaderRoute: typeof CommsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cloud': {
+      id: '/cloud'
+      path: '/cloud'
+      fullPath: '/cloud'
+      preLoaderRoute: typeof CloudRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/clients': {
+      id: '/clients'
+      path: '/clients'
+      fullPath: '/clients'
+      preLoaderRoute: typeof ClientsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ci': {
+      id: '/ci'
+      path: '/ci'
+      fullPath: '/ci'
+      preLoaderRoute: typeof CiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cdn': {
+      id: '/cdn'
+      path: '/cdn'
+      fullPath: '/cdn'
+      preLoaderRoute: typeof CdnRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/builder': {
+      id: '/builder'
+      path: '/builder'
+      fullPath: '/builder'
+      preLoaderRoute: typeof BuilderRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/books': {
+      id: '/books'
+      path: '/books'
+      fullPath: '/books'
+      preLoaderRoute: typeof BooksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/billing': {
+      id: '/billing'
+      path: '/billing'
+      fullPath: '/billing'
+      preLoaderRoute: typeof BillingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/backup': {
+      id: '/backup'
+      path: '/backup'
+      fullPath: '/backup'
+      preLoaderRoute: typeof BackupRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/automation': {
+      id: '/automation'
+      path: '/automation'
+      fullPath: '/automation'
+      preLoaderRoute: typeof AutomationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/authors': {
+      id: '/authors'
+      path: '/authors'
+      fullPath: '/authors'
+      preLoaderRoute: typeof AuthorsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/auth': {
+      id: '/auth'
+      path: '/auth'
+      fullPath: '/auth'
+      preLoaderRoute: typeof AuthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/audit': {
+      id: '/audit'
+      path: '/audit'
+      fullPath: '/audit'
+      preLoaderRoute: typeof AuditRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/assets': {
+      id: '/assets'
+      path: '/assets'
+      fullPath: '/assets'
+      preLoaderRoute: typeof AssetsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/app-builder': {
+      id: '/app-builder'
+      path: '/app-builder'
+      fullPath: '/app-builder'
+      preLoaderRoute: typeof AppBuilderRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/app-analytics': {
+      id: '/app-analytics'
+      path: '/app-analytics'
+      fullPath: '/app-analytics'
+      preLoaderRoute: typeof AppAnalyticsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/apk': {
+      id: '/apk'
+      path: '/apk'
+      fullPath: '/apk'
+      preLoaderRoute: typeof ApkRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api': {
+      id: '/api'
+      path: '/api'
+      fullPath: '/api'
+      preLoaderRoute: typeof ApiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/analytics': {
+      id: '/analytics'
+      path: '/analytics'
+      fullPath: '/analytics'
+      preLoaderRoute: typeof AnalyticsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ai': {
+      id: '/ai'
+      path: '/ai'
+      fullPath: '/ai'
+      preLoaderRoute: typeof AiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/affiliates': {
+      id: '/affiliates'
+      path: '/affiliates'
+      fullPath: '/affiliates'
+      preLoaderRoute: typeof AffiliatesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,11 +1917,254 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/portal/user': {
+      id: '/portal/user'
+      path: '/portal/user'
+      fullPath: '/portal/user'
+      preLoaderRoute: typeof PortalUserRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portal/support': {
+      id: '/portal/support'
+      path: '/portal/support'
+      fullPath: '/portal/support'
+      preLoaderRoute: typeof PortalSupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portal/seo': {
+      id: '/portal/seo'
+      path: '/portal/seo'
+      fullPath: '/portal/seo'
+      preLoaderRoute: typeof PortalSeoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portal/reseller': {
+      id: '/portal/reseller'
+      path: '/portal/reseller'
+      fullPath: '/portal/reseller'
+      preLoaderRoute: typeof PortalResellerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portal/influencer': {
+      id: '/portal/influencer'
+      path: '/portal/influencer'
+      fullPath: '/portal/influencer'
+      preLoaderRoute: typeof PortalInfluencerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portal/franchise': {
+      id: '/portal/franchise'
+      path: '/portal/franchise'
+      fullPath: '/portal/franchise'
+      preLoaderRoute: typeof PortalFranchiseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portal/dev': {
+      id: '/portal/dev'
+      path: '/portal/dev'
+      fullPath: '/portal/dev'
+      preLoaderRoute: typeof PortalDevRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portal/author': {
+      id: '/portal/author'
+      path: '/portal/author'
+      fullPath: '/portal/author'
+      preLoaderRoute: typeof PortalAuthorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portal/affiliate': {
+      id: '/portal/affiliate'
+      path: '/portal/affiliate'
+      fullPath: '/portal/affiliate'
+      preLoaderRoute: typeof PortalAffiliateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ai/workflows': {
+      id: '/ai/workflows'
+      path: '/workflows'
+      fullPath: '/ai/workflows'
+      preLoaderRoute: typeof AiWorkflowsRouteImport
+      parentRoute: typeof AiRoute
+    }
+    '/ai/voice': {
+      id: '/ai/voice'
+      path: '/voice'
+      fullPath: '/ai/voice'
+      preLoaderRoute: typeof AiVoiceRouteImport
+      parentRoute: typeof AiRoute
+    }
+    '/ai/support': {
+      id: '/ai/support'
+      path: '/support'
+      fullPath: '/ai/support'
+      preLoaderRoute: typeof AiSupportRouteImport
+      parentRoute: typeof AiRoute
+    }
+    '/ai/prompts': {
+      id: '/ai/prompts'
+      path: '/prompts'
+      fullPath: '/ai/prompts'
+      preLoaderRoute: typeof AiPromptsRouteImport
+      parentRoute: typeof AiRoute
+    }
+    '/ai/models': {
+      id: '/ai/models'
+      path: '/models'
+      fullPath: '/ai/models'
+      preLoaderRoute: typeof AiModelsRouteImport
+      parentRoute: typeof AiRoute
+    }
+    '/ai/builder': {
+      id: '/ai/builder'
+      path: '/builder'
+      fullPath: '/ai/builder'
+      preLoaderRoute: typeof AiBuilderRouteImport
+      parentRoute: typeof AiRoute
+    }
+    '/ai/bots': {
+      id: '/ai/bots'
+      path: '/bots'
+      fullPath: '/ai/bots'
+      preLoaderRoute: typeof AiBotsRouteImport
+      parentRoute: typeof AiRoute
+    }
+    '/ai/api': {
+      id: '/ai/api'
+      path: '/api'
+      fullPath: '/ai/api'
+      preLoaderRoute: typeof AiApiRouteImport
+      parentRoute: typeof AiRoute
+    }
+    '/ai/agents': {
+      id: '/ai/agents'
+      path: '/agents'
+      fullPath: '/ai/agents'
+      preLoaderRoute: typeof AiAgentsRouteImport
+      parentRoute: typeof AiRoute
+    }
   }
 }
 
+interface AiRouteChildren {
+  AiAgentsRoute: typeof AiAgentsRoute
+  AiApiRoute: typeof AiApiRoute
+  AiBotsRoute: typeof AiBotsRoute
+  AiBuilderRoute: typeof AiBuilderRoute
+  AiModelsRoute: typeof AiModelsRoute
+  AiPromptsRoute: typeof AiPromptsRoute
+  AiSupportRoute: typeof AiSupportRoute
+  AiVoiceRoute: typeof AiVoiceRoute
+  AiWorkflowsRoute: typeof AiWorkflowsRoute
+}
+
+const AiRouteChildren: AiRouteChildren = {
+  AiAgentsRoute: AiAgentsRoute,
+  AiApiRoute: AiApiRoute,
+  AiBotsRoute: AiBotsRoute,
+  AiBuilderRoute: AiBuilderRoute,
+  AiModelsRoute: AiModelsRoute,
+  AiPromptsRoute: AiPromptsRoute,
+  AiSupportRoute: AiSupportRoute,
+  AiVoiceRoute: AiVoiceRoute,
+  AiWorkflowsRoute: AiWorkflowsRoute,
+}
+
+const AiRouteWithChildren = AiRoute._addFileChildren(AiRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AffiliatesRoute: AffiliatesRoute,
+  AiRoute: AiRouteWithChildren,
+  AnalyticsRoute: AnalyticsRoute,
+  ApiRoute: ApiRoute,
+  ApkRoute: ApkRoute,
+  AppAnalyticsRoute: AppAnalyticsRoute,
+  AppBuilderRoute: AppBuilderRoute,
+  AssetsRoute: AssetsRoute,
+  AuditRoute: AuditRoute,
+  AuthRoute: AuthRoute,
+  AuthorsRoute: AuthorsRoute,
+  AutomationRoute: AutomationRoute,
+  BackupRoute: BackupRoute,
+  BillingRoute: BillingRoute,
+  BooksRoute: BooksRoute,
+  BuilderRoute: BuilderRoute,
+  CdnRoute: CdnRoute,
+  CiRoute: CiRoute,
+  ClientsRoute: ClientsRoute,
+  CloudRoute: CloudRoute,
+  CommsRoute: CommsRoute,
+  CrashesRoute: CrashesRoute,
+  CrmRoute: CrmRoute,
+  CustomersRoute: CustomersRoute,
+  DashEngineRoute: DashEngineRoute,
+  DbRoute: DbRoute,
+  DemosRoute: DemosRoute,
+  DeployRoute: DeployRoute,
+  DesignSystemRoute: DesignSystemRoute,
+  DevicesRoute: DevicesRoute,
+  DnsRoute: DnsRoute,
+  DocsRoute: DocsRoute,
+  EmailRoute: EmailRoute,
+  EnterpriseApiRoute: EnterpriseApiRoute,
+  EventBusRoute: EventBusRoute,
+  FilesRoute: FilesRoute,
+  FinanceRoute: FinanceRoute,
+  FranchiseRoute: FranchiseRoute,
+  FraudRoute: FraudRoute,
+  GeoRoute: GeoRoute,
+  GitRoute: GitRoute,
+  HrRoute: HrRoute,
+  InfluencersRoute: InfluencersRoute,
+  KnowledgeRoute: KnowledgeRoute,
+  LawRoute: LawRoute,
+  LawyerRoute: LawyerRoute,
+  LawyerProRoute: LawyerProRoute,
+  LicensesRoute: LicensesRoute,
+  LogsRoute: LogsRoute,
+  MarketplaceRoute: MarketplaceRoute,
+  MonitoringRoute: MonitoringRoute,
+  MonitoringCoreRoute: MonitoringCoreRoute,
+  NotificationsRoute: NotificationsRoute,
+  OnboardingRoute: OnboardingRoute,
+  OrdersRoute: OrdersRoute,
+  PaymentsRoute: PaymentsRoute,
+  PayrollRoute: PayrollRoute,
+  PlayRoute: PlayRoute,
+  ProductsRoute: ProductsRoute,
+  ProjectsRoute: ProjectsRoute,
+  QueueRoute: QueueRoute,
+  RealtimeRoute: RealtimeRoute,
+  RemoteRoute: RemoteRoute,
+  ReportingRoute: ReportingRoute,
+  ResellersRoute: ResellersRoute,
+  RouterRoute: RouterRoute,
+  SaasRoute: SaasRoute,
+  SalesRoute: SalesRoute,
+  SearchRoute: SearchRoute,
+  SecurityRoute: SecurityRoute,
+  ServersRoute: ServersRoute,
+  SettingsRoute: SettingsRoute,
+  SmsRoute: SmsRoute,
+  SuccessRoute: SuccessRoute,
+  SupportRoute: SupportRoute,
+  TasksRoute: TasksRoute,
+  TenantsRoute: TenantsRoute,
+  TicketsRoute: TicketsRoute,
+  VendorsRoute: VendorsRoute,
+  WarRoomRoute: WarRoomRoute,
+  WebhooksRoute: WebhooksRoute,
+  WhiteLabelRoute: WhiteLabelRoute,
+  PortalAffiliateRoute: PortalAffiliateRoute,
+  PortalAuthorRoute: PortalAuthorRoute,
+  PortalDevRoute: PortalDevRoute,
+  PortalFranchiseRoute: PortalFranchiseRoute,
+  PortalInfluencerRoute: PortalInfluencerRoute,
+  PortalResellerRoute: PortalResellerRoute,
+  PortalSeoRoute: PortalSeoRoute,
+  PortalSupportRoute: PortalSupportRoute,
+  PortalUserRoute: PortalUserRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
