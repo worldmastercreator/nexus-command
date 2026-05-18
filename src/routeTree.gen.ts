@@ -101,6 +101,76 @@ import { Route as PortalFranchiseRouteImport } from './routes/portal.franchise'
 import { Route as PortalDevRouteImport } from './routes/portal.dev'
 import { Route as PortalAuthorRouteImport } from './routes/portal.author'
 import { Route as PortalAffiliateRouteImport } from './routes/portal.affiliate'
+import { Route as HrSettingsRouteImport } from './routes/hr.settings'
+import { Route as HrPerformanceRouteImport } from './routes/hr.performance'
+import { Route as HrLeaveRouteImport } from './routes/hr.leave'
+import { Route as HrEmployeesRouteImport } from './routes/hr.employees'
+import { Route as HrDocumentsSharedRouteImport } from './routes/hr.documents-shared'
+import { Route as HrDocumentsRouteImport } from './routes/hr.documents'
+import { Route as HrDashboardRouteImport } from './routes/hr.dashboard'
+import { Route as HrCompanyRouteImport } from './routes/hr.company'
+import { Route as HrAuthRouteImport } from './routes/hr.auth'
+import { Route as HrAttendanceRouteImport } from './routes/hr.attendance'
+import { Route as HrAdminRouteImport } from './routes/hr.admin'
+import { Route as CampaignWireframeRouteImport } from './routes/campaign.wireframe'
+import { Route as CampaignWhiteLabelRouteImport } from './routes/campaign.white-label'
+import { Route as CampaignVotersRouteImport } from './routes/campaign.voters'
+import { Route as CampaignVoterDashboardRouteImport } from './routes/campaign.voter-dashboard'
+import { Route as CampaignVolunteerRouteImport } from './routes/campaign.volunteer'
+import { Route as CampaignUnifiedRouteImport } from './routes/campaign.unified'
+import { Route as CampaignTransportRouteImport } from './routes/campaign.transport'
+import { Route as CampaignTechStackRouteImport } from './routes/campaign.tech-stack'
+import { Route as CampaignSuperAdminRouteImport } from './routes/campaign.super-admin'
+import { Route as CampaignSocialRouteImport } from './routes/campaign.social'
+import { Route as CampaignSettingsRouteImport } from './routes/campaign.settings'
+import { Route as CampaignSecurityMatrixRouteImport } from './routes/campaign.security-matrix'
+import { Route as CampaignRoleSelectRouteImport } from './routes/campaign.role-select'
+import { Route as CampaignRoleDashboardRouteImport } from './routes/campaign.role-dashboard'
+import { Route as CampaignResultsKrRouteImport } from './routes/campaign.results-kr'
+import { Route as CampaignResultDayRouteImport } from './routes/campaign.result-day'
+import { Route as CampaignReportsRouteImport } from './routes/campaign.reports'
+import { Route as CampaignPostElectionRouteImport } from './routes/campaign.post-election'
+import { Route as CampaignPollDayRouteImport } from './routes/campaign.poll-day'
+import { Route as CampaignPaRouteImport } from './routes/campaign.pa'
+import { Route as CampaignMessagingRouteImport } from './routes/campaign.messaging'
+import { Route as CampaignMediaRouteImport } from './routes/campaign.media'
+import { Route as CampaignMasterFlowRouteImport } from './routes/campaign.master-flow'
+import { Route as CampaignManagerRouteImport } from './routes/campaign.manager'
+import { Route as CampaignLoginShowcaseRouteImport } from './routes/campaign.login-showcase'
+import { Route as CampaignLeaderRouteImport } from './routes/campaign.leader'
+import { Route as CampaignJourneyRouteImport } from './routes/campaign.journey'
+import { Route as CampaignIntelligenceRouteImport } from './routes/campaign.intelligence'
+import { Route as CampaignHeroShowcaseRouteImport } from './routes/campaign.hero-showcase'
+import { Route as CampaignFinanceRouteImport } from './routes/campaign.finance'
+import { Route as CampaignFigmaRouteImport } from './routes/campaign.figma'
+import { Route as CampaignEventsRouteImport } from './routes/campaign.events'
+import { Route as CampaignErdRouteImport } from './routes/campaign.erd'
+import { Route as CampaignDriverRouteImport } from './routes/campaign.driver'
+import { Route as CampaignDoorToDoorRouteImport } from './routes/campaign.door-to-door'
+import { Route as CampaignDonationsRouteImport } from './routes/campaign.donations'
+import { Route as CampaignDeploymentRouteImport } from './routes/campaign.deployment'
+import { Route as CampaignDeckRouteImport } from './routes/campaign.deck'
+import { Route as CampaignDashboardRouteImport } from './routes/campaign.dashboard'
+import { Route as CampaignCreativeRouteImport } from './routes/campaign.creative'
+import { Route as CampaignControlShowcaseRouteImport } from './routes/campaign.control-showcase'
+import { Route as CampaignControlRoomRouteImport } from './routes/campaign.control-room'
+import { Route as CampaignConstituencyRouteImport } from './routes/campaign.constituency'
+import { Route as CampaignCollegeRouteImport } from './routes/campaign.college'
+import { Route as CampaignCasteAnalyticsRouteImport } from './routes/campaign.caste-analytics'
+import { Route as CampaignCandidateSetupRouteImport } from './routes/campaign.candidate-setup'
+import { Route as CampaignCandidateResultsRouteImport } from './routes/campaign.candidate-results'
+import { Route as CampaignCandidateMobileRouteImport } from './routes/campaign.candidate-mobile'
+import { Route as CampaignCameramanRouteImport } from './routes/campaign.cameraman'
+import { Route as CampaignCalendarRouteImport } from './routes/campaign.calendar'
+import { Route as CampaignBoothsRouteImport } from './routes/campaign.booths'
+import { Route as CampaignBoothMapRouteImport } from './routes/campaign.booth-map'
+import { Route as CampaignAuthRouteImport } from './routes/campaign.auth'
+import { Route as CampaignAreaStatusRouteImport } from './routes/campaign.area-status'
+import { Route as CampaignApiFlowRouteImport } from './routes/campaign.api-flow'
+import { Route as CampaignAnalyticsRouteImport } from './routes/campaign.analytics'
+import { Route as CampaignAiPredictionRouteImport } from './routes/campaign.ai-prediction'
+import { Route as CampaignAdminRouteImport } from './routes/campaign.admin'
+import { Route as CampaignAccountRouteImport } from './routes/campaign.account'
 import { Route as AiWorkflowsRouteImport } from './routes/ai.workflows'
 import { Route as AiVoiceRouteImport } from './routes/ai.voice'
 import { Route as AiSupportRouteImport } from './routes/ai.support'
@@ -571,6 +641,357 @@ const PortalAffiliateRoute = PortalAffiliateRouteImport.update({
   path: '/portal/affiliate',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HrSettingsRoute = HrSettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => HrRoute,
+} as any)
+const HrPerformanceRoute = HrPerformanceRouteImport.update({
+  id: '/performance',
+  path: '/performance',
+  getParentRoute: () => HrRoute,
+} as any)
+const HrLeaveRoute = HrLeaveRouteImport.update({
+  id: '/leave',
+  path: '/leave',
+  getParentRoute: () => HrRoute,
+} as any)
+const HrEmployeesRoute = HrEmployeesRouteImport.update({
+  id: '/employees',
+  path: '/employees',
+  getParentRoute: () => HrRoute,
+} as any)
+const HrDocumentsSharedRoute = HrDocumentsSharedRouteImport.update({
+  id: '/documents-shared',
+  path: '/documents-shared',
+  getParentRoute: () => HrRoute,
+} as any)
+const HrDocumentsRoute = HrDocumentsRouteImport.update({
+  id: '/documents',
+  path: '/documents',
+  getParentRoute: () => HrRoute,
+} as any)
+const HrDashboardRoute = HrDashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => HrRoute,
+} as any)
+const HrCompanyRoute = HrCompanyRouteImport.update({
+  id: '/company',
+  path: '/company',
+  getParentRoute: () => HrRoute,
+} as any)
+const HrAuthRoute = HrAuthRouteImport.update({
+  id: '/auth',
+  path: '/auth',
+  getParentRoute: () => HrRoute,
+} as any)
+const HrAttendanceRoute = HrAttendanceRouteImport.update({
+  id: '/attendance',
+  path: '/attendance',
+  getParentRoute: () => HrRoute,
+} as any)
+const HrAdminRoute = HrAdminRouteImport.update({
+  id: '/admin',
+  path: '/admin',
+  getParentRoute: () => HrRoute,
+} as any)
+const CampaignWireframeRoute = CampaignWireframeRouteImport.update({
+  id: '/campaign/wireframe',
+  path: '/campaign/wireframe',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignWhiteLabelRoute = CampaignWhiteLabelRouteImport.update({
+  id: '/campaign/white-label',
+  path: '/campaign/white-label',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignVotersRoute = CampaignVotersRouteImport.update({
+  id: '/campaign/voters',
+  path: '/campaign/voters',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignVoterDashboardRoute = CampaignVoterDashboardRouteImport.update({
+  id: '/campaign/voter-dashboard',
+  path: '/campaign/voter-dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignVolunteerRoute = CampaignVolunteerRouteImport.update({
+  id: '/campaign/volunteer',
+  path: '/campaign/volunteer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignUnifiedRoute = CampaignUnifiedRouteImport.update({
+  id: '/campaign/unified',
+  path: '/campaign/unified',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignTransportRoute = CampaignTransportRouteImport.update({
+  id: '/campaign/transport',
+  path: '/campaign/transport',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignTechStackRoute = CampaignTechStackRouteImport.update({
+  id: '/campaign/tech-stack',
+  path: '/campaign/tech-stack',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignSuperAdminRoute = CampaignSuperAdminRouteImport.update({
+  id: '/campaign/super-admin',
+  path: '/campaign/super-admin',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignSocialRoute = CampaignSocialRouteImport.update({
+  id: '/campaign/social',
+  path: '/campaign/social',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignSettingsRoute = CampaignSettingsRouteImport.update({
+  id: '/campaign/settings',
+  path: '/campaign/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignSecurityMatrixRoute = CampaignSecurityMatrixRouteImport.update({
+  id: '/campaign/security-matrix',
+  path: '/campaign/security-matrix',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignRoleSelectRoute = CampaignRoleSelectRouteImport.update({
+  id: '/campaign/role-select',
+  path: '/campaign/role-select',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignRoleDashboardRoute = CampaignRoleDashboardRouteImport.update({
+  id: '/campaign/role-dashboard',
+  path: '/campaign/role-dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignResultsKrRoute = CampaignResultsKrRouteImport.update({
+  id: '/campaign/results-kr',
+  path: '/campaign/results-kr',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignResultDayRoute = CampaignResultDayRouteImport.update({
+  id: '/campaign/result-day',
+  path: '/campaign/result-day',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignReportsRoute = CampaignReportsRouteImport.update({
+  id: '/campaign/reports',
+  path: '/campaign/reports',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignPostElectionRoute = CampaignPostElectionRouteImport.update({
+  id: '/campaign/post-election',
+  path: '/campaign/post-election',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignPollDayRoute = CampaignPollDayRouteImport.update({
+  id: '/campaign/poll-day',
+  path: '/campaign/poll-day',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignPaRoute = CampaignPaRouteImport.update({
+  id: '/campaign/pa',
+  path: '/campaign/pa',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignMessagingRoute = CampaignMessagingRouteImport.update({
+  id: '/campaign/messaging',
+  path: '/campaign/messaging',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignMediaRoute = CampaignMediaRouteImport.update({
+  id: '/campaign/media',
+  path: '/campaign/media',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignMasterFlowRoute = CampaignMasterFlowRouteImport.update({
+  id: '/campaign/master-flow',
+  path: '/campaign/master-flow',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignManagerRoute = CampaignManagerRouteImport.update({
+  id: '/campaign/manager',
+  path: '/campaign/manager',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignLoginShowcaseRoute = CampaignLoginShowcaseRouteImport.update({
+  id: '/campaign/login-showcase',
+  path: '/campaign/login-showcase',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignLeaderRoute = CampaignLeaderRouteImport.update({
+  id: '/campaign/leader',
+  path: '/campaign/leader',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignJourneyRoute = CampaignJourneyRouteImport.update({
+  id: '/campaign/journey',
+  path: '/campaign/journey',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignIntelligenceRoute = CampaignIntelligenceRouteImport.update({
+  id: '/campaign/intelligence',
+  path: '/campaign/intelligence',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignHeroShowcaseRoute = CampaignHeroShowcaseRouteImport.update({
+  id: '/campaign/hero-showcase',
+  path: '/campaign/hero-showcase',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignFinanceRoute = CampaignFinanceRouteImport.update({
+  id: '/campaign/finance',
+  path: '/campaign/finance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignFigmaRoute = CampaignFigmaRouteImport.update({
+  id: '/campaign/figma',
+  path: '/campaign/figma',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignEventsRoute = CampaignEventsRouteImport.update({
+  id: '/campaign/events',
+  path: '/campaign/events',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignErdRoute = CampaignErdRouteImport.update({
+  id: '/campaign/erd',
+  path: '/campaign/erd',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignDriverRoute = CampaignDriverRouteImport.update({
+  id: '/campaign/driver',
+  path: '/campaign/driver',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignDoorToDoorRoute = CampaignDoorToDoorRouteImport.update({
+  id: '/campaign/door-to-door',
+  path: '/campaign/door-to-door',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignDonationsRoute = CampaignDonationsRouteImport.update({
+  id: '/campaign/donations',
+  path: '/campaign/donations',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignDeploymentRoute = CampaignDeploymentRouteImport.update({
+  id: '/campaign/deployment',
+  path: '/campaign/deployment',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignDeckRoute = CampaignDeckRouteImport.update({
+  id: '/campaign/deck',
+  path: '/campaign/deck',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignDashboardRoute = CampaignDashboardRouteImport.update({
+  id: '/campaign/dashboard',
+  path: '/campaign/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignCreativeRoute = CampaignCreativeRouteImport.update({
+  id: '/campaign/creative',
+  path: '/campaign/creative',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignControlShowcaseRoute = CampaignControlShowcaseRouteImport.update({
+  id: '/campaign/control-showcase',
+  path: '/campaign/control-showcase',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignControlRoomRoute = CampaignControlRoomRouteImport.update({
+  id: '/campaign/control-room',
+  path: '/campaign/control-room',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignConstituencyRoute = CampaignConstituencyRouteImport.update({
+  id: '/campaign/constituency',
+  path: '/campaign/constituency',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignCollegeRoute = CampaignCollegeRouteImport.update({
+  id: '/campaign/college',
+  path: '/campaign/college',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignCasteAnalyticsRoute = CampaignCasteAnalyticsRouteImport.update({
+  id: '/campaign/caste-analytics',
+  path: '/campaign/caste-analytics',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignCandidateSetupRoute = CampaignCandidateSetupRouteImport.update({
+  id: '/campaign/candidate-setup',
+  path: '/campaign/candidate-setup',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignCandidateResultsRoute =
+  CampaignCandidateResultsRouteImport.update({
+    id: '/campaign/candidate-results',
+    path: '/campaign/candidate-results',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const CampaignCandidateMobileRoute = CampaignCandidateMobileRouteImport.update({
+  id: '/campaign/candidate-mobile',
+  path: '/campaign/candidate-mobile',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignCameramanRoute = CampaignCameramanRouteImport.update({
+  id: '/campaign/cameraman',
+  path: '/campaign/cameraman',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignCalendarRoute = CampaignCalendarRouteImport.update({
+  id: '/campaign/calendar',
+  path: '/campaign/calendar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignBoothsRoute = CampaignBoothsRouteImport.update({
+  id: '/campaign/booths',
+  path: '/campaign/booths',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignBoothMapRoute = CampaignBoothMapRouteImport.update({
+  id: '/campaign/booth-map',
+  path: '/campaign/booth-map',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignAuthRoute = CampaignAuthRouteImport.update({
+  id: '/campaign/auth',
+  path: '/campaign/auth',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignAreaStatusRoute = CampaignAreaStatusRouteImport.update({
+  id: '/campaign/area-status',
+  path: '/campaign/area-status',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignApiFlowRoute = CampaignApiFlowRouteImport.update({
+  id: '/campaign/api-flow',
+  path: '/campaign/api-flow',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignAnalyticsRoute = CampaignAnalyticsRouteImport.update({
+  id: '/campaign/analytics',
+  path: '/campaign/analytics',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignAiPredictionRoute = CampaignAiPredictionRouteImport.update({
+  id: '/campaign/ai-prediction',
+  path: '/campaign/ai-prediction',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignAdminRoute = CampaignAdminRouteImport.update({
+  id: '/campaign/admin',
+  path: '/campaign/admin',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignAccountRoute = CampaignAccountRouteImport.update({
+  id: '/campaign/account',
+  path: '/campaign/account',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AiWorkflowsRoute = AiWorkflowsRouteImport.update({
   id: '/workflows',
   path: '/workflows',
@@ -660,7 +1081,7 @@ export interface FileRoutesByFullPath {
   '/fraud': typeof FraudRoute
   '/geo': typeof GeoRoute
   '/git': typeof GitRoute
-  '/hr': typeof HrRoute
+  '/hr': typeof HrRouteWithChildren
   '/influencers': typeof InfluencersRoute
   '/knowledge': typeof KnowledgeRoute
   '/law': typeof LawRoute
@@ -710,6 +1131,76 @@ export interface FileRoutesByFullPath {
   '/ai/support': typeof AiSupportRoute
   '/ai/voice': typeof AiVoiceRoute
   '/ai/workflows': typeof AiWorkflowsRoute
+  '/campaign/account': typeof CampaignAccountRoute
+  '/campaign/admin': typeof CampaignAdminRoute
+  '/campaign/ai-prediction': typeof CampaignAiPredictionRoute
+  '/campaign/analytics': typeof CampaignAnalyticsRoute
+  '/campaign/api-flow': typeof CampaignApiFlowRoute
+  '/campaign/area-status': typeof CampaignAreaStatusRoute
+  '/campaign/auth': typeof CampaignAuthRoute
+  '/campaign/booth-map': typeof CampaignBoothMapRoute
+  '/campaign/booths': typeof CampaignBoothsRoute
+  '/campaign/calendar': typeof CampaignCalendarRoute
+  '/campaign/cameraman': typeof CampaignCameramanRoute
+  '/campaign/candidate-mobile': typeof CampaignCandidateMobileRoute
+  '/campaign/candidate-results': typeof CampaignCandidateResultsRoute
+  '/campaign/candidate-setup': typeof CampaignCandidateSetupRoute
+  '/campaign/caste-analytics': typeof CampaignCasteAnalyticsRoute
+  '/campaign/college': typeof CampaignCollegeRoute
+  '/campaign/constituency': typeof CampaignConstituencyRoute
+  '/campaign/control-room': typeof CampaignControlRoomRoute
+  '/campaign/control-showcase': typeof CampaignControlShowcaseRoute
+  '/campaign/creative': typeof CampaignCreativeRoute
+  '/campaign/dashboard': typeof CampaignDashboardRoute
+  '/campaign/deck': typeof CampaignDeckRoute
+  '/campaign/deployment': typeof CampaignDeploymentRoute
+  '/campaign/donations': typeof CampaignDonationsRoute
+  '/campaign/door-to-door': typeof CampaignDoorToDoorRoute
+  '/campaign/driver': typeof CampaignDriverRoute
+  '/campaign/erd': typeof CampaignErdRoute
+  '/campaign/events': typeof CampaignEventsRoute
+  '/campaign/figma': typeof CampaignFigmaRoute
+  '/campaign/finance': typeof CampaignFinanceRoute
+  '/campaign/hero-showcase': typeof CampaignHeroShowcaseRoute
+  '/campaign/intelligence': typeof CampaignIntelligenceRoute
+  '/campaign/journey': typeof CampaignJourneyRoute
+  '/campaign/leader': typeof CampaignLeaderRoute
+  '/campaign/login-showcase': typeof CampaignLoginShowcaseRoute
+  '/campaign/manager': typeof CampaignManagerRoute
+  '/campaign/master-flow': typeof CampaignMasterFlowRoute
+  '/campaign/media': typeof CampaignMediaRoute
+  '/campaign/messaging': typeof CampaignMessagingRoute
+  '/campaign/pa': typeof CampaignPaRoute
+  '/campaign/poll-day': typeof CampaignPollDayRoute
+  '/campaign/post-election': typeof CampaignPostElectionRoute
+  '/campaign/reports': typeof CampaignReportsRoute
+  '/campaign/result-day': typeof CampaignResultDayRoute
+  '/campaign/results-kr': typeof CampaignResultsKrRoute
+  '/campaign/role-dashboard': typeof CampaignRoleDashboardRoute
+  '/campaign/role-select': typeof CampaignRoleSelectRoute
+  '/campaign/security-matrix': typeof CampaignSecurityMatrixRoute
+  '/campaign/settings': typeof CampaignSettingsRoute
+  '/campaign/social': typeof CampaignSocialRoute
+  '/campaign/super-admin': typeof CampaignSuperAdminRoute
+  '/campaign/tech-stack': typeof CampaignTechStackRoute
+  '/campaign/transport': typeof CampaignTransportRoute
+  '/campaign/unified': typeof CampaignUnifiedRoute
+  '/campaign/volunteer': typeof CampaignVolunteerRoute
+  '/campaign/voter-dashboard': typeof CampaignVoterDashboardRoute
+  '/campaign/voters': typeof CampaignVotersRoute
+  '/campaign/white-label': typeof CampaignWhiteLabelRoute
+  '/campaign/wireframe': typeof CampaignWireframeRoute
+  '/hr/admin': typeof HrAdminRoute
+  '/hr/attendance': typeof HrAttendanceRoute
+  '/hr/auth': typeof HrAuthRoute
+  '/hr/company': typeof HrCompanyRoute
+  '/hr/dashboard': typeof HrDashboardRoute
+  '/hr/documents': typeof HrDocumentsRoute
+  '/hr/documents-shared': typeof HrDocumentsSharedRoute
+  '/hr/employees': typeof HrEmployeesRoute
+  '/hr/leave': typeof HrLeaveRoute
+  '/hr/performance': typeof HrPerformanceRoute
+  '/hr/settings': typeof HrSettingsRoute
   '/portal/affiliate': typeof PortalAffiliateRoute
   '/portal/author': typeof PortalAuthorRoute
   '/portal/dev': typeof PortalDevRoute
@@ -763,7 +1254,7 @@ export interface FileRoutesByTo {
   '/fraud': typeof FraudRoute
   '/geo': typeof GeoRoute
   '/git': typeof GitRoute
-  '/hr': typeof HrRoute
+  '/hr': typeof HrRouteWithChildren
   '/influencers': typeof InfluencersRoute
   '/knowledge': typeof KnowledgeRoute
   '/law': typeof LawRoute
@@ -813,6 +1304,76 @@ export interface FileRoutesByTo {
   '/ai/support': typeof AiSupportRoute
   '/ai/voice': typeof AiVoiceRoute
   '/ai/workflows': typeof AiWorkflowsRoute
+  '/campaign/account': typeof CampaignAccountRoute
+  '/campaign/admin': typeof CampaignAdminRoute
+  '/campaign/ai-prediction': typeof CampaignAiPredictionRoute
+  '/campaign/analytics': typeof CampaignAnalyticsRoute
+  '/campaign/api-flow': typeof CampaignApiFlowRoute
+  '/campaign/area-status': typeof CampaignAreaStatusRoute
+  '/campaign/auth': typeof CampaignAuthRoute
+  '/campaign/booth-map': typeof CampaignBoothMapRoute
+  '/campaign/booths': typeof CampaignBoothsRoute
+  '/campaign/calendar': typeof CampaignCalendarRoute
+  '/campaign/cameraman': typeof CampaignCameramanRoute
+  '/campaign/candidate-mobile': typeof CampaignCandidateMobileRoute
+  '/campaign/candidate-results': typeof CampaignCandidateResultsRoute
+  '/campaign/candidate-setup': typeof CampaignCandidateSetupRoute
+  '/campaign/caste-analytics': typeof CampaignCasteAnalyticsRoute
+  '/campaign/college': typeof CampaignCollegeRoute
+  '/campaign/constituency': typeof CampaignConstituencyRoute
+  '/campaign/control-room': typeof CampaignControlRoomRoute
+  '/campaign/control-showcase': typeof CampaignControlShowcaseRoute
+  '/campaign/creative': typeof CampaignCreativeRoute
+  '/campaign/dashboard': typeof CampaignDashboardRoute
+  '/campaign/deck': typeof CampaignDeckRoute
+  '/campaign/deployment': typeof CampaignDeploymentRoute
+  '/campaign/donations': typeof CampaignDonationsRoute
+  '/campaign/door-to-door': typeof CampaignDoorToDoorRoute
+  '/campaign/driver': typeof CampaignDriverRoute
+  '/campaign/erd': typeof CampaignErdRoute
+  '/campaign/events': typeof CampaignEventsRoute
+  '/campaign/figma': typeof CampaignFigmaRoute
+  '/campaign/finance': typeof CampaignFinanceRoute
+  '/campaign/hero-showcase': typeof CampaignHeroShowcaseRoute
+  '/campaign/intelligence': typeof CampaignIntelligenceRoute
+  '/campaign/journey': typeof CampaignJourneyRoute
+  '/campaign/leader': typeof CampaignLeaderRoute
+  '/campaign/login-showcase': typeof CampaignLoginShowcaseRoute
+  '/campaign/manager': typeof CampaignManagerRoute
+  '/campaign/master-flow': typeof CampaignMasterFlowRoute
+  '/campaign/media': typeof CampaignMediaRoute
+  '/campaign/messaging': typeof CampaignMessagingRoute
+  '/campaign/pa': typeof CampaignPaRoute
+  '/campaign/poll-day': typeof CampaignPollDayRoute
+  '/campaign/post-election': typeof CampaignPostElectionRoute
+  '/campaign/reports': typeof CampaignReportsRoute
+  '/campaign/result-day': typeof CampaignResultDayRoute
+  '/campaign/results-kr': typeof CampaignResultsKrRoute
+  '/campaign/role-dashboard': typeof CampaignRoleDashboardRoute
+  '/campaign/role-select': typeof CampaignRoleSelectRoute
+  '/campaign/security-matrix': typeof CampaignSecurityMatrixRoute
+  '/campaign/settings': typeof CampaignSettingsRoute
+  '/campaign/social': typeof CampaignSocialRoute
+  '/campaign/super-admin': typeof CampaignSuperAdminRoute
+  '/campaign/tech-stack': typeof CampaignTechStackRoute
+  '/campaign/transport': typeof CampaignTransportRoute
+  '/campaign/unified': typeof CampaignUnifiedRoute
+  '/campaign/volunteer': typeof CampaignVolunteerRoute
+  '/campaign/voter-dashboard': typeof CampaignVoterDashboardRoute
+  '/campaign/voters': typeof CampaignVotersRoute
+  '/campaign/white-label': typeof CampaignWhiteLabelRoute
+  '/campaign/wireframe': typeof CampaignWireframeRoute
+  '/hr/admin': typeof HrAdminRoute
+  '/hr/attendance': typeof HrAttendanceRoute
+  '/hr/auth': typeof HrAuthRoute
+  '/hr/company': typeof HrCompanyRoute
+  '/hr/dashboard': typeof HrDashboardRoute
+  '/hr/documents': typeof HrDocumentsRoute
+  '/hr/documents-shared': typeof HrDocumentsSharedRoute
+  '/hr/employees': typeof HrEmployeesRoute
+  '/hr/leave': typeof HrLeaveRoute
+  '/hr/performance': typeof HrPerformanceRoute
+  '/hr/settings': typeof HrSettingsRoute
   '/portal/affiliate': typeof PortalAffiliateRoute
   '/portal/author': typeof PortalAuthorRoute
   '/portal/dev': typeof PortalDevRoute
@@ -867,7 +1428,7 @@ export interface FileRoutesById {
   '/fraud': typeof FraudRoute
   '/geo': typeof GeoRoute
   '/git': typeof GitRoute
-  '/hr': typeof HrRoute
+  '/hr': typeof HrRouteWithChildren
   '/influencers': typeof InfluencersRoute
   '/knowledge': typeof KnowledgeRoute
   '/law': typeof LawRoute
@@ -917,6 +1478,76 @@ export interface FileRoutesById {
   '/ai/support': typeof AiSupportRoute
   '/ai/voice': typeof AiVoiceRoute
   '/ai/workflows': typeof AiWorkflowsRoute
+  '/campaign/account': typeof CampaignAccountRoute
+  '/campaign/admin': typeof CampaignAdminRoute
+  '/campaign/ai-prediction': typeof CampaignAiPredictionRoute
+  '/campaign/analytics': typeof CampaignAnalyticsRoute
+  '/campaign/api-flow': typeof CampaignApiFlowRoute
+  '/campaign/area-status': typeof CampaignAreaStatusRoute
+  '/campaign/auth': typeof CampaignAuthRoute
+  '/campaign/booth-map': typeof CampaignBoothMapRoute
+  '/campaign/booths': typeof CampaignBoothsRoute
+  '/campaign/calendar': typeof CampaignCalendarRoute
+  '/campaign/cameraman': typeof CampaignCameramanRoute
+  '/campaign/candidate-mobile': typeof CampaignCandidateMobileRoute
+  '/campaign/candidate-results': typeof CampaignCandidateResultsRoute
+  '/campaign/candidate-setup': typeof CampaignCandidateSetupRoute
+  '/campaign/caste-analytics': typeof CampaignCasteAnalyticsRoute
+  '/campaign/college': typeof CampaignCollegeRoute
+  '/campaign/constituency': typeof CampaignConstituencyRoute
+  '/campaign/control-room': typeof CampaignControlRoomRoute
+  '/campaign/control-showcase': typeof CampaignControlShowcaseRoute
+  '/campaign/creative': typeof CampaignCreativeRoute
+  '/campaign/dashboard': typeof CampaignDashboardRoute
+  '/campaign/deck': typeof CampaignDeckRoute
+  '/campaign/deployment': typeof CampaignDeploymentRoute
+  '/campaign/donations': typeof CampaignDonationsRoute
+  '/campaign/door-to-door': typeof CampaignDoorToDoorRoute
+  '/campaign/driver': typeof CampaignDriverRoute
+  '/campaign/erd': typeof CampaignErdRoute
+  '/campaign/events': typeof CampaignEventsRoute
+  '/campaign/figma': typeof CampaignFigmaRoute
+  '/campaign/finance': typeof CampaignFinanceRoute
+  '/campaign/hero-showcase': typeof CampaignHeroShowcaseRoute
+  '/campaign/intelligence': typeof CampaignIntelligenceRoute
+  '/campaign/journey': typeof CampaignJourneyRoute
+  '/campaign/leader': typeof CampaignLeaderRoute
+  '/campaign/login-showcase': typeof CampaignLoginShowcaseRoute
+  '/campaign/manager': typeof CampaignManagerRoute
+  '/campaign/master-flow': typeof CampaignMasterFlowRoute
+  '/campaign/media': typeof CampaignMediaRoute
+  '/campaign/messaging': typeof CampaignMessagingRoute
+  '/campaign/pa': typeof CampaignPaRoute
+  '/campaign/poll-day': typeof CampaignPollDayRoute
+  '/campaign/post-election': typeof CampaignPostElectionRoute
+  '/campaign/reports': typeof CampaignReportsRoute
+  '/campaign/result-day': typeof CampaignResultDayRoute
+  '/campaign/results-kr': typeof CampaignResultsKrRoute
+  '/campaign/role-dashboard': typeof CampaignRoleDashboardRoute
+  '/campaign/role-select': typeof CampaignRoleSelectRoute
+  '/campaign/security-matrix': typeof CampaignSecurityMatrixRoute
+  '/campaign/settings': typeof CampaignSettingsRoute
+  '/campaign/social': typeof CampaignSocialRoute
+  '/campaign/super-admin': typeof CampaignSuperAdminRoute
+  '/campaign/tech-stack': typeof CampaignTechStackRoute
+  '/campaign/transport': typeof CampaignTransportRoute
+  '/campaign/unified': typeof CampaignUnifiedRoute
+  '/campaign/volunteer': typeof CampaignVolunteerRoute
+  '/campaign/voter-dashboard': typeof CampaignVoterDashboardRoute
+  '/campaign/voters': typeof CampaignVotersRoute
+  '/campaign/white-label': typeof CampaignWhiteLabelRoute
+  '/campaign/wireframe': typeof CampaignWireframeRoute
+  '/hr/admin': typeof HrAdminRoute
+  '/hr/attendance': typeof HrAttendanceRoute
+  '/hr/auth': typeof HrAuthRoute
+  '/hr/company': typeof HrCompanyRoute
+  '/hr/dashboard': typeof HrDashboardRoute
+  '/hr/documents': typeof HrDocumentsRoute
+  '/hr/documents-shared': typeof HrDocumentsSharedRoute
+  '/hr/employees': typeof HrEmployeesRoute
+  '/hr/leave': typeof HrLeaveRoute
+  '/hr/performance': typeof HrPerformanceRoute
+  '/hr/settings': typeof HrSettingsRoute
   '/portal/affiliate': typeof PortalAffiliateRoute
   '/portal/author': typeof PortalAuthorRoute
   '/portal/dev': typeof PortalDevRoute
@@ -1022,6 +1653,76 @@ export interface FileRouteTypes {
     | '/ai/support'
     | '/ai/voice'
     | '/ai/workflows'
+    | '/campaign/account'
+    | '/campaign/admin'
+    | '/campaign/ai-prediction'
+    | '/campaign/analytics'
+    | '/campaign/api-flow'
+    | '/campaign/area-status'
+    | '/campaign/auth'
+    | '/campaign/booth-map'
+    | '/campaign/booths'
+    | '/campaign/calendar'
+    | '/campaign/cameraman'
+    | '/campaign/candidate-mobile'
+    | '/campaign/candidate-results'
+    | '/campaign/candidate-setup'
+    | '/campaign/caste-analytics'
+    | '/campaign/college'
+    | '/campaign/constituency'
+    | '/campaign/control-room'
+    | '/campaign/control-showcase'
+    | '/campaign/creative'
+    | '/campaign/dashboard'
+    | '/campaign/deck'
+    | '/campaign/deployment'
+    | '/campaign/donations'
+    | '/campaign/door-to-door'
+    | '/campaign/driver'
+    | '/campaign/erd'
+    | '/campaign/events'
+    | '/campaign/figma'
+    | '/campaign/finance'
+    | '/campaign/hero-showcase'
+    | '/campaign/intelligence'
+    | '/campaign/journey'
+    | '/campaign/leader'
+    | '/campaign/login-showcase'
+    | '/campaign/manager'
+    | '/campaign/master-flow'
+    | '/campaign/media'
+    | '/campaign/messaging'
+    | '/campaign/pa'
+    | '/campaign/poll-day'
+    | '/campaign/post-election'
+    | '/campaign/reports'
+    | '/campaign/result-day'
+    | '/campaign/results-kr'
+    | '/campaign/role-dashboard'
+    | '/campaign/role-select'
+    | '/campaign/security-matrix'
+    | '/campaign/settings'
+    | '/campaign/social'
+    | '/campaign/super-admin'
+    | '/campaign/tech-stack'
+    | '/campaign/transport'
+    | '/campaign/unified'
+    | '/campaign/volunteer'
+    | '/campaign/voter-dashboard'
+    | '/campaign/voters'
+    | '/campaign/white-label'
+    | '/campaign/wireframe'
+    | '/hr/admin'
+    | '/hr/attendance'
+    | '/hr/auth'
+    | '/hr/company'
+    | '/hr/dashboard'
+    | '/hr/documents'
+    | '/hr/documents-shared'
+    | '/hr/employees'
+    | '/hr/leave'
+    | '/hr/performance'
+    | '/hr/settings'
     | '/portal/affiliate'
     | '/portal/author'
     | '/portal/dev'
@@ -1125,6 +1826,76 @@ export interface FileRouteTypes {
     | '/ai/support'
     | '/ai/voice'
     | '/ai/workflows'
+    | '/campaign/account'
+    | '/campaign/admin'
+    | '/campaign/ai-prediction'
+    | '/campaign/analytics'
+    | '/campaign/api-flow'
+    | '/campaign/area-status'
+    | '/campaign/auth'
+    | '/campaign/booth-map'
+    | '/campaign/booths'
+    | '/campaign/calendar'
+    | '/campaign/cameraman'
+    | '/campaign/candidate-mobile'
+    | '/campaign/candidate-results'
+    | '/campaign/candidate-setup'
+    | '/campaign/caste-analytics'
+    | '/campaign/college'
+    | '/campaign/constituency'
+    | '/campaign/control-room'
+    | '/campaign/control-showcase'
+    | '/campaign/creative'
+    | '/campaign/dashboard'
+    | '/campaign/deck'
+    | '/campaign/deployment'
+    | '/campaign/donations'
+    | '/campaign/door-to-door'
+    | '/campaign/driver'
+    | '/campaign/erd'
+    | '/campaign/events'
+    | '/campaign/figma'
+    | '/campaign/finance'
+    | '/campaign/hero-showcase'
+    | '/campaign/intelligence'
+    | '/campaign/journey'
+    | '/campaign/leader'
+    | '/campaign/login-showcase'
+    | '/campaign/manager'
+    | '/campaign/master-flow'
+    | '/campaign/media'
+    | '/campaign/messaging'
+    | '/campaign/pa'
+    | '/campaign/poll-day'
+    | '/campaign/post-election'
+    | '/campaign/reports'
+    | '/campaign/result-day'
+    | '/campaign/results-kr'
+    | '/campaign/role-dashboard'
+    | '/campaign/role-select'
+    | '/campaign/security-matrix'
+    | '/campaign/settings'
+    | '/campaign/social'
+    | '/campaign/super-admin'
+    | '/campaign/tech-stack'
+    | '/campaign/transport'
+    | '/campaign/unified'
+    | '/campaign/volunteer'
+    | '/campaign/voter-dashboard'
+    | '/campaign/voters'
+    | '/campaign/white-label'
+    | '/campaign/wireframe'
+    | '/hr/admin'
+    | '/hr/attendance'
+    | '/hr/auth'
+    | '/hr/company'
+    | '/hr/dashboard'
+    | '/hr/documents'
+    | '/hr/documents-shared'
+    | '/hr/employees'
+    | '/hr/leave'
+    | '/hr/performance'
+    | '/hr/settings'
     | '/portal/affiliate'
     | '/portal/author'
     | '/portal/dev'
@@ -1228,6 +1999,76 @@ export interface FileRouteTypes {
     | '/ai/support'
     | '/ai/voice'
     | '/ai/workflows'
+    | '/campaign/account'
+    | '/campaign/admin'
+    | '/campaign/ai-prediction'
+    | '/campaign/analytics'
+    | '/campaign/api-flow'
+    | '/campaign/area-status'
+    | '/campaign/auth'
+    | '/campaign/booth-map'
+    | '/campaign/booths'
+    | '/campaign/calendar'
+    | '/campaign/cameraman'
+    | '/campaign/candidate-mobile'
+    | '/campaign/candidate-results'
+    | '/campaign/candidate-setup'
+    | '/campaign/caste-analytics'
+    | '/campaign/college'
+    | '/campaign/constituency'
+    | '/campaign/control-room'
+    | '/campaign/control-showcase'
+    | '/campaign/creative'
+    | '/campaign/dashboard'
+    | '/campaign/deck'
+    | '/campaign/deployment'
+    | '/campaign/donations'
+    | '/campaign/door-to-door'
+    | '/campaign/driver'
+    | '/campaign/erd'
+    | '/campaign/events'
+    | '/campaign/figma'
+    | '/campaign/finance'
+    | '/campaign/hero-showcase'
+    | '/campaign/intelligence'
+    | '/campaign/journey'
+    | '/campaign/leader'
+    | '/campaign/login-showcase'
+    | '/campaign/manager'
+    | '/campaign/master-flow'
+    | '/campaign/media'
+    | '/campaign/messaging'
+    | '/campaign/pa'
+    | '/campaign/poll-day'
+    | '/campaign/post-election'
+    | '/campaign/reports'
+    | '/campaign/result-day'
+    | '/campaign/results-kr'
+    | '/campaign/role-dashboard'
+    | '/campaign/role-select'
+    | '/campaign/security-matrix'
+    | '/campaign/settings'
+    | '/campaign/social'
+    | '/campaign/super-admin'
+    | '/campaign/tech-stack'
+    | '/campaign/transport'
+    | '/campaign/unified'
+    | '/campaign/volunteer'
+    | '/campaign/voter-dashboard'
+    | '/campaign/voters'
+    | '/campaign/white-label'
+    | '/campaign/wireframe'
+    | '/hr/admin'
+    | '/hr/attendance'
+    | '/hr/auth'
+    | '/hr/company'
+    | '/hr/dashboard'
+    | '/hr/documents'
+    | '/hr/documents-shared'
+    | '/hr/employees'
+    | '/hr/leave'
+    | '/hr/performance'
+    | '/hr/settings'
     | '/portal/affiliate'
     | '/portal/author'
     | '/portal/dev'
@@ -1282,7 +2123,7 @@ export interface RootRouteChildren {
   FraudRoute: typeof FraudRoute
   GeoRoute: typeof GeoRoute
   GitRoute: typeof GitRoute
-  HrRoute: typeof HrRoute
+  HrRoute: typeof HrRouteWithChildren
   InfluencersRoute: typeof InfluencersRoute
   KnowledgeRoute: typeof KnowledgeRoute
   LawRoute: typeof LawRoute
@@ -1323,6 +2164,65 @@ export interface RootRouteChildren {
   WarRoomRoute: typeof WarRoomRoute
   WebhooksRoute: typeof WebhooksRoute
   WhiteLabelRoute: typeof WhiteLabelRoute
+  CampaignAccountRoute: typeof CampaignAccountRoute
+  CampaignAdminRoute: typeof CampaignAdminRoute
+  CampaignAiPredictionRoute: typeof CampaignAiPredictionRoute
+  CampaignAnalyticsRoute: typeof CampaignAnalyticsRoute
+  CampaignApiFlowRoute: typeof CampaignApiFlowRoute
+  CampaignAreaStatusRoute: typeof CampaignAreaStatusRoute
+  CampaignAuthRoute: typeof CampaignAuthRoute
+  CampaignBoothMapRoute: typeof CampaignBoothMapRoute
+  CampaignBoothsRoute: typeof CampaignBoothsRoute
+  CampaignCalendarRoute: typeof CampaignCalendarRoute
+  CampaignCameramanRoute: typeof CampaignCameramanRoute
+  CampaignCandidateMobileRoute: typeof CampaignCandidateMobileRoute
+  CampaignCandidateResultsRoute: typeof CampaignCandidateResultsRoute
+  CampaignCandidateSetupRoute: typeof CampaignCandidateSetupRoute
+  CampaignCasteAnalyticsRoute: typeof CampaignCasteAnalyticsRoute
+  CampaignCollegeRoute: typeof CampaignCollegeRoute
+  CampaignConstituencyRoute: typeof CampaignConstituencyRoute
+  CampaignControlRoomRoute: typeof CampaignControlRoomRoute
+  CampaignControlShowcaseRoute: typeof CampaignControlShowcaseRoute
+  CampaignCreativeRoute: typeof CampaignCreativeRoute
+  CampaignDashboardRoute: typeof CampaignDashboardRoute
+  CampaignDeckRoute: typeof CampaignDeckRoute
+  CampaignDeploymentRoute: typeof CampaignDeploymentRoute
+  CampaignDonationsRoute: typeof CampaignDonationsRoute
+  CampaignDoorToDoorRoute: typeof CampaignDoorToDoorRoute
+  CampaignDriverRoute: typeof CampaignDriverRoute
+  CampaignErdRoute: typeof CampaignErdRoute
+  CampaignEventsRoute: typeof CampaignEventsRoute
+  CampaignFigmaRoute: typeof CampaignFigmaRoute
+  CampaignFinanceRoute: typeof CampaignFinanceRoute
+  CampaignHeroShowcaseRoute: typeof CampaignHeroShowcaseRoute
+  CampaignIntelligenceRoute: typeof CampaignIntelligenceRoute
+  CampaignJourneyRoute: typeof CampaignJourneyRoute
+  CampaignLeaderRoute: typeof CampaignLeaderRoute
+  CampaignLoginShowcaseRoute: typeof CampaignLoginShowcaseRoute
+  CampaignManagerRoute: typeof CampaignManagerRoute
+  CampaignMasterFlowRoute: typeof CampaignMasterFlowRoute
+  CampaignMediaRoute: typeof CampaignMediaRoute
+  CampaignMessagingRoute: typeof CampaignMessagingRoute
+  CampaignPaRoute: typeof CampaignPaRoute
+  CampaignPollDayRoute: typeof CampaignPollDayRoute
+  CampaignPostElectionRoute: typeof CampaignPostElectionRoute
+  CampaignReportsRoute: typeof CampaignReportsRoute
+  CampaignResultDayRoute: typeof CampaignResultDayRoute
+  CampaignResultsKrRoute: typeof CampaignResultsKrRoute
+  CampaignRoleDashboardRoute: typeof CampaignRoleDashboardRoute
+  CampaignRoleSelectRoute: typeof CampaignRoleSelectRoute
+  CampaignSecurityMatrixRoute: typeof CampaignSecurityMatrixRoute
+  CampaignSettingsRoute: typeof CampaignSettingsRoute
+  CampaignSocialRoute: typeof CampaignSocialRoute
+  CampaignSuperAdminRoute: typeof CampaignSuperAdminRoute
+  CampaignTechStackRoute: typeof CampaignTechStackRoute
+  CampaignTransportRoute: typeof CampaignTransportRoute
+  CampaignUnifiedRoute: typeof CampaignUnifiedRoute
+  CampaignVolunteerRoute: typeof CampaignVolunteerRoute
+  CampaignVoterDashboardRoute: typeof CampaignVoterDashboardRoute
+  CampaignVotersRoute: typeof CampaignVotersRoute
+  CampaignWhiteLabelRoute: typeof CampaignWhiteLabelRoute
+  CampaignWireframeRoute: typeof CampaignWireframeRoute
   PortalAffiliateRoute: typeof PortalAffiliateRoute
   PortalAuthorRoute: typeof PortalAuthorRoute
   PortalDevRoute: typeof PortalDevRoute
@@ -1980,6 +2880,496 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PortalAffiliateRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/hr/settings': {
+      id: '/hr/settings'
+      path: '/settings'
+      fullPath: '/hr/settings'
+      preLoaderRoute: typeof HrSettingsRouteImport
+      parentRoute: typeof HrRoute
+    }
+    '/hr/performance': {
+      id: '/hr/performance'
+      path: '/performance'
+      fullPath: '/hr/performance'
+      preLoaderRoute: typeof HrPerformanceRouteImport
+      parentRoute: typeof HrRoute
+    }
+    '/hr/leave': {
+      id: '/hr/leave'
+      path: '/leave'
+      fullPath: '/hr/leave'
+      preLoaderRoute: typeof HrLeaveRouteImport
+      parentRoute: typeof HrRoute
+    }
+    '/hr/employees': {
+      id: '/hr/employees'
+      path: '/employees'
+      fullPath: '/hr/employees'
+      preLoaderRoute: typeof HrEmployeesRouteImport
+      parentRoute: typeof HrRoute
+    }
+    '/hr/documents-shared': {
+      id: '/hr/documents-shared'
+      path: '/documents-shared'
+      fullPath: '/hr/documents-shared'
+      preLoaderRoute: typeof HrDocumentsSharedRouteImport
+      parentRoute: typeof HrRoute
+    }
+    '/hr/documents': {
+      id: '/hr/documents'
+      path: '/documents'
+      fullPath: '/hr/documents'
+      preLoaderRoute: typeof HrDocumentsRouteImport
+      parentRoute: typeof HrRoute
+    }
+    '/hr/dashboard': {
+      id: '/hr/dashboard'
+      path: '/dashboard'
+      fullPath: '/hr/dashboard'
+      preLoaderRoute: typeof HrDashboardRouteImport
+      parentRoute: typeof HrRoute
+    }
+    '/hr/company': {
+      id: '/hr/company'
+      path: '/company'
+      fullPath: '/hr/company'
+      preLoaderRoute: typeof HrCompanyRouteImport
+      parentRoute: typeof HrRoute
+    }
+    '/hr/auth': {
+      id: '/hr/auth'
+      path: '/auth'
+      fullPath: '/hr/auth'
+      preLoaderRoute: typeof HrAuthRouteImport
+      parentRoute: typeof HrRoute
+    }
+    '/hr/attendance': {
+      id: '/hr/attendance'
+      path: '/attendance'
+      fullPath: '/hr/attendance'
+      preLoaderRoute: typeof HrAttendanceRouteImport
+      parentRoute: typeof HrRoute
+    }
+    '/hr/admin': {
+      id: '/hr/admin'
+      path: '/admin'
+      fullPath: '/hr/admin'
+      preLoaderRoute: typeof HrAdminRouteImport
+      parentRoute: typeof HrRoute
+    }
+    '/campaign/wireframe': {
+      id: '/campaign/wireframe'
+      path: '/campaign/wireframe'
+      fullPath: '/campaign/wireframe'
+      preLoaderRoute: typeof CampaignWireframeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/white-label': {
+      id: '/campaign/white-label'
+      path: '/campaign/white-label'
+      fullPath: '/campaign/white-label'
+      preLoaderRoute: typeof CampaignWhiteLabelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/voters': {
+      id: '/campaign/voters'
+      path: '/campaign/voters'
+      fullPath: '/campaign/voters'
+      preLoaderRoute: typeof CampaignVotersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/voter-dashboard': {
+      id: '/campaign/voter-dashboard'
+      path: '/campaign/voter-dashboard'
+      fullPath: '/campaign/voter-dashboard'
+      preLoaderRoute: typeof CampaignVoterDashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/volunteer': {
+      id: '/campaign/volunteer'
+      path: '/campaign/volunteer'
+      fullPath: '/campaign/volunteer'
+      preLoaderRoute: typeof CampaignVolunteerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/unified': {
+      id: '/campaign/unified'
+      path: '/campaign/unified'
+      fullPath: '/campaign/unified'
+      preLoaderRoute: typeof CampaignUnifiedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/transport': {
+      id: '/campaign/transport'
+      path: '/campaign/transport'
+      fullPath: '/campaign/transport'
+      preLoaderRoute: typeof CampaignTransportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/tech-stack': {
+      id: '/campaign/tech-stack'
+      path: '/campaign/tech-stack'
+      fullPath: '/campaign/tech-stack'
+      preLoaderRoute: typeof CampaignTechStackRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/super-admin': {
+      id: '/campaign/super-admin'
+      path: '/campaign/super-admin'
+      fullPath: '/campaign/super-admin'
+      preLoaderRoute: typeof CampaignSuperAdminRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/social': {
+      id: '/campaign/social'
+      path: '/campaign/social'
+      fullPath: '/campaign/social'
+      preLoaderRoute: typeof CampaignSocialRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/settings': {
+      id: '/campaign/settings'
+      path: '/campaign/settings'
+      fullPath: '/campaign/settings'
+      preLoaderRoute: typeof CampaignSettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/security-matrix': {
+      id: '/campaign/security-matrix'
+      path: '/campaign/security-matrix'
+      fullPath: '/campaign/security-matrix'
+      preLoaderRoute: typeof CampaignSecurityMatrixRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/role-select': {
+      id: '/campaign/role-select'
+      path: '/campaign/role-select'
+      fullPath: '/campaign/role-select'
+      preLoaderRoute: typeof CampaignRoleSelectRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/role-dashboard': {
+      id: '/campaign/role-dashboard'
+      path: '/campaign/role-dashboard'
+      fullPath: '/campaign/role-dashboard'
+      preLoaderRoute: typeof CampaignRoleDashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/results-kr': {
+      id: '/campaign/results-kr'
+      path: '/campaign/results-kr'
+      fullPath: '/campaign/results-kr'
+      preLoaderRoute: typeof CampaignResultsKrRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/result-day': {
+      id: '/campaign/result-day'
+      path: '/campaign/result-day'
+      fullPath: '/campaign/result-day'
+      preLoaderRoute: typeof CampaignResultDayRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/reports': {
+      id: '/campaign/reports'
+      path: '/campaign/reports'
+      fullPath: '/campaign/reports'
+      preLoaderRoute: typeof CampaignReportsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/post-election': {
+      id: '/campaign/post-election'
+      path: '/campaign/post-election'
+      fullPath: '/campaign/post-election'
+      preLoaderRoute: typeof CampaignPostElectionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/poll-day': {
+      id: '/campaign/poll-day'
+      path: '/campaign/poll-day'
+      fullPath: '/campaign/poll-day'
+      preLoaderRoute: typeof CampaignPollDayRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/pa': {
+      id: '/campaign/pa'
+      path: '/campaign/pa'
+      fullPath: '/campaign/pa'
+      preLoaderRoute: typeof CampaignPaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/messaging': {
+      id: '/campaign/messaging'
+      path: '/campaign/messaging'
+      fullPath: '/campaign/messaging'
+      preLoaderRoute: typeof CampaignMessagingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/media': {
+      id: '/campaign/media'
+      path: '/campaign/media'
+      fullPath: '/campaign/media'
+      preLoaderRoute: typeof CampaignMediaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/master-flow': {
+      id: '/campaign/master-flow'
+      path: '/campaign/master-flow'
+      fullPath: '/campaign/master-flow'
+      preLoaderRoute: typeof CampaignMasterFlowRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/manager': {
+      id: '/campaign/manager'
+      path: '/campaign/manager'
+      fullPath: '/campaign/manager'
+      preLoaderRoute: typeof CampaignManagerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/login-showcase': {
+      id: '/campaign/login-showcase'
+      path: '/campaign/login-showcase'
+      fullPath: '/campaign/login-showcase'
+      preLoaderRoute: typeof CampaignLoginShowcaseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/leader': {
+      id: '/campaign/leader'
+      path: '/campaign/leader'
+      fullPath: '/campaign/leader'
+      preLoaderRoute: typeof CampaignLeaderRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/journey': {
+      id: '/campaign/journey'
+      path: '/campaign/journey'
+      fullPath: '/campaign/journey'
+      preLoaderRoute: typeof CampaignJourneyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/intelligence': {
+      id: '/campaign/intelligence'
+      path: '/campaign/intelligence'
+      fullPath: '/campaign/intelligence'
+      preLoaderRoute: typeof CampaignIntelligenceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/hero-showcase': {
+      id: '/campaign/hero-showcase'
+      path: '/campaign/hero-showcase'
+      fullPath: '/campaign/hero-showcase'
+      preLoaderRoute: typeof CampaignHeroShowcaseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/finance': {
+      id: '/campaign/finance'
+      path: '/campaign/finance'
+      fullPath: '/campaign/finance'
+      preLoaderRoute: typeof CampaignFinanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/figma': {
+      id: '/campaign/figma'
+      path: '/campaign/figma'
+      fullPath: '/campaign/figma'
+      preLoaderRoute: typeof CampaignFigmaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/events': {
+      id: '/campaign/events'
+      path: '/campaign/events'
+      fullPath: '/campaign/events'
+      preLoaderRoute: typeof CampaignEventsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/erd': {
+      id: '/campaign/erd'
+      path: '/campaign/erd'
+      fullPath: '/campaign/erd'
+      preLoaderRoute: typeof CampaignErdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/driver': {
+      id: '/campaign/driver'
+      path: '/campaign/driver'
+      fullPath: '/campaign/driver'
+      preLoaderRoute: typeof CampaignDriverRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/door-to-door': {
+      id: '/campaign/door-to-door'
+      path: '/campaign/door-to-door'
+      fullPath: '/campaign/door-to-door'
+      preLoaderRoute: typeof CampaignDoorToDoorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/donations': {
+      id: '/campaign/donations'
+      path: '/campaign/donations'
+      fullPath: '/campaign/donations'
+      preLoaderRoute: typeof CampaignDonationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/deployment': {
+      id: '/campaign/deployment'
+      path: '/campaign/deployment'
+      fullPath: '/campaign/deployment'
+      preLoaderRoute: typeof CampaignDeploymentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/deck': {
+      id: '/campaign/deck'
+      path: '/campaign/deck'
+      fullPath: '/campaign/deck'
+      preLoaderRoute: typeof CampaignDeckRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/dashboard': {
+      id: '/campaign/dashboard'
+      path: '/campaign/dashboard'
+      fullPath: '/campaign/dashboard'
+      preLoaderRoute: typeof CampaignDashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/creative': {
+      id: '/campaign/creative'
+      path: '/campaign/creative'
+      fullPath: '/campaign/creative'
+      preLoaderRoute: typeof CampaignCreativeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/control-showcase': {
+      id: '/campaign/control-showcase'
+      path: '/campaign/control-showcase'
+      fullPath: '/campaign/control-showcase'
+      preLoaderRoute: typeof CampaignControlShowcaseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/control-room': {
+      id: '/campaign/control-room'
+      path: '/campaign/control-room'
+      fullPath: '/campaign/control-room'
+      preLoaderRoute: typeof CampaignControlRoomRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/constituency': {
+      id: '/campaign/constituency'
+      path: '/campaign/constituency'
+      fullPath: '/campaign/constituency'
+      preLoaderRoute: typeof CampaignConstituencyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/college': {
+      id: '/campaign/college'
+      path: '/campaign/college'
+      fullPath: '/campaign/college'
+      preLoaderRoute: typeof CampaignCollegeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/caste-analytics': {
+      id: '/campaign/caste-analytics'
+      path: '/campaign/caste-analytics'
+      fullPath: '/campaign/caste-analytics'
+      preLoaderRoute: typeof CampaignCasteAnalyticsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/candidate-setup': {
+      id: '/campaign/candidate-setup'
+      path: '/campaign/candidate-setup'
+      fullPath: '/campaign/candidate-setup'
+      preLoaderRoute: typeof CampaignCandidateSetupRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/candidate-results': {
+      id: '/campaign/candidate-results'
+      path: '/campaign/candidate-results'
+      fullPath: '/campaign/candidate-results'
+      preLoaderRoute: typeof CampaignCandidateResultsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/candidate-mobile': {
+      id: '/campaign/candidate-mobile'
+      path: '/campaign/candidate-mobile'
+      fullPath: '/campaign/candidate-mobile'
+      preLoaderRoute: typeof CampaignCandidateMobileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/cameraman': {
+      id: '/campaign/cameraman'
+      path: '/campaign/cameraman'
+      fullPath: '/campaign/cameraman'
+      preLoaderRoute: typeof CampaignCameramanRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/calendar': {
+      id: '/campaign/calendar'
+      path: '/campaign/calendar'
+      fullPath: '/campaign/calendar'
+      preLoaderRoute: typeof CampaignCalendarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/booths': {
+      id: '/campaign/booths'
+      path: '/campaign/booths'
+      fullPath: '/campaign/booths'
+      preLoaderRoute: typeof CampaignBoothsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/booth-map': {
+      id: '/campaign/booth-map'
+      path: '/campaign/booth-map'
+      fullPath: '/campaign/booth-map'
+      preLoaderRoute: typeof CampaignBoothMapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/auth': {
+      id: '/campaign/auth'
+      path: '/campaign/auth'
+      fullPath: '/campaign/auth'
+      preLoaderRoute: typeof CampaignAuthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/area-status': {
+      id: '/campaign/area-status'
+      path: '/campaign/area-status'
+      fullPath: '/campaign/area-status'
+      preLoaderRoute: typeof CampaignAreaStatusRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/api-flow': {
+      id: '/campaign/api-flow'
+      path: '/campaign/api-flow'
+      fullPath: '/campaign/api-flow'
+      preLoaderRoute: typeof CampaignApiFlowRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/analytics': {
+      id: '/campaign/analytics'
+      path: '/campaign/analytics'
+      fullPath: '/campaign/analytics'
+      preLoaderRoute: typeof CampaignAnalyticsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/ai-prediction': {
+      id: '/campaign/ai-prediction'
+      path: '/campaign/ai-prediction'
+      fullPath: '/campaign/ai-prediction'
+      preLoaderRoute: typeof CampaignAiPredictionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/admin': {
+      id: '/campaign/admin'
+      path: '/campaign/admin'
+      fullPath: '/campaign/admin'
+      preLoaderRoute: typeof CampaignAdminRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/account': {
+      id: '/campaign/account'
+      path: '/campaign/account'
+      fullPath: '/campaign/account'
+      preLoaderRoute: typeof CampaignAccountRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/ai/workflows': {
       id: '/ai/workflows'
       path: '/workflows'
@@ -2072,6 +3462,36 @@ const AiRouteChildren: AiRouteChildren = {
 
 const AiRouteWithChildren = AiRoute._addFileChildren(AiRouteChildren)
 
+interface HrRouteChildren {
+  HrAdminRoute: typeof HrAdminRoute
+  HrAttendanceRoute: typeof HrAttendanceRoute
+  HrAuthRoute: typeof HrAuthRoute
+  HrCompanyRoute: typeof HrCompanyRoute
+  HrDashboardRoute: typeof HrDashboardRoute
+  HrDocumentsRoute: typeof HrDocumentsRoute
+  HrDocumentsSharedRoute: typeof HrDocumentsSharedRoute
+  HrEmployeesRoute: typeof HrEmployeesRoute
+  HrLeaveRoute: typeof HrLeaveRoute
+  HrPerformanceRoute: typeof HrPerformanceRoute
+  HrSettingsRoute: typeof HrSettingsRoute
+}
+
+const HrRouteChildren: HrRouteChildren = {
+  HrAdminRoute: HrAdminRoute,
+  HrAttendanceRoute: HrAttendanceRoute,
+  HrAuthRoute: HrAuthRoute,
+  HrCompanyRoute: HrCompanyRoute,
+  HrDashboardRoute: HrDashboardRoute,
+  HrDocumentsRoute: HrDocumentsRoute,
+  HrDocumentsSharedRoute: HrDocumentsSharedRoute,
+  HrEmployeesRoute: HrEmployeesRoute,
+  HrLeaveRoute: HrLeaveRoute,
+  HrPerformanceRoute: HrPerformanceRoute,
+  HrSettingsRoute: HrSettingsRoute,
+}
+
+const HrRouteWithChildren = HrRoute._addFileChildren(HrRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AffiliatesRoute: AffiliatesRoute,
@@ -2115,7 +3535,7 @@ const rootRouteChildren: RootRouteChildren = {
   FraudRoute: FraudRoute,
   GeoRoute: GeoRoute,
   GitRoute: GitRoute,
-  HrRoute: HrRoute,
+  HrRoute: HrRouteWithChildren,
   InfluencersRoute: InfluencersRoute,
   KnowledgeRoute: KnowledgeRoute,
   LawRoute: LawRoute,
@@ -2156,6 +3576,65 @@ const rootRouteChildren: RootRouteChildren = {
   WarRoomRoute: WarRoomRoute,
   WebhooksRoute: WebhooksRoute,
   WhiteLabelRoute: WhiteLabelRoute,
+  CampaignAccountRoute: CampaignAccountRoute,
+  CampaignAdminRoute: CampaignAdminRoute,
+  CampaignAiPredictionRoute: CampaignAiPredictionRoute,
+  CampaignAnalyticsRoute: CampaignAnalyticsRoute,
+  CampaignApiFlowRoute: CampaignApiFlowRoute,
+  CampaignAreaStatusRoute: CampaignAreaStatusRoute,
+  CampaignAuthRoute: CampaignAuthRoute,
+  CampaignBoothMapRoute: CampaignBoothMapRoute,
+  CampaignBoothsRoute: CampaignBoothsRoute,
+  CampaignCalendarRoute: CampaignCalendarRoute,
+  CampaignCameramanRoute: CampaignCameramanRoute,
+  CampaignCandidateMobileRoute: CampaignCandidateMobileRoute,
+  CampaignCandidateResultsRoute: CampaignCandidateResultsRoute,
+  CampaignCandidateSetupRoute: CampaignCandidateSetupRoute,
+  CampaignCasteAnalyticsRoute: CampaignCasteAnalyticsRoute,
+  CampaignCollegeRoute: CampaignCollegeRoute,
+  CampaignConstituencyRoute: CampaignConstituencyRoute,
+  CampaignControlRoomRoute: CampaignControlRoomRoute,
+  CampaignControlShowcaseRoute: CampaignControlShowcaseRoute,
+  CampaignCreativeRoute: CampaignCreativeRoute,
+  CampaignDashboardRoute: CampaignDashboardRoute,
+  CampaignDeckRoute: CampaignDeckRoute,
+  CampaignDeploymentRoute: CampaignDeploymentRoute,
+  CampaignDonationsRoute: CampaignDonationsRoute,
+  CampaignDoorToDoorRoute: CampaignDoorToDoorRoute,
+  CampaignDriverRoute: CampaignDriverRoute,
+  CampaignErdRoute: CampaignErdRoute,
+  CampaignEventsRoute: CampaignEventsRoute,
+  CampaignFigmaRoute: CampaignFigmaRoute,
+  CampaignFinanceRoute: CampaignFinanceRoute,
+  CampaignHeroShowcaseRoute: CampaignHeroShowcaseRoute,
+  CampaignIntelligenceRoute: CampaignIntelligenceRoute,
+  CampaignJourneyRoute: CampaignJourneyRoute,
+  CampaignLeaderRoute: CampaignLeaderRoute,
+  CampaignLoginShowcaseRoute: CampaignLoginShowcaseRoute,
+  CampaignManagerRoute: CampaignManagerRoute,
+  CampaignMasterFlowRoute: CampaignMasterFlowRoute,
+  CampaignMediaRoute: CampaignMediaRoute,
+  CampaignMessagingRoute: CampaignMessagingRoute,
+  CampaignPaRoute: CampaignPaRoute,
+  CampaignPollDayRoute: CampaignPollDayRoute,
+  CampaignPostElectionRoute: CampaignPostElectionRoute,
+  CampaignReportsRoute: CampaignReportsRoute,
+  CampaignResultDayRoute: CampaignResultDayRoute,
+  CampaignResultsKrRoute: CampaignResultsKrRoute,
+  CampaignRoleDashboardRoute: CampaignRoleDashboardRoute,
+  CampaignRoleSelectRoute: CampaignRoleSelectRoute,
+  CampaignSecurityMatrixRoute: CampaignSecurityMatrixRoute,
+  CampaignSettingsRoute: CampaignSettingsRoute,
+  CampaignSocialRoute: CampaignSocialRoute,
+  CampaignSuperAdminRoute: CampaignSuperAdminRoute,
+  CampaignTechStackRoute: CampaignTechStackRoute,
+  CampaignTransportRoute: CampaignTransportRoute,
+  CampaignUnifiedRoute: CampaignUnifiedRoute,
+  CampaignVolunteerRoute: CampaignVolunteerRoute,
+  CampaignVoterDashboardRoute: CampaignVoterDashboardRoute,
+  CampaignVotersRoute: CampaignVotersRoute,
+  CampaignWhiteLabelRoute: CampaignWhiteLabelRoute,
+  CampaignWireframeRoute: CampaignWireframeRoute,
   PortalAffiliateRoute: PortalAffiliateRoute,
   PortalAuthorRoute: PortalAuthorRoute,
   PortalDevRoute: PortalDevRoute,
@@ -2169,3 +3648,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
