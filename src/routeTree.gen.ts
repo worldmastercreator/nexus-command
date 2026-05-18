@@ -49,7 +49,7 @@ import { Route as LawyerRouteImport } from './routes/lawyer'
 import { Route as LawRouteImport } from './routes/law'
 import { Route as KnowledgeRouteImport } from './routes/knowledge'
 import { Route as InfluencersRouteImport } from './routes/influencers'
-import { Route as HrRouteImport } from './routes/hr'
+import { Route as HrWorkdayRouteImport } from './routes/hr-workday'
 import { Route as GitRouteImport } from './routes/git'
 import { Route as GeoRouteImport } from './routes/geo'
 import { Route as FraudRouteImport } from './routes/fraud'
@@ -381,9 +381,9 @@ const InfluencersRoute = InfluencersRouteImport.update({
   path: '/influencers',
   getParentRoute: () => rootRouteImport,
 } as any)
-const HrRoute = HrRouteImport.update({
-  id: '/hr',
-  path: '/hr',
+const HrWorkdayRoute = HrWorkdayRouteImport.update({
+  id: '/hr-workday',
+  path: '/hr-workday',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GitRoute = GitRouteImport.update({
@@ -1081,7 +1081,7 @@ export interface FileRoutesByFullPath {
   '/fraud': typeof FraudRoute
   '/geo': typeof GeoRoute
   '/git': typeof GitRoute
-  '/hr': typeof HrRouteWithChildren
+  '/hr-workday': typeof HrWorkdayRoute
   '/influencers': typeof InfluencersRoute
   '/knowledge': typeof KnowledgeRoute
   '/law': typeof LawRoute
@@ -1254,7 +1254,7 @@ export interface FileRoutesByTo {
   '/fraud': typeof FraudRoute
   '/geo': typeof GeoRoute
   '/git': typeof GitRoute
-  '/hr': typeof HrRouteWithChildren
+  '/hr-workday': typeof HrWorkdayRoute
   '/influencers': typeof InfluencersRoute
   '/knowledge': typeof KnowledgeRoute
   '/law': typeof LawRoute
@@ -1428,7 +1428,7 @@ export interface FileRoutesById {
   '/fraud': typeof FraudRoute
   '/geo': typeof GeoRoute
   '/git': typeof GitRoute
-  '/hr': typeof HrRouteWithChildren
+  '/hr-workday': typeof HrWorkdayRoute
   '/influencers': typeof InfluencersRoute
   '/knowledge': typeof KnowledgeRoute
   '/law': typeof LawRoute
@@ -1603,7 +1603,7 @@ export interface FileRouteTypes {
     | '/fraud'
     | '/geo'
     | '/git'
-    | '/hr'
+    | '/hr-workday'
     | '/influencers'
     | '/knowledge'
     | '/law'
@@ -1776,7 +1776,7 @@ export interface FileRouteTypes {
     | '/fraud'
     | '/geo'
     | '/git'
-    | '/hr'
+    | '/hr-workday'
     | '/influencers'
     | '/knowledge'
     | '/law'
@@ -1949,7 +1949,7 @@ export interface FileRouteTypes {
     | '/fraud'
     | '/geo'
     | '/git'
-    | '/hr'
+    | '/hr-workday'
     | '/influencers'
     | '/knowledge'
     | '/law'
@@ -2123,7 +2123,7 @@ export interface RootRouteChildren {
   FraudRoute: typeof FraudRoute
   GeoRoute: typeof GeoRoute
   GitRoute: typeof GitRoute
-  HrRoute: typeof HrRouteWithChildren
+  HrWorkdayRoute: typeof HrWorkdayRoute
   InfluencersRoute: typeof InfluencersRoute
   KnowledgeRoute: typeof KnowledgeRoute
   LawRoute: typeof LawRoute
@@ -2516,11 +2516,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof InfluencersRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/hr': {
-      id: '/hr'
-      path: '/hr'
-      fullPath: '/hr'
-      preLoaderRoute: typeof HrRouteImport
+    '/hr-workday': {
+      id: '/hr-workday'
+      path: '/hr-workday'
+      fullPath: '/hr-workday'
+      preLoaderRoute: typeof HrWorkdayRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/git': {
@@ -3462,36 +3462,6 @@ const AiRouteChildren: AiRouteChildren = {
 
 const AiRouteWithChildren = AiRoute._addFileChildren(AiRouteChildren)
 
-interface HrRouteChildren {
-  HrAdminRoute: typeof HrAdminRoute
-  HrAttendanceRoute: typeof HrAttendanceRoute
-  HrAuthRoute: typeof HrAuthRoute
-  HrCompanyRoute: typeof HrCompanyRoute
-  HrDashboardRoute: typeof HrDashboardRoute
-  HrDocumentsRoute: typeof HrDocumentsRoute
-  HrDocumentsSharedRoute: typeof HrDocumentsSharedRoute
-  HrEmployeesRoute: typeof HrEmployeesRoute
-  HrLeaveRoute: typeof HrLeaveRoute
-  HrPerformanceRoute: typeof HrPerformanceRoute
-  HrSettingsRoute: typeof HrSettingsRoute
-}
-
-const HrRouteChildren: HrRouteChildren = {
-  HrAdminRoute: HrAdminRoute,
-  HrAttendanceRoute: HrAttendanceRoute,
-  HrAuthRoute: HrAuthRoute,
-  HrCompanyRoute: HrCompanyRoute,
-  HrDashboardRoute: HrDashboardRoute,
-  HrDocumentsRoute: HrDocumentsRoute,
-  HrDocumentsSharedRoute: HrDocumentsSharedRoute,
-  HrEmployeesRoute: HrEmployeesRoute,
-  HrLeaveRoute: HrLeaveRoute,
-  HrPerformanceRoute: HrPerformanceRoute,
-  HrSettingsRoute: HrSettingsRoute,
-}
-
-const HrRouteWithChildren = HrRoute._addFileChildren(HrRouteChildren)
-
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AffiliatesRoute: AffiliatesRoute,
@@ -3535,7 +3505,7 @@ const rootRouteChildren: RootRouteChildren = {
   FraudRoute: FraudRoute,
   GeoRoute: GeoRoute,
   GitRoute: GitRoute,
-  HrRoute: HrRouteWithChildren,
+  HrWorkdayRoute: HrWorkdayRoute,
   InfluencersRoute: InfluencersRoute,
   KnowledgeRoute: KnowledgeRoute,
   LawRoute: LawRoute,
