@@ -143,6 +143,7 @@ import { Route as ValaDemoLoginRouteImport } from './routes/vala.demo-login'
 import { Route as ValaDemoDirectoryRouteImport } from './routes/vala.demo-directory'
 import { Route as ValaDemoCredentialsRouteImport } from './routes/vala.demo-credentials'
 import { Route as ValaDemoAccessRouteImport } from './routes/vala.demo-access'
+import { Route as ValaDashboardRouteImport } from './routes/vala.dashboard'
 import { Route as ValaControlRouteImport } from './routes/vala.control'
 import { Route as ValaContinentSuperRouteImport } from './routes/vala.continent-super'
 import { Route as ValaClientSuccessRouteImport } from './routes/vala.client-success'
@@ -1050,6 +1051,11 @@ const ValaDemoCredentialsRoute = ValaDemoCredentialsRouteImport.update({
 const ValaDemoAccessRoute = ValaDemoAccessRouteImport.update({
   id: '/vala/demo-access',
   path: '/vala/demo-access',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaDashboardRoute = ValaDashboardRouteImport.update({
+  id: '/vala/dashboard',
+  path: '/vala/dashboard',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ValaControlRoute = ValaControlRouteImport.update({
@@ -2555,6 +2561,7 @@ export interface FileRoutesByFullPath {
   '/vala/client-success': typeof ValaClientSuccessRoute
   '/vala/continent-super': typeof ValaContinentSuperRoute
   '/vala/control': typeof ValaControlRoute
+  '/vala/dashboard': typeof ValaDashboardRoute
   '/vala/demo-access': typeof ValaDemoAccessRoute
   '/vala/demo-credentials': typeof ValaDemoCredentialsRoute
   '/vala/demo-directory': typeof ValaDemoDirectoryRoute
@@ -2929,6 +2936,7 @@ export interface FileRoutesByTo {
   '/vala/client-success': typeof ValaClientSuccessRoute
   '/vala/continent-super': typeof ValaContinentSuperRoute
   '/vala/control': typeof ValaControlRoute
+  '/vala/dashboard': typeof ValaDashboardRoute
   '/vala/demo-access': typeof ValaDemoAccessRoute
   '/vala/demo-credentials': typeof ValaDemoCredentialsRoute
   '/vala/demo-directory': typeof ValaDemoDirectoryRoute
@@ -3304,6 +3312,7 @@ export interface FileRoutesById {
   '/vala/client-success': typeof ValaClientSuccessRoute
   '/vala/continent-super': typeof ValaContinentSuperRoute
   '/vala/control': typeof ValaControlRoute
+  '/vala/dashboard': typeof ValaDashboardRoute
   '/vala/demo-access': typeof ValaDemoAccessRoute
   '/vala/demo-credentials': typeof ValaDemoCredentialsRoute
   '/vala/demo-directory': typeof ValaDemoDirectoryRoute
@@ -3680,6 +3689,7 @@ export interface FileRouteTypes {
     | '/vala/client-success'
     | '/vala/continent-super'
     | '/vala/control'
+    | '/vala/dashboard'
     | '/vala/demo-access'
     | '/vala/demo-credentials'
     | '/vala/demo-directory'
@@ -4054,6 +4064,7 @@ export interface FileRouteTypes {
     | '/vala/client-success'
     | '/vala/continent-super'
     | '/vala/control'
+    | '/vala/dashboard'
     | '/vala/demo-access'
     | '/vala/demo-credentials'
     | '/vala/demo-directory'
@@ -4428,6 +4439,7 @@ export interface FileRouteTypes {
     | '/vala/client-success'
     | '/vala/continent-super'
     | '/vala/control'
+    | '/vala/dashboard'
     | '/vala/demo-access'
     | '/vala/demo-credentials'
     | '/vala/demo-directory'
@@ -4794,6 +4806,7 @@ export interface RootRouteChildren {
   ValaClientSuccessRoute: typeof ValaClientSuccessRoute
   ValaContinentSuperRoute: typeof ValaContinentSuperRoute
   ValaControlRoute: typeof ValaControlRoute
+  ValaDashboardRoute: typeof ValaDashboardRoute
   ValaDemoAccessRoute: typeof ValaDemoAccessRoute
   ValaDemoCredentialsRoute: typeof ValaDemoCredentialsRoute
   ValaDemoDirectoryRoute: typeof ValaDemoDirectoryRoute
@@ -5796,6 +5809,13 @@ declare module '@tanstack/react-router' {
       path: '/vala/demo-access'
       fullPath: '/vala/demo-access'
       preLoaderRoute: typeof ValaDemoAccessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/dashboard': {
+      id: '/vala/dashboard'
+      path: '/vala/dashboard'
+      fullPath: '/vala/dashboard'
+      preLoaderRoute: typeof ValaDashboardRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/vala/control': {
@@ -7795,6 +7815,7 @@ const rootRouteChildren: RootRouteChildren = {
   ValaClientSuccessRoute: ValaClientSuccessRoute,
   ValaContinentSuperRoute: ValaContinentSuperRoute,
   ValaControlRoute: ValaControlRoute,
+  ValaDashboardRoute: ValaDashboardRoute,
   ValaDemoAccessRoute: ValaDemoAccessRoute,
   ValaDemoCredentialsRoute: ValaDemoCredentialsRoute,
   ValaDemoDirectoryRoute: ValaDemoDirectoryRoute,
