@@ -45,7 +45,7 @@ function OrdersPage() {
             <ul className="space-y-3 text-[12.5px]">
               {[[ShoppingCart,"Captured",2840,"primary"],[CircleAlert,"Picking",1240,"warning"],[PackageCheck,"Packed",820,"ai"],[Truck,"In transit",1480,"info"]].map(([I,n,c,t])=>{const Ico=I as any; return (
                 <li key={n as string} className="space-y-1">
-                  <div className="flex items-center gap-2"><Ico className="h-3.5 w-3.5" /><span>{n}</span><span className="ml-auto font-mono text-muted-foreground">{c}</span></div>
+                  <div className="flex items-center gap-2"><Ico className="h-3.5 w-3.5" /><span>{n as string}</span><span className="ml-auto font-mono text-muted-foreground">{c as number}</span></div>
                   <div className="h-1.5 overflow-hidden rounded-full bg-surface"><div className={`h-full bg-${t}`} style={{width:`${Math.min(100,(c as number)/30)}%`}} /></div>
                 </li>
               );})}

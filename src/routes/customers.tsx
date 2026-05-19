@@ -58,7 +58,7 @@ function CustomersPage() {
             <ul className="space-y-2 text-[12px]">
               {[[Mail,"Email",42,"primary"],[MessageCircle,"Chat",28,"ai"],[Phone,"Phone",18,"info"],[UserCircle,"Self-serve",12,"success"]].map(([I,n,p,t])=>{const Ico=I as any; return (
                 <li key={n as string} className="space-y-1">
-                  <div className="flex items-center gap-2"><Ico className="h-3.5 w-3.5" /><span>{n}</span><span className="ml-auto font-mono text-muted-foreground">{p}%</span></div>
+                  <div className="flex items-center gap-2"><Ico className="h-3.5 w-3.5" /><span>{n as string}</span><span className="ml-auto font-mono text-muted-foreground">{p as number}%</span></div>
                   <div className="h-1.5 overflow-hidden rounded-full bg-surface"><div className={`h-full bg-${t}`} style={{width:`${p}%`}} /></div>
                 </li>
               );})}
