@@ -183,6 +183,7 @@ import { Route as GrowthLeadDetailRouteImport } from './routes/growth.lead-detai
 import { Route as GrowthGrowRouteImport } from './routes/growth.grow'
 import { Route as GrowthEmployeesRouteImport } from './routes/growth.employees'
 import { Route as GrowthEmployeeProfileRouteImport } from './routes/growth.employee-profile'
+import { Route as GrowthDashboardRouteImport } from './routes/growth.dashboard'
 import { Route as GrowthCompanyDetailRouteImport } from './routes/growth.company-detail'
 import { Route as GrowthCompaniesRouteImport } from './routes/growth.companies'
 import { Route as GrowthCashierRouteImport } from './routes/growth.cashier'
@@ -204,6 +205,7 @@ import { Route as DataMobileRouteImport } from './routes/data.mobile'
 import { Route as DataMarketplaceRouteImport } from './routes/data.marketplace'
 import { Route as DataFavoritesRouteImport } from './routes/data.favorites'
 import { Route as DataExtractorsRouteImport } from './routes/data.extractors'
+import { Route as DataDashboardRouteImport } from './routes/data.dashboard'
 import { Route as DataComparisonRouteImport } from './routes/data.comparison'
 import { Route as DataCompareRouteImport } from './routes/data.compare'
 import { Route as DataClientRouteImport } from './routes/data.client'
@@ -1185,6 +1187,11 @@ const GrowthEmployeeProfileRoute = GrowthEmployeeProfileRouteImport.update({
   path: '/growth/employee-profile',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GrowthDashboardRoute = GrowthDashboardRouteImport.update({
+  id: '/growth/dashboard',
+  path: '/growth/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const GrowthCompanyDetailRoute = GrowthCompanyDetailRouteImport.update({
   id: '/growth/company-detail',
   path: '/growth/company-detail',
@@ -1288,6 +1295,11 @@ const DataFavoritesRoute = DataFavoritesRouteImport.update({
 const DataExtractorsRoute = DataExtractorsRouteImport.update({
   id: '/data/extractors',
   path: '/data/extractors',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DataDashboardRoute = DataDashboardRouteImport.update({
+  id: '/data/dashboard',
+  path: '/data/dashboard',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DataComparisonRoute = DataComparisonRouteImport.update({
@@ -2025,6 +2037,7 @@ export interface FileRoutesByFullPath {
   '/data/client': typeof DataClientRoute
   '/data/compare': typeof DataCompareRoute
   '/data/comparison': typeof DataComparisonRoute
+  '/data/dashboard': typeof DataDashboardRoute
   '/data/extractors': typeof DataExtractorsRoute
   '/data/favorites': typeof DataFavoritesRoute
   '/data/marketplace': typeof DataMarketplaceRoute
@@ -2046,6 +2059,7 @@ export interface FileRoutesByFullPath {
   '/growth/cashier': typeof GrowthCashierRoute
   '/growth/companies': typeof GrowthCompaniesRoute
   '/growth/company-detail': typeof GrowthCompanyDetailRoute
+  '/growth/dashboard': typeof GrowthDashboardRoute
   '/growth/employee-profile': typeof GrowthEmployeeProfileRoute
   '/growth/employees': typeof GrowthEmployeesRoute
   '/growth/grow': typeof GrowthGrowRoute
@@ -2332,6 +2346,7 @@ export interface FileRoutesByTo {
   '/data/client': typeof DataClientRoute
   '/data/compare': typeof DataCompareRoute
   '/data/comparison': typeof DataComparisonRoute
+  '/data/dashboard': typeof DataDashboardRoute
   '/data/extractors': typeof DataExtractorsRoute
   '/data/favorites': typeof DataFavoritesRoute
   '/data/marketplace': typeof DataMarketplaceRoute
@@ -2353,6 +2368,7 @@ export interface FileRoutesByTo {
   '/growth/cashier': typeof GrowthCashierRoute
   '/growth/companies': typeof GrowthCompaniesRoute
   '/growth/company-detail': typeof GrowthCompanyDetailRoute
+  '/growth/dashboard': typeof GrowthDashboardRoute
   '/growth/employee-profile': typeof GrowthEmployeeProfileRoute
   '/growth/employees': typeof GrowthEmployeesRoute
   '/growth/grow': typeof GrowthGrowRoute
@@ -2640,6 +2656,7 @@ export interface FileRoutesById {
   '/data/client': typeof DataClientRoute
   '/data/compare': typeof DataCompareRoute
   '/data/comparison': typeof DataComparisonRoute
+  '/data/dashboard': typeof DataDashboardRoute
   '/data/extractors': typeof DataExtractorsRoute
   '/data/favorites': typeof DataFavoritesRoute
   '/data/marketplace': typeof DataMarketplaceRoute
@@ -2661,6 +2678,7 @@ export interface FileRoutesById {
   '/growth/cashier': typeof GrowthCashierRoute
   '/growth/companies': typeof GrowthCompaniesRoute
   '/growth/company-detail': typeof GrowthCompanyDetailRoute
+  '/growth/dashboard': typeof GrowthDashboardRoute
   '/growth/employee-profile': typeof GrowthEmployeeProfileRoute
   '/growth/employees': typeof GrowthEmployeesRoute
   '/growth/grow': typeof GrowthGrowRoute
@@ -2949,6 +2967,7 @@ export interface FileRouteTypes {
     | '/data/client'
     | '/data/compare'
     | '/data/comparison'
+    | '/data/dashboard'
     | '/data/extractors'
     | '/data/favorites'
     | '/data/marketplace'
@@ -2970,6 +2989,7 @@ export interface FileRouteTypes {
     | '/growth/cashier'
     | '/growth/companies'
     | '/growth/company-detail'
+    | '/growth/dashboard'
     | '/growth/employee-profile'
     | '/growth/employees'
     | '/growth/grow'
@@ -3256,6 +3276,7 @@ export interface FileRouteTypes {
     | '/data/client'
     | '/data/compare'
     | '/data/comparison'
+    | '/data/dashboard'
     | '/data/extractors'
     | '/data/favorites'
     | '/data/marketplace'
@@ -3277,6 +3298,7 @@ export interface FileRouteTypes {
     | '/growth/cashier'
     | '/growth/companies'
     | '/growth/company-detail'
+    | '/growth/dashboard'
     | '/growth/employee-profile'
     | '/growth/employees'
     | '/growth/grow'
@@ -3563,6 +3585,7 @@ export interface FileRouteTypes {
     | '/data/client'
     | '/data/compare'
     | '/data/comparison'
+    | '/data/dashboard'
     | '/data/extractors'
     | '/data/favorites'
     | '/data/marketplace'
@@ -3584,6 +3607,7 @@ export interface FileRouteTypes {
     | '/growth/cashier'
     | '/growth/companies'
     | '/growth/company-detail'
+    | '/growth/dashboard'
     | '/growth/employee-profile'
     | '/growth/employees'
     | '/growth/grow'
@@ -3862,6 +3886,7 @@ export interface RootRouteChildren {
   DataClientRoute: typeof DataClientRoute
   DataCompareRoute: typeof DataCompareRoute
   DataComparisonRoute: typeof DataComparisonRoute
+  DataDashboardRoute: typeof DataDashboardRoute
   DataExtractorsRoute: typeof DataExtractorsRoute
   DataFavoritesRoute: typeof DataFavoritesRoute
   DataMarketplaceRoute: typeof DataMarketplaceRoute
@@ -3883,6 +3908,7 @@ export interface RootRouteChildren {
   GrowthCashierRoute: typeof GrowthCashierRoute
   GrowthCompaniesRoute: typeof GrowthCompaniesRoute
   GrowthCompanyDetailRoute: typeof GrowthCompanyDetailRoute
+  GrowthDashboardRoute: typeof GrowthDashboardRoute
   GrowthEmployeeProfileRoute: typeof GrowthEmployeeProfileRoute
   GrowthEmployeesRoute: typeof GrowthEmployeesRoute
   GrowthGrowRoute: typeof GrowthGrowRoute
@@ -5207,6 +5233,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GrowthEmployeeProfileRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/growth/dashboard': {
+      id: '/growth/dashboard'
+      path: '/growth/dashboard'
+      fullPath: '/growth/dashboard'
+      preLoaderRoute: typeof GrowthDashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/growth/company-detail': {
       id: '/growth/company-detail'
       path: '/growth/company-detail'
@@ -5352,6 +5385,13 @@ declare module '@tanstack/react-router' {
       path: '/data/extractors'
       fullPath: '/data/extractors'
       preLoaderRoute: typeof DataExtractorsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/data/dashboard': {
+      id: '/data/dashboard'
+      path: '/data/dashboard'
+      fullPath: '/data/dashboard'
+      preLoaderRoute: typeof DataDashboardRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/data/comparison': {
@@ -6327,6 +6367,7 @@ const rootRouteChildren: RootRouteChildren = {
   DataClientRoute: DataClientRoute,
   DataCompareRoute: DataCompareRoute,
   DataComparisonRoute: DataComparisonRoute,
+  DataDashboardRoute: DataDashboardRoute,
   DataExtractorsRoute: DataExtractorsRoute,
   DataFavoritesRoute: DataFavoritesRoute,
   DataMarketplaceRoute: DataMarketplaceRoute,
@@ -6348,6 +6389,7 @@ const rootRouteChildren: RootRouteChildren = {
   GrowthCashierRoute: GrowthCashierRoute,
   GrowthCompaniesRoute: GrowthCompaniesRoute,
   GrowthCompanyDetailRoute: GrowthCompanyDetailRoute,
+  GrowthDashboardRoute: GrowthDashboardRoute,
   GrowthEmployeeProfileRoute: GrowthEmployeeProfileRoute,
   GrowthEmployeesRoute: GrowthEmployeesRoute,
   GrowthGrowRoute: GrowthGrowRoute,
@@ -6454,13 +6496,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
