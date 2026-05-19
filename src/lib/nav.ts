@@ -22,6 +22,9 @@ import {
   // Creator Hub (LMS) + Payroll
   PlaySquare, BookOpenCheck, Presentation, NotepadText, PencilRuler, Receipt,
   Calculator, PiggyBank, Landmark, FileCheck2, ScrollText as Pay, TrendingDown,
+  // MLM + POS
+  GitFork, Gift, Trophy as RankIcon, RefreshCw, Printer, ScanLine, Tags,
+  Percent, Crown, Banknote as Cash, Building2 as Company,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
