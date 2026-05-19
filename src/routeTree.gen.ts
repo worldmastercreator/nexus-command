@@ -157,6 +157,43 @@ import { Route as ValaApiManagerRouteImport } from './routes/vala.api-manager'
 import { Route as ValaApiIntegrationRouteImport } from './routes/vala.api-integration'
 import { Route as ValaApiAiRouteImport } from './routes/vala.api-ai'
 import { Route as ValaAiConsoleRouteImport } from './routes/vala.ai-console'
+import { Route as ShopifyViewerDashboardRouteImport } from './routes/shopify.viewer-dashboard'
+import { Route as ShopifyTaxRouteImport } from './routes/shopify.tax'
+import { Route as ShopifyStaffDashboardRouteImport } from './routes/shopify.staff-dashboard'
+import { Route as ShopifyShippingRouteImport } from './routes/shopify.shipping'
+import { Route as ShopifySettingsRouteImport } from './routes/shopify.settings'
+import { Route as ShopifySecurityRouteImport } from './routes/shopify.security'
+import { Route as ShopifyReviewsRouteImport } from './routes/shopify.reviews'
+import { Route as ShopifyReturnsRouteImport } from './routes/shopify.returns'
+import { Route as ShopifyProductsRouteImport } from './routes/shopify.products'
+import { Route as ShopifyProductSuiteExtrasRouteImport } from './routes/shopify.product-suite-extras'
+import { Route as ShopifyProductSuiteRouteImport } from './routes/shopify.product-suite'
+import { Route as ShopifyProductEditRouteImport } from './routes/shopify.product-edit'
+import { Route as ShopifyPosRouteImport } from './routes/shopify.pos'
+import { Route as ShopifyPaymentsRouteImport } from './routes/shopify.payments'
+import { Route as ShopifyOrdersRouteImport } from './routes/shopify.orders'
+import { Route as ShopifyOnlineStoreRouteImport } from './routes/shopify.online-store'
+import { Route as ShopifyNotificationsRouteImport } from './routes/shopify.notifications'
+import { Route as ShopifyMultiStoreRouteImport } from './routes/shopify.multi-store'
+import { Route as ShopifyMediaLibraryRouteImport } from './routes/shopify.media-library'
+import { Route as ShopifyMarketplaceRouteImport } from './routes/shopify.marketplace'
+import { Route as ShopifyMarketingRouteImport } from './routes/shopify.marketing'
+import { Route as ShopifyManagerDashboardRouteImport } from './routes/shopify.manager-dashboard'
+import { Route as ShopifyLoginRouteImport } from './routes/shopify.login'
+import { Route as ShopifyInventoryRouteImport } from './routes/shopify.inventory'
+import { Route as ShopifyInternationalizationRouteImport } from './routes/shopify.internationalization'
+import { Route as ShopifyDiscountsRouteImport } from './routes/shopify.discounts'
+import { Route as ShopifyDeveloperToolsRouteImport } from './routes/shopify.developer-tools'
+import { Route as ShopifyDashboardRouteImport } from './routes/shopify.dashboard'
+import { Route as ShopifyCustomersRouteImport } from './routes/shopify.customers'
+import { Route as ShopifyCollectionsRouteImport } from './routes/shopify.collections'
+import { Route as ShopifyCartCheckoutRouteImport } from './routes/shopify.cart-checkout'
+import { Route as ShopifyBlogRouteImport } from './routes/shopify.blog'
+import { Route as ShopifyBillingRouteImport } from './routes/shopify.billing'
+import { Route as ShopifyAutomationRouteImport } from './routes/shopify.automation'
+import { Route as ShopifyAuditLogRouteImport } from './routes/shopify.audit-log'
+import { Route as ShopifyAppMarketplaceRouteImport } from './routes/shopify.app-marketplace'
+import { Route as ShopifyAnalyticsRouteImport } from './routes/shopify.analytics'
 import { Route as PosSyncRouteImport } from './routes/pos.sync'
 import { Route as PosStaffRouteImport } from './routes/pos.staff'
 import { Route as PosShiftRouteImport } from './routes/pos.shift'
@@ -256,6 +293,161 @@ import { Route as GrowthCashierRouteImport } from './routes/growth.cashier'
 import { Route as GrowthCampaignsRouteImport } from './routes/growth.campaigns'
 import { Route as GrowthCampaignAnalyticsRouteImport } from './routes/growth.campaign-analytics'
 import { Route as GrowthAdminRouteImport } from './routes/growth.admin'
+import { Route as ErpSupportTicketsRouteImport } from './routes/erp.support-tickets'
+import { Route as ErpSupportSettingsRouteImport } from './routes/erp.support-settings'
+import { Route as ErpSupportSearchRouteImport } from './routes/erp.support-search'
+import { Route as ErpSupportLogsRouteImport } from './routes/erp.support-logs'
+import { Route as ErpSupportEscalationsRouteImport } from './routes/erp.support-escalations'
+import { Route as ErpSupportDashboardRouteImport } from './routes/erp.support-dashboard'
+import { Route as ErpSupportCustomersRouteImport } from './routes/erp.support-customers'
+import { Route as ErpSupportRouteImport } from './routes/erp.support'
+import { Route as ErpMerchantWebhooksCreateRouteImport } from './routes/erp.merchant-webhooks-create'
+import { Route as ErpMerchantWebhooksRouteImport } from './routes/erp.merchant-webhooks'
+import { Route as ErpMerchantTransactionsRouteImport } from './routes/erp.merchant-transactions'
+import { Route as ErpMerchantSubscriptionsRouteImport } from './routes/erp.merchant-subscriptions'
+import { Route as ErpMerchantSettingsRouteImport } from './routes/erp.merchant-settings'
+import { Route as ErpMerchantProductsCreateRouteImport } from './routes/erp.merchant-products-create'
+import { Route as ErpMerchantProductsRouteImport } from './routes/erp.merchant-products'
+import { Route as ErpMerchantPricingCreateRouteImport } from './routes/erp.merchant-pricing-create'
+import { Route as ErpMerchantPricingRouteImport } from './routes/erp.merchant-pricing'
+import { Route as ErpMerchantLicensesRouteImport } from './routes/erp.merchant-licenses'
+import { Route as ErpMerchantInvoicesRouteImport } from './routes/erp.merchant-invoices'
+import { Route as ErpMerchantFilesRouteImport } from './routes/erp.merchant-files'
+import { Route as ErpMerchantEntitlementsRouteImport } from './routes/erp.merchant-entitlements'
+import { Route as ErpMerchantDunningRouteImport } from './routes/erp.merchant-dunning'
+import { Route as ErpMerchantDiscountsCreateRouteImport } from './routes/erp.merchant-discounts-create'
+import { Route as ErpMerchantDiscountsRouteImport } from './routes/erp.merchant-discounts'
+import { Route as ErpMerchantDashboardRouteImport } from './routes/erp.merchant-dashboard'
+import { Route as ErpMerchantCustomersRouteImport } from './routes/erp.merchant-customers'
+import { Route as ErpMerchantCheckoutLinksRouteImport } from './routes/erp.merchant-checkout-links'
+import { Route as ErpMerchantApiRouteImport } from './routes/erp.merchant-api'
+import { Route as ErpMerchantAnalyticsRouteImport } from './routes/erp.merchant-analytics'
+import { Route as ErpMerchantRouteImport } from './routes/erp.merchant'
+import { Route as ErpMarketplaceWishlistRouteImport } from './routes/erp.marketplace-wishlist'
+import { Route as ErpMarketplaceSearchRouteImport } from './routes/erp.marketplace-search'
+import { Route as ErpMarketplaceNotificationsRouteImport } from './routes/erp.marketplace-notifications'
+import { Route as ErpMarketplaceForumsCreateRouteImport } from './routes/erp.marketplace-forums-create'
+import { Route as ErpMarketplaceForumsRouteImport } from './routes/erp.marketplace-forums'
+import { Route as ErpMarketplaceCompareRouteImport } from './routes/erp.marketplace-compare'
+import { Route as ErpMarketplaceCheckoutRouteImport } from './routes/erp.marketplace-checkout'
+import { Route as ErpMarketplaceCartRouteImport } from './routes/erp.marketplace-cart'
+import { Route as ErpMarketplaceBlogRouteImport } from './routes/erp.marketplace-blog'
+import { Route as ErpMarketplaceBecomeAuthorRouteImport } from './routes/erp.marketplace-become-author'
+import { Route as ErpMarketplaceAuthorsRouteImport } from './routes/erp.marketplace-authors'
+import { Route as ErpMarketplaceAuthorWithdrawRouteImport } from './routes/erp.marketplace-author-withdraw'
+import { Route as ErpMarketplaceAuthorUploadRouteImport } from './routes/erp.marketplace-author-upload'
+import { Route as ErpMarketplaceAuthorStatementsRouteImport } from './routes/erp.marketplace-author-statements'
+import { Route as ErpMarketplaceAuthorSettingsRouteImport } from './routes/erp.marketplace-author-settings'
+import { Route as ErpMarketplaceAuthorReviewsRouteImport } from './routes/erp.marketplace-author-reviews'
+import { Route as ErpMarketplaceAuthorRefundsRouteImport } from './routes/erp.marketplace-author-refunds'
+import { Route as ErpMarketplaceAuthorPortfolioRouteImport } from './routes/erp.marketplace-author-portfolio'
+import { Route as ErpMarketplaceAuthorFollowersRouteImport } from './routes/erp.marketplace-author-followers'
+import { Route as ErpMarketplaceAuthorEarningsRouteImport } from './routes/erp.marketplace-author-earnings'
+import { Route as ErpMarketplaceAuthorDashboardRouteImport } from './routes/erp.marketplace-author-dashboard'
+import { Route as ErpMarketplaceAuthorCommentsRouteImport } from './routes/erp.marketplace-author-comments'
+import { Route as ErpMarketplaceAuthorBadgesRouteImport } from './routes/erp.marketplace-author-badges'
+import { Route as ErpMarketplaceAuthorAnalyticsRouteImport } from './routes/erp.marketplace-author-analytics'
+import { Route as ErpMarketplaceAuthorRouteImport } from './routes/erp.marketplace-author'
+import { Route as ErpMarketplaceRouteImport } from './routes/erp.marketplace'
+import { Route as ErpCustomerSubscriptionsRouteImport } from './routes/erp.customer-subscriptions'
+import { Route as ErpCustomerSecurityRouteImport } from './routes/erp.customer-security'
+import { Route as ErpCustomerPrivacyRouteImport } from './routes/erp.customer-privacy'
+import { Route as ErpCustomerPaymentMethodsRouteImport } from './routes/erp.customer-payment-methods'
+import { Route as ErpCustomerMarketplaceDownloadsRouteImport } from './routes/erp.customer-marketplace-downloads'
+import { Route as ErpCustomerLicensesRouteImport } from './routes/erp.customer-licenses'
+import { Route as ErpCustomerInvoicesRouteImport } from './routes/erp.customer-invoices'
+import { Route as ErpCustomerDownloadsRouteImport } from './routes/erp.customer-downloads'
+import { Route as ErpCustomerDashboardRouteImport } from './routes/erp.customer-dashboard'
+import { Route as ErpCustomerAccountRouteImport } from './routes/erp.customer-account'
+import { Route as ErpCustomerRouteImport } from './routes/erp.customer'
+import { Route as ErpCheckoutRouteImport } from './routes/erp.checkout'
+import { Route as ErpAuthVerifyEmailRouteImport } from './routes/erp.auth-verify-email'
+import { Route as ErpAuthResetPasswordRouteImport } from './routes/erp.auth-reset-password'
+import { Route as ErpAuthRegisterRouteImport } from './routes/erp.auth-register'
+import { Route as ErpAuthLoginRouteImport } from './routes/erp.auth-login'
+import { Route as ErpAuthForgotPasswordRouteImport } from './routes/erp.auth-forgot-password'
+import { Route as ErpAuthRouteImport } from './routes/erp.auth'
+import { Route as ErpAdminWebhooksRouteImport } from './routes/erp.admin-webhooks'
+import { Route as ErpAdminVersioningRouteImport } from './routes/erp.admin-versioning'
+import { Route as ErpAdminTrustScoresRouteImport } from './routes/erp.admin-trust-scores'
+import { Route as ErpAdminTransactionsRouteImport } from './routes/erp.admin-transactions'
+import { Route as ErpAdminTenantsRouteImport } from './routes/erp.admin-tenants'
+import { Route as ErpAdminTaxRouteImport } from './routes/erp.admin-tax'
+import { Route as ErpAdminSystemHealthRouteImport } from './routes/erp.admin-system-health'
+import { Route as ErpAdminSubscriptionsRouteImport } from './routes/erp.admin-subscriptions'
+import { Route as ErpAdminSlaRouteImport } from './routes/erp.admin-sla'
+import { Route as ErpAdminSettingsRouteImport } from './routes/erp.admin-settings'
+import { Route as ErpAdminSecurityRouteImport } from './routes/erp.admin-security'
+import { Route as ErpAdminSecretsRouteImport } from './routes/erp.admin-secrets'
+import { Route as ErpAdminSearchEngineRouteImport } from './routes/erp.admin-search-engine'
+import { Route as ErpAdminSchedulerRouteImport } from './routes/erp.admin-scheduler'
+import { Route as ErpAdminRolesRouteImport } from './routes/erp.admin-roles'
+import { Route as ErpAdminRegionSyncRouteImport } from './routes/erp.admin-region-sync'
+import { Route as ErpAdminRecoveryLogRouteImport } from './routes/erp.admin-recovery-log'
+import { Route as ErpAdminRateLimitsRouteImport } from './routes/erp.admin-rate-limits'
+import { Route as ErpAdminProrationRouteImport } from './routes/erp.admin-proration'
+import { Route as ErpAdminProductsRouteImport } from './routes/erp.admin-products'
+import { Route as ErpAdminPolicyEngineRouteImport } from './routes/erp.admin-policy-engine'
+import { Route as ErpAdminPaymentsGodModeRouteImport } from './routes/erp.admin-payments-god-mode'
+import { Route as ErpAdminObservabilityRouteImport } from './routes/erp.admin-observability'
+import { Route as ErpAdminNotificationsRouteImport } from './routes/erp.admin-notifications'
+import { Route as ErpAdminMerchantsRouteImport } from './routes/erp.admin-merchants'
+import { Route as ErpAdminMemoryRecoveryRouteImport } from './routes/erp.admin-memory-recovery'
+import { Route as ErpAdminMarketplaceTopSellingRouteImport } from './routes/erp.admin-marketplace-top-selling'
+import { Route as ErpAdminMarketplaceTaxRulesRouteImport } from './routes/erp.admin-marketplace-tax-rules'
+import { Route as ErpAdminMarketplaceTakedownsRouteImport } from './routes/erp.admin-marketplace-takedowns'
+import { Route as ErpAdminMarketplaceSettingsRouteImport } from './routes/erp.admin-marketplace-settings'
+import { Route as ErpAdminMarketplaceSalesReportsRouteImport } from './routes/erp.admin-marketplace-sales-reports'
+import { Route as ErpAdminMarketplaceReportsRouteImport } from './routes/erp.admin-marketplace-reports'
+import { Route as ErpAdminMarketplaceRefundsRouteImport } from './routes/erp.admin-marketplace-refunds'
+import { Route as ErpAdminMarketplaceQueueRouteImport } from './routes/erp.admin-marketplace-queue'
+import { Route as ErpAdminMarketplacePayoutsRouteImport } from './routes/erp.admin-marketplace-payouts'
+import { Route as ErpAdminMarketplaceLevelsRouteImport } from './routes/erp.admin-marketplace-levels'
+import { Route as ErpAdminMarketplaceItemsRouteImport } from './routes/erp.admin-marketplace-items'
+import { Route as ErpAdminMarketplaceFlagsRouteImport } from './routes/erp.admin-marketplace-flags'
+import { Route as ErpAdminMarketplaceFeaturedRouteImport } from './routes/erp.admin-marketplace-featured'
+import { Route as ErpAdminMarketplaceCollectionsRouteImport } from './routes/erp.admin-marketplace-collections'
+import { Route as ErpAdminMarketplaceCategoriesRouteImport } from './routes/erp.admin-marketplace-categories'
+import { Route as ErpAdminMarketplaceAuthorsRouteImport } from './routes/erp.admin-marketplace-authors'
+import { Route as ErpAdminMarketplaceRouteImport } from './routes/erp.admin-marketplace'
+import { Route as ErpAdminLoadPredictionRouteImport } from './routes/erp.admin-load-prediction'
+import { Route as ErpAdminLicensesRouteImport } from './routes/erp.admin-licenses'
+import { Route as ErpAdminIntegrationsRouteImport } from './routes/erp.admin-integrations'
+import { Route as ErpAdminImpersonationRouteImport } from './routes/erp.admin-impersonation'
+import { Route as ErpAdminGatewaysRouteImport } from './routes/erp.admin-gateways'
+import { Route as ErpAdminFraudMlRouteImport } from './routes/erp.admin-fraud-ml'
+import { Route as ErpAdminFraudRouteImport } from './routes/erp.admin-fraud'
+import { Route as ErpAdminFeatureFlagsRouteImport } from './routes/erp.admin-feature-flags'
+import { Route as ErpAdminEventBusRouteImport } from './routes/erp.admin-event-bus'
+import { Route as ErpAdminEntitlementsRouteImport } from './routes/erp.admin-entitlements'
+import { Route as ErpAdminDunningRouteImport } from './routes/erp.admin-dunning'
+import { Route as ErpAdminDocumentsRouteImport } from './routes/erp.admin-documents'
+import { Route as ErpAdminDigitalTwinRouteImport } from './routes/erp.admin-digital-twin'
+import { Route as ErpAdminDeploymentsRouteImport } from './routes/erp.admin-deployments'
+import { Route as ErpAdminDependencyWatcherRouteImport } from './routes/erp.admin-dependency-watcher'
+import { Route as ErpAdminDataGuardianRouteImport } from './routes/erp.admin-data-guardian'
+import { Route as ErpAdminDataConsistencyRouteImport } from './routes/erp.admin-data-consistency'
+import { Route as ErpAdminDashboardRouteImport } from './routes/erp.admin-dashboard'
+import { Route as ErpAdminCustomersRouteImport } from './routes/erp.admin-customers'
+import { Route as ErpAdminCurrencyRouteImport } from './routes/erp.admin-currency'
+import { Route as ErpAdminCostOptimizationRouteImport } from './routes/erp.admin-cost-optimization'
+import { Route as ErpAdminCostGovernorRouteImport } from './routes/erp.admin-cost-governor'
+import { Route as ErpAdminConsistencyRouteImport } from './routes/erp.admin-consistency'
+import { Route as ErpAdminConfigSyncRouteImport } from './routes/erp.admin-config-sync'
+import { Route as ErpAdminComplianceRouteImport } from './routes/erp.admin-compliance'
+import { Route as ErpAdminCircuitBreakersRouteImport } from './routes/erp.admin-circuit-breakers'
+import { Route as ErpAdminCdnEdgeRouteImport } from './routes/erp.admin-cdn-edge'
+import { Route as ErpAdminCdnRouteImport } from './routes/erp.admin-cdn'
+import { Route as ErpAdminBusinessLogicRouteImport } from './routes/erp.admin-business-logic'
+import { Route as ErpAdminBillingRouteImport } from './routes/erp.admin-billing'
+import { Route as ErpAdminBiSyncRouteImport } from './routes/erp.admin-bi-sync'
+import { Route as ErpAdminBackupRouteImport } from './routes/erp.admin-backup'
+import { Route as ErpAdminAutoRollbackRouteImport } from './routes/erp.admin-auto-rollback'
+import { Route as ErpAdminAuditLogsRouteImport } from './routes/erp.admin-audit-logs'
+import { Route as ErpAdminApiSelfTestRouteImport } from './routes/erp.admin-api-self-test'
+import { Route as ErpAdminApiLogsRouteImport } from './routes/erp.admin-api-logs'
+import { Route as ErpAdminAiAssistRouteImport } from './routes/erp.admin-ai-assist'
+import { Route as ErpAdminRouteImport } from './routes/erp.admin'
 import { Route as DataWizardRouteImport } from './routes/data.wizard'
 import { Route as DataWalletRouteImport } from './routes/data.wallet'
 import { Route as DataViewerRouteImport } from './routes/data.viewer'
@@ -363,6 +555,38 @@ import { Route as CampaignAnalyticsRouteImport } from './routes/campaign.analyti
 import { Route as CampaignAiPredictionRouteImport } from './routes/campaign.ai-prediction'
 import { Route as CampaignAdminRouteImport } from './routes/campaign.admin'
 import { Route as CampaignAccountRouteImport } from './routes/campaign.account'
+import { Route as AtelierSupportRouteImport } from './routes/atelier.support'
+import { Route as AtelierSearchRouteImport } from './routes/atelier.search'
+import { Route as AtelierResetRouteImport } from './routes/atelier.reset'
+import { Route as AtelierResellerSoftwareRouteImport } from './routes/atelier.reseller-software'
+import { Route as AtelierResellerPluginsRouteImport } from './routes/atelier.reseller-plugins'
+import { Route as AtelierRegisterRouteImport } from './routes/atelier.register'
+import { Route as AtelierProductivityRouteImport } from './routes/atelier.productivity'
+import { Route as AtelierPartnerRouteImport } from './routes/atelier.partner'
+import { Route as AtelierMerchantRouteImport } from './routes/atelier.merchant'
+import { Route as AtelierLoginRouteImport } from './routes/atelier.login'
+import { Route as AtelierInfluencerRouteImport } from './routes/atelier.influencer'
+import { Route as AtelierHomeRouteImport } from './routes/atelier.home'
+import { Route as AtelierFranchiseRouteImport } from './routes/atelier.franchise'
+import { Route as AtelierForgotRouteImport } from './routes/atelier.forgot'
+import { Route as AtelierCustomerRouteImport } from './routes/atelier.customer'
+import { Route as AtelierChatRouteImport } from './routes/atelier.chat'
+import { Route as AtelierCategoryRouteImport } from './routes/atelier.category'
+import { Route as AtelierCategoriesRouteImport } from './routes/atelier.categories'
+import { Route as AtelierBuilderRouteImport } from './routes/atelier.builder'
+import { Route as AtelierBlogDetailRouteImport } from './routes/atelier.blog-detail'
+import { Route as AtelierBlogRouteImport } from './routes/atelier.blog'
+import { Route as AtelierAuthorUploadRouteImport } from './routes/atelier.author-upload'
+import { Route as AtelierAuthorSalesRouteImport } from './routes/atelier.author-sales'
+import { Route as AtelierAuthorReviewsRouteImport } from './routes/atelier.author-reviews'
+import { Route as AtelierAuthorProfileRouteImport } from './routes/atelier.author-profile'
+import { Route as AtelierAuthorItemsRouteImport } from './routes/atelier.author-items'
+import { Route as AtelierAuthorEditRouteImport } from './routes/atelier.author-edit'
+import { Route as AtelierAuthorEarningsRouteImport } from './routes/atelier.author-earnings'
+import { Route as AtelierAuthorRouteImport } from './routes/atelier.author'
+import { Route as AtelierAdminUsersRouteImport } from './routes/atelier.admin-users'
+import { Route as AtelierAdminRolesRouteImport } from './routes/atelier.admin-roles'
+import { Route as AtelierAdminAuditRouteImport } from './routes/atelier.admin-audit'
 import { Route as AiWorkflowsRouteImport } from './routes/ai.workflows'
 import { Route as AiVoiceRouteImport } from './routes/ai.voice'
 import { Route as AiSupportRouteImport } from './routes/ai.support'
@@ -1123,6 +1347,193 @@ const ValaAiConsoleRoute = ValaAiConsoleRouteImport.update({
   path: '/vala/ai-console',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ShopifyViewerDashboardRoute = ShopifyViewerDashboardRouteImport.update({
+  id: '/shopify/viewer-dashboard',
+  path: '/shopify/viewer-dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopifyTaxRoute = ShopifyTaxRouteImport.update({
+  id: '/shopify/tax',
+  path: '/shopify/tax',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopifyStaffDashboardRoute = ShopifyStaffDashboardRouteImport.update({
+  id: '/shopify/staff-dashboard',
+  path: '/shopify/staff-dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopifyShippingRoute = ShopifyShippingRouteImport.update({
+  id: '/shopify/shipping',
+  path: '/shopify/shipping',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopifySettingsRoute = ShopifySettingsRouteImport.update({
+  id: '/shopify/settings',
+  path: '/shopify/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopifySecurityRoute = ShopifySecurityRouteImport.update({
+  id: '/shopify/security',
+  path: '/shopify/security',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopifyReviewsRoute = ShopifyReviewsRouteImport.update({
+  id: '/shopify/reviews',
+  path: '/shopify/reviews',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopifyReturnsRoute = ShopifyReturnsRouteImport.update({
+  id: '/shopify/returns',
+  path: '/shopify/returns',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopifyProductsRoute = ShopifyProductsRouteImport.update({
+  id: '/shopify/products',
+  path: '/shopify/products',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopifyProductSuiteExtrasRoute =
+  ShopifyProductSuiteExtrasRouteImport.update({
+    id: '/shopify/product-suite-extras',
+    path: '/shopify/product-suite-extras',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ShopifyProductSuiteRoute = ShopifyProductSuiteRouteImport.update({
+  id: '/shopify/product-suite',
+  path: '/shopify/product-suite',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopifyProductEditRoute = ShopifyProductEditRouteImport.update({
+  id: '/shopify/product-edit',
+  path: '/shopify/product-edit',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopifyPosRoute = ShopifyPosRouteImport.update({
+  id: '/shopify/pos',
+  path: '/shopify/pos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopifyPaymentsRoute = ShopifyPaymentsRouteImport.update({
+  id: '/shopify/payments',
+  path: '/shopify/payments',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopifyOrdersRoute = ShopifyOrdersRouteImport.update({
+  id: '/shopify/orders',
+  path: '/shopify/orders',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopifyOnlineStoreRoute = ShopifyOnlineStoreRouteImport.update({
+  id: '/shopify/online-store',
+  path: '/shopify/online-store',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopifyNotificationsRoute = ShopifyNotificationsRouteImport.update({
+  id: '/shopify/notifications',
+  path: '/shopify/notifications',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopifyMultiStoreRoute = ShopifyMultiStoreRouteImport.update({
+  id: '/shopify/multi-store',
+  path: '/shopify/multi-store',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopifyMediaLibraryRoute = ShopifyMediaLibraryRouteImport.update({
+  id: '/shopify/media-library',
+  path: '/shopify/media-library',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopifyMarketplaceRoute = ShopifyMarketplaceRouteImport.update({
+  id: '/shopify/marketplace',
+  path: '/shopify/marketplace',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopifyMarketingRoute = ShopifyMarketingRouteImport.update({
+  id: '/shopify/marketing',
+  path: '/shopify/marketing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopifyManagerDashboardRoute = ShopifyManagerDashboardRouteImport.update({
+  id: '/shopify/manager-dashboard',
+  path: '/shopify/manager-dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopifyLoginRoute = ShopifyLoginRouteImport.update({
+  id: '/shopify/login',
+  path: '/shopify/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopifyInventoryRoute = ShopifyInventoryRouteImport.update({
+  id: '/shopify/inventory',
+  path: '/shopify/inventory',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopifyInternationalizationRoute =
+  ShopifyInternationalizationRouteImport.update({
+    id: '/shopify/internationalization',
+    path: '/shopify/internationalization',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ShopifyDiscountsRoute = ShopifyDiscountsRouteImport.update({
+  id: '/shopify/discounts',
+  path: '/shopify/discounts',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopifyDeveloperToolsRoute = ShopifyDeveloperToolsRouteImport.update({
+  id: '/shopify/developer-tools',
+  path: '/shopify/developer-tools',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopifyDashboardRoute = ShopifyDashboardRouteImport.update({
+  id: '/shopify/dashboard',
+  path: '/shopify/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopifyCustomersRoute = ShopifyCustomersRouteImport.update({
+  id: '/shopify/customers',
+  path: '/shopify/customers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopifyCollectionsRoute = ShopifyCollectionsRouteImport.update({
+  id: '/shopify/collections',
+  path: '/shopify/collections',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopifyCartCheckoutRoute = ShopifyCartCheckoutRouteImport.update({
+  id: '/shopify/cart-checkout',
+  path: '/shopify/cart-checkout',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopifyBlogRoute = ShopifyBlogRouteImport.update({
+  id: '/shopify/blog',
+  path: '/shopify/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopifyBillingRoute = ShopifyBillingRouteImport.update({
+  id: '/shopify/billing',
+  path: '/shopify/billing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopifyAutomationRoute = ShopifyAutomationRouteImport.update({
+  id: '/shopify/automation',
+  path: '/shopify/automation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopifyAuditLogRoute = ShopifyAuditLogRouteImport.update({
+  id: '/shopify/audit-log',
+  path: '/shopify/audit-log',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopifyAppMarketplaceRoute = ShopifyAppMarketplaceRouteImport.update({
+  id: '/shopify/app-marketplace',
+  path: '/shopify/app-marketplace',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopifyAnalyticsRoute = ShopifyAnalyticsRouteImport.update({
+  id: '/shopify/analytics',
+  path: '/shopify/analytics',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PosSyncRoute = PosSyncRouteImport.update({
   id: '/pos/sync',
   path: '/pos/sync',
@@ -1616,6 +2027,824 @@ const GrowthCampaignAnalyticsRoute = GrowthCampaignAnalyticsRouteImport.update({
 const GrowthAdminRoute = GrowthAdminRouteImport.update({
   id: '/growth/admin',
   path: '/growth/admin',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpSupportTicketsRoute = ErpSupportTicketsRouteImport.update({
+  id: '/erp/support-tickets',
+  path: '/erp/support-tickets',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpSupportSettingsRoute = ErpSupportSettingsRouteImport.update({
+  id: '/erp/support-settings',
+  path: '/erp/support-settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpSupportSearchRoute = ErpSupportSearchRouteImport.update({
+  id: '/erp/support-search',
+  path: '/erp/support-search',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpSupportLogsRoute = ErpSupportLogsRouteImport.update({
+  id: '/erp/support-logs',
+  path: '/erp/support-logs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpSupportEscalationsRoute = ErpSupportEscalationsRouteImport.update({
+  id: '/erp/support-escalations',
+  path: '/erp/support-escalations',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpSupportDashboardRoute = ErpSupportDashboardRouteImport.update({
+  id: '/erp/support-dashboard',
+  path: '/erp/support-dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpSupportCustomersRoute = ErpSupportCustomersRouteImport.update({
+  id: '/erp/support-customers',
+  path: '/erp/support-customers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpSupportRoute = ErpSupportRouteImport.update({
+  id: '/erp/support',
+  path: '/erp/support',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpMerchantWebhooksCreateRoute =
+  ErpMerchantWebhooksCreateRouteImport.update({
+    id: '/erp/merchant-webhooks-create',
+    path: '/erp/merchant-webhooks-create',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpMerchantWebhooksRoute = ErpMerchantWebhooksRouteImport.update({
+  id: '/erp/merchant-webhooks',
+  path: '/erp/merchant-webhooks',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpMerchantTransactionsRoute = ErpMerchantTransactionsRouteImport.update({
+  id: '/erp/merchant-transactions',
+  path: '/erp/merchant-transactions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpMerchantSubscriptionsRoute =
+  ErpMerchantSubscriptionsRouteImport.update({
+    id: '/erp/merchant-subscriptions',
+    path: '/erp/merchant-subscriptions',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpMerchantSettingsRoute = ErpMerchantSettingsRouteImport.update({
+  id: '/erp/merchant-settings',
+  path: '/erp/merchant-settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpMerchantProductsCreateRoute =
+  ErpMerchantProductsCreateRouteImport.update({
+    id: '/erp/merchant-products-create',
+    path: '/erp/merchant-products-create',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpMerchantProductsRoute = ErpMerchantProductsRouteImport.update({
+  id: '/erp/merchant-products',
+  path: '/erp/merchant-products',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpMerchantPricingCreateRoute =
+  ErpMerchantPricingCreateRouteImport.update({
+    id: '/erp/merchant-pricing-create',
+    path: '/erp/merchant-pricing-create',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpMerchantPricingRoute = ErpMerchantPricingRouteImport.update({
+  id: '/erp/merchant-pricing',
+  path: '/erp/merchant-pricing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpMerchantLicensesRoute = ErpMerchantLicensesRouteImport.update({
+  id: '/erp/merchant-licenses',
+  path: '/erp/merchant-licenses',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpMerchantInvoicesRoute = ErpMerchantInvoicesRouteImport.update({
+  id: '/erp/merchant-invoices',
+  path: '/erp/merchant-invoices',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpMerchantFilesRoute = ErpMerchantFilesRouteImport.update({
+  id: '/erp/merchant-files',
+  path: '/erp/merchant-files',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpMerchantEntitlementsRoute = ErpMerchantEntitlementsRouteImport.update({
+  id: '/erp/merchant-entitlements',
+  path: '/erp/merchant-entitlements',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpMerchantDunningRoute = ErpMerchantDunningRouteImport.update({
+  id: '/erp/merchant-dunning',
+  path: '/erp/merchant-dunning',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpMerchantDiscountsCreateRoute =
+  ErpMerchantDiscountsCreateRouteImport.update({
+    id: '/erp/merchant-discounts-create',
+    path: '/erp/merchant-discounts-create',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpMerchantDiscountsRoute = ErpMerchantDiscountsRouteImport.update({
+  id: '/erp/merchant-discounts',
+  path: '/erp/merchant-discounts',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpMerchantDashboardRoute = ErpMerchantDashboardRouteImport.update({
+  id: '/erp/merchant-dashboard',
+  path: '/erp/merchant-dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpMerchantCustomersRoute = ErpMerchantCustomersRouteImport.update({
+  id: '/erp/merchant-customers',
+  path: '/erp/merchant-customers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpMerchantCheckoutLinksRoute =
+  ErpMerchantCheckoutLinksRouteImport.update({
+    id: '/erp/merchant-checkout-links',
+    path: '/erp/merchant-checkout-links',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpMerchantApiRoute = ErpMerchantApiRouteImport.update({
+  id: '/erp/merchant-api',
+  path: '/erp/merchant-api',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpMerchantAnalyticsRoute = ErpMerchantAnalyticsRouteImport.update({
+  id: '/erp/merchant-analytics',
+  path: '/erp/merchant-analytics',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpMerchantRoute = ErpMerchantRouteImport.update({
+  id: '/erp/merchant',
+  path: '/erp/merchant',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpMarketplaceWishlistRoute = ErpMarketplaceWishlistRouteImport.update({
+  id: '/erp/marketplace-wishlist',
+  path: '/erp/marketplace-wishlist',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpMarketplaceSearchRoute = ErpMarketplaceSearchRouteImport.update({
+  id: '/erp/marketplace-search',
+  path: '/erp/marketplace-search',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpMarketplaceNotificationsRoute =
+  ErpMarketplaceNotificationsRouteImport.update({
+    id: '/erp/marketplace-notifications',
+    path: '/erp/marketplace-notifications',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpMarketplaceForumsCreateRoute =
+  ErpMarketplaceForumsCreateRouteImport.update({
+    id: '/erp/marketplace-forums-create',
+    path: '/erp/marketplace-forums-create',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpMarketplaceForumsRoute = ErpMarketplaceForumsRouteImport.update({
+  id: '/erp/marketplace-forums',
+  path: '/erp/marketplace-forums',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpMarketplaceCompareRoute = ErpMarketplaceCompareRouteImport.update({
+  id: '/erp/marketplace-compare',
+  path: '/erp/marketplace-compare',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpMarketplaceCheckoutRoute = ErpMarketplaceCheckoutRouteImport.update({
+  id: '/erp/marketplace-checkout',
+  path: '/erp/marketplace-checkout',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpMarketplaceCartRoute = ErpMarketplaceCartRouteImport.update({
+  id: '/erp/marketplace-cart',
+  path: '/erp/marketplace-cart',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpMarketplaceBlogRoute = ErpMarketplaceBlogRouteImport.update({
+  id: '/erp/marketplace-blog',
+  path: '/erp/marketplace-blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpMarketplaceBecomeAuthorRoute =
+  ErpMarketplaceBecomeAuthorRouteImport.update({
+    id: '/erp/marketplace-become-author',
+    path: '/erp/marketplace-become-author',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpMarketplaceAuthorsRoute = ErpMarketplaceAuthorsRouteImport.update({
+  id: '/erp/marketplace-authors',
+  path: '/erp/marketplace-authors',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpMarketplaceAuthorWithdrawRoute =
+  ErpMarketplaceAuthorWithdrawRouteImport.update({
+    id: '/erp/marketplace-author-withdraw',
+    path: '/erp/marketplace-author-withdraw',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpMarketplaceAuthorUploadRoute =
+  ErpMarketplaceAuthorUploadRouteImport.update({
+    id: '/erp/marketplace-author-upload',
+    path: '/erp/marketplace-author-upload',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpMarketplaceAuthorStatementsRoute =
+  ErpMarketplaceAuthorStatementsRouteImport.update({
+    id: '/erp/marketplace-author-statements',
+    path: '/erp/marketplace-author-statements',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpMarketplaceAuthorSettingsRoute =
+  ErpMarketplaceAuthorSettingsRouteImport.update({
+    id: '/erp/marketplace-author-settings',
+    path: '/erp/marketplace-author-settings',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpMarketplaceAuthorReviewsRoute =
+  ErpMarketplaceAuthorReviewsRouteImport.update({
+    id: '/erp/marketplace-author-reviews',
+    path: '/erp/marketplace-author-reviews',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpMarketplaceAuthorRefundsRoute =
+  ErpMarketplaceAuthorRefundsRouteImport.update({
+    id: '/erp/marketplace-author-refunds',
+    path: '/erp/marketplace-author-refunds',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpMarketplaceAuthorPortfolioRoute =
+  ErpMarketplaceAuthorPortfolioRouteImport.update({
+    id: '/erp/marketplace-author-portfolio',
+    path: '/erp/marketplace-author-portfolio',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpMarketplaceAuthorFollowersRoute =
+  ErpMarketplaceAuthorFollowersRouteImport.update({
+    id: '/erp/marketplace-author-followers',
+    path: '/erp/marketplace-author-followers',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpMarketplaceAuthorEarningsRoute =
+  ErpMarketplaceAuthorEarningsRouteImport.update({
+    id: '/erp/marketplace-author-earnings',
+    path: '/erp/marketplace-author-earnings',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpMarketplaceAuthorDashboardRoute =
+  ErpMarketplaceAuthorDashboardRouteImport.update({
+    id: '/erp/marketplace-author-dashboard',
+    path: '/erp/marketplace-author-dashboard',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpMarketplaceAuthorCommentsRoute =
+  ErpMarketplaceAuthorCommentsRouteImport.update({
+    id: '/erp/marketplace-author-comments',
+    path: '/erp/marketplace-author-comments',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpMarketplaceAuthorBadgesRoute =
+  ErpMarketplaceAuthorBadgesRouteImport.update({
+    id: '/erp/marketplace-author-badges',
+    path: '/erp/marketplace-author-badges',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpMarketplaceAuthorAnalyticsRoute =
+  ErpMarketplaceAuthorAnalyticsRouteImport.update({
+    id: '/erp/marketplace-author-analytics',
+    path: '/erp/marketplace-author-analytics',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpMarketplaceAuthorRoute = ErpMarketplaceAuthorRouteImport.update({
+  id: '/erp/marketplace-author',
+  path: '/erp/marketplace-author',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpMarketplaceRoute = ErpMarketplaceRouteImport.update({
+  id: '/erp/marketplace',
+  path: '/erp/marketplace',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpCustomerSubscriptionsRoute =
+  ErpCustomerSubscriptionsRouteImport.update({
+    id: '/erp/customer-subscriptions',
+    path: '/erp/customer-subscriptions',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpCustomerSecurityRoute = ErpCustomerSecurityRouteImport.update({
+  id: '/erp/customer-security',
+  path: '/erp/customer-security',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpCustomerPrivacyRoute = ErpCustomerPrivacyRouteImport.update({
+  id: '/erp/customer-privacy',
+  path: '/erp/customer-privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpCustomerPaymentMethodsRoute =
+  ErpCustomerPaymentMethodsRouteImport.update({
+    id: '/erp/customer-payment-methods',
+    path: '/erp/customer-payment-methods',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpCustomerMarketplaceDownloadsRoute =
+  ErpCustomerMarketplaceDownloadsRouteImport.update({
+    id: '/erp/customer-marketplace-downloads',
+    path: '/erp/customer-marketplace-downloads',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpCustomerLicensesRoute = ErpCustomerLicensesRouteImport.update({
+  id: '/erp/customer-licenses',
+  path: '/erp/customer-licenses',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpCustomerInvoicesRoute = ErpCustomerInvoicesRouteImport.update({
+  id: '/erp/customer-invoices',
+  path: '/erp/customer-invoices',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpCustomerDownloadsRoute = ErpCustomerDownloadsRouteImport.update({
+  id: '/erp/customer-downloads',
+  path: '/erp/customer-downloads',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpCustomerDashboardRoute = ErpCustomerDashboardRouteImport.update({
+  id: '/erp/customer-dashboard',
+  path: '/erp/customer-dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpCustomerAccountRoute = ErpCustomerAccountRouteImport.update({
+  id: '/erp/customer-account',
+  path: '/erp/customer-account',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpCustomerRoute = ErpCustomerRouteImport.update({
+  id: '/erp/customer',
+  path: '/erp/customer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpCheckoutRoute = ErpCheckoutRouteImport.update({
+  id: '/erp/checkout',
+  path: '/erp/checkout',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAuthVerifyEmailRoute = ErpAuthVerifyEmailRouteImport.update({
+  id: '/erp/auth-verify-email',
+  path: '/erp/auth-verify-email',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAuthResetPasswordRoute = ErpAuthResetPasswordRouteImport.update({
+  id: '/erp/auth-reset-password',
+  path: '/erp/auth-reset-password',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAuthRegisterRoute = ErpAuthRegisterRouteImport.update({
+  id: '/erp/auth-register',
+  path: '/erp/auth-register',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAuthLoginRoute = ErpAuthLoginRouteImport.update({
+  id: '/erp/auth-login',
+  path: '/erp/auth-login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAuthForgotPasswordRoute = ErpAuthForgotPasswordRouteImport.update({
+  id: '/erp/auth-forgot-password',
+  path: '/erp/auth-forgot-password',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAuthRoute = ErpAuthRouteImport.update({
+  id: '/erp/auth',
+  path: '/erp/auth',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminWebhooksRoute = ErpAdminWebhooksRouteImport.update({
+  id: '/erp/admin-webhooks',
+  path: '/erp/admin-webhooks',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminVersioningRoute = ErpAdminVersioningRouteImport.update({
+  id: '/erp/admin-versioning',
+  path: '/erp/admin-versioning',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminTrustScoresRoute = ErpAdminTrustScoresRouteImport.update({
+  id: '/erp/admin-trust-scores',
+  path: '/erp/admin-trust-scores',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminTransactionsRoute = ErpAdminTransactionsRouteImport.update({
+  id: '/erp/admin-transactions',
+  path: '/erp/admin-transactions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminTenantsRoute = ErpAdminTenantsRouteImport.update({
+  id: '/erp/admin-tenants',
+  path: '/erp/admin-tenants',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminTaxRoute = ErpAdminTaxRouteImport.update({
+  id: '/erp/admin-tax',
+  path: '/erp/admin-tax',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminSystemHealthRoute = ErpAdminSystemHealthRouteImport.update({
+  id: '/erp/admin-system-health',
+  path: '/erp/admin-system-health',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminSubscriptionsRoute = ErpAdminSubscriptionsRouteImport.update({
+  id: '/erp/admin-subscriptions',
+  path: '/erp/admin-subscriptions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminSlaRoute = ErpAdminSlaRouteImport.update({
+  id: '/erp/admin-sla',
+  path: '/erp/admin-sla',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminSettingsRoute = ErpAdminSettingsRouteImport.update({
+  id: '/erp/admin-settings',
+  path: '/erp/admin-settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminSecurityRoute = ErpAdminSecurityRouteImport.update({
+  id: '/erp/admin-security',
+  path: '/erp/admin-security',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminSecretsRoute = ErpAdminSecretsRouteImport.update({
+  id: '/erp/admin-secrets',
+  path: '/erp/admin-secrets',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminSearchEngineRoute = ErpAdminSearchEngineRouteImport.update({
+  id: '/erp/admin-search-engine',
+  path: '/erp/admin-search-engine',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminSchedulerRoute = ErpAdminSchedulerRouteImport.update({
+  id: '/erp/admin-scheduler',
+  path: '/erp/admin-scheduler',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminRolesRoute = ErpAdminRolesRouteImport.update({
+  id: '/erp/admin-roles',
+  path: '/erp/admin-roles',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminRegionSyncRoute = ErpAdminRegionSyncRouteImport.update({
+  id: '/erp/admin-region-sync',
+  path: '/erp/admin-region-sync',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminRecoveryLogRoute = ErpAdminRecoveryLogRouteImport.update({
+  id: '/erp/admin-recovery-log',
+  path: '/erp/admin-recovery-log',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminRateLimitsRoute = ErpAdminRateLimitsRouteImport.update({
+  id: '/erp/admin-rate-limits',
+  path: '/erp/admin-rate-limits',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminProrationRoute = ErpAdminProrationRouteImport.update({
+  id: '/erp/admin-proration',
+  path: '/erp/admin-proration',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminProductsRoute = ErpAdminProductsRouteImport.update({
+  id: '/erp/admin-products',
+  path: '/erp/admin-products',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminPolicyEngineRoute = ErpAdminPolicyEngineRouteImport.update({
+  id: '/erp/admin-policy-engine',
+  path: '/erp/admin-policy-engine',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminPaymentsGodModeRoute = ErpAdminPaymentsGodModeRouteImport.update({
+  id: '/erp/admin-payments-god-mode',
+  path: '/erp/admin-payments-god-mode',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminObservabilityRoute = ErpAdminObservabilityRouteImport.update({
+  id: '/erp/admin-observability',
+  path: '/erp/admin-observability',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminNotificationsRoute = ErpAdminNotificationsRouteImport.update({
+  id: '/erp/admin-notifications',
+  path: '/erp/admin-notifications',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminMerchantsRoute = ErpAdminMerchantsRouteImport.update({
+  id: '/erp/admin-merchants',
+  path: '/erp/admin-merchants',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminMemoryRecoveryRoute = ErpAdminMemoryRecoveryRouteImport.update({
+  id: '/erp/admin-memory-recovery',
+  path: '/erp/admin-memory-recovery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminMarketplaceTopSellingRoute =
+  ErpAdminMarketplaceTopSellingRouteImport.update({
+    id: '/erp/admin-marketplace-top-selling',
+    path: '/erp/admin-marketplace-top-selling',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpAdminMarketplaceTaxRulesRoute =
+  ErpAdminMarketplaceTaxRulesRouteImport.update({
+    id: '/erp/admin-marketplace-tax-rules',
+    path: '/erp/admin-marketplace-tax-rules',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpAdminMarketplaceTakedownsRoute =
+  ErpAdminMarketplaceTakedownsRouteImport.update({
+    id: '/erp/admin-marketplace-takedowns',
+    path: '/erp/admin-marketplace-takedowns',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpAdminMarketplaceSettingsRoute =
+  ErpAdminMarketplaceSettingsRouteImport.update({
+    id: '/erp/admin-marketplace-settings',
+    path: '/erp/admin-marketplace-settings',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpAdminMarketplaceSalesReportsRoute =
+  ErpAdminMarketplaceSalesReportsRouteImport.update({
+    id: '/erp/admin-marketplace-sales-reports',
+    path: '/erp/admin-marketplace-sales-reports',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpAdminMarketplaceReportsRoute =
+  ErpAdminMarketplaceReportsRouteImport.update({
+    id: '/erp/admin-marketplace-reports',
+    path: '/erp/admin-marketplace-reports',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpAdminMarketplaceRefundsRoute =
+  ErpAdminMarketplaceRefundsRouteImport.update({
+    id: '/erp/admin-marketplace-refunds',
+    path: '/erp/admin-marketplace-refunds',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpAdminMarketplaceQueueRoute =
+  ErpAdminMarketplaceQueueRouteImport.update({
+    id: '/erp/admin-marketplace-queue',
+    path: '/erp/admin-marketplace-queue',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpAdminMarketplacePayoutsRoute =
+  ErpAdminMarketplacePayoutsRouteImport.update({
+    id: '/erp/admin-marketplace-payouts',
+    path: '/erp/admin-marketplace-payouts',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpAdminMarketplaceLevelsRoute =
+  ErpAdminMarketplaceLevelsRouteImport.update({
+    id: '/erp/admin-marketplace-levels',
+    path: '/erp/admin-marketplace-levels',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpAdminMarketplaceItemsRoute =
+  ErpAdminMarketplaceItemsRouteImport.update({
+    id: '/erp/admin-marketplace-items',
+    path: '/erp/admin-marketplace-items',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpAdminMarketplaceFlagsRoute =
+  ErpAdminMarketplaceFlagsRouteImport.update({
+    id: '/erp/admin-marketplace-flags',
+    path: '/erp/admin-marketplace-flags',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpAdminMarketplaceFeaturedRoute =
+  ErpAdminMarketplaceFeaturedRouteImport.update({
+    id: '/erp/admin-marketplace-featured',
+    path: '/erp/admin-marketplace-featured',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpAdminMarketplaceCollectionsRoute =
+  ErpAdminMarketplaceCollectionsRouteImport.update({
+    id: '/erp/admin-marketplace-collections',
+    path: '/erp/admin-marketplace-collections',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpAdminMarketplaceCategoriesRoute =
+  ErpAdminMarketplaceCategoriesRouteImport.update({
+    id: '/erp/admin-marketplace-categories',
+    path: '/erp/admin-marketplace-categories',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpAdminMarketplaceAuthorsRoute =
+  ErpAdminMarketplaceAuthorsRouteImport.update({
+    id: '/erp/admin-marketplace-authors',
+    path: '/erp/admin-marketplace-authors',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpAdminMarketplaceRoute = ErpAdminMarketplaceRouteImport.update({
+  id: '/erp/admin-marketplace',
+  path: '/erp/admin-marketplace',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminLoadPredictionRoute = ErpAdminLoadPredictionRouteImport.update({
+  id: '/erp/admin-load-prediction',
+  path: '/erp/admin-load-prediction',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminLicensesRoute = ErpAdminLicensesRouteImport.update({
+  id: '/erp/admin-licenses',
+  path: '/erp/admin-licenses',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminIntegrationsRoute = ErpAdminIntegrationsRouteImport.update({
+  id: '/erp/admin-integrations',
+  path: '/erp/admin-integrations',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminImpersonationRoute = ErpAdminImpersonationRouteImport.update({
+  id: '/erp/admin-impersonation',
+  path: '/erp/admin-impersonation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminGatewaysRoute = ErpAdminGatewaysRouteImport.update({
+  id: '/erp/admin-gateways',
+  path: '/erp/admin-gateways',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminFraudMlRoute = ErpAdminFraudMlRouteImport.update({
+  id: '/erp/admin-fraud-ml',
+  path: '/erp/admin-fraud-ml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminFraudRoute = ErpAdminFraudRouteImport.update({
+  id: '/erp/admin-fraud',
+  path: '/erp/admin-fraud',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminFeatureFlagsRoute = ErpAdminFeatureFlagsRouteImport.update({
+  id: '/erp/admin-feature-flags',
+  path: '/erp/admin-feature-flags',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminEventBusRoute = ErpAdminEventBusRouteImport.update({
+  id: '/erp/admin-event-bus',
+  path: '/erp/admin-event-bus',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminEntitlementsRoute = ErpAdminEntitlementsRouteImport.update({
+  id: '/erp/admin-entitlements',
+  path: '/erp/admin-entitlements',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminDunningRoute = ErpAdminDunningRouteImport.update({
+  id: '/erp/admin-dunning',
+  path: '/erp/admin-dunning',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminDocumentsRoute = ErpAdminDocumentsRouteImport.update({
+  id: '/erp/admin-documents',
+  path: '/erp/admin-documents',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminDigitalTwinRoute = ErpAdminDigitalTwinRouteImport.update({
+  id: '/erp/admin-digital-twin',
+  path: '/erp/admin-digital-twin',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminDeploymentsRoute = ErpAdminDeploymentsRouteImport.update({
+  id: '/erp/admin-deployments',
+  path: '/erp/admin-deployments',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminDependencyWatcherRoute =
+  ErpAdminDependencyWatcherRouteImport.update({
+    id: '/erp/admin-dependency-watcher',
+    path: '/erp/admin-dependency-watcher',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpAdminDataGuardianRoute = ErpAdminDataGuardianRouteImport.update({
+  id: '/erp/admin-data-guardian',
+  path: '/erp/admin-data-guardian',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminDataConsistencyRoute = ErpAdminDataConsistencyRouteImport.update({
+  id: '/erp/admin-data-consistency',
+  path: '/erp/admin-data-consistency',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminDashboardRoute = ErpAdminDashboardRouteImport.update({
+  id: '/erp/admin-dashboard',
+  path: '/erp/admin-dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminCustomersRoute = ErpAdminCustomersRouteImport.update({
+  id: '/erp/admin-customers',
+  path: '/erp/admin-customers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminCurrencyRoute = ErpAdminCurrencyRouteImport.update({
+  id: '/erp/admin-currency',
+  path: '/erp/admin-currency',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminCostOptimizationRoute =
+  ErpAdminCostOptimizationRouteImport.update({
+    id: '/erp/admin-cost-optimization',
+    path: '/erp/admin-cost-optimization',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErpAdminCostGovernorRoute = ErpAdminCostGovernorRouteImport.update({
+  id: '/erp/admin-cost-governor',
+  path: '/erp/admin-cost-governor',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminConsistencyRoute = ErpAdminConsistencyRouteImport.update({
+  id: '/erp/admin-consistency',
+  path: '/erp/admin-consistency',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminConfigSyncRoute = ErpAdminConfigSyncRouteImport.update({
+  id: '/erp/admin-config-sync',
+  path: '/erp/admin-config-sync',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminComplianceRoute = ErpAdminComplianceRouteImport.update({
+  id: '/erp/admin-compliance',
+  path: '/erp/admin-compliance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminCircuitBreakersRoute = ErpAdminCircuitBreakersRouteImport.update({
+  id: '/erp/admin-circuit-breakers',
+  path: '/erp/admin-circuit-breakers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminCdnEdgeRoute = ErpAdminCdnEdgeRouteImport.update({
+  id: '/erp/admin-cdn-edge',
+  path: '/erp/admin-cdn-edge',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminCdnRoute = ErpAdminCdnRouteImport.update({
+  id: '/erp/admin-cdn',
+  path: '/erp/admin-cdn',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminBusinessLogicRoute = ErpAdminBusinessLogicRouteImport.update({
+  id: '/erp/admin-business-logic',
+  path: '/erp/admin-business-logic',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminBillingRoute = ErpAdminBillingRouteImport.update({
+  id: '/erp/admin-billing',
+  path: '/erp/admin-billing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminBiSyncRoute = ErpAdminBiSyncRouteImport.update({
+  id: '/erp/admin-bi-sync',
+  path: '/erp/admin-bi-sync',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminBackupRoute = ErpAdminBackupRouteImport.update({
+  id: '/erp/admin-backup',
+  path: '/erp/admin-backup',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminAutoRollbackRoute = ErpAdminAutoRollbackRouteImport.update({
+  id: '/erp/admin-auto-rollback',
+  path: '/erp/admin-auto-rollback',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminAuditLogsRoute = ErpAdminAuditLogsRouteImport.update({
+  id: '/erp/admin-audit-logs',
+  path: '/erp/admin-audit-logs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminApiSelfTestRoute = ErpAdminApiSelfTestRouteImport.update({
+  id: '/erp/admin-api-self-test',
+  path: '/erp/admin-api-self-test',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminApiLogsRoute = ErpAdminApiLogsRouteImport.update({
+  id: '/erp/admin-api-logs',
+  path: '/erp/admin-api-logs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminAiAssistRoute = ErpAdminAiAssistRouteImport.update({
+  id: '/erp/admin-ai-assist',
+  path: '/erp/admin-ai-assist',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErpAdminRoute = ErpAdminRouteImport.update({
+  id: '/erp/admin',
+  path: '/erp/admin',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DataWizardRoute = DataWizardRouteImport.update({
@@ -2154,6 +3383,166 @@ const CampaignAccountRoute = CampaignAccountRouteImport.update({
   path: '/campaign/account',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AtelierSupportRoute = AtelierSupportRouteImport.update({
+  id: '/atelier/support',
+  path: '/atelier/support',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AtelierSearchRoute = AtelierSearchRouteImport.update({
+  id: '/atelier/search',
+  path: '/atelier/search',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AtelierResetRoute = AtelierResetRouteImport.update({
+  id: '/atelier/reset',
+  path: '/atelier/reset',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AtelierResellerSoftwareRoute = AtelierResellerSoftwareRouteImport.update({
+  id: '/atelier/reseller-software',
+  path: '/atelier/reseller-software',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AtelierResellerPluginsRoute = AtelierResellerPluginsRouteImport.update({
+  id: '/atelier/reseller-plugins',
+  path: '/atelier/reseller-plugins',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AtelierRegisterRoute = AtelierRegisterRouteImport.update({
+  id: '/atelier/register',
+  path: '/atelier/register',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AtelierProductivityRoute = AtelierProductivityRouteImport.update({
+  id: '/atelier/productivity',
+  path: '/atelier/productivity',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AtelierPartnerRoute = AtelierPartnerRouteImport.update({
+  id: '/atelier/partner',
+  path: '/atelier/partner',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AtelierMerchantRoute = AtelierMerchantRouteImport.update({
+  id: '/atelier/merchant',
+  path: '/atelier/merchant',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AtelierLoginRoute = AtelierLoginRouteImport.update({
+  id: '/atelier/login',
+  path: '/atelier/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AtelierInfluencerRoute = AtelierInfluencerRouteImport.update({
+  id: '/atelier/influencer',
+  path: '/atelier/influencer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AtelierHomeRoute = AtelierHomeRouteImport.update({
+  id: '/atelier/home',
+  path: '/atelier/home',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AtelierFranchiseRoute = AtelierFranchiseRouteImport.update({
+  id: '/atelier/franchise',
+  path: '/atelier/franchise',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AtelierForgotRoute = AtelierForgotRouteImport.update({
+  id: '/atelier/forgot',
+  path: '/atelier/forgot',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AtelierCustomerRoute = AtelierCustomerRouteImport.update({
+  id: '/atelier/customer',
+  path: '/atelier/customer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AtelierChatRoute = AtelierChatRouteImport.update({
+  id: '/atelier/chat',
+  path: '/atelier/chat',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AtelierCategoryRoute = AtelierCategoryRouteImport.update({
+  id: '/atelier/category',
+  path: '/atelier/category',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AtelierCategoriesRoute = AtelierCategoriesRouteImport.update({
+  id: '/atelier/categories',
+  path: '/atelier/categories',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AtelierBuilderRoute = AtelierBuilderRouteImport.update({
+  id: '/atelier/builder',
+  path: '/atelier/builder',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AtelierBlogDetailRoute = AtelierBlogDetailRouteImport.update({
+  id: '/atelier/blog-detail',
+  path: '/atelier/blog-detail',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AtelierBlogRoute = AtelierBlogRouteImport.update({
+  id: '/atelier/blog',
+  path: '/atelier/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AtelierAuthorUploadRoute = AtelierAuthorUploadRouteImport.update({
+  id: '/atelier/author-upload',
+  path: '/atelier/author-upload',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AtelierAuthorSalesRoute = AtelierAuthorSalesRouteImport.update({
+  id: '/atelier/author-sales',
+  path: '/atelier/author-sales',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AtelierAuthorReviewsRoute = AtelierAuthorReviewsRouteImport.update({
+  id: '/atelier/author-reviews',
+  path: '/atelier/author-reviews',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AtelierAuthorProfileRoute = AtelierAuthorProfileRouteImport.update({
+  id: '/atelier/author-profile',
+  path: '/atelier/author-profile',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AtelierAuthorItemsRoute = AtelierAuthorItemsRouteImport.update({
+  id: '/atelier/author-items',
+  path: '/atelier/author-items',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AtelierAuthorEditRoute = AtelierAuthorEditRouteImport.update({
+  id: '/atelier/author-edit',
+  path: '/atelier/author-edit',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AtelierAuthorEarningsRoute = AtelierAuthorEarningsRouteImport.update({
+  id: '/atelier/author-earnings',
+  path: '/atelier/author-earnings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AtelierAuthorRoute = AtelierAuthorRouteImport.update({
+  id: '/atelier/author',
+  path: '/atelier/author',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AtelierAdminUsersRoute = AtelierAdminUsersRouteImport.update({
+  id: '/atelier/admin-users',
+  path: '/atelier/admin-users',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AtelierAdminRolesRoute = AtelierAdminRolesRouteImport.update({
+  id: '/atelier/admin-roles',
+  path: '/atelier/admin-roles',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AtelierAdminAuditRoute = AtelierAdminAuditRouteImport.update({
+  id: '/atelier/admin-audit',
+  path: '/atelier/admin-audit',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AiWorkflowsRoute = AiWorkflowsRouteImport.update({
   id: '/workflows',
   path: '/workflows',
@@ -2342,6 +3731,38 @@ export interface FileRoutesByFullPath {
   '/ai/support': typeof AiSupportRoute
   '/ai/voice': typeof AiVoiceRoute
   '/ai/workflows': typeof AiWorkflowsRoute
+  '/atelier/admin-audit': typeof AtelierAdminAuditRoute
+  '/atelier/admin-roles': typeof AtelierAdminRolesRoute
+  '/atelier/admin-users': typeof AtelierAdminUsersRoute
+  '/atelier/author': typeof AtelierAuthorRoute
+  '/atelier/author-earnings': typeof AtelierAuthorEarningsRoute
+  '/atelier/author-edit': typeof AtelierAuthorEditRoute
+  '/atelier/author-items': typeof AtelierAuthorItemsRoute
+  '/atelier/author-profile': typeof AtelierAuthorProfileRoute
+  '/atelier/author-reviews': typeof AtelierAuthorReviewsRoute
+  '/atelier/author-sales': typeof AtelierAuthorSalesRoute
+  '/atelier/author-upload': typeof AtelierAuthorUploadRoute
+  '/atelier/blog': typeof AtelierBlogRoute
+  '/atelier/blog-detail': typeof AtelierBlogDetailRoute
+  '/atelier/builder': typeof AtelierBuilderRoute
+  '/atelier/categories': typeof AtelierCategoriesRoute
+  '/atelier/category': typeof AtelierCategoryRoute
+  '/atelier/chat': typeof AtelierChatRoute
+  '/atelier/customer': typeof AtelierCustomerRoute
+  '/atelier/forgot': typeof AtelierForgotRoute
+  '/atelier/franchise': typeof AtelierFranchiseRoute
+  '/atelier/home': typeof AtelierHomeRoute
+  '/atelier/influencer': typeof AtelierInfluencerRoute
+  '/atelier/login': typeof AtelierLoginRoute
+  '/atelier/merchant': typeof AtelierMerchantRoute
+  '/atelier/partner': typeof AtelierPartnerRoute
+  '/atelier/productivity': typeof AtelierProductivityRoute
+  '/atelier/register': typeof AtelierRegisterRoute
+  '/atelier/reseller-plugins': typeof AtelierResellerPluginsRoute
+  '/atelier/reseller-software': typeof AtelierResellerSoftwareRoute
+  '/atelier/reset': typeof AtelierResetRoute
+  '/atelier/search': typeof AtelierSearchRoute
+  '/atelier/support': typeof AtelierSupportRoute
   '/campaign/account': typeof CampaignAccountRoute
   '/campaign/admin': typeof CampaignAdminRoute
   '/campaign/ai-prediction': typeof CampaignAiPredictionRoute
@@ -2449,6 +3870,161 @@ export interface FileRoutesByFullPath {
   '/data/viewer': typeof DataViewerRoute
   '/data/wallet': typeof DataWalletRoute
   '/data/wizard': typeof DataWizardRoute
+  '/erp/admin': typeof ErpAdminRoute
+  '/erp/admin-ai-assist': typeof ErpAdminAiAssistRoute
+  '/erp/admin-api-logs': typeof ErpAdminApiLogsRoute
+  '/erp/admin-api-self-test': typeof ErpAdminApiSelfTestRoute
+  '/erp/admin-audit-logs': typeof ErpAdminAuditLogsRoute
+  '/erp/admin-auto-rollback': typeof ErpAdminAutoRollbackRoute
+  '/erp/admin-backup': typeof ErpAdminBackupRoute
+  '/erp/admin-bi-sync': typeof ErpAdminBiSyncRoute
+  '/erp/admin-billing': typeof ErpAdminBillingRoute
+  '/erp/admin-business-logic': typeof ErpAdminBusinessLogicRoute
+  '/erp/admin-cdn': typeof ErpAdminCdnRoute
+  '/erp/admin-cdn-edge': typeof ErpAdminCdnEdgeRoute
+  '/erp/admin-circuit-breakers': typeof ErpAdminCircuitBreakersRoute
+  '/erp/admin-compliance': typeof ErpAdminComplianceRoute
+  '/erp/admin-config-sync': typeof ErpAdminConfigSyncRoute
+  '/erp/admin-consistency': typeof ErpAdminConsistencyRoute
+  '/erp/admin-cost-governor': typeof ErpAdminCostGovernorRoute
+  '/erp/admin-cost-optimization': typeof ErpAdminCostOptimizationRoute
+  '/erp/admin-currency': typeof ErpAdminCurrencyRoute
+  '/erp/admin-customers': typeof ErpAdminCustomersRoute
+  '/erp/admin-dashboard': typeof ErpAdminDashboardRoute
+  '/erp/admin-data-consistency': typeof ErpAdminDataConsistencyRoute
+  '/erp/admin-data-guardian': typeof ErpAdminDataGuardianRoute
+  '/erp/admin-dependency-watcher': typeof ErpAdminDependencyWatcherRoute
+  '/erp/admin-deployments': typeof ErpAdminDeploymentsRoute
+  '/erp/admin-digital-twin': typeof ErpAdminDigitalTwinRoute
+  '/erp/admin-documents': typeof ErpAdminDocumentsRoute
+  '/erp/admin-dunning': typeof ErpAdminDunningRoute
+  '/erp/admin-entitlements': typeof ErpAdminEntitlementsRoute
+  '/erp/admin-event-bus': typeof ErpAdminEventBusRoute
+  '/erp/admin-feature-flags': typeof ErpAdminFeatureFlagsRoute
+  '/erp/admin-fraud': typeof ErpAdminFraudRoute
+  '/erp/admin-fraud-ml': typeof ErpAdminFraudMlRoute
+  '/erp/admin-gateways': typeof ErpAdminGatewaysRoute
+  '/erp/admin-impersonation': typeof ErpAdminImpersonationRoute
+  '/erp/admin-integrations': typeof ErpAdminIntegrationsRoute
+  '/erp/admin-licenses': typeof ErpAdminLicensesRoute
+  '/erp/admin-load-prediction': typeof ErpAdminLoadPredictionRoute
+  '/erp/admin-marketplace': typeof ErpAdminMarketplaceRoute
+  '/erp/admin-marketplace-authors': typeof ErpAdminMarketplaceAuthorsRoute
+  '/erp/admin-marketplace-categories': typeof ErpAdminMarketplaceCategoriesRoute
+  '/erp/admin-marketplace-collections': typeof ErpAdminMarketplaceCollectionsRoute
+  '/erp/admin-marketplace-featured': typeof ErpAdminMarketplaceFeaturedRoute
+  '/erp/admin-marketplace-flags': typeof ErpAdminMarketplaceFlagsRoute
+  '/erp/admin-marketplace-items': typeof ErpAdminMarketplaceItemsRoute
+  '/erp/admin-marketplace-levels': typeof ErpAdminMarketplaceLevelsRoute
+  '/erp/admin-marketplace-payouts': typeof ErpAdminMarketplacePayoutsRoute
+  '/erp/admin-marketplace-queue': typeof ErpAdminMarketplaceQueueRoute
+  '/erp/admin-marketplace-refunds': typeof ErpAdminMarketplaceRefundsRoute
+  '/erp/admin-marketplace-reports': typeof ErpAdminMarketplaceReportsRoute
+  '/erp/admin-marketplace-sales-reports': typeof ErpAdminMarketplaceSalesReportsRoute
+  '/erp/admin-marketplace-settings': typeof ErpAdminMarketplaceSettingsRoute
+  '/erp/admin-marketplace-takedowns': typeof ErpAdminMarketplaceTakedownsRoute
+  '/erp/admin-marketplace-tax-rules': typeof ErpAdminMarketplaceTaxRulesRoute
+  '/erp/admin-marketplace-top-selling': typeof ErpAdminMarketplaceTopSellingRoute
+  '/erp/admin-memory-recovery': typeof ErpAdminMemoryRecoveryRoute
+  '/erp/admin-merchants': typeof ErpAdminMerchantsRoute
+  '/erp/admin-notifications': typeof ErpAdminNotificationsRoute
+  '/erp/admin-observability': typeof ErpAdminObservabilityRoute
+  '/erp/admin-payments-god-mode': typeof ErpAdminPaymentsGodModeRoute
+  '/erp/admin-policy-engine': typeof ErpAdminPolicyEngineRoute
+  '/erp/admin-products': typeof ErpAdminProductsRoute
+  '/erp/admin-proration': typeof ErpAdminProrationRoute
+  '/erp/admin-rate-limits': typeof ErpAdminRateLimitsRoute
+  '/erp/admin-recovery-log': typeof ErpAdminRecoveryLogRoute
+  '/erp/admin-region-sync': typeof ErpAdminRegionSyncRoute
+  '/erp/admin-roles': typeof ErpAdminRolesRoute
+  '/erp/admin-scheduler': typeof ErpAdminSchedulerRoute
+  '/erp/admin-search-engine': typeof ErpAdminSearchEngineRoute
+  '/erp/admin-secrets': typeof ErpAdminSecretsRoute
+  '/erp/admin-security': typeof ErpAdminSecurityRoute
+  '/erp/admin-settings': typeof ErpAdminSettingsRoute
+  '/erp/admin-sla': typeof ErpAdminSlaRoute
+  '/erp/admin-subscriptions': typeof ErpAdminSubscriptionsRoute
+  '/erp/admin-system-health': typeof ErpAdminSystemHealthRoute
+  '/erp/admin-tax': typeof ErpAdminTaxRoute
+  '/erp/admin-tenants': typeof ErpAdminTenantsRoute
+  '/erp/admin-transactions': typeof ErpAdminTransactionsRoute
+  '/erp/admin-trust-scores': typeof ErpAdminTrustScoresRoute
+  '/erp/admin-versioning': typeof ErpAdminVersioningRoute
+  '/erp/admin-webhooks': typeof ErpAdminWebhooksRoute
+  '/erp/auth': typeof ErpAuthRoute
+  '/erp/auth-forgot-password': typeof ErpAuthForgotPasswordRoute
+  '/erp/auth-login': typeof ErpAuthLoginRoute
+  '/erp/auth-register': typeof ErpAuthRegisterRoute
+  '/erp/auth-reset-password': typeof ErpAuthResetPasswordRoute
+  '/erp/auth-verify-email': typeof ErpAuthVerifyEmailRoute
+  '/erp/checkout': typeof ErpCheckoutRoute
+  '/erp/customer': typeof ErpCustomerRoute
+  '/erp/customer-account': typeof ErpCustomerAccountRoute
+  '/erp/customer-dashboard': typeof ErpCustomerDashboardRoute
+  '/erp/customer-downloads': typeof ErpCustomerDownloadsRoute
+  '/erp/customer-invoices': typeof ErpCustomerInvoicesRoute
+  '/erp/customer-licenses': typeof ErpCustomerLicensesRoute
+  '/erp/customer-marketplace-downloads': typeof ErpCustomerMarketplaceDownloadsRoute
+  '/erp/customer-payment-methods': typeof ErpCustomerPaymentMethodsRoute
+  '/erp/customer-privacy': typeof ErpCustomerPrivacyRoute
+  '/erp/customer-security': typeof ErpCustomerSecurityRoute
+  '/erp/customer-subscriptions': typeof ErpCustomerSubscriptionsRoute
+  '/erp/marketplace': typeof ErpMarketplaceRoute
+  '/erp/marketplace-author': typeof ErpMarketplaceAuthorRoute
+  '/erp/marketplace-author-analytics': typeof ErpMarketplaceAuthorAnalyticsRoute
+  '/erp/marketplace-author-badges': typeof ErpMarketplaceAuthorBadgesRoute
+  '/erp/marketplace-author-comments': typeof ErpMarketplaceAuthorCommentsRoute
+  '/erp/marketplace-author-dashboard': typeof ErpMarketplaceAuthorDashboardRoute
+  '/erp/marketplace-author-earnings': typeof ErpMarketplaceAuthorEarningsRoute
+  '/erp/marketplace-author-followers': typeof ErpMarketplaceAuthorFollowersRoute
+  '/erp/marketplace-author-portfolio': typeof ErpMarketplaceAuthorPortfolioRoute
+  '/erp/marketplace-author-refunds': typeof ErpMarketplaceAuthorRefundsRoute
+  '/erp/marketplace-author-reviews': typeof ErpMarketplaceAuthorReviewsRoute
+  '/erp/marketplace-author-settings': typeof ErpMarketplaceAuthorSettingsRoute
+  '/erp/marketplace-author-statements': typeof ErpMarketplaceAuthorStatementsRoute
+  '/erp/marketplace-author-upload': typeof ErpMarketplaceAuthorUploadRoute
+  '/erp/marketplace-author-withdraw': typeof ErpMarketplaceAuthorWithdrawRoute
+  '/erp/marketplace-authors': typeof ErpMarketplaceAuthorsRoute
+  '/erp/marketplace-become-author': typeof ErpMarketplaceBecomeAuthorRoute
+  '/erp/marketplace-blog': typeof ErpMarketplaceBlogRoute
+  '/erp/marketplace-cart': typeof ErpMarketplaceCartRoute
+  '/erp/marketplace-checkout': typeof ErpMarketplaceCheckoutRoute
+  '/erp/marketplace-compare': typeof ErpMarketplaceCompareRoute
+  '/erp/marketplace-forums': typeof ErpMarketplaceForumsRoute
+  '/erp/marketplace-forums-create': typeof ErpMarketplaceForumsCreateRoute
+  '/erp/marketplace-notifications': typeof ErpMarketplaceNotificationsRoute
+  '/erp/marketplace-search': typeof ErpMarketplaceSearchRoute
+  '/erp/marketplace-wishlist': typeof ErpMarketplaceWishlistRoute
+  '/erp/merchant': typeof ErpMerchantRoute
+  '/erp/merchant-analytics': typeof ErpMerchantAnalyticsRoute
+  '/erp/merchant-api': typeof ErpMerchantApiRoute
+  '/erp/merchant-checkout-links': typeof ErpMerchantCheckoutLinksRoute
+  '/erp/merchant-customers': typeof ErpMerchantCustomersRoute
+  '/erp/merchant-dashboard': typeof ErpMerchantDashboardRoute
+  '/erp/merchant-discounts': typeof ErpMerchantDiscountsRoute
+  '/erp/merchant-discounts-create': typeof ErpMerchantDiscountsCreateRoute
+  '/erp/merchant-dunning': typeof ErpMerchantDunningRoute
+  '/erp/merchant-entitlements': typeof ErpMerchantEntitlementsRoute
+  '/erp/merchant-files': typeof ErpMerchantFilesRoute
+  '/erp/merchant-invoices': typeof ErpMerchantInvoicesRoute
+  '/erp/merchant-licenses': typeof ErpMerchantLicensesRoute
+  '/erp/merchant-pricing': typeof ErpMerchantPricingRoute
+  '/erp/merchant-pricing-create': typeof ErpMerchantPricingCreateRoute
+  '/erp/merchant-products': typeof ErpMerchantProductsRoute
+  '/erp/merchant-products-create': typeof ErpMerchantProductsCreateRoute
+  '/erp/merchant-settings': typeof ErpMerchantSettingsRoute
+  '/erp/merchant-subscriptions': typeof ErpMerchantSubscriptionsRoute
+  '/erp/merchant-transactions': typeof ErpMerchantTransactionsRoute
+  '/erp/merchant-webhooks': typeof ErpMerchantWebhooksRoute
+  '/erp/merchant-webhooks-create': typeof ErpMerchantWebhooksCreateRoute
+  '/erp/support': typeof ErpSupportRoute
+  '/erp/support-customers': typeof ErpSupportCustomersRoute
+  '/erp/support-dashboard': typeof ErpSupportDashboardRoute
+  '/erp/support-escalations': typeof ErpSupportEscalationsRoute
+  '/erp/support-logs': typeof ErpSupportLogsRoute
+  '/erp/support-search': typeof ErpSupportSearchRoute
+  '/erp/support-settings': typeof ErpSupportSettingsRoute
+  '/erp/support-tickets': typeof ErpSupportTicketsRoute
   '/growth/admin': typeof GrowthAdminRoute
   '/growth/campaign-analytics': typeof GrowthCampaignAnalyticsRoute
   '/growth/campaigns': typeof GrowthCampaignsRoute
@@ -2548,6 +4124,43 @@ export interface FileRoutesByFullPath {
   '/pos/shift': typeof PosShiftRoute
   '/pos/staff': typeof PosStaffRoute
   '/pos/sync': typeof PosSyncRoute
+  '/shopify/analytics': typeof ShopifyAnalyticsRoute
+  '/shopify/app-marketplace': typeof ShopifyAppMarketplaceRoute
+  '/shopify/audit-log': typeof ShopifyAuditLogRoute
+  '/shopify/automation': typeof ShopifyAutomationRoute
+  '/shopify/billing': typeof ShopifyBillingRoute
+  '/shopify/blog': typeof ShopifyBlogRoute
+  '/shopify/cart-checkout': typeof ShopifyCartCheckoutRoute
+  '/shopify/collections': typeof ShopifyCollectionsRoute
+  '/shopify/customers': typeof ShopifyCustomersRoute
+  '/shopify/dashboard': typeof ShopifyDashboardRoute
+  '/shopify/developer-tools': typeof ShopifyDeveloperToolsRoute
+  '/shopify/discounts': typeof ShopifyDiscountsRoute
+  '/shopify/internationalization': typeof ShopifyInternationalizationRoute
+  '/shopify/inventory': typeof ShopifyInventoryRoute
+  '/shopify/login': typeof ShopifyLoginRoute
+  '/shopify/manager-dashboard': typeof ShopifyManagerDashboardRoute
+  '/shopify/marketing': typeof ShopifyMarketingRoute
+  '/shopify/marketplace': typeof ShopifyMarketplaceRoute
+  '/shopify/media-library': typeof ShopifyMediaLibraryRoute
+  '/shopify/multi-store': typeof ShopifyMultiStoreRoute
+  '/shopify/notifications': typeof ShopifyNotificationsRoute
+  '/shopify/online-store': typeof ShopifyOnlineStoreRoute
+  '/shopify/orders': typeof ShopifyOrdersRoute
+  '/shopify/payments': typeof ShopifyPaymentsRoute
+  '/shopify/pos': typeof ShopifyPosRoute
+  '/shopify/product-edit': typeof ShopifyProductEditRoute
+  '/shopify/product-suite': typeof ShopifyProductSuiteRoute
+  '/shopify/product-suite-extras': typeof ShopifyProductSuiteExtrasRoute
+  '/shopify/products': typeof ShopifyProductsRoute
+  '/shopify/returns': typeof ShopifyReturnsRoute
+  '/shopify/reviews': typeof ShopifyReviewsRoute
+  '/shopify/security': typeof ShopifySecurityRoute
+  '/shopify/settings': typeof ShopifySettingsRoute
+  '/shopify/shipping': typeof ShopifyShippingRoute
+  '/shopify/staff-dashboard': typeof ShopifyStaffDashboardRoute
+  '/shopify/tax': typeof ShopifyTaxRoute
+  '/shopify/viewer-dashboard': typeof ShopifyViewerDashboardRoute
   '/vala/ai-console': typeof ValaAiConsoleRoute
   '/vala/api-ai': typeof ValaApiAiRoute
   '/vala/api-integration': typeof ValaApiIntegrationRoute
@@ -2717,6 +4330,38 @@ export interface FileRoutesByTo {
   '/ai/support': typeof AiSupportRoute
   '/ai/voice': typeof AiVoiceRoute
   '/ai/workflows': typeof AiWorkflowsRoute
+  '/atelier/admin-audit': typeof AtelierAdminAuditRoute
+  '/atelier/admin-roles': typeof AtelierAdminRolesRoute
+  '/atelier/admin-users': typeof AtelierAdminUsersRoute
+  '/atelier/author': typeof AtelierAuthorRoute
+  '/atelier/author-earnings': typeof AtelierAuthorEarningsRoute
+  '/atelier/author-edit': typeof AtelierAuthorEditRoute
+  '/atelier/author-items': typeof AtelierAuthorItemsRoute
+  '/atelier/author-profile': typeof AtelierAuthorProfileRoute
+  '/atelier/author-reviews': typeof AtelierAuthorReviewsRoute
+  '/atelier/author-sales': typeof AtelierAuthorSalesRoute
+  '/atelier/author-upload': typeof AtelierAuthorUploadRoute
+  '/atelier/blog': typeof AtelierBlogRoute
+  '/atelier/blog-detail': typeof AtelierBlogDetailRoute
+  '/atelier/builder': typeof AtelierBuilderRoute
+  '/atelier/categories': typeof AtelierCategoriesRoute
+  '/atelier/category': typeof AtelierCategoryRoute
+  '/atelier/chat': typeof AtelierChatRoute
+  '/atelier/customer': typeof AtelierCustomerRoute
+  '/atelier/forgot': typeof AtelierForgotRoute
+  '/atelier/franchise': typeof AtelierFranchiseRoute
+  '/atelier/home': typeof AtelierHomeRoute
+  '/atelier/influencer': typeof AtelierInfluencerRoute
+  '/atelier/login': typeof AtelierLoginRoute
+  '/atelier/merchant': typeof AtelierMerchantRoute
+  '/atelier/partner': typeof AtelierPartnerRoute
+  '/atelier/productivity': typeof AtelierProductivityRoute
+  '/atelier/register': typeof AtelierRegisterRoute
+  '/atelier/reseller-plugins': typeof AtelierResellerPluginsRoute
+  '/atelier/reseller-software': typeof AtelierResellerSoftwareRoute
+  '/atelier/reset': typeof AtelierResetRoute
+  '/atelier/search': typeof AtelierSearchRoute
+  '/atelier/support': typeof AtelierSupportRoute
   '/campaign/account': typeof CampaignAccountRoute
   '/campaign/admin': typeof CampaignAdminRoute
   '/campaign/ai-prediction': typeof CampaignAiPredictionRoute
@@ -2824,6 +4469,161 @@ export interface FileRoutesByTo {
   '/data/viewer': typeof DataViewerRoute
   '/data/wallet': typeof DataWalletRoute
   '/data/wizard': typeof DataWizardRoute
+  '/erp/admin': typeof ErpAdminRoute
+  '/erp/admin-ai-assist': typeof ErpAdminAiAssistRoute
+  '/erp/admin-api-logs': typeof ErpAdminApiLogsRoute
+  '/erp/admin-api-self-test': typeof ErpAdminApiSelfTestRoute
+  '/erp/admin-audit-logs': typeof ErpAdminAuditLogsRoute
+  '/erp/admin-auto-rollback': typeof ErpAdminAutoRollbackRoute
+  '/erp/admin-backup': typeof ErpAdminBackupRoute
+  '/erp/admin-bi-sync': typeof ErpAdminBiSyncRoute
+  '/erp/admin-billing': typeof ErpAdminBillingRoute
+  '/erp/admin-business-logic': typeof ErpAdminBusinessLogicRoute
+  '/erp/admin-cdn': typeof ErpAdminCdnRoute
+  '/erp/admin-cdn-edge': typeof ErpAdminCdnEdgeRoute
+  '/erp/admin-circuit-breakers': typeof ErpAdminCircuitBreakersRoute
+  '/erp/admin-compliance': typeof ErpAdminComplianceRoute
+  '/erp/admin-config-sync': typeof ErpAdminConfigSyncRoute
+  '/erp/admin-consistency': typeof ErpAdminConsistencyRoute
+  '/erp/admin-cost-governor': typeof ErpAdminCostGovernorRoute
+  '/erp/admin-cost-optimization': typeof ErpAdminCostOptimizationRoute
+  '/erp/admin-currency': typeof ErpAdminCurrencyRoute
+  '/erp/admin-customers': typeof ErpAdminCustomersRoute
+  '/erp/admin-dashboard': typeof ErpAdminDashboardRoute
+  '/erp/admin-data-consistency': typeof ErpAdminDataConsistencyRoute
+  '/erp/admin-data-guardian': typeof ErpAdminDataGuardianRoute
+  '/erp/admin-dependency-watcher': typeof ErpAdminDependencyWatcherRoute
+  '/erp/admin-deployments': typeof ErpAdminDeploymentsRoute
+  '/erp/admin-digital-twin': typeof ErpAdminDigitalTwinRoute
+  '/erp/admin-documents': typeof ErpAdminDocumentsRoute
+  '/erp/admin-dunning': typeof ErpAdminDunningRoute
+  '/erp/admin-entitlements': typeof ErpAdminEntitlementsRoute
+  '/erp/admin-event-bus': typeof ErpAdminEventBusRoute
+  '/erp/admin-feature-flags': typeof ErpAdminFeatureFlagsRoute
+  '/erp/admin-fraud': typeof ErpAdminFraudRoute
+  '/erp/admin-fraud-ml': typeof ErpAdminFraudMlRoute
+  '/erp/admin-gateways': typeof ErpAdminGatewaysRoute
+  '/erp/admin-impersonation': typeof ErpAdminImpersonationRoute
+  '/erp/admin-integrations': typeof ErpAdminIntegrationsRoute
+  '/erp/admin-licenses': typeof ErpAdminLicensesRoute
+  '/erp/admin-load-prediction': typeof ErpAdminLoadPredictionRoute
+  '/erp/admin-marketplace': typeof ErpAdminMarketplaceRoute
+  '/erp/admin-marketplace-authors': typeof ErpAdminMarketplaceAuthorsRoute
+  '/erp/admin-marketplace-categories': typeof ErpAdminMarketplaceCategoriesRoute
+  '/erp/admin-marketplace-collections': typeof ErpAdminMarketplaceCollectionsRoute
+  '/erp/admin-marketplace-featured': typeof ErpAdminMarketplaceFeaturedRoute
+  '/erp/admin-marketplace-flags': typeof ErpAdminMarketplaceFlagsRoute
+  '/erp/admin-marketplace-items': typeof ErpAdminMarketplaceItemsRoute
+  '/erp/admin-marketplace-levels': typeof ErpAdminMarketplaceLevelsRoute
+  '/erp/admin-marketplace-payouts': typeof ErpAdminMarketplacePayoutsRoute
+  '/erp/admin-marketplace-queue': typeof ErpAdminMarketplaceQueueRoute
+  '/erp/admin-marketplace-refunds': typeof ErpAdminMarketplaceRefundsRoute
+  '/erp/admin-marketplace-reports': typeof ErpAdminMarketplaceReportsRoute
+  '/erp/admin-marketplace-sales-reports': typeof ErpAdminMarketplaceSalesReportsRoute
+  '/erp/admin-marketplace-settings': typeof ErpAdminMarketplaceSettingsRoute
+  '/erp/admin-marketplace-takedowns': typeof ErpAdminMarketplaceTakedownsRoute
+  '/erp/admin-marketplace-tax-rules': typeof ErpAdminMarketplaceTaxRulesRoute
+  '/erp/admin-marketplace-top-selling': typeof ErpAdminMarketplaceTopSellingRoute
+  '/erp/admin-memory-recovery': typeof ErpAdminMemoryRecoveryRoute
+  '/erp/admin-merchants': typeof ErpAdminMerchantsRoute
+  '/erp/admin-notifications': typeof ErpAdminNotificationsRoute
+  '/erp/admin-observability': typeof ErpAdminObservabilityRoute
+  '/erp/admin-payments-god-mode': typeof ErpAdminPaymentsGodModeRoute
+  '/erp/admin-policy-engine': typeof ErpAdminPolicyEngineRoute
+  '/erp/admin-products': typeof ErpAdminProductsRoute
+  '/erp/admin-proration': typeof ErpAdminProrationRoute
+  '/erp/admin-rate-limits': typeof ErpAdminRateLimitsRoute
+  '/erp/admin-recovery-log': typeof ErpAdminRecoveryLogRoute
+  '/erp/admin-region-sync': typeof ErpAdminRegionSyncRoute
+  '/erp/admin-roles': typeof ErpAdminRolesRoute
+  '/erp/admin-scheduler': typeof ErpAdminSchedulerRoute
+  '/erp/admin-search-engine': typeof ErpAdminSearchEngineRoute
+  '/erp/admin-secrets': typeof ErpAdminSecretsRoute
+  '/erp/admin-security': typeof ErpAdminSecurityRoute
+  '/erp/admin-settings': typeof ErpAdminSettingsRoute
+  '/erp/admin-sla': typeof ErpAdminSlaRoute
+  '/erp/admin-subscriptions': typeof ErpAdminSubscriptionsRoute
+  '/erp/admin-system-health': typeof ErpAdminSystemHealthRoute
+  '/erp/admin-tax': typeof ErpAdminTaxRoute
+  '/erp/admin-tenants': typeof ErpAdminTenantsRoute
+  '/erp/admin-transactions': typeof ErpAdminTransactionsRoute
+  '/erp/admin-trust-scores': typeof ErpAdminTrustScoresRoute
+  '/erp/admin-versioning': typeof ErpAdminVersioningRoute
+  '/erp/admin-webhooks': typeof ErpAdminWebhooksRoute
+  '/erp/auth': typeof ErpAuthRoute
+  '/erp/auth-forgot-password': typeof ErpAuthForgotPasswordRoute
+  '/erp/auth-login': typeof ErpAuthLoginRoute
+  '/erp/auth-register': typeof ErpAuthRegisterRoute
+  '/erp/auth-reset-password': typeof ErpAuthResetPasswordRoute
+  '/erp/auth-verify-email': typeof ErpAuthVerifyEmailRoute
+  '/erp/checkout': typeof ErpCheckoutRoute
+  '/erp/customer': typeof ErpCustomerRoute
+  '/erp/customer-account': typeof ErpCustomerAccountRoute
+  '/erp/customer-dashboard': typeof ErpCustomerDashboardRoute
+  '/erp/customer-downloads': typeof ErpCustomerDownloadsRoute
+  '/erp/customer-invoices': typeof ErpCustomerInvoicesRoute
+  '/erp/customer-licenses': typeof ErpCustomerLicensesRoute
+  '/erp/customer-marketplace-downloads': typeof ErpCustomerMarketplaceDownloadsRoute
+  '/erp/customer-payment-methods': typeof ErpCustomerPaymentMethodsRoute
+  '/erp/customer-privacy': typeof ErpCustomerPrivacyRoute
+  '/erp/customer-security': typeof ErpCustomerSecurityRoute
+  '/erp/customer-subscriptions': typeof ErpCustomerSubscriptionsRoute
+  '/erp/marketplace': typeof ErpMarketplaceRoute
+  '/erp/marketplace-author': typeof ErpMarketplaceAuthorRoute
+  '/erp/marketplace-author-analytics': typeof ErpMarketplaceAuthorAnalyticsRoute
+  '/erp/marketplace-author-badges': typeof ErpMarketplaceAuthorBadgesRoute
+  '/erp/marketplace-author-comments': typeof ErpMarketplaceAuthorCommentsRoute
+  '/erp/marketplace-author-dashboard': typeof ErpMarketplaceAuthorDashboardRoute
+  '/erp/marketplace-author-earnings': typeof ErpMarketplaceAuthorEarningsRoute
+  '/erp/marketplace-author-followers': typeof ErpMarketplaceAuthorFollowersRoute
+  '/erp/marketplace-author-portfolio': typeof ErpMarketplaceAuthorPortfolioRoute
+  '/erp/marketplace-author-refunds': typeof ErpMarketplaceAuthorRefundsRoute
+  '/erp/marketplace-author-reviews': typeof ErpMarketplaceAuthorReviewsRoute
+  '/erp/marketplace-author-settings': typeof ErpMarketplaceAuthorSettingsRoute
+  '/erp/marketplace-author-statements': typeof ErpMarketplaceAuthorStatementsRoute
+  '/erp/marketplace-author-upload': typeof ErpMarketplaceAuthorUploadRoute
+  '/erp/marketplace-author-withdraw': typeof ErpMarketplaceAuthorWithdrawRoute
+  '/erp/marketplace-authors': typeof ErpMarketplaceAuthorsRoute
+  '/erp/marketplace-become-author': typeof ErpMarketplaceBecomeAuthorRoute
+  '/erp/marketplace-blog': typeof ErpMarketplaceBlogRoute
+  '/erp/marketplace-cart': typeof ErpMarketplaceCartRoute
+  '/erp/marketplace-checkout': typeof ErpMarketplaceCheckoutRoute
+  '/erp/marketplace-compare': typeof ErpMarketplaceCompareRoute
+  '/erp/marketplace-forums': typeof ErpMarketplaceForumsRoute
+  '/erp/marketplace-forums-create': typeof ErpMarketplaceForumsCreateRoute
+  '/erp/marketplace-notifications': typeof ErpMarketplaceNotificationsRoute
+  '/erp/marketplace-search': typeof ErpMarketplaceSearchRoute
+  '/erp/marketplace-wishlist': typeof ErpMarketplaceWishlistRoute
+  '/erp/merchant': typeof ErpMerchantRoute
+  '/erp/merchant-analytics': typeof ErpMerchantAnalyticsRoute
+  '/erp/merchant-api': typeof ErpMerchantApiRoute
+  '/erp/merchant-checkout-links': typeof ErpMerchantCheckoutLinksRoute
+  '/erp/merchant-customers': typeof ErpMerchantCustomersRoute
+  '/erp/merchant-dashboard': typeof ErpMerchantDashboardRoute
+  '/erp/merchant-discounts': typeof ErpMerchantDiscountsRoute
+  '/erp/merchant-discounts-create': typeof ErpMerchantDiscountsCreateRoute
+  '/erp/merchant-dunning': typeof ErpMerchantDunningRoute
+  '/erp/merchant-entitlements': typeof ErpMerchantEntitlementsRoute
+  '/erp/merchant-files': typeof ErpMerchantFilesRoute
+  '/erp/merchant-invoices': typeof ErpMerchantInvoicesRoute
+  '/erp/merchant-licenses': typeof ErpMerchantLicensesRoute
+  '/erp/merchant-pricing': typeof ErpMerchantPricingRoute
+  '/erp/merchant-pricing-create': typeof ErpMerchantPricingCreateRoute
+  '/erp/merchant-products': typeof ErpMerchantProductsRoute
+  '/erp/merchant-products-create': typeof ErpMerchantProductsCreateRoute
+  '/erp/merchant-settings': typeof ErpMerchantSettingsRoute
+  '/erp/merchant-subscriptions': typeof ErpMerchantSubscriptionsRoute
+  '/erp/merchant-transactions': typeof ErpMerchantTransactionsRoute
+  '/erp/merchant-webhooks': typeof ErpMerchantWebhooksRoute
+  '/erp/merchant-webhooks-create': typeof ErpMerchantWebhooksCreateRoute
+  '/erp/support': typeof ErpSupportRoute
+  '/erp/support-customers': typeof ErpSupportCustomersRoute
+  '/erp/support-dashboard': typeof ErpSupportDashboardRoute
+  '/erp/support-escalations': typeof ErpSupportEscalationsRoute
+  '/erp/support-logs': typeof ErpSupportLogsRoute
+  '/erp/support-search': typeof ErpSupportSearchRoute
+  '/erp/support-settings': typeof ErpSupportSettingsRoute
+  '/erp/support-tickets': typeof ErpSupportTicketsRoute
   '/growth/admin': typeof GrowthAdminRoute
   '/growth/campaign-analytics': typeof GrowthCampaignAnalyticsRoute
   '/growth/campaigns': typeof GrowthCampaignsRoute
@@ -2923,6 +4723,43 @@ export interface FileRoutesByTo {
   '/pos/shift': typeof PosShiftRoute
   '/pos/staff': typeof PosStaffRoute
   '/pos/sync': typeof PosSyncRoute
+  '/shopify/analytics': typeof ShopifyAnalyticsRoute
+  '/shopify/app-marketplace': typeof ShopifyAppMarketplaceRoute
+  '/shopify/audit-log': typeof ShopifyAuditLogRoute
+  '/shopify/automation': typeof ShopifyAutomationRoute
+  '/shopify/billing': typeof ShopifyBillingRoute
+  '/shopify/blog': typeof ShopifyBlogRoute
+  '/shopify/cart-checkout': typeof ShopifyCartCheckoutRoute
+  '/shopify/collections': typeof ShopifyCollectionsRoute
+  '/shopify/customers': typeof ShopifyCustomersRoute
+  '/shopify/dashboard': typeof ShopifyDashboardRoute
+  '/shopify/developer-tools': typeof ShopifyDeveloperToolsRoute
+  '/shopify/discounts': typeof ShopifyDiscountsRoute
+  '/shopify/internationalization': typeof ShopifyInternationalizationRoute
+  '/shopify/inventory': typeof ShopifyInventoryRoute
+  '/shopify/login': typeof ShopifyLoginRoute
+  '/shopify/manager-dashboard': typeof ShopifyManagerDashboardRoute
+  '/shopify/marketing': typeof ShopifyMarketingRoute
+  '/shopify/marketplace': typeof ShopifyMarketplaceRoute
+  '/shopify/media-library': typeof ShopifyMediaLibraryRoute
+  '/shopify/multi-store': typeof ShopifyMultiStoreRoute
+  '/shopify/notifications': typeof ShopifyNotificationsRoute
+  '/shopify/online-store': typeof ShopifyOnlineStoreRoute
+  '/shopify/orders': typeof ShopifyOrdersRoute
+  '/shopify/payments': typeof ShopifyPaymentsRoute
+  '/shopify/pos': typeof ShopifyPosRoute
+  '/shopify/product-edit': typeof ShopifyProductEditRoute
+  '/shopify/product-suite': typeof ShopifyProductSuiteRoute
+  '/shopify/product-suite-extras': typeof ShopifyProductSuiteExtrasRoute
+  '/shopify/products': typeof ShopifyProductsRoute
+  '/shopify/returns': typeof ShopifyReturnsRoute
+  '/shopify/reviews': typeof ShopifyReviewsRoute
+  '/shopify/security': typeof ShopifySecurityRoute
+  '/shopify/settings': typeof ShopifySettingsRoute
+  '/shopify/shipping': typeof ShopifyShippingRoute
+  '/shopify/staff-dashboard': typeof ShopifyStaffDashboardRoute
+  '/shopify/tax': typeof ShopifyTaxRoute
+  '/shopify/viewer-dashboard': typeof ShopifyViewerDashboardRoute
   '/vala/ai-console': typeof ValaAiConsoleRoute
   '/vala/api-ai': typeof ValaApiAiRoute
   '/vala/api-integration': typeof ValaApiIntegrationRoute
@@ -3093,6 +4930,38 @@ export interface FileRoutesById {
   '/ai/support': typeof AiSupportRoute
   '/ai/voice': typeof AiVoiceRoute
   '/ai/workflows': typeof AiWorkflowsRoute
+  '/atelier/admin-audit': typeof AtelierAdminAuditRoute
+  '/atelier/admin-roles': typeof AtelierAdminRolesRoute
+  '/atelier/admin-users': typeof AtelierAdminUsersRoute
+  '/atelier/author': typeof AtelierAuthorRoute
+  '/atelier/author-earnings': typeof AtelierAuthorEarningsRoute
+  '/atelier/author-edit': typeof AtelierAuthorEditRoute
+  '/atelier/author-items': typeof AtelierAuthorItemsRoute
+  '/atelier/author-profile': typeof AtelierAuthorProfileRoute
+  '/atelier/author-reviews': typeof AtelierAuthorReviewsRoute
+  '/atelier/author-sales': typeof AtelierAuthorSalesRoute
+  '/atelier/author-upload': typeof AtelierAuthorUploadRoute
+  '/atelier/blog': typeof AtelierBlogRoute
+  '/atelier/blog-detail': typeof AtelierBlogDetailRoute
+  '/atelier/builder': typeof AtelierBuilderRoute
+  '/atelier/categories': typeof AtelierCategoriesRoute
+  '/atelier/category': typeof AtelierCategoryRoute
+  '/atelier/chat': typeof AtelierChatRoute
+  '/atelier/customer': typeof AtelierCustomerRoute
+  '/atelier/forgot': typeof AtelierForgotRoute
+  '/atelier/franchise': typeof AtelierFranchiseRoute
+  '/atelier/home': typeof AtelierHomeRoute
+  '/atelier/influencer': typeof AtelierInfluencerRoute
+  '/atelier/login': typeof AtelierLoginRoute
+  '/atelier/merchant': typeof AtelierMerchantRoute
+  '/atelier/partner': typeof AtelierPartnerRoute
+  '/atelier/productivity': typeof AtelierProductivityRoute
+  '/atelier/register': typeof AtelierRegisterRoute
+  '/atelier/reseller-plugins': typeof AtelierResellerPluginsRoute
+  '/atelier/reseller-software': typeof AtelierResellerSoftwareRoute
+  '/atelier/reset': typeof AtelierResetRoute
+  '/atelier/search': typeof AtelierSearchRoute
+  '/atelier/support': typeof AtelierSupportRoute
   '/campaign/account': typeof CampaignAccountRoute
   '/campaign/admin': typeof CampaignAdminRoute
   '/campaign/ai-prediction': typeof CampaignAiPredictionRoute
@@ -3200,6 +5069,161 @@ export interface FileRoutesById {
   '/data/viewer': typeof DataViewerRoute
   '/data/wallet': typeof DataWalletRoute
   '/data/wizard': typeof DataWizardRoute
+  '/erp/admin': typeof ErpAdminRoute
+  '/erp/admin-ai-assist': typeof ErpAdminAiAssistRoute
+  '/erp/admin-api-logs': typeof ErpAdminApiLogsRoute
+  '/erp/admin-api-self-test': typeof ErpAdminApiSelfTestRoute
+  '/erp/admin-audit-logs': typeof ErpAdminAuditLogsRoute
+  '/erp/admin-auto-rollback': typeof ErpAdminAutoRollbackRoute
+  '/erp/admin-backup': typeof ErpAdminBackupRoute
+  '/erp/admin-bi-sync': typeof ErpAdminBiSyncRoute
+  '/erp/admin-billing': typeof ErpAdminBillingRoute
+  '/erp/admin-business-logic': typeof ErpAdminBusinessLogicRoute
+  '/erp/admin-cdn': typeof ErpAdminCdnRoute
+  '/erp/admin-cdn-edge': typeof ErpAdminCdnEdgeRoute
+  '/erp/admin-circuit-breakers': typeof ErpAdminCircuitBreakersRoute
+  '/erp/admin-compliance': typeof ErpAdminComplianceRoute
+  '/erp/admin-config-sync': typeof ErpAdminConfigSyncRoute
+  '/erp/admin-consistency': typeof ErpAdminConsistencyRoute
+  '/erp/admin-cost-governor': typeof ErpAdminCostGovernorRoute
+  '/erp/admin-cost-optimization': typeof ErpAdminCostOptimizationRoute
+  '/erp/admin-currency': typeof ErpAdminCurrencyRoute
+  '/erp/admin-customers': typeof ErpAdminCustomersRoute
+  '/erp/admin-dashboard': typeof ErpAdminDashboardRoute
+  '/erp/admin-data-consistency': typeof ErpAdminDataConsistencyRoute
+  '/erp/admin-data-guardian': typeof ErpAdminDataGuardianRoute
+  '/erp/admin-dependency-watcher': typeof ErpAdminDependencyWatcherRoute
+  '/erp/admin-deployments': typeof ErpAdminDeploymentsRoute
+  '/erp/admin-digital-twin': typeof ErpAdminDigitalTwinRoute
+  '/erp/admin-documents': typeof ErpAdminDocumentsRoute
+  '/erp/admin-dunning': typeof ErpAdminDunningRoute
+  '/erp/admin-entitlements': typeof ErpAdminEntitlementsRoute
+  '/erp/admin-event-bus': typeof ErpAdminEventBusRoute
+  '/erp/admin-feature-flags': typeof ErpAdminFeatureFlagsRoute
+  '/erp/admin-fraud': typeof ErpAdminFraudRoute
+  '/erp/admin-fraud-ml': typeof ErpAdminFraudMlRoute
+  '/erp/admin-gateways': typeof ErpAdminGatewaysRoute
+  '/erp/admin-impersonation': typeof ErpAdminImpersonationRoute
+  '/erp/admin-integrations': typeof ErpAdminIntegrationsRoute
+  '/erp/admin-licenses': typeof ErpAdminLicensesRoute
+  '/erp/admin-load-prediction': typeof ErpAdminLoadPredictionRoute
+  '/erp/admin-marketplace': typeof ErpAdminMarketplaceRoute
+  '/erp/admin-marketplace-authors': typeof ErpAdminMarketplaceAuthorsRoute
+  '/erp/admin-marketplace-categories': typeof ErpAdminMarketplaceCategoriesRoute
+  '/erp/admin-marketplace-collections': typeof ErpAdminMarketplaceCollectionsRoute
+  '/erp/admin-marketplace-featured': typeof ErpAdminMarketplaceFeaturedRoute
+  '/erp/admin-marketplace-flags': typeof ErpAdminMarketplaceFlagsRoute
+  '/erp/admin-marketplace-items': typeof ErpAdminMarketplaceItemsRoute
+  '/erp/admin-marketplace-levels': typeof ErpAdminMarketplaceLevelsRoute
+  '/erp/admin-marketplace-payouts': typeof ErpAdminMarketplacePayoutsRoute
+  '/erp/admin-marketplace-queue': typeof ErpAdminMarketplaceQueueRoute
+  '/erp/admin-marketplace-refunds': typeof ErpAdminMarketplaceRefundsRoute
+  '/erp/admin-marketplace-reports': typeof ErpAdminMarketplaceReportsRoute
+  '/erp/admin-marketplace-sales-reports': typeof ErpAdminMarketplaceSalesReportsRoute
+  '/erp/admin-marketplace-settings': typeof ErpAdminMarketplaceSettingsRoute
+  '/erp/admin-marketplace-takedowns': typeof ErpAdminMarketplaceTakedownsRoute
+  '/erp/admin-marketplace-tax-rules': typeof ErpAdminMarketplaceTaxRulesRoute
+  '/erp/admin-marketplace-top-selling': typeof ErpAdminMarketplaceTopSellingRoute
+  '/erp/admin-memory-recovery': typeof ErpAdminMemoryRecoveryRoute
+  '/erp/admin-merchants': typeof ErpAdminMerchantsRoute
+  '/erp/admin-notifications': typeof ErpAdminNotificationsRoute
+  '/erp/admin-observability': typeof ErpAdminObservabilityRoute
+  '/erp/admin-payments-god-mode': typeof ErpAdminPaymentsGodModeRoute
+  '/erp/admin-policy-engine': typeof ErpAdminPolicyEngineRoute
+  '/erp/admin-products': typeof ErpAdminProductsRoute
+  '/erp/admin-proration': typeof ErpAdminProrationRoute
+  '/erp/admin-rate-limits': typeof ErpAdminRateLimitsRoute
+  '/erp/admin-recovery-log': typeof ErpAdminRecoveryLogRoute
+  '/erp/admin-region-sync': typeof ErpAdminRegionSyncRoute
+  '/erp/admin-roles': typeof ErpAdminRolesRoute
+  '/erp/admin-scheduler': typeof ErpAdminSchedulerRoute
+  '/erp/admin-search-engine': typeof ErpAdminSearchEngineRoute
+  '/erp/admin-secrets': typeof ErpAdminSecretsRoute
+  '/erp/admin-security': typeof ErpAdminSecurityRoute
+  '/erp/admin-settings': typeof ErpAdminSettingsRoute
+  '/erp/admin-sla': typeof ErpAdminSlaRoute
+  '/erp/admin-subscriptions': typeof ErpAdminSubscriptionsRoute
+  '/erp/admin-system-health': typeof ErpAdminSystemHealthRoute
+  '/erp/admin-tax': typeof ErpAdminTaxRoute
+  '/erp/admin-tenants': typeof ErpAdminTenantsRoute
+  '/erp/admin-transactions': typeof ErpAdminTransactionsRoute
+  '/erp/admin-trust-scores': typeof ErpAdminTrustScoresRoute
+  '/erp/admin-versioning': typeof ErpAdminVersioningRoute
+  '/erp/admin-webhooks': typeof ErpAdminWebhooksRoute
+  '/erp/auth': typeof ErpAuthRoute
+  '/erp/auth-forgot-password': typeof ErpAuthForgotPasswordRoute
+  '/erp/auth-login': typeof ErpAuthLoginRoute
+  '/erp/auth-register': typeof ErpAuthRegisterRoute
+  '/erp/auth-reset-password': typeof ErpAuthResetPasswordRoute
+  '/erp/auth-verify-email': typeof ErpAuthVerifyEmailRoute
+  '/erp/checkout': typeof ErpCheckoutRoute
+  '/erp/customer': typeof ErpCustomerRoute
+  '/erp/customer-account': typeof ErpCustomerAccountRoute
+  '/erp/customer-dashboard': typeof ErpCustomerDashboardRoute
+  '/erp/customer-downloads': typeof ErpCustomerDownloadsRoute
+  '/erp/customer-invoices': typeof ErpCustomerInvoicesRoute
+  '/erp/customer-licenses': typeof ErpCustomerLicensesRoute
+  '/erp/customer-marketplace-downloads': typeof ErpCustomerMarketplaceDownloadsRoute
+  '/erp/customer-payment-methods': typeof ErpCustomerPaymentMethodsRoute
+  '/erp/customer-privacy': typeof ErpCustomerPrivacyRoute
+  '/erp/customer-security': typeof ErpCustomerSecurityRoute
+  '/erp/customer-subscriptions': typeof ErpCustomerSubscriptionsRoute
+  '/erp/marketplace': typeof ErpMarketplaceRoute
+  '/erp/marketplace-author': typeof ErpMarketplaceAuthorRoute
+  '/erp/marketplace-author-analytics': typeof ErpMarketplaceAuthorAnalyticsRoute
+  '/erp/marketplace-author-badges': typeof ErpMarketplaceAuthorBadgesRoute
+  '/erp/marketplace-author-comments': typeof ErpMarketplaceAuthorCommentsRoute
+  '/erp/marketplace-author-dashboard': typeof ErpMarketplaceAuthorDashboardRoute
+  '/erp/marketplace-author-earnings': typeof ErpMarketplaceAuthorEarningsRoute
+  '/erp/marketplace-author-followers': typeof ErpMarketplaceAuthorFollowersRoute
+  '/erp/marketplace-author-portfolio': typeof ErpMarketplaceAuthorPortfolioRoute
+  '/erp/marketplace-author-refunds': typeof ErpMarketplaceAuthorRefundsRoute
+  '/erp/marketplace-author-reviews': typeof ErpMarketplaceAuthorReviewsRoute
+  '/erp/marketplace-author-settings': typeof ErpMarketplaceAuthorSettingsRoute
+  '/erp/marketplace-author-statements': typeof ErpMarketplaceAuthorStatementsRoute
+  '/erp/marketplace-author-upload': typeof ErpMarketplaceAuthorUploadRoute
+  '/erp/marketplace-author-withdraw': typeof ErpMarketplaceAuthorWithdrawRoute
+  '/erp/marketplace-authors': typeof ErpMarketplaceAuthorsRoute
+  '/erp/marketplace-become-author': typeof ErpMarketplaceBecomeAuthorRoute
+  '/erp/marketplace-blog': typeof ErpMarketplaceBlogRoute
+  '/erp/marketplace-cart': typeof ErpMarketplaceCartRoute
+  '/erp/marketplace-checkout': typeof ErpMarketplaceCheckoutRoute
+  '/erp/marketplace-compare': typeof ErpMarketplaceCompareRoute
+  '/erp/marketplace-forums': typeof ErpMarketplaceForumsRoute
+  '/erp/marketplace-forums-create': typeof ErpMarketplaceForumsCreateRoute
+  '/erp/marketplace-notifications': typeof ErpMarketplaceNotificationsRoute
+  '/erp/marketplace-search': typeof ErpMarketplaceSearchRoute
+  '/erp/marketplace-wishlist': typeof ErpMarketplaceWishlistRoute
+  '/erp/merchant': typeof ErpMerchantRoute
+  '/erp/merchant-analytics': typeof ErpMerchantAnalyticsRoute
+  '/erp/merchant-api': typeof ErpMerchantApiRoute
+  '/erp/merchant-checkout-links': typeof ErpMerchantCheckoutLinksRoute
+  '/erp/merchant-customers': typeof ErpMerchantCustomersRoute
+  '/erp/merchant-dashboard': typeof ErpMerchantDashboardRoute
+  '/erp/merchant-discounts': typeof ErpMerchantDiscountsRoute
+  '/erp/merchant-discounts-create': typeof ErpMerchantDiscountsCreateRoute
+  '/erp/merchant-dunning': typeof ErpMerchantDunningRoute
+  '/erp/merchant-entitlements': typeof ErpMerchantEntitlementsRoute
+  '/erp/merchant-files': typeof ErpMerchantFilesRoute
+  '/erp/merchant-invoices': typeof ErpMerchantInvoicesRoute
+  '/erp/merchant-licenses': typeof ErpMerchantLicensesRoute
+  '/erp/merchant-pricing': typeof ErpMerchantPricingRoute
+  '/erp/merchant-pricing-create': typeof ErpMerchantPricingCreateRoute
+  '/erp/merchant-products': typeof ErpMerchantProductsRoute
+  '/erp/merchant-products-create': typeof ErpMerchantProductsCreateRoute
+  '/erp/merchant-settings': typeof ErpMerchantSettingsRoute
+  '/erp/merchant-subscriptions': typeof ErpMerchantSubscriptionsRoute
+  '/erp/merchant-transactions': typeof ErpMerchantTransactionsRoute
+  '/erp/merchant-webhooks': typeof ErpMerchantWebhooksRoute
+  '/erp/merchant-webhooks-create': typeof ErpMerchantWebhooksCreateRoute
+  '/erp/support': typeof ErpSupportRoute
+  '/erp/support-customers': typeof ErpSupportCustomersRoute
+  '/erp/support-dashboard': typeof ErpSupportDashboardRoute
+  '/erp/support-escalations': typeof ErpSupportEscalationsRoute
+  '/erp/support-logs': typeof ErpSupportLogsRoute
+  '/erp/support-search': typeof ErpSupportSearchRoute
+  '/erp/support-settings': typeof ErpSupportSettingsRoute
+  '/erp/support-tickets': typeof ErpSupportTicketsRoute
   '/growth/admin': typeof GrowthAdminRoute
   '/growth/campaign-analytics': typeof GrowthCampaignAnalyticsRoute
   '/growth/campaigns': typeof GrowthCampaignsRoute
@@ -3299,6 +5323,43 @@ export interface FileRoutesById {
   '/pos/shift': typeof PosShiftRoute
   '/pos/staff': typeof PosStaffRoute
   '/pos/sync': typeof PosSyncRoute
+  '/shopify/analytics': typeof ShopifyAnalyticsRoute
+  '/shopify/app-marketplace': typeof ShopifyAppMarketplaceRoute
+  '/shopify/audit-log': typeof ShopifyAuditLogRoute
+  '/shopify/automation': typeof ShopifyAutomationRoute
+  '/shopify/billing': typeof ShopifyBillingRoute
+  '/shopify/blog': typeof ShopifyBlogRoute
+  '/shopify/cart-checkout': typeof ShopifyCartCheckoutRoute
+  '/shopify/collections': typeof ShopifyCollectionsRoute
+  '/shopify/customers': typeof ShopifyCustomersRoute
+  '/shopify/dashboard': typeof ShopifyDashboardRoute
+  '/shopify/developer-tools': typeof ShopifyDeveloperToolsRoute
+  '/shopify/discounts': typeof ShopifyDiscountsRoute
+  '/shopify/internationalization': typeof ShopifyInternationalizationRoute
+  '/shopify/inventory': typeof ShopifyInventoryRoute
+  '/shopify/login': typeof ShopifyLoginRoute
+  '/shopify/manager-dashboard': typeof ShopifyManagerDashboardRoute
+  '/shopify/marketing': typeof ShopifyMarketingRoute
+  '/shopify/marketplace': typeof ShopifyMarketplaceRoute
+  '/shopify/media-library': typeof ShopifyMediaLibraryRoute
+  '/shopify/multi-store': typeof ShopifyMultiStoreRoute
+  '/shopify/notifications': typeof ShopifyNotificationsRoute
+  '/shopify/online-store': typeof ShopifyOnlineStoreRoute
+  '/shopify/orders': typeof ShopifyOrdersRoute
+  '/shopify/payments': typeof ShopifyPaymentsRoute
+  '/shopify/pos': typeof ShopifyPosRoute
+  '/shopify/product-edit': typeof ShopifyProductEditRoute
+  '/shopify/product-suite': typeof ShopifyProductSuiteRoute
+  '/shopify/product-suite-extras': typeof ShopifyProductSuiteExtrasRoute
+  '/shopify/products': typeof ShopifyProductsRoute
+  '/shopify/returns': typeof ShopifyReturnsRoute
+  '/shopify/reviews': typeof ShopifyReviewsRoute
+  '/shopify/security': typeof ShopifySecurityRoute
+  '/shopify/settings': typeof ShopifySettingsRoute
+  '/shopify/shipping': typeof ShopifyShippingRoute
+  '/shopify/staff-dashboard': typeof ShopifyStaffDashboardRoute
+  '/shopify/tax': typeof ShopifyTaxRoute
+  '/shopify/viewer-dashboard': typeof ShopifyViewerDashboardRoute
   '/vala/ai-console': typeof ValaAiConsoleRoute
   '/vala/api-ai': typeof ValaApiAiRoute
   '/vala/api-integration': typeof ValaApiIntegrationRoute
@@ -3470,6 +5531,38 @@ export interface FileRouteTypes {
     | '/ai/support'
     | '/ai/voice'
     | '/ai/workflows'
+    | '/atelier/admin-audit'
+    | '/atelier/admin-roles'
+    | '/atelier/admin-users'
+    | '/atelier/author'
+    | '/atelier/author-earnings'
+    | '/atelier/author-edit'
+    | '/atelier/author-items'
+    | '/atelier/author-profile'
+    | '/atelier/author-reviews'
+    | '/atelier/author-sales'
+    | '/atelier/author-upload'
+    | '/atelier/blog'
+    | '/atelier/blog-detail'
+    | '/atelier/builder'
+    | '/atelier/categories'
+    | '/atelier/category'
+    | '/atelier/chat'
+    | '/atelier/customer'
+    | '/atelier/forgot'
+    | '/atelier/franchise'
+    | '/atelier/home'
+    | '/atelier/influencer'
+    | '/atelier/login'
+    | '/atelier/merchant'
+    | '/atelier/partner'
+    | '/atelier/productivity'
+    | '/atelier/register'
+    | '/atelier/reseller-plugins'
+    | '/atelier/reseller-software'
+    | '/atelier/reset'
+    | '/atelier/search'
+    | '/atelier/support'
     | '/campaign/account'
     | '/campaign/admin'
     | '/campaign/ai-prediction'
@@ -3577,6 +5670,161 @@ export interface FileRouteTypes {
     | '/data/viewer'
     | '/data/wallet'
     | '/data/wizard'
+    | '/erp/admin'
+    | '/erp/admin-ai-assist'
+    | '/erp/admin-api-logs'
+    | '/erp/admin-api-self-test'
+    | '/erp/admin-audit-logs'
+    | '/erp/admin-auto-rollback'
+    | '/erp/admin-backup'
+    | '/erp/admin-bi-sync'
+    | '/erp/admin-billing'
+    | '/erp/admin-business-logic'
+    | '/erp/admin-cdn'
+    | '/erp/admin-cdn-edge'
+    | '/erp/admin-circuit-breakers'
+    | '/erp/admin-compliance'
+    | '/erp/admin-config-sync'
+    | '/erp/admin-consistency'
+    | '/erp/admin-cost-governor'
+    | '/erp/admin-cost-optimization'
+    | '/erp/admin-currency'
+    | '/erp/admin-customers'
+    | '/erp/admin-dashboard'
+    | '/erp/admin-data-consistency'
+    | '/erp/admin-data-guardian'
+    | '/erp/admin-dependency-watcher'
+    | '/erp/admin-deployments'
+    | '/erp/admin-digital-twin'
+    | '/erp/admin-documents'
+    | '/erp/admin-dunning'
+    | '/erp/admin-entitlements'
+    | '/erp/admin-event-bus'
+    | '/erp/admin-feature-flags'
+    | '/erp/admin-fraud'
+    | '/erp/admin-fraud-ml'
+    | '/erp/admin-gateways'
+    | '/erp/admin-impersonation'
+    | '/erp/admin-integrations'
+    | '/erp/admin-licenses'
+    | '/erp/admin-load-prediction'
+    | '/erp/admin-marketplace'
+    | '/erp/admin-marketplace-authors'
+    | '/erp/admin-marketplace-categories'
+    | '/erp/admin-marketplace-collections'
+    | '/erp/admin-marketplace-featured'
+    | '/erp/admin-marketplace-flags'
+    | '/erp/admin-marketplace-items'
+    | '/erp/admin-marketplace-levels'
+    | '/erp/admin-marketplace-payouts'
+    | '/erp/admin-marketplace-queue'
+    | '/erp/admin-marketplace-refunds'
+    | '/erp/admin-marketplace-reports'
+    | '/erp/admin-marketplace-sales-reports'
+    | '/erp/admin-marketplace-settings'
+    | '/erp/admin-marketplace-takedowns'
+    | '/erp/admin-marketplace-tax-rules'
+    | '/erp/admin-marketplace-top-selling'
+    | '/erp/admin-memory-recovery'
+    | '/erp/admin-merchants'
+    | '/erp/admin-notifications'
+    | '/erp/admin-observability'
+    | '/erp/admin-payments-god-mode'
+    | '/erp/admin-policy-engine'
+    | '/erp/admin-products'
+    | '/erp/admin-proration'
+    | '/erp/admin-rate-limits'
+    | '/erp/admin-recovery-log'
+    | '/erp/admin-region-sync'
+    | '/erp/admin-roles'
+    | '/erp/admin-scheduler'
+    | '/erp/admin-search-engine'
+    | '/erp/admin-secrets'
+    | '/erp/admin-security'
+    | '/erp/admin-settings'
+    | '/erp/admin-sla'
+    | '/erp/admin-subscriptions'
+    | '/erp/admin-system-health'
+    | '/erp/admin-tax'
+    | '/erp/admin-tenants'
+    | '/erp/admin-transactions'
+    | '/erp/admin-trust-scores'
+    | '/erp/admin-versioning'
+    | '/erp/admin-webhooks'
+    | '/erp/auth'
+    | '/erp/auth-forgot-password'
+    | '/erp/auth-login'
+    | '/erp/auth-register'
+    | '/erp/auth-reset-password'
+    | '/erp/auth-verify-email'
+    | '/erp/checkout'
+    | '/erp/customer'
+    | '/erp/customer-account'
+    | '/erp/customer-dashboard'
+    | '/erp/customer-downloads'
+    | '/erp/customer-invoices'
+    | '/erp/customer-licenses'
+    | '/erp/customer-marketplace-downloads'
+    | '/erp/customer-payment-methods'
+    | '/erp/customer-privacy'
+    | '/erp/customer-security'
+    | '/erp/customer-subscriptions'
+    | '/erp/marketplace'
+    | '/erp/marketplace-author'
+    | '/erp/marketplace-author-analytics'
+    | '/erp/marketplace-author-badges'
+    | '/erp/marketplace-author-comments'
+    | '/erp/marketplace-author-dashboard'
+    | '/erp/marketplace-author-earnings'
+    | '/erp/marketplace-author-followers'
+    | '/erp/marketplace-author-portfolio'
+    | '/erp/marketplace-author-refunds'
+    | '/erp/marketplace-author-reviews'
+    | '/erp/marketplace-author-settings'
+    | '/erp/marketplace-author-statements'
+    | '/erp/marketplace-author-upload'
+    | '/erp/marketplace-author-withdraw'
+    | '/erp/marketplace-authors'
+    | '/erp/marketplace-become-author'
+    | '/erp/marketplace-blog'
+    | '/erp/marketplace-cart'
+    | '/erp/marketplace-checkout'
+    | '/erp/marketplace-compare'
+    | '/erp/marketplace-forums'
+    | '/erp/marketplace-forums-create'
+    | '/erp/marketplace-notifications'
+    | '/erp/marketplace-search'
+    | '/erp/marketplace-wishlist'
+    | '/erp/merchant'
+    | '/erp/merchant-analytics'
+    | '/erp/merchant-api'
+    | '/erp/merchant-checkout-links'
+    | '/erp/merchant-customers'
+    | '/erp/merchant-dashboard'
+    | '/erp/merchant-discounts'
+    | '/erp/merchant-discounts-create'
+    | '/erp/merchant-dunning'
+    | '/erp/merchant-entitlements'
+    | '/erp/merchant-files'
+    | '/erp/merchant-invoices'
+    | '/erp/merchant-licenses'
+    | '/erp/merchant-pricing'
+    | '/erp/merchant-pricing-create'
+    | '/erp/merchant-products'
+    | '/erp/merchant-products-create'
+    | '/erp/merchant-settings'
+    | '/erp/merchant-subscriptions'
+    | '/erp/merchant-transactions'
+    | '/erp/merchant-webhooks'
+    | '/erp/merchant-webhooks-create'
+    | '/erp/support'
+    | '/erp/support-customers'
+    | '/erp/support-dashboard'
+    | '/erp/support-escalations'
+    | '/erp/support-logs'
+    | '/erp/support-search'
+    | '/erp/support-settings'
+    | '/erp/support-tickets'
     | '/growth/admin'
     | '/growth/campaign-analytics'
     | '/growth/campaigns'
@@ -3676,6 +5924,43 @@ export interface FileRouteTypes {
     | '/pos/shift'
     | '/pos/staff'
     | '/pos/sync'
+    | '/shopify/analytics'
+    | '/shopify/app-marketplace'
+    | '/shopify/audit-log'
+    | '/shopify/automation'
+    | '/shopify/billing'
+    | '/shopify/blog'
+    | '/shopify/cart-checkout'
+    | '/shopify/collections'
+    | '/shopify/customers'
+    | '/shopify/dashboard'
+    | '/shopify/developer-tools'
+    | '/shopify/discounts'
+    | '/shopify/internationalization'
+    | '/shopify/inventory'
+    | '/shopify/login'
+    | '/shopify/manager-dashboard'
+    | '/shopify/marketing'
+    | '/shopify/marketplace'
+    | '/shopify/media-library'
+    | '/shopify/multi-store'
+    | '/shopify/notifications'
+    | '/shopify/online-store'
+    | '/shopify/orders'
+    | '/shopify/payments'
+    | '/shopify/pos'
+    | '/shopify/product-edit'
+    | '/shopify/product-suite'
+    | '/shopify/product-suite-extras'
+    | '/shopify/products'
+    | '/shopify/returns'
+    | '/shopify/reviews'
+    | '/shopify/security'
+    | '/shopify/settings'
+    | '/shopify/shipping'
+    | '/shopify/staff-dashboard'
+    | '/shopify/tax'
+    | '/shopify/viewer-dashboard'
     | '/vala/ai-console'
     | '/vala/api-ai'
     | '/vala/api-integration'
@@ -3845,6 +6130,38 @@ export interface FileRouteTypes {
     | '/ai/support'
     | '/ai/voice'
     | '/ai/workflows'
+    | '/atelier/admin-audit'
+    | '/atelier/admin-roles'
+    | '/atelier/admin-users'
+    | '/atelier/author'
+    | '/atelier/author-earnings'
+    | '/atelier/author-edit'
+    | '/atelier/author-items'
+    | '/atelier/author-profile'
+    | '/atelier/author-reviews'
+    | '/atelier/author-sales'
+    | '/atelier/author-upload'
+    | '/atelier/blog'
+    | '/atelier/blog-detail'
+    | '/atelier/builder'
+    | '/atelier/categories'
+    | '/atelier/category'
+    | '/atelier/chat'
+    | '/atelier/customer'
+    | '/atelier/forgot'
+    | '/atelier/franchise'
+    | '/atelier/home'
+    | '/atelier/influencer'
+    | '/atelier/login'
+    | '/atelier/merchant'
+    | '/atelier/partner'
+    | '/atelier/productivity'
+    | '/atelier/register'
+    | '/atelier/reseller-plugins'
+    | '/atelier/reseller-software'
+    | '/atelier/reset'
+    | '/atelier/search'
+    | '/atelier/support'
     | '/campaign/account'
     | '/campaign/admin'
     | '/campaign/ai-prediction'
@@ -3952,6 +6269,161 @@ export interface FileRouteTypes {
     | '/data/viewer'
     | '/data/wallet'
     | '/data/wizard'
+    | '/erp/admin'
+    | '/erp/admin-ai-assist'
+    | '/erp/admin-api-logs'
+    | '/erp/admin-api-self-test'
+    | '/erp/admin-audit-logs'
+    | '/erp/admin-auto-rollback'
+    | '/erp/admin-backup'
+    | '/erp/admin-bi-sync'
+    | '/erp/admin-billing'
+    | '/erp/admin-business-logic'
+    | '/erp/admin-cdn'
+    | '/erp/admin-cdn-edge'
+    | '/erp/admin-circuit-breakers'
+    | '/erp/admin-compliance'
+    | '/erp/admin-config-sync'
+    | '/erp/admin-consistency'
+    | '/erp/admin-cost-governor'
+    | '/erp/admin-cost-optimization'
+    | '/erp/admin-currency'
+    | '/erp/admin-customers'
+    | '/erp/admin-dashboard'
+    | '/erp/admin-data-consistency'
+    | '/erp/admin-data-guardian'
+    | '/erp/admin-dependency-watcher'
+    | '/erp/admin-deployments'
+    | '/erp/admin-digital-twin'
+    | '/erp/admin-documents'
+    | '/erp/admin-dunning'
+    | '/erp/admin-entitlements'
+    | '/erp/admin-event-bus'
+    | '/erp/admin-feature-flags'
+    | '/erp/admin-fraud'
+    | '/erp/admin-fraud-ml'
+    | '/erp/admin-gateways'
+    | '/erp/admin-impersonation'
+    | '/erp/admin-integrations'
+    | '/erp/admin-licenses'
+    | '/erp/admin-load-prediction'
+    | '/erp/admin-marketplace'
+    | '/erp/admin-marketplace-authors'
+    | '/erp/admin-marketplace-categories'
+    | '/erp/admin-marketplace-collections'
+    | '/erp/admin-marketplace-featured'
+    | '/erp/admin-marketplace-flags'
+    | '/erp/admin-marketplace-items'
+    | '/erp/admin-marketplace-levels'
+    | '/erp/admin-marketplace-payouts'
+    | '/erp/admin-marketplace-queue'
+    | '/erp/admin-marketplace-refunds'
+    | '/erp/admin-marketplace-reports'
+    | '/erp/admin-marketplace-sales-reports'
+    | '/erp/admin-marketplace-settings'
+    | '/erp/admin-marketplace-takedowns'
+    | '/erp/admin-marketplace-tax-rules'
+    | '/erp/admin-marketplace-top-selling'
+    | '/erp/admin-memory-recovery'
+    | '/erp/admin-merchants'
+    | '/erp/admin-notifications'
+    | '/erp/admin-observability'
+    | '/erp/admin-payments-god-mode'
+    | '/erp/admin-policy-engine'
+    | '/erp/admin-products'
+    | '/erp/admin-proration'
+    | '/erp/admin-rate-limits'
+    | '/erp/admin-recovery-log'
+    | '/erp/admin-region-sync'
+    | '/erp/admin-roles'
+    | '/erp/admin-scheduler'
+    | '/erp/admin-search-engine'
+    | '/erp/admin-secrets'
+    | '/erp/admin-security'
+    | '/erp/admin-settings'
+    | '/erp/admin-sla'
+    | '/erp/admin-subscriptions'
+    | '/erp/admin-system-health'
+    | '/erp/admin-tax'
+    | '/erp/admin-tenants'
+    | '/erp/admin-transactions'
+    | '/erp/admin-trust-scores'
+    | '/erp/admin-versioning'
+    | '/erp/admin-webhooks'
+    | '/erp/auth'
+    | '/erp/auth-forgot-password'
+    | '/erp/auth-login'
+    | '/erp/auth-register'
+    | '/erp/auth-reset-password'
+    | '/erp/auth-verify-email'
+    | '/erp/checkout'
+    | '/erp/customer'
+    | '/erp/customer-account'
+    | '/erp/customer-dashboard'
+    | '/erp/customer-downloads'
+    | '/erp/customer-invoices'
+    | '/erp/customer-licenses'
+    | '/erp/customer-marketplace-downloads'
+    | '/erp/customer-payment-methods'
+    | '/erp/customer-privacy'
+    | '/erp/customer-security'
+    | '/erp/customer-subscriptions'
+    | '/erp/marketplace'
+    | '/erp/marketplace-author'
+    | '/erp/marketplace-author-analytics'
+    | '/erp/marketplace-author-badges'
+    | '/erp/marketplace-author-comments'
+    | '/erp/marketplace-author-dashboard'
+    | '/erp/marketplace-author-earnings'
+    | '/erp/marketplace-author-followers'
+    | '/erp/marketplace-author-portfolio'
+    | '/erp/marketplace-author-refunds'
+    | '/erp/marketplace-author-reviews'
+    | '/erp/marketplace-author-settings'
+    | '/erp/marketplace-author-statements'
+    | '/erp/marketplace-author-upload'
+    | '/erp/marketplace-author-withdraw'
+    | '/erp/marketplace-authors'
+    | '/erp/marketplace-become-author'
+    | '/erp/marketplace-blog'
+    | '/erp/marketplace-cart'
+    | '/erp/marketplace-checkout'
+    | '/erp/marketplace-compare'
+    | '/erp/marketplace-forums'
+    | '/erp/marketplace-forums-create'
+    | '/erp/marketplace-notifications'
+    | '/erp/marketplace-search'
+    | '/erp/marketplace-wishlist'
+    | '/erp/merchant'
+    | '/erp/merchant-analytics'
+    | '/erp/merchant-api'
+    | '/erp/merchant-checkout-links'
+    | '/erp/merchant-customers'
+    | '/erp/merchant-dashboard'
+    | '/erp/merchant-discounts'
+    | '/erp/merchant-discounts-create'
+    | '/erp/merchant-dunning'
+    | '/erp/merchant-entitlements'
+    | '/erp/merchant-files'
+    | '/erp/merchant-invoices'
+    | '/erp/merchant-licenses'
+    | '/erp/merchant-pricing'
+    | '/erp/merchant-pricing-create'
+    | '/erp/merchant-products'
+    | '/erp/merchant-products-create'
+    | '/erp/merchant-settings'
+    | '/erp/merchant-subscriptions'
+    | '/erp/merchant-transactions'
+    | '/erp/merchant-webhooks'
+    | '/erp/merchant-webhooks-create'
+    | '/erp/support'
+    | '/erp/support-customers'
+    | '/erp/support-dashboard'
+    | '/erp/support-escalations'
+    | '/erp/support-logs'
+    | '/erp/support-search'
+    | '/erp/support-settings'
+    | '/erp/support-tickets'
     | '/growth/admin'
     | '/growth/campaign-analytics'
     | '/growth/campaigns'
@@ -4051,6 +6523,43 @@ export interface FileRouteTypes {
     | '/pos/shift'
     | '/pos/staff'
     | '/pos/sync'
+    | '/shopify/analytics'
+    | '/shopify/app-marketplace'
+    | '/shopify/audit-log'
+    | '/shopify/automation'
+    | '/shopify/billing'
+    | '/shopify/blog'
+    | '/shopify/cart-checkout'
+    | '/shopify/collections'
+    | '/shopify/customers'
+    | '/shopify/dashboard'
+    | '/shopify/developer-tools'
+    | '/shopify/discounts'
+    | '/shopify/internationalization'
+    | '/shopify/inventory'
+    | '/shopify/login'
+    | '/shopify/manager-dashboard'
+    | '/shopify/marketing'
+    | '/shopify/marketplace'
+    | '/shopify/media-library'
+    | '/shopify/multi-store'
+    | '/shopify/notifications'
+    | '/shopify/online-store'
+    | '/shopify/orders'
+    | '/shopify/payments'
+    | '/shopify/pos'
+    | '/shopify/product-edit'
+    | '/shopify/product-suite'
+    | '/shopify/product-suite-extras'
+    | '/shopify/products'
+    | '/shopify/returns'
+    | '/shopify/reviews'
+    | '/shopify/security'
+    | '/shopify/settings'
+    | '/shopify/shipping'
+    | '/shopify/staff-dashboard'
+    | '/shopify/tax'
+    | '/shopify/viewer-dashboard'
     | '/vala/ai-console'
     | '/vala/api-ai'
     | '/vala/api-integration'
@@ -4220,6 +6729,38 @@ export interface FileRouteTypes {
     | '/ai/support'
     | '/ai/voice'
     | '/ai/workflows'
+    | '/atelier/admin-audit'
+    | '/atelier/admin-roles'
+    | '/atelier/admin-users'
+    | '/atelier/author'
+    | '/atelier/author-earnings'
+    | '/atelier/author-edit'
+    | '/atelier/author-items'
+    | '/atelier/author-profile'
+    | '/atelier/author-reviews'
+    | '/atelier/author-sales'
+    | '/atelier/author-upload'
+    | '/atelier/blog'
+    | '/atelier/blog-detail'
+    | '/atelier/builder'
+    | '/atelier/categories'
+    | '/atelier/category'
+    | '/atelier/chat'
+    | '/atelier/customer'
+    | '/atelier/forgot'
+    | '/atelier/franchise'
+    | '/atelier/home'
+    | '/atelier/influencer'
+    | '/atelier/login'
+    | '/atelier/merchant'
+    | '/atelier/partner'
+    | '/atelier/productivity'
+    | '/atelier/register'
+    | '/atelier/reseller-plugins'
+    | '/atelier/reseller-software'
+    | '/atelier/reset'
+    | '/atelier/search'
+    | '/atelier/support'
     | '/campaign/account'
     | '/campaign/admin'
     | '/campaign/ai-prediction'
@@ -4327,6 +6868,161 @@ export interface FileRouteTypes {
     | '/data/viewer'
     | '/data/wallet'
     | '/data/wizard'
+    | '/erp/admin'
+    | '/erp/admin-ai-assist'
+    | '/erp/admin-api-logs'
+    | '/erp/admin-api-self-test'
+    | '/erp/admin-audit-logs'
+    | '/erp/admin-auto-rollback'
+    | '/erp/admin-backup'
+    | '/erp/admin-bi-sync'
+    | '/erp/admin-billing'
+    | '/erp/admin-business-logic'
+    | '/erp/admin-cdn'
+    | '/erp/admin-cdn-edge'
+    | '/erp/admin-circuit-breakers'
+    | '/erp/admin-compliance'
+    | '/erp/admin-config-sync'
+    | '/erp/admin-consistency'
+    | '/erp/admin-cost-governor'
+    | '/erp/admin-cost-optimization'
+    | '/erp/admin-currency'
+    | '/erp/admin-customers'
+    | '/erp/admin-dashboard'
+    | '/erp/admin-data-consistency'
+    | '/erp/admin-data-guardian'
+    | '/erp/admin-dependency-watcher'
+    | '/erp/admin-deployments'
+    | '/erp/admin-digital-twin'
+    | '/erp/admin-documents'
+    | '/erp/admin-dunning'
+    | '/erp/admin-entitlements'
+    | '/erp/admin-event-bus'
+    | '/erp/admin-feature-flags'
+    | '/erp/admin-fraud'
+    | '/erp/admin-fraud-ml'
+    | '/erp/admin-gateways'
+    | '/erp/admin-impersonation'
+    | '/erp/admin-integrations'
+    | '/erp/admin-licenses'
+    | '/erp/admin-load-prediction'
+    | '/erp/admin-marketplace'
+    | '/erp/admin-marketplace-authors'
+    | '/erp/admin-marketplace-categories'
+    | '/erp/admin-marketplace-collections'
+    | '/erp/admin-marketplace-featured'
+    | '/erp/admin-marketplace-flags'
+    | '/erp/admin-marketplace-items'
+    | '/erp/admin-marketplace-levels'
+    | '/erp/admin-marketplace-payouts'
+    | '/erp/admin-marketplace-queue'
+    | '/erp/admin-marketplace-refunds'
+    | '/erp/admin-marketplace-reports'
+    | '/erp/admin-marketplace-sales-reports'
+    | '/erp/admin-marketplace-settings'
+    | '/erp/admin-marketplace-takedowns'
+    | '/erp/admin-marketplace-tax-rules'
+    | '/erp/admin-marketplace-top-selling'
+    | '/erp/admin-memory-recovery'
+    | '/erp/admin-merchants'
+    | '/erp/admin-notifications'
+    | '/erp/admin-observability'
+    | '/erp/admin-payments-god-mode'
+    | '/erp/admin-policy-engine'
+    | '/erp/admin-products'
+    | '/erp/admin-proration'
+    | '/erp/admin-rate-limits'
+    | '/erp/admin-recovery-log'
+    | '/erp/admin-region-sync'
+    | '/erp/admin-roles'
+    | '/erp/admin-scheduler'
+    | '/erp/admin-search-engine'
+    | '/erp/admin-secrets'
+    | '/erp/admin-security'
+    | '/erp/admin-settings'
+    | '/erp/admin-sla'
+    | '/erp/admin-subscriptions'
+    | '/erp/admin-system-health'
+    | '/erp/admin-tax'
+    | '/erp/admin-tenants'
+    | '/erp/admin-transactions'
+    | '/erp/admin-trust-scores'
+    | '/erp/admin-versioning'
+    | '/erp/admin-webhooks'
+    | '/erp/auth'
+    | '/erp/auth-forgot-password'
+    | '/erp/auth-login'
+    | '/erp/auth-register'
+    | '/erp/auth-reset-password'
+    | '/erp/auth-verify-email'
+    | '/erp/checkout'
+    | '/erp/customer'
+    | '/erp/customer-account'
+    | '/erp/customer-dashboard'
+    | '/erp/customer-downloads'
+    | '/erp/customer-invoices'
+    | '/erp/customer-licenses'
+    | '/erp/customer-marketplace-downloads'
+    | '/erp/customer-payment-methods'
+    | '/erp/customer-privacy'
+    | '/erp/customer-security'
+    | '/erp/customer-subscriptions'
+    | '/erp/marketplace'
+    | '/erp/marketplace-author'
+    | '/erp/marketplace-author-analytics'
+    | '/erp/marketplace-author-badges'
+    | '/erp/marketplace-author-comments'
+    | '/erp/marketplace-author-dashboard'
+    | '/erp/marketplace-author-earnings'
+    | '/erp/marketplace-author-followers'
+    | '/erp/marketplace-author-portfolio'
+    | '/erp/marketplace-author-refunds'
+    | '/erp/marketplace-author-reviews'
+    | '/erp/marketplace-author-settings'
+    | '/erp/marketplace-author-statements'
+    | '/erp/marketplace-author-upload'
+    | '/erp/marketplace-author-withdraw'
+    | '/erp/marketplace-authors'
+    | '/erp/marketplace-become-author'
+    | '/erp/marketplace-blog'
+    | '/erp/marketplace-cart'
+    | '/erp/marketplace-checkout'
+    | '/erp/marketplace-compare'
+    | '/erp/marketplace-forums'
+    | '/erp/marketplace-forums-create'
+    | '/erp/marketplace-notifications'
+    | '/erp/marketplace-search'
+    | '/erp/marketplace-wishlist'
+    | '/erp/merchant'
+    | '/erp/merchant-analytics'
+    | '/erp/merchant-api'
+    | '/erp/merchant-checkout-links'
+    | '/erp/merchant-customers'
+    | '/erp/merchant-dashboard'
+    | '/erp/merchant-discounts'
+    | '/erp/merchant-discounts-create'
+    | '/erp/merchant-dunning'
+    | '/erp/merchant-entitlements'
+    | '/erp/merchant-files'
+    | '/erp/merchant-invoices'
+    | '/erp/merchant-licenses'
+    | '/erp/merchant-pricing'
+    | '/erp/merchant-pricing-create'
+    | '/erp/merchant-products'
+    | '/erp/merchant-products-create'
+    | '/erp/merchant-settings'
+    | '/erp/merchant-subscriptions'
+    | '/erp/merchant-transactions'
+    | '/erp/merchant-webhooks'
+    | '/erp/merchant-webhooks-create'
+    | '/erp/support'
+    | '/erp/support-customers'
+    | '/erp/support-dashboard'
+    | '/erp/support-escalations'
+    | '/erp/support-logs'
+    | '/erp/support-search'
+    | '/erp/support-settings'
+    | '/erp/support-tickets'
     | '/growth/admin'
     | '/growth/campaign-analytics'
     | '/growth/campaigns'
@@ -4426,6 +7122,43 @@ export interface FileRouteTypes {
     | '/pos/shift'
     | '/pos/staff'
     | '/pos/sync'
+    | '/shopify/analytics'
+    | '/shopify/app-marketplace'
+    | '/shopify/audit-log'
+    | '/shopify/automation'
+    | '/shopify/billing'
+    | '/shopify/blog'
+    | '/shopify/cart-checkout'
+    | '/shopify/collections'
+    | '/shopify/customers'
+    | '/shopify/dashboard'
+    | '/shopify/developer-tools'
+    | '/shopify/discounts'
+    | '/shopify/internationalization'
+    | '/shopify/inventory'
+    | '/shopify/login'
+    | '/shopify/manager-dashboard'
+    | '/shopify/marketing'
+    | '/shopify/marketplace'
+    | '/shopify/media-library'
+    | '/shopify/multi-store'
+    | '/shopify/notifications'
+    | '/shopify/online-store'
+    | '/shopify/orders'
+    | '/shopify/payments'
+    | '/shopify/pos'
+    | '/shopify/product-edit'
+    | '/shopify/product-suite'
+    | '/shopify/product-suite-extras'
+    | '/shopify/products'
+    | '/shopify/returns'
+    | '/shopify/reviews'
+    | '/shopify/security'
+    | '/shopify/settings'
+    | '/shopify/shipping'
+    | '/shopify/staff-dashboard'
+    | '/shopify/tax'
+    | '/shopify/viewer-dashboard'
     | '/vala/ai-console'
     | '/vala/api-ai'
     | '/vala/api-integration'
@@ -4587,6 +7320,38 @@ export interface RootRouteChildren {
   WarRoomRoute: typeof WarRoomRoute
   WebhooksRoute: typeof WebhooksRoute
   WhiteLabelRoute: typeof WhiteLabelRoute
+  AtelierAdminAuditRoute: typeof AtelierAdminAuditRoute
+  AtelierAdminRolesRoute: typeof AtelierAdminRolesRoute
+  AtelierAdminUsersRoute: typeof AtelierAdminUsersRoute
+  AtelierAuthorRoute: typeof AtelierAuthorRoute
+  AtelierAuthorEarningsRoute: typeof AtelierAuthorEarningsRoute
+  AtelierAuthorEditRoute: typeof AtelierAuthorEditRoute
+  AtelierAuthorItemsRoute: typeof AtelierAuthorItemsRoute
+  AtelierAuthorProfileRoute: typeof AtelierAuthorProfileRoute
+  AtelierAuthorReviewsRoute: typeof AtelierAuthorReviewsRoute
+  AtelierAuthorSalesRoute: typeof AtelierAuthorSalesRoute
+  AtelierAuthorUploadRoute: typeof AtelierAuthorUploadRoute
+  AtelierBlogRoute: typeof AtelierBlogRoute
+  AtelierBlogDetailRoute: typeof AtelierBlogDetailRoute
+  AtelierBuilderRoute: typeof AtelierBuilderRoute
+  AtelierCategoriesRoute: typeof AtelierCategoriesRoute
+  AtelierCategoryRoute: typeof AtelierCategoryRoute
+  AtelierChatRoute: typeof AtelierChatRoute
+  AtelierCustomerRoute: typeof AtelierCustomerRoute
+  AtelierForgotRoute: typeof AtelierForgotRoute
+  AtelierFranchiseRoute: typeof AtelierFranchiseRoute
+  AtelierHomeRoute: typeof AtelierHomeRoute
+  AtelierInfluencerRoute: typeof AtelierInfluencerRoute
+  AtelierLoginRoute: typeof AtelierLoginRoute
+  AtelierMerchantRoute: typeof AtelierMerchantRoute
+  AtelierPartnerRoute: typeof AtelierPartnerRoute
+  AtelierProductivityRoute: typeof AtelierProductivityRoute
+  AtelierRegisterRoute: typeof AtelierRegisterRoute
+  AtelierResellerPluginsRoute: typeof AtelierResellerPluginsRoute
+  AtelierResellerSoftwareRoute: typeof AtelierResellerSoftwareRoute
+  AtelierResetRoute: typeof AtelierResetRoute
+  AtelierSearchRoute: typeof AtelierSearchRoute
+  AtelierSupportRoute: typeof AtelierSupportRoute
   CampaignAccountRoute: typeof CampaignAccountRoute
   CampaignAdminRoute: typeof CampaignAdminRoute
   CampaignAiPredictionRoute: typeof CampaignAiPredictionRoute
@@ -4694,6 +7459,161 @@ export interface RootRouteChildren {
   DataViewerRoute: typeof DataViewerRoute
   DataWalletRoute: typeof DataWalletRoute
   DataWizardRoute: typeof DataWizardRoute
+  ErpAdminRoute: typeof ErpAdminRoute
+  ErpAdminAiAssistRoute: typeof ErpAdminAiAssistRoute
+  ErpAdminApiLogsRoute: typeof ErpAdminApiLogsRoute
+  ErpAdminApiSelfTestRoute: typeof ErpAdminApiSelfTestRoute
+  ErpAdminAuditLogsRoute: typeof ErpAdminAuditLogsRoute
+  ErpAdminAutoRollbackRoute: typeof ErpAdminAutoRollbackRoute
+  ErpAdminBackupRoute: typeof ErpAdminBackupRoute
+  ErpAdminBiSyncRoute: typeof ErpAdminBiSyncRoute
+  ErpAdminBillingRoute: typeof ErpAdminBillingRoute
+  ErpAdminBusinessLogicRoute: typeof ErpAdminBusinessLogicRoute
+  ErpAdminCdnRoute: typeof ErpAdminCdnRoute
+  ErpAdminCdnEdgeRoute: typeof ErpAdminCdnEdgeRoute
+  ErpAdminCircuitBreakersRoute: typeof ErpAdminCircuitBreakersRoute
+  ErpAdminComplianceRoute: typeof ErpAdminComplianceRoute
+  ErpAdminConfigSyncRoute: typeof ErpAdminConfigSyncRoute
+  ErpAdminConsistencyRoute: typeof ErpAdminConsistencyRoute
+  ErpAdminCostGovernorRoute: typeof ErpAdminCostGovernorRoute
+  ErpAdminCostOptimizationRoute: typeof ErpAdminCostOptimizationRoute
+  ErpAdminCurrencyRoute: typeof ErpAdminCurrencyRoute
+  ErpAdminCustomersRoute: typeof ErpAdminCustomersRoute
+  ErpAdminDashboardRoute: typeof ErpAdminDashboardRoute
+  ErpAdminDataConsistencyRoute: typeof ErpAdminDataConsistencyRoute
+  ErpAdminDataGuardianRoute: typeof ErpAdminDataGuardianRoute
+  ErpAdminDependencyWatcherRoute: typeof ErpAdminDependencyWatcherRoute
+  ErpAdminDeploymentsRoute: typeof ErpAdminDeploymentsRoute
+  ErpAdminDigitalTwinRoute: typeof ErpAdminDigitalTwinRoute
+  ErpAdminDocumentsRoute: typeof ErpAdminDocumentsRoute
+  ErpAdminDunningRoute: typeof ErpAdminDunningRoute
+  ErpAdminEntitlementsRoute: typeof ErpAdminEntitlementsRoute
+  ErpAdminEventBusRoute: typeof ErpAdminEventBusRoute
+  ErpAdminFeatureFlagsRoute: typeof ErpAdminFeatureFlagsRoute
+  ErpAdminFraudRoute: typeof ErpAdminFraudRoute
+  ErpAdminFraudMlRoute: typeof ErpAdminFraudMlRoute
+  ErpAdminGatewaysRoute: typeof ErpAdminGatewaysRoute
+  ErpAdminImpersonationRoute: typeof ErpAdminImpersonationRoute
+  ErpAdminIntegrationsRoute: typeof ErpAdminIntegrationsRoute
+  ErpAdminLicensesRoute: typeof ErpAdminLicensesRoute
+  ErpAdminLoadPredictionRoute: typeof ErpAdminLoadPredictionRoute
+  ErpAdminMarketplaceRoute: typeof ErpAdminMarketplaceRoute
+  ErpAdminMarketplaceAuthorsRoute: typeof ErpAdminMarketplaceAuthorsRoute
+  ErpAdminMarketplaceCategoriesRoute: typeof ErpAdminMarketplaceCategoriesRoute
+  ErpAdminMarketplaceCollectionsRoute: typeof ErpAdminMarketplaceCollectionsRoute
+  ErpAdminMarketplaceFeaturedRoute: typeof ErpAdminMarketplaceFeaturedRoute
+  ErpAdminMarketplaceFlagsRoute: typeof ErpAdminMarketplaceFlagsRoute
+  ErpAdminMarketplaceItemsRoute: typeof ErpAdminMarketplaceItemsRoute
+  ErpAdminMarketplaceLevelsRoute: typeof ErpAdminMarketplaceLevelsRoute
+  ErpAdminMarketplacePayoutsRoute: typeof ErpAdminMarketplacePayoutsRoute
+  ErpAdminMarketplaceQueueRoute: typeof ErpAdminMarketplaceQueueRoute
+  ErpAdminMarketplaceRefundsRoute: typeof ErpAdminMarketplaceRefundsRoute
+  ErpAdminMarketplaceReportsRoute: typeof ErpAdminMarketplaceReportsRoute
+  ErpAdminMarketplaceSalesReportsRoute: typeof ErpAdminMarketplaceSalesReportsRoute
+  ErpAdminMarketplaceSettingsRoute: typeof ErpAdminMarketplaceSettingsRoute
+  ErpAdminMarketplaceTakedownsRoute: typeof ErpAdminMarketplaceTakedownsRoute
+  ErpAdminMarketplaceTaxRulesRoute: typeof ErpAdminMarketplaceTaxRulesRoute
+  ErpAdminMarketplaceTopSellingRoute: typeof ErpAdminMarketplaceTopSellingRoute
+  ErpAdminMemoryRecoveryRoute: typeof ErpAdminMemoryRecoveryRoute
+  ErpAdminMerchantsRoute: typeof ErpAdminMerchantsRoute
+  ErpAdminNotificationsRoute: typeof ErpAdminNotificationsRoute
+  ErpAdminObservabilityRoute: typeof ErpAdminObservabilityRoute
+  ErpAdminPaymentsGodModeRoute: typeof ErpAdminPaymentsGodModeRoute
+  ErpAdminPolicyEngineRoute: typeof ErpAdminPolicyEngineRoute
+  ErpAdminProductsRoute: typeof ErpAdminProductsRoute
+  ErpAdminProrationRoute: typeof ErpAdminProrationRoute
+  ErpAdminRateLimitsRoute: typeof ErpAdminRateLimitsRoute
+  ErpAdminRecoveryLogRoute: typeof ErpAdminRecoveryLogRoute
+  ErpAdminRegionSyncRoute: typeof ErpAdminRegionSyncRoute
+  ErpAdminRolesRoute: typeof ErpAdminRolesRoute
+  ErpAdminSchedulerRoute: typeof ErpAdminSchedulerRoute
+  ErpAdminSearchEngineRoute: typeof ErpAdminSearchEngineRoute
+  ErpAdminSecretsRoute: typeof ErpAdminSecretsRoute
+  ErpAdminSecurityRoute: typeof ErpAdminSecurityRoute
+  ErpAdminSettingsRoute: typeof ErpAdminSettingsRoute
+  ErpAdminSlaRoute: typeof ErpAdminSlaRoute
+  ErpAdminSubscriptionsRoute: typeof ErpAdminSubscriptionsRoute
+  ErpAdminSystemHealthRoute: typeof ErpAdminSystemHealthRoute
+  ErpAdminTaxRoute: typeof ErpAdminTaxRoute
+  ErpAdminTenantsRoute: typeof ErpAdminTenantsRoute
+  ErpAdminTransactionsRoute: typeof ErpAdminTransactionsRoute
+  ErpAdminTrustScoresRoute: typeof ErpAdminTrustScoresRoute
+  ErpAdminVersioningRoute: typeof ErpAdminVersioningRoute
+  ErpAdminWebhooksRoute: typeof ErpAdminWebhooksRoute
+  ErpAuthRoute: typeof ErpAuthRoute
+  ErpAuthForgotPasswordRoute: typeof ErpAuthForgotPasswordRoute
+  ErpAuthLoginRoute: typeof ErpAuthLoginRoute
+  ErpAuthRegisterRoute: typeof ErpAuthRegisterRoute
+  ErpAuthResetPasswordRoute: typeof ErpAuthResetPasswordRoute
+  ErpAuthVerifyEmailRoute: typeof ErpAuthVerifyEmailRoute
+  ErpCheckoutRoute: typeof ErpCheckoutRoute
+  ErpCustomerRoute: typeof ErpCustomerRoute
+  ErpCustomerAccountRoute: typeof ErpCustomerAccountRoute
+  ErpCustomerDashboardRoute: typeof ErpCustomerDashboardRoute
+  ErpCustomerDownloadsRoute: typeof ErpCustomerDownloadsRoute
+  ErpCustomerInvoicesRoute: typeof ErpCustomerInvoicesRoute
+  ErpCustomerLicensesRoute: typeof ErpCustomerLicensesRoute
+  ErpCustomerMarketplaceDownloadsRoute: typeof ErpCustomerMarketplaceDownloadsRoute
+  ErpCustomerPaymentMethodsRoute: typeof ErpCustomerPaymentMethodsRoute
+  ErpCustomerPrivacyRoute: typeof ErpCustomerPrivacyRoute
+  ErpCustomerSecurityRoute: typeof ErpCustomerSecurityRoute
+  ErpCustomerSubscriptionsRoute: typeof ErpCustomerSubscriptionsRoute
+  ErpMarketplaceRoute: typeof ErpMarketplaceRoute
+  ErpMarketplaceAuthorRoute: typeof ErpMarketplaceAuthorRoute
+  ErpMarketplaceAuthorAnalyticsRoute: typeof ErpMarketplaceAuthorAnalyticsRoute
+  ErpMarketplaceAuthorBadgesRoute: typeof ErpMarketplaceAuthorBadgesRoute
+  ErpMarketplaceAuthorCommentsRoute: typeof ErpMarketplaceAuthorCommentsRoute
+  ErpMarketplaceAuthorDashboardRoute: typeof ErpMarketplaceAuthorDashboardRoute
+  ErpMarketplaceAuthorEarningsRoute: typeof ErpMarketplaceAuthorEarningsRoute
+  ErpMarketplaceAuthorFollowersRoute: typeof ErpMarketplaceAuthorFollowersRoute
+  ErpMarketplaceAuthorPortfolioRoute: typeof ErpMarketplaceAuthorPortfolioRoute
+  ErpMarketplaceAuthorRefundsRoute: typeof ErpMarketplaceAuthorRefundsRoute
+  ErpMarketplaceAuthorReviewsRoute: typeof ErpMarketplaceAuthorReviewsRoute
+  ErpMarketplaceAuthorSettingsRoute: typeof ErpMarketplaceAuthorSettingsRoute
+  ErpMarketplaceAuthorStatementsRoute: typeof ErpMarketplaceAuthorStatementsRoute
+  ErpMarketplaceAuthorUploadRoute: typeof ErpMarketplaceAuthorUploadRoute
+  ErpMarketplaceAuthorWithdrawRoute: typeof ErpMarketplaceAuthorWithdrawRoute
+  ErpMarketplaceAuthorsRoute: typeof ErpMarketplaceAuthorsRoute
+  ErpMarketplaceBecomeAuthorRoute: typeof ErpMarketplaceBecomeAuthorRoute
+  ErpMarketplaceBlogRoute: typeof ErpMarketplaceBlogRoute
+  ErpMarketplaceCartRoute: typeof ErpMarketplaceCartRoute
+  ErpMarketplaceCheckoutRoute: typeof ErpMarketplaceCheckoutRoute
+  ErpMarketplaceCompareRoute: typeof ErpMarketplaceCompareRoute
+  ErpMarketplaceForumsRoute: typeof ErpMarketplaceForumsRoute
+  ErpMarketplaceForumsCreateRoute: typeof ErpMarketplaceForumsCreateRoute
+  ErpMarketplaceNotificationsRoute: typeof ErpMarketplaceNotificationsRoute
+  ErpMarketplaceSearchRoute: typeof ErpMarketplaceSearchRoute
+  ErpMarketplaceWishlistRoute: typeof ErpMarketplaceWishlistRoute
+  ErpMerchantRoute: typeof ErpMerchantRoute
+  ErpMerchantAnalyticsRoute: typeof ErpMerchantAnalyticsRoute
+  ErpMerchantApiRoute: typeof ErpMerchantApiRoute
+  ErpMerchantCheckoutLinksRoute: typeof ErpMerchantCheckoutLinksRoute
+  ErpMerchantCustomersRoute: typeof ErpMerchantCustomersRoute
+  ErpMerchantDashboardRoute: typeof ErpMerchantDashboardRoute
+  ErpMerchantDiscountsRoute: typeof ErpMerchantDiscountsRoute
+  ErpMerchantDiscountsCreateRoute: typeof ErpMerchantDiscountsCreateRoute
+  ErpMerchantDunningRoute: typeof ErpMerchantDunningRoute
+  ErpMerchantEntitlementsRoute: typeof ErpMerchantEntitlementsRoute
+  ErpMerchantFilesRoute: typeof ErpMerchantFilesRoute
+  ErpMerchantInvoicesRoute: typeof ErpMerchantInvoicesRoute
+  ErpMerchantLicensesRoute: typeof ErpMerchantLicensesRoute
+  ErpMerchantPricingRoute: typeof ErpMerchantPricingRoute
+  ErpMerchantPricingCreateRoute: typeof ErpMerchantPricingCreateRoute
+  ErpMerchantProductsRoute: typeof ErpMerchantProductsRoute
+  ErpMerchantProductsCreateRoute: typeof ErpMerchantProductsCreateRoute
+  ErpMerchantSettingsRoute: typeof ErpMerchantSettingsRoute
+  ErpMerchantSubscriptionsRoute: typeof ErpMerchantSubscriptionsRoute
+  ErpMerchantTransactionsRoute: typeof ErpMerchantTransactionsRoute
+  ErpMerchantWebhooksRoute: typeof ErpMerchantWebhooksRoute
+  ErpMerchantWebhooksCreateRoute: typeof ErpMerchantWebhooksCreateRoute
+  ErpSupportRoute: typeof ErpSupportRoute
+  ErpSupportCustomersRoute: typeof ErpSupportCustomersRoute
+  ErpSupportDashboardRoute: typeof ErpSupportDashboardRoute
+  ErpSupportEscalationsRoute: typeof ErpSupportEscalationsRoute
+  ErpSupportLogsRoute: typeof ErpSupportLogsRoute
+  ErpSupportSearchRoute: typeof ErpSupportSearchRoute
+  ErpSupportSettingsRoute: typeof ErpSupportSettingsRoute
+  ErpSupportTicketsRoute: typeof ErpSupportTicketsRoute
   GrowthAdminRoute: typeof GrowthAdminRoute
   GrowthCampaignAnalyticsRoute: typeof GrowthCampaignAnalyticsRoute
   GrowthCampaignsRoute: typeof GrowthCampaignsRoute
@@ -4793,6 +7713,43 @@ export interface RootRouteChildren {
   PosShiftRoute: typeof PosShiftRoute
   PosStaffRoute: typeof PosStaffRoute
   PosSyncRoute: typeof PosSyncRoute
+  ShopifyAnalyticsRoute: typeof ShopifyAnalyticsRoute
+  ShopifyAppMarketplaceRoute: typeof ShopifyAppMarketplaceRoute
+  ShopifyAuditLogRoute: typeof ShopifyAuditLogRoute
+  ShopifyAutomationRoute: typeof ShopifyAutomationRoute
+  ShopifyBillingRoute: typeof ShopifyBillingRoute
+  ShopifyBlogRoute: typeof ShopifyBlogRoute
+  ShopifyCartCheckoutRoute: typeof ShopifyCartCheckoutRoute
+  ShopifyCollectionsRoute: typeof ShopifyCollectionsRoute
+  ShopifyCustomersRoute: typeof ShopifyCustomersRoute
+  ShopifyDashboardRoute: typeof ShopifyDashboardRoute
+  ShopifyDeveloperToolsRoute: typeof ShopifyDeveloperToolsRoute
+  ShopifyDiscountsRoute: typeof ShopifyDiscountsRoute
+  ShopifyInternationalizationRoute: typeof ShopifyInternationalizationRoute
+  ShopifyInventoryRoute: typeof ShopifyInventoryRoute
+  ShopifyLoginRoute: typeof ShopifyLoginRoute
+  ShopifyManagerDashboardRoute: typeof ShopifyManagerDashboardRoute
+  ShopifyMarketingRoute: typeof ShopifyMarketingRoute
+  ShopifyMarketplaceRoute: typeof ShopifyMarketplaceRoute
+  ShopifyMediaLibraryRoute: typeof ShopifyMediaLibraryRoute
+  ShopifyMultiStoreRoute: typeof ShopifyMultiStoreRoute
+  ShopifyNotificationsRoute: typeof ShopifyNotificationsRoute
+  ShopifyOnlineStoreRoute: typeof ShopifyOnlineStoreRoute
+  ShopifyOrdersRoute: typeof ShopifyOrdersRoute
+  ShopifyPaymentsRoute: typeof ShopifyPaymentsRoute
+  ShopifyPosRoute: typeof ShopifyPosRoute
+  ShopifyProductEditRoute: typeof ShopifyProductEditRoute
+  ShopifyProductSuiteRoute: typeof ShopifyProductSuiteRoute
+  ShopifyProductSuiteExtrasRoute: typeof ShopifyProductSuiteExtrasRoute
+  ShopifyProductsRoute: typeof ShopifyProductsRoute
+  ShopifyReturnsRoute: typeof ShopifyReturnsRoute
+  ShopifyReviewsRoute: typeof ShopifyReviewsRoute
+  ShopifySecurityRoute: typeof ShopifySecurityRoute
+  ShopifySettingsRoute: typeof ShopifySettingsRoute
+  ShopifyShippingRoute: typeof ShopifyShippingRoute
+  ShopifyStaffDashboardRoute: typeof ShopifyStaffDashboardRoute
+  ShopifyTaxRoute: typeof ShopifyTaxRoute
+  ShopifyViewerDashboardRoute: typeof ShopifyViewerDashboardRoute
   ValaAiConsoleRoute: typeof ValaAiConsoleRoute
   ValaApiAiRoute: typeof ValaApiAiRoute
   ValaApiIntegrationRoute: typeof ValaApiIntegrationRoute
@@ -5909,6 +8866,265 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ValaAiConsoleRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/shopify/viewer-dashboard': {
+      id: '/shopify/viewer-dashboard'
+      path: '/shopify/viewer-dashboard'
+      fullPath: '/shopify/viewer-dashboard'
+      preLoaderRoute: typeof ShopifyViewerDashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shopify/tax': {
+      id: '/shopify/tax'
+      path: '/shopify/tax'
+      fullPath: '/shopify/tax'
+      preLoaderRoute: typeof ShopifyTaxRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shopify/staff-dashboard': {
+      id: '/shopify/staff-dashboard'
+      path: '/shopify/staff-dashboard'
+      fullPath: '/shopify/staff-dashboard'
+      preLoaderRoute: typeof ShopifyStaffDashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shopify/shipping': {
+      id: '/shopify/shipping'
+      path: '/shopify/shipping'
+      fullPath: '/shopify/shipping'
+      preLoaderRoute: typeof ShopifyShippingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shopify/settings': {
+      id: '/shopify/settings'
+      path: '/shopify/settings'
+      fullPath: '/shopify/settings'
+      preLoaderRoute: typeof ShopifySettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shopify/security': {
+      id: '/shopify/security'
+      path: '/shopify/security'
+      fullPath: '/shopify/security'
+      preLoaderRoute: typeof ShopifySecurityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shopify/reviews': {
+      id: '/shopify/reviews'
+      path: '/shopify/reviews'
+      fullPath: '/shopify/reviews'
+      preLoaderRoute: typeof ShopifyReviewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shopify/returns': {
+      id: '/shopify/returns'
+      path: '/shopify/returns'
+      fullPath: '/shopify/returns'
+      preLoaderRoute: typeof ShopifyReturnsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shopify/products': {
+      id: '/shopify/products'
+      path: '/shopify/products'
+      fullPath: '/shopify/products'
+      preLoaderRoute: typeof ShopifyProductsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shopify/product-suite-extras': {
+      id: '/shopify/product-suite-extras'
+      path: '/shopify/product-suite-extras'
+      fullPath: '/shopify/product-suite-extras'
+      preLoaderRoute: typeof ShopifyProductSuiteExtrasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shopify/product-suite': {
+      id: '/shopify/product-suite'
+      path: '/shopify/product-suite'
+      fullPath: '/shopify/product-suite'
+      preLoaderRoute: typeof ShopifyProductSuiteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shopify/product-edit': {
+      id: '/shopify/product-edit'
+      path: '/shopify/product-edit'
+      fullPath: '/shopify/product-edit'
+      preLoaderRoute: typeof ShopifyProductEditRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shopify/pos': {
+      id: '/shopify/pos'
+      path: '/shopify/pos'
+      fullPath: '/shopify/pos'
+      preLoaderRoute: typeof ShopifyPosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shopify/payments': {
+      id: '/shopify/payments'
+      path: '/shopify/payments'
+      fullPath: '/shopify/payments'
+      preLoaderRoute: typeof ShopifyPaymentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shopify/orders': {
+      id: '/shopify/orders'
+      path: '/shopify/orders'
+      fullPath: '/shopify/orders'
+      preLoaderRoute: typeof ShopifyOrdersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shopify/online-store': {
+      id: '/shopify/online-store'
+      path: '/shopify/online-store'
+      fullPath: '/shopify/online-store'
+      preLoaderRoute: typeof ShopifyOnlineStoreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shopify/notifications': {
+      id: '/shopify/notifications'
+      path: '/shopify/notifications'
+      fullPath: '/shopify/notifications'
+      preLoaderRoute: typeof ShopifyNotificationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shopify/multi-store': {
+      id: '/shopify/multi-store'
+      path: '/shopify/multi-store'
+      fullPath: '/shopify/multi-store'
+      preLoaderRoute: typeof ShopifyMultiStoreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shopify/media-library': {
+      id: '/shopify/media-library'
+      path: '/shopify/media-library'
+      fullPath: '/shopify/media-library'
+      preLoaderRoute: typeof ShopifyMediaLibraryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shopify/marketplace': {
+      id: '/shopify/marketplace'
+      path: '/shopify/marketplace'
+      fullPath: '/shopify/marketplace'
+      preLoaderRoute: typeof ShopifyMarketplaceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shopify/marketing': {
+      id: '/shopify/marketing'
+      path: '/shopify/marketing'
+      fullPath: '/shopify/marketing'
+      preLoaderRoute: typeof ShopifyMarketingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shopify/manager-dashboard': {
+      id: '/shopify/manager-dashboard'
+      path: '/shopify/manager-dashboard'
+      fullPath: '/shopify/manager-dashboard'
+      preLoaderRoute: typeof ShopifyManagerDashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shopify/login': {
+      id: '/shopify/login'
+      path: '/shopify/login'
+      fullPath: '/shopify/login'
+      preLoaderRoute: typeof ShopifyLoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shopify/inventory': {
+      id: '/shopify/inventory'
+      path: '/shopify/inventory'
+      fullPath: '/shopify/inventory'
+      preLoaderRoute: typeof ShopifyInventoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shopify/internationalization': {
+      id: '/shopify/internationalization'
+      path: '/shopify/internationalization'
+      fullPath: '/shopify/internationalization'
+      preLoaderRoute: typeof ShopifyInternationalizationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shopify/discounts': {
+      id: '/shopify/discounts'
+      path: '/shopify/discounts'
+      fullPath: '/shopify/discounts'
+      preLoaderRoute: typeof ShopifyDiscountsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shopify/developer-tools': {
+      id: '/shopify/developer-tools'
+      path: '/shopify/developer-tools'
+      fullPath: '/shopify/developer-tools'
+      preLoaderRoute: typeof ShopifyDeveloperToolsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shopify/dashboard': {
+      id: '/shopify/dashboard'
+      path: '/shopify/dashboard'
+      fullPath: '/shopify/dashboard'
+      preLoaderRoute: typeof ShopifyDashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shopify/customers': {
+      id: '/shopify/customers'
+      path: '/shopify/customers'
+      fullPath: '/shopify/customers'
+      preLoaderRoute: typeof ShopifyCustomersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shopify/collections': {
+      id: '/shopify/collections'
+      path: '/shopify/collections'
+      fullPath: '/shopify/collections'
+      preLoaderRoute: typeof ShopifyCollectionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shopify/cart-checkout': {
+      id: '/shopify/cart-checkout'
+      path: '/shopify/cart-checkout'
+      fullPath: '/shopify/cart-checkout'
+      preLoaderRoute: typeof ShopifyCartCheckoutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shopify/blog': {
+      id: '/shopify/blog'
+      path: '/shopify/blog'
+      fullPath: '/shopify/blog'
+      preLoaderRoute: typeof ShopifyBlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shopify/billing': {
+      id: '/shopify/billing'
+      path: '/shopify/billing'
+      fullPath: '/shopify/billing'
+      preLoaderRoute: typeof ShopifyBillingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shopify/automation': {
+      id: '/shopify/automation'
+      path: '/shopify/automation'
+      fullPath: '/shopify/automation'
+      preLoaderRoute: typeof ShopifyAutomationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shopify/audit-log': {
+      id: '/shopify/audit-log'
+      path: '/shopify/audit-log'
+      fullPath: '/shopify/audit-log'
+      preLoaderRoute: typeof ShopifyAuditLogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shopify/app-marketplace': {
+      id: '/shopify/app-marketplace'
+      path: '/shopify/app-marketplace'
+      fullPath: '/shopify/app-marketplace'
+      preLoaderRoute: typeof ShopifyAppMarketplaceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shopify/analytics': {
+      id: '/shopify/analytics'
+      path: '/shopify/analytics'
+      fullPath: '/shopify/analytics'
+      preLoaderRoute: typeof ShopifyAnalyticsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/pos/sync': {
       id: '/pos/sync'
       path: '/pos/sync'
@@ -6600,6 +9816,1091 @@ declare module '@tanstack/react-router' {
       path: '/growth/admin'
       fullPath: '/growth/admin'
       preLoaderRoute: typeof GrowthAdminRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/support-tickets': {
+      id: '/erp/support-tickets'
+      path: '/erp/support-tickets'
+      fullPath: '/erp/support-tickets'
+      preLoaderRoute: typeof ErpSupportTicketsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/support-settings': {
+      id: '/erp/support-settings'
+      path: '/erp/support-settings'
+      fullPath: '/erp/support-settings'
+      preLoaderRoute: typeof ErpSupportSettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/support-search': {
+      id: '/erp/support-search'
+      path: '/erp/support-search'
+      fullPath: '/erp/support-search'
+      preLoaderRoute: typeof ErpSupportSearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/support-logs': {
+      id: '/erp/support-logs'
+      path: '/erp/support-logs'
+      fullPath: '/erp/support-logs'
+      preLoaderRoute: typeof ErpSupportLogsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/support-escalations': {
+      id: '/erp/support-escalations'
+      path: '/erp/support-escalations'
+      fullPath: '/erp/support-escalations'
+      preLoaderRoute: typeof ErpSupportEscalationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/support-dashboard': {
+      id: '/erp/support-dashboard'
+      path: '/erp/support-dashboard'
+      fullPath: '/erp/support-dashboard'
+      preLoaderRoute: typeof ErpSupportDashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/support-customers': {
+      id: '/erp/support-customers'
+      path: '/erp/support-customers'
+      fullPath: '/erp/support-customers'
+      preLoaderRoute: typeof ErpSupportCustomersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/support': {
+      id: '/erp/support'
+      path: '/erp/support'
+      fullPath: '/erp/support'
+      preLoaderRoute: typeof ErpSupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/merchant-webhooks-create': {
+      id: '/erp/merchant-webhooks-create'
+      path: '/erp/merchant-webhooks-create'
+      fullPath: '/erp/merchant-webhooks-create'
+      preLoaderRoute: typeof ErpMerchantWebhooksCreateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/merchant-webhooks': {
+      id: '/erp/merchant-webhooks'
+      path: '/erp/merchant-webhooks'
+      fullPath: '/erp/merchant-webhooks'
+      preLoaderRoute: typeof ErpMerchantWebhooksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/merchant-transactions': {
+      id: '/erp/merchant-transactions'
+      path: '/erp/merchant-transactions'
+      fullPath: '/erp/merchant-transactions'
+      preLoaderRoute: typeof ErpMerchantTransactionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/merchant-subscriptions': {
+      id: '/erp/merchant-subscriptions'
+      path: '/erp/merchant-subscriptions'
+      fullPath: '/erp/merchant-subscriptions'
+      preLoaderRoute: typeof ErpMerchantSubscriptionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/merchant-settings': {
+      id: '/erp/merchant-settings'
+      path: '/erp/merchant-settings'
+      fullPath: '/erp/merchant-settings'
+      preLoaderRoute: typeof ErpMerchantSettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/merchant-products-create': {
+      id: '/erp/merchant-products-create'
+      path: '/erp/merchant-products-create'
+      fullPath: '/erp/merchant-products-create'
+      preLoaderRoute: typeof ErpMerchantProductsCreateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/merchant-products': {
+      id: '/erp/merchant-products'
+      path: '/erp/merchant-products'
+      fullPath: '/erp/merchant-products'
+      preLoaderRoute: typeof ErpMerchantProductsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/merchant-pricing-create': {
+      id: '/erp/merchant-pricing-create'
+      path: '/erp/merchant-pricing-create'
+      fullPath: '/erp/merchant-pricing-create'
+      preLoaderRoute: typeof ErpMerchantPricingCreateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/merchant-pricing': {
+      id: '/erp/merchant-pricing'
+      path: '/erp/merchant-pricing'
+      fullPath: '/erp/merchant-pricing'
+      preLoaderRoute: typeof ErpMerchantPricingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/merchant-licenses': {
+      id: '/erp/merchant-licenses'
+      path: '/erp/merchant-licenses'
+      fullPath: '/erp/merchant-licenses'
+      preLoaderRoute: typeof ErpMerchantLicensesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/merchant-invoices': {
+      id: '/erp/merchant-invoices'
+      path: '/erp/merchant-invoices'
+      fullPath: '/erp/merchant-invoices'
+      preLoaderRoute: typeof ErpMerchantInvoicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/merchant-files': {
+      id: '/erp/merchant-files'
+      path: '/erp/merchant-files'
+      fullPath: '/erp/merchant-files'
+      preLoaderRoute: typeof ErpMerchantFilesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/merchant-entitlements': {
+      id: '/erp/merchant-entitlements'
+      path: '/erp/merchant-entitlements'
+      fullPath: '/erp/merchant-entitlements'
+      preLoaderRoute: typeof ErpMerchantEntitlementsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/merchant-dunning': {
+      id: '/erp/merchant-dunning'
+      path: '/erp/merchant-dunning'
+      fullPath: '/erp/merchant-dunning'
+      preLoaderRoute: typeof ErpMerchantDunningRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/merchant-discounts-create': {
+      id: '/erp/merchant-discounts-create'
+      path: '/erp/merchant-discounts-create'
+      fullPath: '/erp/merchant-discounts-create'
+      preLoaderRoute: typeof ErpMerchantDiscountsCreateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/merchant-discounts': {
+      id: '/erp/merchant-discounts'
+      path: '/erp/merchant-discounts'
+      fullPath: '/erp/merchant-discounts'
+      preLoaderRoute: typeof ErpMerchantDiscountsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/merchant-dashboard': {
+      id: '/erp/merchant-dashboard'
+      path: '/erp/merchant-dashboard'
+      fullPath: '/erp/merchant-dashboard'
+      preLoaderRoute: typeof ErpMerchantDashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/merchant-customers': {
+      id: '/erp/merchant-customers'
+      path: '/erp/merchant-customers'
+      fullPath: '/erp/merchant-customers'
+      preLoaderRoute: typeof ErpMerchantCustomersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/merchant-checkout-links': {
+      id: '/erp/merchant-checkout-links'
+      path: '/erp/merchant-checkout-links'
+      fullPath: '/erp/merchant-checkout-links'
+      preLoaderRoute: typeof ErpMerchantCheckoutLinksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/merchant-api': {
+      id: '/erp/merchant-api'
+      path: '/erp/merchant-api'
+      fullPath: '/erp/merchant-api'
+      preLoaderRoute: typeof ErpMerchantApiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/merchant-analytics': {
+      id: '/erp/merchant-analytics'
+      path: '/erp/merchant-analytics'
+      fullPath: '/erp/merchant-analytics'
+      preLoaderRoute: typeof ErpMerchantAnalyticsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/merchant': {
+      id: '/erp/merchant'
+      path: '/erp/merchant'
+      fullPath: '/erp/merchant'
+      preLoaderRoute: typeof ErpMerchantRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/marketplace-wishlist': {
+      id: '/erp/marketplace-wishlist'
+      path: '/erp/marketplace-wishlist'
+      fullPath: '/erp/marketplace-wishlist'
+      preLoaderRoute: typeof ErpMarketplaceWishlistRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/marketplace-search': {
+      id: '/erp/marketplace-search'
+      path: '/erp/marketplace-search'
+      fullPath: '/erp/marketplace-search'
+      preLoaderRoute: typeof ErpMarketplaceSearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/marketplace-notifications': {
+      id: '/erp/marketplace-notifications'
+      path: '/erp/marketplace-notifications'
+      fullPath: '/erp/marketplace-notifications'
+      preLoaderRoute: typeof ErpMarketplaceNotificationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/marketplace-forums-create': {
+      id: '/erp/marketplace-forums-create'
+      path: '/erp/marketplace-forums-create'
+      fullPath: '/erp/marketplace-forums-create'
+      preLoaderRoute: typeof ErpMarketplaceForumsCreateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/marketplace-forums': {
+      id: '/erp/marketplace-forums'
+      path: '/erp/marketplace-forums'
+      fullPath: '/erp/marketplace-forums'
+      preLoaderRoute: typeof ErpMarketplaceForumsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/marketplace-compare': {
+      id: '/erp/marketplace-compare'
+      path: '/erp/marketplace-compare'
+      fullPath: '/erp/marketplace-compare'
+      preLoaderRoute: typeof ErpMarketplaceCompareRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/marketplace-checkout': {
+      id: '/erp/marketplace-checkout'
+      path: '/erp/marketplace-checkout'
+      fullPath: '/erp/marketplace-checkout'
+      preLoaderRoute: typeof ErpMarketplaceCheckoutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/marketplace-cart': {
+      id: '/erp/marketplace-cart'
+      path: '/erp/marketplace-cart'
+      fullPath: '/erp/marketplace-cart'
+      preLoaderRoute: typeof ErpMarketplaceCartRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/marketplace-blog': {
+      id: '/erp/marketplace-blog'
+      path: '/erp/marketplace-blog'
+      fullPath: '/erp/marketplace-blog'
+      preLoaderRoute: typeof ErpMarketplaceBlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/marketplace-become-author': {
+      id: '/erp/marketplace-become-author'
+      path: '/erp/marketplace-become-author'
+      fullPath: '/erp/marketplace-become-author'
+      preLoaderRoute: typeof ErpMarketplaceBecomeAuthorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/marketplace-authors': {
+      id: '/erp/marketplace-authors'
+      path: '/erp/marketplace-authors'
+      fullPath: '/erp/marketplace-authors'
+      preLoaderRoute: typeof ErpMarketplaceAuthorsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/marketplace-author-withdraw': {
+      id: '/erp/marketplace-author-withdraw'
+      path: '/erp/marketplace-author-withdraw'
+      fullPath: '/erp/marketplace-author-withdraw'
+      preLoaderRoute: typeof ErpMarketplaceAuthorWithdrawRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/marketplace-author-upload': {
+      id: '/erp/marketplace-author-upload'
+      path: '/erp/marketplace-author-upload'
+      fullPath: '/erp/marketplace-author-upload'
+      preLoaderRoute: typeof ErpMarketplaceAuthorUploadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/marketplace-author-statements': {
+      id: '/erp/marketplace-author-statements'
+      path: '/erp/marketplace-author-statements'
+      fullPath: '/erp/marketplace-author-statements'
+      preLoaderRoute: typeof ErpMarketplaceAuthorStatementsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/marketplace-author-settings': {
+      id: '/erp/marketplace-author-settings'
+      path: '/erp/marketplace-author-settings'
+      fullPath: '/erp/marketplace-author-settings'
+      preLoaderRoute: typeof ErpMarketplaceAuthorSettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/marketplace-author-reviews': {
+      id: '/erp/marketplace-author-reviews'
+      path: '/erp/marketplace-author-reviews'
+      fullPath: '/erp/marketplace-author-reviews'
+      preLoaderRoute: typeof ErpMarketplaceAuthorReviewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/marketplace-author-refunds': {
+      id: '/erp/marketplace-author-refunds'
+      path: '/erp/marketplace-author-refunds'
+      fullPath: '/erp/marketplace-author-refunds'
+      preLoaderRoute: typeof ErpMarketplaceAuthorRefundsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/marketplace-author-portfolio': {
+      id: '/erp/marketplace-author-portfolio'
+      path: '/erp/marketplace-author-portfolio'
+      fullPath: '/erp/marketplace-author-portfolio'
+      preLoaderRoute: typeof ErpMarketplaceAuthorPortfolioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/marketplace-author-followers': {
+      id: '/erp/marketplace-author-followers'
+      path: '/erp/marketplace-author-followers'
+      fullPath: '/erp/marketplace-author-followers'
+      preLoaderRoute: typeof ErpMarketplaceAuthorFollowersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/marketplace-author-earnings': {
+      id: '/erp/marketplace-author-earnings'
+      path: '/erp/marketplace-author-earnings'
+      fullPath: '/erp/marketplace-author-earnings'
+      preLoaderRoute: typeof ErpMarketplaceAuthorEarningsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/marketplace-author-dashboard': {
+      id: '/erp/marketplace-author-dashboard'
+      path: '/erp/marketplace-author-dashboard'
+      fullPath: '/erp/marketplace-author-dashboard'
+      preLoaderRoute: typeof ErpMarketplaceAuthorDashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/marketplace-author-comments': {
+      id: '/erp/marketplace-author-comments'
+      path: '/erp/marketplace-author-comments'
+      fullPath: '/erp/marketplace-author-comments'
+      preLoaderRoute: typeof ErpMarketplaceAuthorCommentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/marketplace-author-badges': {
+      id: '/erp/marketplace-author-badges'
+      path: '/erp/marketplace-author-badges'
+      fullPath: '/erp/marketplace-author-badges'
+      preLoaderRoute: typeof ErpMarketplaceAuthorBadgesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/marketplace-author-analytics': {
+      id: '/erp/marketplace-author-analytics'
+      path: '/erp/marketplace-author-analytics'
+      fullPath: '/erp/marketplace-author-analytics'
+      preLoaderRoute: typeof ErpMarketplaceAuthorAnalyticsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/marketplace-author': {
+      id: '/erp/marketplace-author'
+      path: '/erp/marketplace-author'
+      fullPath: '/erp/marketplace-author'
+      preLoaderRoute: typeof ErpMarketplaceAuthorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/marketplace': {
+      id: '/erp/marketplace'
+      path: '/erp/marketplace'
+      fullPath: '/erp/marketplace'
+      preLoaderRoute: typeof ErpMarketplaceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/customer-subscriptions': {
+      id: '/erp/customer-subscriptions'
+      path: '/erp/customer-subscriptions'
+      fullPath: '/erp/customer-subscriptions'
+      preLoaderRoute: typeof ErpCustomerSubscriptionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/customer-security': {
+      id: '/erp/customer-security'
+      path: '/erp/customer-security'
+      fullPath: '/erp/customer-security'
+      preLoaderRoute: typeof ErpCustomerSecurityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/customer-privacy': {
+      id: '/erp/customer-privacy'
+      path: '/erp/customer-privacy'
+      fullPath: '/erp/customer-privacy'
+      preLoaderRoute: typeof ErpCustomerPrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/customer-payment-methods': {
+      id: '/erp/customer-payment-methods'
+      path: '/erp/customer-payment-methods'
+      fullPath: '/erp/customer-payment-methods'
+      preLoaderRoute: typeof ErpCustomerPaymentMethodsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/customer-marketplace-downloads': {
+      id: '/erp/customer-marketplace-downloads'
+      path: '/erp/customer-marketplace-downloads'
+      fullPath: '/erp/customer-marketplace-downloads'
+      preLoaderRoute: typeof ErpCustomerMarketplaceDownloadsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/customer-licenses': {
+      id: '/erp/customer-licenses'
+      path: '/erp/customer-licenses'
+      fullPath: '/erp/customer-licenses'
+      preLoaderRoute: typeof ErpCustomerLicensesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/customer-invoices': {
+      id: '/erp/customer-invoices'
+      path: '/erp/customer-invoices'
+      fullPath: '/erp/customer-invoices'
+      preLoaderRoute: typeof ErpCustomerInvoicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/customer-downloads': {
+      id: '/erp/customer-downloads'
+      path: '/erp/customer-downloads'
+      fullPath: '/erp/customer-downloads'
+      preLoaderRoute: typeof ErpCustomerDownloadsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/customer-dashboard': {
+      id: '/erp/customer-dashboard'
+      path: '/erp/customer-dashboard'
+      fullPath: '/erp/customer-dashboard'
+      preLoaderRoute: typeof ErpCustomerDashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/customer-account': {
+      id: '/erp/customer-account'
+      path: '/erp/customer-account'
+      fullPath: '/erp/customer-account'
+      preLoaderRoute: typeof ErpCustomerAccountRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/customer': {
+      id: '/erp/customer'
+      path: '/erp/customer'
+      fullPath: '/erp/customer'
+      preLoaderRoute: typeof ErpCustomerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/checkout': {
+      id: '/erp/checkout'
+      path: '/erp/checkout'
+      fullPath: '/erp/checkout'
+      preLoaderRoute: typeof ErpCheckoutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/auth-verify-email': {
+      id: '/erp/auth-verify-email'
+      path: '/erp/auth-verify-email'
+      fullPath: '/erp/auth-verify-email'
+      preLoaderRoute: typeof ErpAuthVerifyEmailRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/auth-reset-password': {
+      id: '/erp/auth-reset-password'
+      path: '/erp/auth-reset-password'
+      fullPath: '/erp/auth-reset-password'
+      preLoaderRoute: typeof ErpAuthResetPasswordRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/auth-register': {
+      id: '/erp/auth-register'
+      path: '/erp/auth-register'
+      fullPath: '/erp/auth-register'
+      preLoaderRoute: typeof ErpAuthRegisterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/auth-login': {
+      id: '/erp/auth-login'
+      path: '/erp/auth-login'
+      fullPath: '/erp/auth-login'
+      preLoaderRoute: typeof ErpAuthLoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/auth-forgot-password': {
+      id: '/erp/auth-forgot-password'
+      path: '/erp/auth-forgot-password'
+      fullPath: '/erp/auth-forgot-password'
+      preLoaderRoute: typeof ErpAuthForgotPasswordRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/auth': {
+      id: '/erp/auth'
+      path: '/erp/auth'
+      fullPath: '/erp/auth'
+      preLoaderRoute: typeof ErpAuthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-webhooks': {
+      id: '/erp/admin-webhooks'
+      path: '/erp/admin-webhooks'
+      fullPath: '/erp/admin-webhooks'
+      preLoaderRoute: typeof ErpAdminWebhooksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-versioning': {
+      id: '/erp/admin-versioning'
+      path: '/erp/admin-versioning'
+      fullPath: '/erp/admin-versioning'
+      preLoaderRoute: typeof ErpAdminVersioningRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-trust-scores': {
+      id: '/erp/admin-trust-scores'
+      path: '/erp/admin-trust-scores'
+      fullPath: '/erp/admin-trust-scores'
+      preLoaderRoute: typeof ErpAdminTrustScoresRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-transactions': {
+      id: '/erp/admin-transactions'
+      path: '/erp/admin-transactions'
+      fullPath: '/erp/admin-transactions'
+      preLoaderRoute: typeof ErpAdminTransactionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-tenants': {
+      id: '/erp/admin-tenants'
+      path: '/erp/admin-tenants'
+      fullPath: '/erp/admin-tenants'
+      preLoaderRoute: typeof ErpAdminTenantsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-tax': {
+      id: '/erp/admin-tax'
+      path: '/erp/admin-tax'
+      fullPath: '/erp/admin-tax'
+      preLoaderRoute: typeof ErpAdminTaxRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-system-health': {
+      id: '/erp/admin-system-health'
+      path: '/erp/admin-system-health'
+      fullPath: '/erp/admin-system-health'
+      preLoaderRoute: typeof ErpAdminSystemHealthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-subscriptions': {
+      id: '/erp/admin-subscriptions'
+      path: '/erp/admin-subscriptions'
+      fullPath: '/erp/admin-subscriptions'
+      preLoaderRoute: typeof ErpAdminSubscriptionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-sla': {
+      id: '/erp/admin-sla'
+      path: '/erp/admin-sla'
+      fullPath: '/erp/admin-sla'
+      preLoaderRoute: typeof ErpAdminSlaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-settings': {
+      id: '/erp/admin-settings'
+      path: '/erp/admin-settings'
+      fullPath: '/erp/admin-settings'
+      preLoaderRoute: typeof ErpAdminSettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-security': {
+      id: '/erp/admin-security'
+      path: '/erp/admin-security'
+      fullPath: '/erp/admin-security'
+      preLoaderRoute: typeof ErpAdminSecurityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-secrets': {
+      id: '/erp/admin-secrets'
+      path: '/erp/admin-secrets'
+      fullPath: '/erp/admin-secrets'
+      preLoaderRoute: typeof ErpAdminSecretsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-search-engine': {
+      id: '/erp/admin-search-engine'
+      path: '/erp/admin-search-engine'
+      fullPath: '/erp/admin-search-engine'
+      preLoaderRoute: typeof ErpAdminSearchEngineRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-scheduler': {
+      id: '/erp/admin-scheduler'
+      path: '/erp/admin-scheduler'
+      fullPath: '/erp/admin-scheduler'
+      preLoaderRoute: typeof ErpAdminSchedulerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-roles': {
+      id: '/erp/admin-roles'
+      path: '/erp/admin-roles'
+      fullPath: '/erp/admin-roles'
+      preLoaderRoute: typeof ErpAdminRolesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-region-sync': {
+      id: '/erp/admin-region-sync'
+      path: '/erp/admin-region-sync'
+      fullPath: '/erp/admin-region-sync'
+      preLoaderRoute: typeof ErpAdminRegionSyncRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-recovery-log': {
+      id: '/erp/admin-recovery-log'
+      path: '/erp/admin-recovery-log'
+      fullPath: '/erp/admin-recovery-log'
+      preLoaderRoute: typeof ErpAdminRecoveryLogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-rate-limits': {
+      id: '/erp/admin-rate-limits'
+      path: '/erp/admin-rate-limits'
+      fullPath: '/erp/admin-rate-limits'
+      preLoaderRoute: typeof ErpAdminRateLimitsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-proration': {
+      id: '/erp/admin-proration'
+      path: '/erp/admin-proration'
+      fullPath: '/erp/admin-proration'
+      preLoaderRoute: typeof ErpAdminProrationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-products': {
+      id: '/erp/admin-products'
+      path: '/erp/admin-products'
+      fullPath: '/erp/admin-products'
+      preLoaderRoute: typeof ErpAdminProductsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-policy-engine': {
+      id: '/erp/admin-policy-engine'
+      path: '/erp/admin-policy-engine'
+      fullPath: '/erp/admin-policy-engine'
+      preLoaderRoute: typeof ErpAdminPolicyEngineRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-payments-god-mode': {
+      id: '/erp/admin-payments-god-mode'
+      path: '/erp/admin-payments-god-mode'
+      fullPath: '/erp/admin-payments-god-mode'
+      preLoaderRoute: typeof ErpAdminPaymentsGodModeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-observability': {
+      id: '/erp/admin-observability'
+      path: '/erp/admin-observability'
+      fullPath: '/erp/admin-observability'
+      preLoaderRoute: typeof ErpAdminObservabilityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-notifications': {
+      id: '/erp/admin-notifications'
+      path: '/erp/admin-notifications'
+      fullPath: '/erp/admin-notifications'
+      preLoaderRoute: typeof ErpAdminNotificationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-merchants': {
+      id: '/erp/admin-merchants'
+      path: '/erp/admin-merchants'
+      fullPath: '/erp/admin-merchants'
+      preLoaderRoute: typeof ErpAdminMerchantsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-memory-recovery': {
+      id: '/erp/admin-memory-recovery'
+      path: '/erp/admin-memory-recovery'
+      fullPath: '/erp/admin-memory-recovery'
+      preLoaderRoute: typeof ErpAdminMemoryRecoveryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-marketplace-top-selling': {
+      id: '/erp/admin-marketplace-top-selling'
+      path: '/erp/admin-marketplace-top-selling'
+      fullPath: '/erp/admin-marketplace-top-selling'
+      preLoaderRoute: typeof ErpAdminMarketplaceTopSellingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-marketplace-tax-rules': {
+      id: '/erp/admin-marketplace-tax-rules'
+      path: '/erp/admin-marketplace-tax-rules'
+      fullPath: '/erp/admin-marketplace-tax-rules'
+      preLoaderRoute: typeof ErpAdminMarketplaceTaxRulesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-marketplace-takedowns': {
+      id: '/erp/admin-marketplace-takedowns'
+      path: '/erp/admin-marketplace-takedowns'
+      fullPath: '/erp/admin-marketplace-takedowns'
+      preLoaderRoute: typeof ErpAdminMarketplaceTakedownsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-marketplace-settings': {
+      id: '/erp/admin-marketplace-settings'
+      path: '/erp/admin-marketplace-settings'
+      fullPath: '/erp/admin-marketplace-settings'
+      preLoaderRoute: typeof ErpAdminMarketplaceSettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-marketplace-sales-reports': {
+      id: '/erp/admin-marketplace-sales-reports'
+      path: '/erp/admin-marketplace-sales-reports'
+      fullPath: '/erp/admin-marketplace-sales-reports'
+      preLoaderRoute: typeof ErpAdminMarketplaceSalesReportsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-marketplace-reports': {
+      id: '/erp/admin-marketplace-reports'
+      path: '/erp/admin-marketplace-reports'
+      fullPath: '/erp/admin-marketplace-reports'
+      preLoaderRoute: typeof ErpAdminMarketplaceReportsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-marketplace-refunds': {
+      id: '/erp/admin-marketplace-refunds'
+      path: '/erp/admin-marketplace-refunds'
+      fullPath: '/erp/admin-marketplace-refunds'
+      preLoaderRoute: typeof ErpAdminMarketplaceRefundsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-marketplace-queue': {
+      id: '/erp/admin-marketplace-queue'
+      path: '/erp/admin-marketplace-queue'
+      fullPath: '/erp/admin-marketplace-queue'
+      preLoaderRoute: typeof ErpAdminMarketplaceQueueRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-marketplace-payouts': {
+      id: '/erp/admin-marketplace-payouts'
+      path: '/erp/admin-marketplace-payouts'
+      fullPath: '/erp/admin-marketplace-payouts'
+      preLoaderRoute: typeof ErpAdminMarketplacePayoutsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-marketplace-levels': {
+      id: '/erp/admin-marketplace-levels'
+      path: '/erp/admin-marketplace-levels'
+      fullPath: '/erp/admin-marketplace-levels'
+      preLoaderRoute: typeof ErpAdminMarketplaceLevelsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-marketplace-items': {
+      id: '/erp/admin-marketplace-items'
+      path: '/erp/admin-marketplace-items'
+      fullPath: '/erp/admin-marketplace-items'
+      preLoaderRoute: typeof ErpAdminMarketplaceItemsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-marketplace-flags': {
+      id: '/erp/admin-marketplace-flags'
+      path: '/erp/admin-marketplace-flags'
+      fullPath: '/erp/admin-marketplace-flags'
+      preLoaderRoute: typeof ErpAdminMarketplaceFlagsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-marketplace-featured': {
+      id: '/erp/admin-marketplace-featured'
+      path: '/erp/admin-marketplace-featured'
+      fullPath: '/erp/admin-marketplace-featured'
+      preLoaderRoute: typeof ErpAdminMarketplaceFeaturedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-marketplace-collections': {
+      id: '/erp/admin-marketplace-collections'
+      path: '/erp/admin-marketplace-collections'
+      fullPath: '/erp/admin-marketplace-collections'
+      preLoaderRoute: typeof ErpAdminMarketplaceCollectionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-marketplace-categories': {
+      id: '/erp/admin-marketplace-categories'
+      path: '/erp/admin-marketplace-categories'
+      fullPath: '/erp/admin-marketplace-categories'
+      preLoaderRoute: typeof ErpAdminMarketplaceCategoriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-marketplace-authors': {
+      id: '/erp/admin-marketplace-authors'
+      path: '/erp/admin-marketplace-authors'
+      fullPath: '/erp/admin-marketplace-authors'
+      preLoaderRoute: typeof ErpAdminMarketplaceAuthorsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-marketplace': {
+      id: '/erp/admin-marketplace'
+      path: '/erp/admin-marketplace'
+      fullPath: '/erp/admin-marketplace'
+      preLoaderRoute: typeof ErpAdminMarketplaceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-load-prediction': {
+      id: '/erp/admin-load-prediction'
+      path: '/erp/admin-load-prediction'
+      fullPath: '/erp/admin-load-prediction'
+      preLoaderRoute: typeof ErpAdminLoadPredictionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-licenses': {
+      id: '/erp/admin-licenses'
+      path: '/erp/admin-licenses'
+      fullPath: '/erp/admin-licenses'
+      preLoaderRoute: typeof ErpAdminLicensesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-integrations': {
+      id: '/erp/admin-integrations'
+      path: '/erp/admin-integrations'
+      fullPath: '/erp/admin-integrations'
+      preLoaderRoute: typeof ErpAdminIntegrationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-impersonation': {
+      id: '/erp/admin-impersonation'
+      path: '/erp/admin-impersonation'
+      fullPath: '/erp/admin-impersonation'
+      preLoaderRoute: typeof ErpAdminImpersonationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-gateways': {
+      id: '/erp/admin-gateways'
+      path: '/erp/admin-gateways'
+      fullPath: '/erp/admin-gateways'
+      preLoaderRoute: typeof ErpAdminGatewaysRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-fraud-ml': {
+      id: '/erp/admin-fraud-ml'
+      path: '/erp/admin-fraud-ml'
+      fullPath: '/erp/admin-fraud-ml'
+      preLoaderRoute: typeof ErpAdminFraudMlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-fraud': {
+      id: '/erp/admin-fraud'
+      path: '/erp/admin-fraud'
+      fullPath: '/erp/admin-fraud'
+      preLoaderRoute: typeof ErpAdminFraudRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-feature-flags': {
+      id: '/erp/admin-feature-flags'
+      path: '/erp/admin-feature-flags'
+      fullPath: '/erp/admin-feature-flags'
+      preLoaderRoute: typeof ErpAdminFeatureFlagsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-event-bus': {
+      id: '/erp/admin-event-bus'
+      path: '/erp/admin-event-bus'
+      fullPath: '/erp/admin-event-bus'
+      preLoaderRoute: typeof ErpAdminEventBusRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-entitlements': {
+      id: '/erp/admin-entitlements'
+      path: '/erp/admin-entitlements'
+      fullPath: '/erp/admin-entitlements'
+      preLoaderRoute: typeof ErpAdminEntitlementsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-dunning': {
+      id: '/erp/admin-dunning'
+      path: '/erp/admin-dunning'
+      fullPath: '/erp/admin-dunning'
+      preLoaderRoute: typeof ErpAdminDunningRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-documents': {
+      id: '/erp/admin-documents'
+      path: '/erp/admin-documents'
+      fullPath: '/erp/admin-documents'
+      preLoaderRoute: typeof ErpAdminDocumentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-digital-twin': {
+      id: '/erp/admin-digital-twin'
+      path: '/erp/admin-digital-twin'
+      fullPath: '/erp/admin-digital-twin'
+      preLoaderRoute: typeof ErpAdminDigitalTwinRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-deployments': {
+      id: '/erp/admin-deployments'
+      path: '/erp/admin-deployments'
+      fullPath: '/erp/admin-deployments'
+      preLoaderRoute: typeof ErpAdminDeploymentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-dependency-watcher': {
+      id: '/erp/admin-dependency-watcher'
+      path: '/erp/admin-dependency-watcher'
+      fullPath: '/erp/admin-dependency-watcher'
+      preLoaderRoute: typeof ErpAdminDependencyWatcherRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-data-guardian': {
+      id: '/erp/admin-data-guardian'
+      path: '/erp/admin-data-guardian'
+      fullPath: '/erp/admin-data-guardian'
+      preLoaderRoute: typeof ErpAdminDataGuardianRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-data-consistency': {
+      id: '/erp/admin-data-consistency'
+      path: '/erp/admin-data-consistency'
+      fullPath: '/erp/admin-data-consistency'
+      preLoaderRoute: typeof ErpAdminDataConsistencyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-dashboard': {
+      id: '/erp/admin-dashboard'
+      path: '/erp/admin-dashboard'
+      fullPath: '/erp/admin-dashboard'
+      preLoaderRoute: typeof ErpAdminDashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-customers': {
+      id: '/erp/admin-customers'
+      path: '/erp/admin-customers'
+      fullPath: '/erp/admin-customers'
+      preLoaderRoute: typeof ErpAdminCustomersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-currency': {
+      id: '/erp/admin-currency'
+      path: '/erp/admin-currency'
+      fullPath: '/erp/admin-currency'
+      preLoaderRoute: typeof ErpAdminCurrencyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-cost-optimization': {
+      id: '/erp/admin-cost-optimization'
+      path: '/erp/admin-cost-optimization'
+      fullPath: '/erp/admin-cost-optimization'
+      preLoaderRoute: typeof ErpAdminCostOptimizationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-cost-governor': {
+      id: '/erp/admin-cost-governor'
+      path: '/erp/admin-cost-governor'
+      fullPath: '/erp/admin-cost-governor'
+      preLoaderRoute: typeof ErpAdminCostGovernorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-consistency': {
+      id: '/erp/admin-consistency'
+      path: '/erp/admin-consistency'
+      fullPath: '/erp/admin-consistency'
+      preLoaderRoute: typeof ErpAdminConsistencyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-config-sync': {
+      id: '/erp/admin-config-sync'
+      path: '/erp/admin-config-sync'
+      fullPath: '/erp/admin-config-sync'
+      preLoaderRoute: typeof ErpAdminConfigSyncRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-compliance': {
+      id: '/erp/admin-compliance'
+      path: '/erp/admin-compliance'
+      fullPath: '/erp/admin-compliance'
+      preLoaderRoute: typeof ErpAdminComplianceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-circuit-breakers': {
+      id: '/erp/admin-circuit-breakers'
+      path: '/erp/admin-circuit-breakers'
+      fullPath: '/erp/admin-circuit-breakers'
+      preLoaderRoute: typeof ErpAdminCircuitBreakersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-cdn-edge': {
+      id: '/erp/admin-cdn-edge'
+      path: '/erp/admin-cdn-edge'
+      fullPath: '/erp/admin-cdn-edge'
+      preLoaderRoute: typeof ErpAdminCdnEdgeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-cdn': {
+      id: '/erp/admin-cdn'
+      path: '/erp/admin-cdn'
+      fullPath: '/erp/admin-cdn'
+      preLoaderRoute: typeof ErpAdminCdnRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-business-logic': {
+      id: '/erp/admin-business-logic'
+      path: '/erp/admin-business-logic'
+      fullPath: '/erp/admin-business-logic'
+      preLoaderRoute: typeof ErpAdminBusinessLogicRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-billing': {
+      id: '/erp/admin-billing'
+      path: '/erp/admin-billing'
+      fullPath: '/erp/admin-billing'
+      preLoaderRoute: typeof ErpAdminBillingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-bi-sync': {
+      id: '/erp/admin-bi-sync'
+      path: '/erp/admin-bi-sync'
+      fullPath: '/erp/admin-bi-sync'
+      preLoaderRoute: typeof ErpAdminBiSyncRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-backup': {
+      id: '/erp/admin-backup'
+      path: '/erp/admin-backup'
+      fullPath: '/erp/admin-backup'
+      preLoaderRoute: typeof ErpAdminBackupRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-auto-rollback': {
+      id: '/erp/admin-auto-rollback'
+      path: '/erp/admin-auto-rollback'
+      fullPath: '/erp/admin-auto-rollback'
+      preLoaderRoute: typeof ErpAdminAutoRollbackRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-audit-logs': {
+      id: '/erp/admin-audit-logs'
+      path: '/erp/admin-audit-logs'
+      fullPath: '/erp/admin-audit-logs'
+      preLoaderRoute: typeof ErpAdminAuditLogsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-api-self-test': {
+      id: '/erp/admin-api-self-test'
+      path: '/erp/admin-api-self-test'
+      fullPath: '/erp/admin-api-self-test'
+      preLoaderRoute: typeof ErpAdminApiSelfTestRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-api-logs': {
+      id: '/erp/admin-api-logs'
+      path: '/erp/admin-api-logs'
+      fullPath: '/erp/admin-api-logs'
+      preLoaderRoute: typeof ErpAdminApiLogsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin-ai-assist': {
+      id: '/erp/admin-ai-assist'
+      path: '/erp/admin-ai-assist'
+      fullPath: '/erp/admin-ai-assist'
+      preLoaderRoute: typeof ErpAdminAiAssistRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erp/admin': {
+      id: '/erp/admin'
+      path: '/erp/admin'
+      fullPath: '/erp/admin'
+      preLoaderRoute: typeof ErpAdminRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/data/wizard': {
@@ -7351,6 +11652,230 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CampaignAccountRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/atelier/support': {
+      id: '/atelier/support'
+      path: '/atelier/support'
+      fullPath: '/atelier/support'
+      preLoaderRoute: typeof AtelierSupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/atelier/search': {
+      id: '/atelier/search'
+      path: '/atelier/search'
+      fullPath: '/atelier/search'
+      preLoaderRoute: typeof AtelierSearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/atelier/reset': {
+      id: '/atelier/reset'
+      path: '/atelier/reset'
+      fullPath: '/atelier/reset'
+      preLoaderRoute: typeof AtelierResetRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/atelier/reseller-software': {
+      id: '/atelier/reseller-software'
+      path: '/atelier/reseller-software'
+      fullPath: '/atelier/reseller-software'
+      preLoaderRoute: typeof AtelierResellerSoftwareRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/atelier/reseller-plugins': {
+      id: '/atelier/reseller-plugins'
+      path: '/atelier/reseller-plugins'
+      fullPath: '/atelier/reseller-plugins'
+      preLoaderRoute: typeof AtelierResellerPluginsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/atelier/register': {
+      id: '/atelier/register'
+      path: '/atelier/register'
+      fullPath: '/atelier/register'
+      preLoaderRoute: typeof AtelierRegisterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/atelier/productivity': {
+      id: '/atelier/productivity'
+      path: '/atelier/productivity'
+      fullPath: '/atelier/productivity'
+      preLoaderRoute: typeof AtelierProductivityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/atelier/partner': {
+      id: '/atelier/partner'
+      path: '/atelier/partner'
+      fullPath: '/atelier/partner'
+      preLoaderRoute: typeof AtelierPartnerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/atelier/merchant': {
+      id: '/atelier/merchant'
+      path: '/atelier/merchant'
+      fullPath: '/atelier/merchant'
+      preLoaderRoute: typeof AtelierMerchantRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/atelier/login': {
+      id: '/atelier/login'
+      path: '/atelier/login'
+      fullPath: '/atelier/login'
+      preLoaderRoute: typeof AtelierLoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/atelier/influencer': {
+      id: '/atelier/influencer'
+      path: '/atelier/influencer'
+      fullPath: '/atelier/influencer'
+      preLoaderRoute: typeof AtelierInfluencerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/atelier/home': {
+      id: '/atelier/home'
+      path: '/atelier/home'
+      fullPath: '/atelier/home'
+      preLoaderRoute: typeof AtelierHomeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/atelier/franchise': {
+      id: '/atelier/franchise'
+      path: '/atelier/franchise'
+      fullPath: '/atelier/franchise'
+      preLoaderRoute: typeof AtelierFranchiseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/atelier/forgot': {
+      id: '/atelier/forgot'
+      path: '/atelier/forgot'
+      fullPath: '/atelier/forgot'
+      preLoaderRoute: typeof AtelierForgotRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/atelier/customer': {
+      id: '/atelier/customer'
+      path: '/atelier/customer'
+      fullPath: '/atelier/customer'
+      preLoaderRoute: typeof AtelierCustomerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/atelier/chat': {
+      id: '/atelier/chat'
+      path: '/atelier/chat'
+      fullPath: '/atelier/chat'
+      preLoaderRoute: typeof AtelierChatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/atelier/category': {
+      id: '/atelier/category'
+      path: '/atelier/category'
+      fullPath: '/atelier/category'
+      preLoaderRoute: typeof AtelierCategoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/atelier/categories': {
+      id: '/atelier/categories'
+      path: '/atelier/categories'
+      fullPath: '/atelier/categories'
+      preLoaderRoute: typeof AtelierCategoriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/atelier/builder': {
+      id: '/atelier/builder'
+      path: '/atelier/builder'
+      fullPath: '/atelier/builder'
+      preLoaderRoute: typeof AtelierBuilderRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/atelier/blog-detail': {
+      id: '/atelier/blog-detail'
+      path: '/atelier/blog-detail'
+      fullPath: '/atelier/blog-detail'
+      preLoaderRoute: typeof AtelierBlogDetailRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/atelier/blog': {
+      id: '/atelier/blog'
+      path: '/atelier/blog'
+      fullPath: '/atelier/blog'
+      preLoaderRoute: typeof AtelierBlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/atelier/author-upload': {
+      id: '/atelier/author-upload'
+      path: '/atelier/author-upload'
+      fullPath: '/atelier/author-upload'
+      preLoaderRoute: typeof AtelierAuthorUploadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/atelier/author-sales': {
+      id: '/atelier/author-sales'
+      path: '/atelier/author-sales'
+      fullPath: '/atelier/author-sales'
+      preLoaderRoute: typeof AtelierAuthorSalesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/atelier/author-reviews': {
+      id: '/atelier/author-reviews'
+      path: '/atelier/author-reviews'
+      fullPath: '/atelier/author-reviews'
+      preLoaderRoute: typeof AtelierAuthorReviewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/atelier/author-profile': {
+      id: '/atelier/author-profile'
+      path: '/atelier/author-profile'
+      fullPath: '/atelier/author-profile'
+      preLoaderRoute: typeof AtelierAuthorProfileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/atelier/author-items': {
+      id: '/atelier/author-items'
+      path: '/atelier/author-items'
+      fullPath: '/atelier/author-items'
+      preLoaderRoute: typeof AtelierAuthorItemsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/atelier/author-edit': {
+      id: '/atelier/author-edit'
+      path: '/atelier/author-edit'
+      fullPath: '/atelier/author-edit'
+      preLoaderRoute: typeof AtelierAuthorEditRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/atelier/author-earnings': {
+      id: '/atelier/author-earnings'
+      path: '/atelier/author-earnings'
+      fullPath: '/atelier/author-earnings'
+      preLoaderRoute: typeof AtelierAuthorEarningsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/atelier/author': {
+      id: '/atelier/author'
+      path: '/atelier/author'
+      fullPath: '/atelier/author'
+      preLoaderRoute: typeof AtelierAuthorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/atelier/admin-users': {
+      id: '/atelier/admin-users'
+      path: '/atelier/admin-users'
+      fullPath: '/atelier/admin-users'
+      preLoaderRoute: typeof AtelierAdminUsersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/atelier/admin-roles': {
+      id: '/atelier/admin-roles'
+      path: '/atelier/admin-roles'
+      fullPath: '/atelier/admin-roles'
+      preLoaderRoute: typeof AtelierAdminRolesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/atelier/admin-audit': {
+      id: '/atelier/admin-audit'
+      path: '/atelier/admin-audit'
+      fullPath: '/atelier/admin-audit'
+      preLoaderRoute: typeof AtelierAdminAuditRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/ai/workflows': {
       id: '/ai/workflows'
       path: '/workflows'
@@ -7596,6 +12121,38 @@ const rootRouteChildren: RootRouteChildren = {
   WarRoomRoute: WarRoomRoute,
   WebhooksRoute: WebhooksRoute,
   WhiteLabelRoute: WhiteLabelRoute,
+  AtelierAdminAuditRoute: AtelierAdminAuditRoute,
+  AtelierAdminRolesRoute: AtelierAdminRolesRoute,
+  AtelierAdminUsersRoute: AtelierAdminUsersRoute,
+  AtelierAuthorRoute: AtelierAuthorRoute,
+  AtelierAuthorEarningsRoute: AtelierAuthorEarningsRoute,
+  AtelierAuthorEditRoute: AtelierAuthorEditRoute,
+  AtelierAuthorItemsRoute: AtelierAuthorItemsRoute,
+  AtelierAuthorProfileRoute: AtelierAuthorProfileRoute,
+  AtelierAuthorReviewsRoute: AtelierAuthorReviewsRoute,
+  AtelierAuthorSalesRoute: AtelierAuthorSalesRoute,
+  AtelierAuthorUploadRoute: AtelierAuthorUploadRoute,
+  AtelierBlogRoute: AtelierBlogRoute,
+  AtelierBlogDetailRoute: AtelierBlogDetailRoute,
+  AtelierBuilderRoute: AtelierBuilderRoute,
+  AtelierCategoriesRoute: AtelierCategoriesRoute,
+  AtelierCategoryRoute: AtelierCategoryRoute,
+  AtelierChatRoute: AtelierChatRoute,
+  AtelierCustomerRoute: AtelierCustomerRoute,
+  AtelierForgotRoute: AtelierForgotRoute,
+  AtelierFranchiseRoute: AtelierFranchiseRoute,
+  AtelierHomeRoute: AtelierHomeRoute,
+  AtelierInfluencerRoute: AtelierInfluencerRoute,
+  AtelierLoginRoute: AtelierLoginRoute,
+  AtelierMerchantRoute: AtelierMerchantRoute,
+  AtelierPartnerRoute: AtelierPartnerRoute,
+  AtelierProductivityRoute: AtelierProductivityRoute,
+  AtelierRegisterRoute: AtelierRegisterRoute,
+  AtelierResellerPluginsRoute: AtelierResellerPluginsRoute,
+  AtelierResellerSoftwareRoute: AtelierResellerSoftwareRoute,
+  AtelierResetRoute: AtelierResetRoute,
+  AtelierSearchRoute: AtelierSearchRoute,
+  AtelierSupportRoute: AtelierSupportRoute,
   CampaignAccountRoute: CampaignAccountRoute,
   CampaignAdminRoute: CampaignAdminRoute,
   CampaignAiPredictionRoute: CampaignAiPredictionRoute,
@@ -7703,6 +12260,161 @@ const rootRouteChildren: RootRouteChildren = {
   DataViewerRoute: DataViewerRoute,
   DataWalletRoute: DataWalletRoute,
   DataWizardRoute: DataWizardRoute,
+  ErpAdminRoute: ErpAdminRoute,
+  ErpAdminAiAssistRoute: ErpAdminAiAssistRoute,
+  ErpAdminApiLogsRoute: ErpAdminApiLogsRoute,
+  ErpAdminApiSelfTestRoute: ErpAdminApiSelfTestRoute,
+  ErpAdminAuditLogsRoute: ErpAdminAuditLogsRoute,
+  ErpAdminAutoRollbackRoute: ErpAdminAutoRollbackRoute,
+  ErpAdminBackupRoute: ErpAdminBackupRoute,
+  ErpAdminBiSyncRoute: ErpAdminBiSyncRoute,
+  ErpAdminBillingRoute: ErpAdminBillingRoute,
+  ErpAdminBusinessLogicRoute: ErpAdminBusinessLogicRoute,
+  ErpAdminCdnRoute: ErpAdminCdnRoute,
+  ErpAdminCdnEdgeRoute: ErpAdminCdnEdgeRoute,
+  ErpAdminCircuitBreakersRoute: ErpAdminCircuitBreakersRoute,
+  ErpAdminComplianceRoute: ErpAdminComplianceRoute,
+  ErpAdminConfigSyncRoute: ErpAdminConfigSyncRoute,
+  ErpAdminConsistencyRoute: ErpAdminConsistencyRoute,
+  ErpAdminCostGovernorRoute: ErpAdminCostGovernorRoute,
+  ErpAdminCostOptimizationRoute: ErpAdminCostOptimizationRoute,
+  ErpAdminCurrencyRoute: ErpAdminCurrencyRoute,
+  ErpAdminCustomersRoute: ErpAdminCustomersRoute,
+  ErpAdminDashboardRoute: ErpAdminDashboardRoute,
+  ErpAdminDataConsistencyRoute: ErpAdminDataConsistencyRoute,
+  ErpAdminDataGuardianRoute: ErpAdminDataGuardianRoute,
+  ErpAdminDependencyWatcherRoute: ErpAdminDependencyWatcherRoute,
+  ErpAdminDeploymentsRoute: ErpAdminDeploymentsRoute,
+  ErpAdminDigitalTwinRoute: ErpAdminDigitalTwinRoute,
+  ErpAdminDocumentsRoute: ErpAdminDocumentsRoute,
+  ErpAdminDunningRoute: ErpAdminDunningRoute,
+  ErpAdminEntitlementsRoute: ErpAdminEntitlementsRoute,
+  ErpAdminEventBusRoute: ErpAdminEventBusRoute,
+  ErpAdminFeatureFlagsRoute: ErpAdminFeatureFlagsRoute,
+  ErpAdminFraudRoute: ErpAdminFraudRoute,
+  ErpAdminFraudMlRoute: ErpAdminFraudMlRoute,
+  ErpAdminGatewaysRoute: ErpAdminGatewaysRoute,
+  ErpAdminImpersonationRoute: ErpAdminImpersonationRoute,
+  ErpAdminIntegrationsRoute: ErpAdminIntegrationsRoute,
+  ErpAdminLicensesRoute: ErpAdminLicensesRoute,
+  ErpAdminLoadPredictionRoute: ErpAdminLoadPredictionRoute,
+  ErpAdminMarketplaceRoute: ErpAdminMarketplaceRoute,
+  ErpAdminMarketplaceAuthorsRoute: ErpAdminMarketplaceAuthorsRoute,
+  ErpAdminMarketplaceCategoriesRoute: ErpAdminMarketplaceCategoriesRoute,
+  ErpAdminMarketplaceCollectionsRoute: ErpAdminMarketplaceCollectionsRoute,
+  ErpAdminMarketplaceFeaturedRoute: ErpAdminMarketplaceFeaturedRoute,
+  ErpAdminMarketplaceFlagsRoute: ErpAdminMarketplaceFlagsRoute,
+  ErpAdminMarketplaceItemsRoute: ErpAdminMarketplaceItemsRoute,
+  ErpAdminMarketplaceLevelsRoute: ErpAdminMarketplaceLevelsRoute,
+  ErpAdminMarketplacePayoutsRoute: ErpAdminMarketplacePayoutsRoute,
+  ErpAdminMarketplaceQueueRoute: ErpAdminMarketplaceQueueRoute,
+  ErpAdminMarketplaceRefundsRoute: ErpAdminMarketplaceRefundsRoute,
+  ErpAdminMarketplaceReportsRoute: ErpAdminMarketplaceReportsRoute,
+  ErpAdminMarketplaceSalesReportsRoute: ErpAdminMarketplaceSalesReportsRoute,
+  ErpAdminMarketplaceSettingsRoute: ErpAdminMarketplaceSettingsRoute,
+  ErpAdminMarketplaceTakedownsRoute: ErpAdminMarketplaceTakedownsRoute,
+  ErpAdminMarketplaceTaxRulesRoute: ErpAdminMarketplaceTaxRulesRoute,
+  ErpAdminMarketplaceTopSellingRoute: ErpAdminMarketplaceTopSellingRoute,
+  ErpAdminMemoryRecoveryRoute: ErpAdminMemoryRecoveryRoute,
+  ErpAdminMerchantsRoute: ErpAdminMerchantsRoute,
+  ErpAdminNotificationsRoute: ErpAdminNotificationsRoute,
+  ErpAdminObservabilityRoute: ErpAdminObservabilityRoute,
+  ErpAdminPaymentsGodModeRoute: ErpAdminPaymentsGodModeRoute,
+  ErpAdminPolicyEngineRoute: ErpAdminPolicyEngineRoute,
+  ErpAdminProductsRoute: ErpAdminProductsRoute,
+  ErpAdminProrationRoute: ErpAdminProrationRoute,
+  ErpAdminRateLimitsRoute: ErpAdminRateLimitsRoute,
+  ErpAdminRecoveryLogRoute: ErpAdminRecoveryLogRoute,
+  ErpAdminRegionSyncRoute: ErpAdminRegionSyncRoute,
+  ErpAdminRolesRoute: ErpAdminRolesRoute,
+  ErpAdminSchedulerRoute: ErpAdminSchedulerRoute,
+  ErpAdminSearchEngineRoute: ErpAdminSearchEngineRoute,
+  ErpAdminSecretsRoute: ErpAdminSecretsRoute,
+  ErpAdminSecurityRoute: ErpAdminSecurityRoute,
+  ErpAdminSettingsRoute: ErpAdminSettingsRoute,
+  ErpAdminSlaRoute: ErpAdminSlaRoute,
+  ErpAdminSubscriptionsRoute: ErpAdminSubscriptionsRoute,
+  ErpAdminSystemHealthRoute: ErpAdminSystemHealthRoute,
+  ErpAdminTaxRoute: ErpAdminTaxRoute,
+  ErpAdminTenantsRoute: ErpAdminTenantsRoute,
+  ErpAdminTransactionsRoute: ErpAdminTransactionsRoute,
+  ErpAdminTrustScoresRoute: ErpAdminTrustScoresRoute,
+  ErpAdminVersioningRoute: ErpAdminVersioningRoute,
+  ErpAdminWebhooksRoute: ErpAdminWebhooksRoute,
+  ErpAuthRoute: ErpAuthRoute,
+  ErpAuthForgotPasswordRoute: ErpAuthForgotPasswordRoute,
+  ErpAuthLoginRoute: ErpAuthLoginRoute,
+  ErpAuthRegisterRoute: ErpAuthRegisterRoute,
+  ErpAuthResetPasswordRoute: ErpAuthResetPasswordRoute,
+  ErpAuthVerifyEmailRoute: ErpAuthVerifyEmailRoute,
+  ErpCheckoutRoute: ErpCheckoutRoute,
+  ErpCustomerRoute: ErpCustomerRoute,
+  ErpCustomerAccountRoute: ErpCustomerAccountRoute,
+  ErpCustomerDashboardRoute: ErpCustomerDashboardRoute,
+  ErpCustomerDownloadsRoute: ErpCustomerDownloadsRoute,
+  ErpCustomerInvoicesRoute: ErpCustomerInvoicesRoute,
+  ErpCustomerLicensesRoute: ErpCustomerLicensesRoute,
+  ErpCustomerMarketplaceDownloadsRoute: ErpCustomerMarketplaceDownloadsRoute,
+  ErpCustomerPaymentMethodsRoute: ErpCustomerPaymentMethodsRoute,
+  ErpCustomerPrivacyRoute: ErpCustomerPrivacyRoute,
+  ErpCustomerSecurityRoute: ErpCustomerSecurityRoute,
+  ErpCustomerSubscriptionsRoute: ErpCustomerSubscriptionsRoute,
+  ErpMarketplaceRoute: ErpMarketplaceRoute,
+  ErpMarketplaceAuthorRoute: ErpMarketplaceAuthorRoute,
+  ErpMarketplaceAuthorAnalyticsRoute: ErpMarketplaceAuthorAnalyticsRoute,
+  ErpMarketplaceAuthorBadgesRoute: ErpMarketplaceAuthorBadgesRoute,
+  ErpMarketplaceAuthorCommentsRoute: ErpMarketplaceAuthorCommentsRoute,
+  ErpMarketplaceAuthorDashboardRoute: ErpMarketplaceAuthorDashboardRoute,
+  ErpMarketplaceAuthorEarningsRoute: ErpMarketplaceAuthorEarningsRoute,
+  ErpMarketplaceAuthorFollowersRoute: ErpMarketplaceAuthorFollowersRoute,
+  ErpMarketplaceAuthorPortfolioRoute: ErpMarketplaceAuthorPortfolioRoute,
+  ErpMarketplaceAuthorRefundsRoute: ErpMarketplaceAuthorRefundsRoute,
+  ErpMarketplaceAuthorReviewsRoute: ErpMarketplaceAuthorReviewsRoute,
+  ErpMarketplaceAuthorSettingsRoute: ErpMarketplaceAuthorSettingsRoute,
+  ErpMarketplaceAuthorStatementsRoute: ErpMarketplaceAuthorStatementsRoute,
+  ErpMarketplaceAuthorUploadRoute: ErpMarketplaceAuthorUploadRoute,
+  ErpMarketplaceAuthorWithdrawRoute: ErpMarketplaceAuthorWithdrawRoute,
+  ErpMarketplaceAuthorsRoute: ErpMarketplaceAuthorsRoute,
+  ErpMarketplaceBecomeAuthorRoute: ErpMarketplaceBecomeAuthorRoute,
+  ErpMarketplaceBlogRoute: ErpMarketplaceBlogRoute,
+  ErpMarketplaceCartRoute: ErpMarketplaceCartRoute,
+  ErpMarketplaceCheckoutRoute: ErpMarketplaceCheckoutRoute,
+  ErpMarketplaceCompareRoute: ErpMarketplaceCompareRoute,
+  ErpMarketplaceForumsRoute: ErpMarketplaceForumsRoute,
+  ErpMarketplaceForumsCreateRoute: ErpMarketplaceForumsCreateRoute,
+  ErpMarketplaceNotificationsRoute: ErpMarketplaceNotificationsRoute,
+  ErpMarketplaceSearchRoute: ErpMarketplaceSearchRoute,
+  ErpMarketplaceWishlistRoute: ErpMarketplaceWishlistRoute,
+  ErpMerchantRoute: ErpMerchantRoute,
+  ErpMerchantAnalyticsRoute: ErpMerchantAnalyticsRoute,
+  ErpMerchantApiRoute: ErpMerchantApiRoute,
+  ErpMerchantCheckoutLinksRoute: ErpMerchantCheckoutLinksRoute,
+  ErpMerchantCustomersRoute: ErpMerchantCustomersRoute,
+  ErpMerchantDashboardRoute: ErpMerchantDashboardRoute,
+  ErpMerchantDiscountsRoute: ErpMerchantDiscountsRoute,
+  ErpMerchantDiscountsCreateRoute: ErpMerchantDiscountsCreateRoute,
+  ErpMerchantDunningRoute: ErpMerchantDunningRoute,
+  ErpMerchantEntitlementsRoute: ErpMerchantEntitlementsRoute,
+  ErpMerchantFilesRoute: ErpMerchantFilesRoute,
+  ErpMerchantInvoicesRoute: ErpMerchantInvoicesRoute,
+  ErpMerchantLicensesRoute: ErpMerchantLicensesRoute,
+  ErpMerchantPricingRoute: ErpMerchantPricingRoute,
+  ErpMerchantPricingCreateRoute: ErpMerchantPricingCreateRoute,
+  ErpMerchantProductsRoute: ErpMerchantProductsRoute,
+  ErpMerchantProductsCreateRoute: ErpMerchantProductsCreateRoute,
+  ErpMerchantSettingsRoute: ErpMerchantSettingsRoute,
+  ErpMerchantSubscriptionsRoute: ErpMerchantSubscriptionsRoute,
+  ErpMerchantTransactionsRoute: ErpMerchantTransactionsRoute,
+  ErpMerchantWebhooksRoute: ErpMerchantWebhooksRoute,
+  ErpMerchantWebhooksCreateRoute: ErpMerchantWebhooksCreateRoute,
+  ErpSupportRoute: ErpSupportRoute,
+  ErpSupportCustomersRoute: ErpSupportCustomersRoute,
+  ErpSupportDashboardRoute: ErpSupportDashboardRoute,
+  ErpSupportEscalationsRoute: ErpSupportEscalationsRoute,
+  ErpSupportLogsRoute: ErpSupportLogsRoute,
+  ErpSupportSearchRoute: ErpSupportSearchRoute,
+  ErpSupportSettingsRoute: ErpSupportSettingsRoute,
+  ErpSupportTicketsRoute: ErpSupportTicketsRoute,
   GrowthAdminRoute: GrowthAdminRoute,
   GrowthCampaignAnalyticsRoute: GrowthCampaignAnalyticsRoute,
   GrowthCampaignsRoute: GrowthCampaignsRoute,
@@ -7802,6 +12514,43 @@ const rootRouteChildren: RootRouteChildren = {
   PosShiftRoute: PosShiftRoute,
   PosStaffRoute: PosStaffRoute,
   PosSyncRoute: PosSyncRoute,
+  ShopifyAnalyticsRoute: ShopifyAnalyticsRoute,
+  ShopifyAppMarketplaceRoute: ShopifyAppMarketplaceRoute,
+  ShopifyAuditLogRoute: ShopifyAuditLogRoute,
+  ShopifyAutomationRoute: ShopifyAutomationRoute,
+  ShopifyBillingRoute: ShopifyBillingRoute,
+  ShopifyBlogRoute: ShopifyBlogRoute,
+  ShopifyCartCheckoutRoute: ShopifyCartCheckoutRoute,
+  ShopifyCollectionsRoute: ShopifyCollectionsRoute,
+  ShopifyCustomersRoute: ShopifyCustomersRoute,
+  ShopifyDashboardRoute: ShopifyDashboardRoute,
+  ShopifyDeveloperToolsRoute: ShopifyDeveloperToolsRoute,
+  ShopifyDiscountsRoute: ShopifyDiscountsRoute,
+  ShopifyInternationalizationRoute: ShopifyInternationalizationRoute,
+  ShopifyInventoryRoute: ShopifyInventoryRoute,
+  ShopifyLoginRoute: ShopifyLoginRoute,
+  ShopifyManagerDashboardRoute: ShopifyManagerDashboardRoute,
+  ShopifyMarketingRoute: ShopifyMarketingRoute,
+  ShopifyMarketplaceRoute: ShopifyMarketplaceRoute,
+  ShopifyMediaLibraryRoute: ShopifyMediaLibraryRoute,
+  ShopifyMultiStoreRoute: ShopifyMultiStoreRoute,
+  ShopifyNotificationsRoute: ShopifyNotificationsRoute,
+  ShopifyOnlineStoreRoute: ShopifyOnlineStoreRoute,
+  ShopifyOrdersRoute: ShopifyOrdersRoute,
+  ShopifyPaymentsRoute: ShopifyPaymentsRoute,
+  ShopifyPosRoute: ShopifyPosRoute,
+  ShopifyProductEditRoute: ShopifyProductEditRoute,
+  ShopifyProductSuiteRoute: ShopifyProductSuiteRoute,
+  ShopifyProductSuiteExtrasRoute: ShopifyProductSuiteExtrasRoute,
+  ShopifyProductsRoute: ShopifyProductsRoute,
+  ShopifyReturnsRoute: ShopifyReturnsRoute,
+  ShopifyReviewsRoute: ShopifyReviewsRoute,
+  ShopifySecurityRoute: ShopifySecurityRoute,
+  ShopifySettingsRoute: ShopifySettingsRoute,
+  ShopifyShippingRoute: ShopifyShippingRoute,
+  ShopifyStaffDashboardRoute: ShopifyStaffDashboardRoute,
+  ShopifyTaxRoute: ShopifyTaxRoute,
+  ShopifyViewerDashboardRoute: ShopifyViewerDashboardRoute,
   ValaAiConsoleRoute: ValaAiConsoleRoute,
   ValaApiAiRoute: ValaApiAiRoute,
   ValaApiIntegrationRoute: ValaApiIntegrationRoute,
@@ -7882,3 +12631,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
