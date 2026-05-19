@@ -57,8 +57,8 @@ export function ModuleStub() {
               {Array.from({ length: 8 }).map((_, i) => (
                 <li key={i} className="flex items-center gap-3 py-2">
                   <span className={`live-dot ${i % 4 === 0 ? "warn" : ""}`} />
-                  <span className="font-mono text-[10.5px] text-muted-foreground">
-                    {new Date(Date.now() - i * 41000).toISOString().slice(11, 19)}
+                  <span suppressHydrationWarning className="font-mono text-[10.5px] text-muted-foreground">
+                    {`${String((22 - i) % 24).padStart(2,"0")}:${String((58 - i * 5 + 60) % 60).padStart(2,"0")}:${String((41 - i * 11 + 60) % 60).padStart(2,"0")}`}
                   </span>
                   <span className="text-foreground/90">
                     {item.title} event <span className="font-mono text-muted-foreground">#{(99814 - i * 7).toString(16).toUpperCase()}</span>
