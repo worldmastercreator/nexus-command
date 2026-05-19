@@ -25,6 +25,9 @@ import {
   // MLM + POS
   GitFork, Gift, Trophy as RankIcon, RefreshCw, Printer, ScanLine, Tags,
   Percent, Crown, Banknote as Cash, Building2 as Company,
+  // Data Vala + Dezortn
+  DatabaseZap, Download, Heart, ShoppingBag, Filter, Sparkle, Send,
+  TrendingUp as Growth, BarChart2, UserPlus2,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
