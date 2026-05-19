@@ -166,6 +166,54 @@ import { Route as HrCompanyRouteImport } from './routes/hr.company'
 import { Route as HrAuthRouteImport } from './routes/hr.auth'
 import { Route as HrAttendanceRouteImport } from './routes/hr.attendance'
 import { Route as HrAdminRouteImport } from './routes/hr.admin'
+import { Route as GrowthWalletRouteImport } from './routes/growth.wallet'
+import { Route as GrowthSettingsRouteImport } from './routes/growth.settings'
+import { Route as GrowthSeoRouteImport } from './routes/growth.seo'
+import { Route as GrowthResellersRouteImport } from './routes/growth.resellers'
+import { Route as GrowthResellerProfileRouteImport } from './routes/growth.reseller-profile'
+import { Route as GrowthResellerConsoleRouteImport } from './routes/growth.reseller-console'
+import { Route as GrowthReportsRouteImport } from './routes/growth.reports'
+import { Route as GrowthRatingsRouteImport } from './routes/growth.ratings'
+import { Route as GrowthProductRouteImport } from './routes/growth.product'
+import { Route as GrowthPortalRouteImport } from './routes/growth.portal'
+import { Route as GrowthPaymentsRouteImport } from './routes/growth.payments'
+import { Route as GrowthPaymentHistoryRouteImport } from './routes/growth.payment-history'
+import { Route as GrowthLeadsRouteImport } from './routes/growth.leads'
+import { Route as GrowthLeadDetailRouteImport } from './routes/growth.lead-detail'
+import { Route as GrowthGrowRouteImport } from './routes/growth.grow'
+import { Route as GrowthEmployeesRouteImport } from './routes/growth.employees'
+import { Route as GrowthEmployeeProfileRouteImport } from './routes/growth.employee-profile'
+import { Route as GrowthCompanyDetailRouteImport } from './routes/growth.company-detail'
+import { Route as GrowthCompaniesRouteImport } from './routes/growth.companies'
+import { Route as GrowthCashierRouteImport } from './routes/growth.cashier'
+import { Route as GrowthCampaignsRouteImport } from './routes/growth.campaigns'
+import { Route as GrowthCampaignAnalyticsRouteImport } from './routes/growth.campaign-analytics'
+import { Route as GrowthAdminRouteImport } from './routes/growth.admin'
+import { Route as DataWizardRouteImport } from './routes/data.wizard'
+import { Route as DataWalletRouteImport } from './routes/data.wallet'
+import { Route as DataViewerRouteImport } from './routes/data.viewer'
+import { Route as DataSuperAdminRouteImport } from './routes/data.super-admin'
+import { Route as DataShowcaseRouteImport } from './routes/data.showcase'
+import { Route as DataSettingsRouteImport } from './routes/data.settings'
+import { Route as DataResellerRouteImport } from './routes/data.reseller'
+import { Route as DataPurchasesRouteImport } from './routes/data.purchases'
+import { Route as DataProfileRouteImport } from './routes/data.profile'
+import { Route as DataPricingRouteImport } from './routes/data.pricing'
+import { Route as DataOneClickRouteImport } from './routes/data.one-click'
+import { Route as DataMobileRouteImport } from './routes/data.mobile'
+import { Route as DataMarketplaceRouteImport } from './routes/data.marketplace'
+import { Route as DataFavoritesRouteImport } from './routes/data.favorites'
+import { Route as DataExtractorsRouteImport } from './routes/data.extractors'
+import { Route as DataComparisonRouteImport } from './routes/data.comparison'
+import { Route as DataCompareRouteImport } from './routes/data.compare'
+import { Route as DataClientRouteImport } from './routes/data.client'
+import { Route as DataCategoriesRouteImport } from './routes/data.categories'
+import { Route as DataBrowseRouteImport } from './routes/data.browse'
+import { Route as DataBillingRouteImport } from './routes/data.billing'
+import { Route as DataAiExtractorRouteImport } from './routes/data.ai-extractor'
+import { Route as DataAiApiRouteImport } from './routes/data.ai-api'
+import { Route as DataActivityAnalyticsRouteImport } from './routes/data.activity-analytics'
+import { Route as DataActivityRouteImport } from './routes/data.activity'
 import { Route as CreatorWorkshopsRouteImport } from './routes/creator.workshops'
 import { Route as CreatorVideoRouteImport } from './routes/creator.video'
 import { Route as CreatorTrainersRouteImport } from './routes/creator.trainers'
@@ -1052,6 +1100,246 @@ const HrAdminRoute = HrAdminRouteImport.update({
   path: '/hr/admin',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GrowthWalletRoute = GrowthWalletRouteImport.update({
+  id: '/growth/wallet',
+  path: '/growth/wallet',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GrowthSettingsRoute = GrowthSettingsRouteImport.update({
+  id: '/growth/settings',
+  path: '/growth/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GrowthSeoRoute = GrowthSeoRouteImport.update({
+  id: '/growth/seo',
+  path: '/growth/seo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GrowthResellersRoute = GrowthResellersRouteImport.update({
+  id: '/growth/resellers',
+  path: '/growth/resellers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GrowthResellerProfileRoute = GrowthResellerProfileRouteImport.update({
+  id: '/growth/reseller-profile',
+  path: '/growth/reseller-profile',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GrowthResellerConsoleRoute = GrowthResellerConsoleRouteImport.update({
+  id: '/growth/reseller-console',
+  path: '/growth/reseller-console',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GrowthReportsRoute = GrowthReportsRouteImport.update({
+  id: '/growth/reports',
+  path: '/growth/reports',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GrowthRatingsRoute = GrowthRatingsRouteImport.update({
+  id: '/growth/ratings',
+  path: '/growth/ratings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GrowthProductRoute = GrowthProductRouteImport.update({
+  id: '/growth/product',
+  path: '/growth/product',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GrowthPortalRoute = GrowthPortalRouteImport.update({
+  id: '/growth/portal',
+  path: '/growth/portal',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GrowthPaymentsRoute = GrowthPaymentsRouteImport.update({
+  id: '/growth/payments',
+  path: '/growth/payments',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GrowthPaymentHistoryRoute = GrowthPaymentHistoryRouteImport.update({
+  id: '/growth/payment-history',
+  path: '/growth/payment-history',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GrowthLeadsRoute = GrowthLeadsRouteImport.update({
+  id: '/growth/leads',
+  path: '/growth/leads',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GrowthLeadDetailRoute = GrowthLeadDetailRouteImport.update({
+  id: '/growth/lead-detail',
+  path: '/growth/lead-detail',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GrowthGrowRoute = GrowthGrowRouteImport.update({
+  id: '/growth/grow',
+  path: '/growth/grow',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GrowthEmployeesRoute = GrowthEmployeesRouteImport.update({
+  id: '/growth/employees',
+  path: '/growth/employees',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GrowthEmployeeProfileRoute = GrowthEmployeeProfileRouteImport.update({
+  id: '/growth/employee-profile',
+  path: '/growth/employee-profile',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GrowthCompanyDetailRoute = GrowthCompanyDetailRouteImport.update({
+  id: '/growth/company-detail',
+  path: '/growth/company-detail',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GrowthCompaniesRoute = GrowthCompaniesRouteImport.update({
+  id: '/growth/companies',
+  path: '/growth/companies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GrowthCashierRoute = GrowthCashierRouteImport.update({
+  id: '/growth/cashier',
+  path: '/growth/cashier',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GrowthCampaignsRoute = GrowthCampaignsRouteImport.update({
+  id: '/growth/campaigns',
+  path: '/growth/campaigns',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GrowthCampaignAnalyticsRoute = GrowthCampaignAnalyticsRouteImport.update({
+  id: '/growth/campaign-analytics',
+  path: '/growth/campaign-analytics',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GrowthAdminRoute = GrowthAdminRouteImport.update({
+  id: '/growth/admin',
+  path: '/growth/admin',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DataWizardRoute = DataWizardRouteImport.update({
+  id: '/data/wizard',
+  path: '/data/wizard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DataWalletRoute = DataWalletRouteImport.update({
+  id: '/data/wallet',
+  path: '/data/wallet',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DataViewerRoute = DataViewerRouteImport.update({
+  id: '/data/viewer',
+  path: '/data/viewer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DataSuperAdminRoute = DataSuperAdminRouteImport.update({
+  id: '/data/super-admin',
+  path: '/data/super-admin',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DataShowcaseRoute = DataShowcaseRouteImport.update({
+  id: '/data/showcase',
+  path: '/data/showcase',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DataSettingsRoute = DataSettingsRouteImport.update({
+  id: '/data/settings',
+  path: '/data/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DataResellerRoute = DataResellerRouteImport.update({
+  id: '/data/reseller',
+  path: '/data/reseller',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DataPurchasesRoute = DataPurchasesRouteImport.update({
+  id: '/data/purchases',
+  path: '/data/purchases',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DataProfileRoute = DataProfileRouteImport.update({
+  id: '/data/profile',
+  path: '/data/profile',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DataPricingRoute = DataPricingRouteImport.update({
+  id: '/data/pricing',
+  path: '/data/pricing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DataOneClickRoute = DataOneClickRouteImport.update({
+  id: '/data/one-click',
+  path: '/data/one-click',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DataMobileRoute = DataMobileRouteImport.update({
+  id: '/data/mobile',
+  path: '/data/mobile',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DataMarketplaceRoute = DataMarketplaceRouteImport.update({
+  id: '/data/marketplace',
+  path: '/data/marketplace',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DataFavoritesRoute = DataFavoritesRouteImport.update({
+  id: '/data/favorites',
+  path: '/data/favorites',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DataExtractorsRoute = DataExtractorsRouteImport.update({
+  id: '/data/extractors',
+  path: '/data/extractors',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DataComparisonRoute = DataComparisonRouteImport.update({
+  id: '/data/comparison',
+  path: '/data/comparison',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DataCompareRoute = DataCompareRouteImport.update({
+  id: '/data/compare',
+  path: '/data/compare',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DataClientRoute = DataClientRouteImport.update({
+  id: '/data/client',
+  path: '/data/client',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DataCategoriesRoute = DataCategoriesRouteImport.update({
+  id: '/data/categories',
+  path: '/data/categories',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DataBrowseRoute = DataBrowseRouteImport.update({
+  id: '/data/browse',
+  path: '/data/browse',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DataBillingRoute = DataBillingRouteImport.update({
+  id: '/data/billing',
+  path: '/data/billing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DataAiExtractorRoute = DataAiExtractorRouteImport.update({
+  id: '/data/ai-extractor',
+  path: '/data/ai-extractor',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DataAiApiRoute = DataAiApiRouteImport.update({
+  id: '/data/ai-api',
+  path: '/data/ai-api',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DataActivityAnalyticsRoute = DataActivityAnalyticsRouteImport.update({
+  id: '/data/activity-analytics',
+  path: '/data/activity-analytics',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DataActivityRoute = DataActivityRouteImport.update({
+  id: '/data/activity',
+  path: '/data/activity',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CreatorWorkshopsRoute = CreatorWorkshopsRouteImport.update({
   id: '/creator/workshops',
   path: '/creator/workshops',
@@ -1727,6 +2015,54 @@ export interface FileRoutesByFullPath {
   '/creator/trainers': typeof CreatorTrainersRoute
   '/creator/video': typeof CreatorVideoRoute
   '/creator/workshops': typeof CreatorWorkshopsRoute
+  '/data/activity': typeof DataActivityRoute
+  '/data/activity-analytics': typeof DataActivityAnalyticsRoute
+  '/data/ai-api': typeof DataAiApiRoute
+  '/data/ai-extractor': typeof DataAiExtractorRoute
+  '/data/billing': typeof DataBillingRoute
+  '/data/browse': typeof DataBrowseRoute
+  '/data/categories': typeof DataCategoriesRoute
+  '/data/client': typeof DataClientRoute
+  '/data/compare': typeof DataCompareRoute
+  '/data/comparison': typeof DataComparisonRoute
+  '/data/extractors': typeof DataExtractorsRoute
+  '/data/favorites': typeof DataFavoritesRoute
+  '/data/marketplace': typeof DataMarketplaceRoute
+  '/data/mobile': typeof DataMobileRoute
+  '/data/one-click': typeof DataOneClickRoute
+  '/data/pricing': typeof DataPricingRoute
+  '/data/profile': typeof DataProfileRoute
+  '/data/purchases': typeof DataPurchasesRoute
+  '/data/reseller': typeof DataResellerRoute
+  '/data/settings': typeof DataSettingsRoute
+  '/data/showcase': typeof DataShowcaseRoute
+  '/data/super-admin': typeof DataSuperAdminRoute
+  '/data/viewer': typeof DataViewerRoute
+  '/data/wallet': typeof DataWalletRoute
+  '/data/wizard': typeof DataWizardRoute
+  '/growth/admin': typeof GrowthAdminRoute
+  '/growth/campaign-analytics': typeof GrowthCampaignAnalyticsRoute
+  '/growth/campaigns': typeof GrowthCampaignsRoute
+  '/growth/cashier': typeof GrowthCashierRoute
+  '/growth/companies': typeof GrowthCompaniesRoute
+  '/growth/company-detail': typeof GrowthCompanyDetailRoute
+  '/growth/employee-profile': typeof GrowthEmployeeProfileRoute
+  '/growth/employees': typeof GrowthEmployeesRoute
+  '/growth/grow': typeof GrowthGrowRoute
+  '/growth/lead-detail': typeof GrowthLeadDetailRoute
+  '/growth/leads': typeof GrowthLeadsRoute
+  '/growth/payment-history': typeof GrowthPaymentHistoryRoute
+  '/growth/payments': typeof GrowthPaymentsRoute
+  '/growth/portal': typeof GrowthPortalRoute
+  '/growth/product': typeof GrowthProductRoute
+  '/growth/ratings': typeof GrowthRatingsRoute
+  '/growth/reports': typeof GrowthReportsRoute
+  '/growth/reseller-console': typeof GrowthResellerConsoleRoute
+  '/growth/reseller-profile': typeof GrowthResellerProfileRoute
+  '/growth/resellers': typeof GrowthResellersRoute
+  '/growth/seo': typeof GrowthSeoRoute
+  '/growth/settings': typeof GrowthSettingsRoute
+  '/growth/wallet': typeof GrowthWalletRoute
   '/hr/admin': typeof HrAdminRoute
   '/hr/attendance': typeof HrAttendanceRoute
   '/hr/auth': typeof HrAuthRoute
@@ -1986,6 +2322,54 @@ export interface FileRoutesByTo {
   '/creator/trainers': typeof CreatorTrainersRoute
   '/creator/video': typeof CreatorVideoRoute
   '/creator/workshops': typeof CreatorWorkshopsRoute
+  '/data/activity': typeof DataActivityRoute
+  '/data/activity-analytics': typeof DataActivityAnalyticsRoute
+  '/data/ai-api': typeof DataAiApiRoute
+  '/data/ai-extractor': typeof DataAiExtractorRoute
+  '/data/billing': typeof DataBillingRoute
+  '/data/browse': typeof DataBrowseRoute
+  '/data/categories': typeof DataCategoriesRoute
+  '/data/client': typeof DataClientRoute
+  '/data/compare': typeof DataCompareRoute
+  '/data/comparison': typeof DataComparisonRoute
+  '/data/extractors': typeof DataExtractorsRoute
+  '/data/favorites': typeof DataFavoritesRoute
+  '/data/marketplace': typeof DataMarketplaceRoute
+  '/data/mobile': typeof DataMobileRoute
+  '/data/one-click': typeof DataOneClickRoute
+  '/data/pricing': typeof DataPricingRoute
+  '/data/profile': typeof DataProfileRoute
+  '/data/purchases': typeof DataPurchasesRoute
+  '/data/reseller': typeof DataResellerRoute
+  '/data/settings': typeof DataSettingsRoute
+  '/data/showcase': typeof DataShowcaseRoute
+  '/data/super-admin': typeof DataSuperAdminRoute
+  '/data/viewer': typeof DataViewerRoute
+  '/data/wallet': typeof DataWalletRoute
+  '/data/wizard': typeof DataWizardRoute
+  '/growth/admin': typeof GrowthAdminRoute
+  '/growth/campaign-analytics': typeof GrowthCampaignAnalyticsRoute
+  '/growth/campaigns': typeof GrowthCampaignsRoute
+  '/growth/cashier': typeof GrowthCashierRoute
+  '/growth/companies': typeof GrowthCompaniesRoute
+  '/growth/company-detail': typeof GrowthCompanyDetailRoute
+  '/growth/employee-profile': typeof GrowthEmployeeProfileRoute
+  '/growth/employees': typeof GrowthEmployeesRoute
+  '/growth/grow': typeof GrowthGrowRoute
+  '/growth/lead-detail': typeof GrowthLeadDetailRoute
+  '/growth/leads': typeof GrowthLeadsRoute
+  '/growth/payment-history': typeof GrowthPaymentHistoryRoute
+  '/growth/payments': typeof GrowthPaymentsRoute
+  '/growth/portal': typeof GrowthPortalRoute
+  '/growth/product': typeof GrowthProductRoute
+  '/growth/ratings': typeof GrowthRatingsRoute
+  '/growth/reports': typeof GrowthReportsRoute
+  '/growth/reseller-console': typeof GrowthResellerConsoleRoute
+  '/growth/reseller-profile': typeof GrowthResellerProfileRoute
+  '/growth/resellers': typeof GrowthResellersRoute
+  '/growth/seo': typeof GrowthSeoRoute
+  '/growth/settings': typeof GrowthSettingsRoute
+  '/growth/wallet': typeof GrowthWalletRoute
   '/hr/admin': typeof HrAdminRoute
   '/hr/attendance': typeof HrAttendanceRoute
   '/hr/auth': typeof HrAuthRoute
@@ -2246,6 +2630,54 @@ export interface FileRoutesById {
   '/creator/trainers': typeof CreatorTrainersRoute
   '/creator/video': typeof CreatorVideoRoute
   '/creator/workshops': typeof CreatorWorkshopsRoute
+  '/data/activity': typeof DataActivityRoute
+  '/data/activity-analytics': typeof DataActivityAnalyticsRoute
+  '/data/ai-api': typeof DataAiApiRoute
+  '/data/ai-extractor': typeof DataAiExtractorRoute
+  '/data/billing': typeof DataBillingRoute
+  '/data/browse': typeof DataBrowseRoute
+  '/data/categories': typeof DataCategoriesRoute
+  '/data/client': typeof DataClientRoute
+  '/data/compare': typeof DataCompareRoute
+  '/data/comparison': typeof DataComparisonRoute
+  '/data/extractors': typeof DataExtractorsRoute
+  '/data/favorites': typeof DataFavoritesRoute
+  '/data/marketplace': typeof DataMarketplaceRoute
+  '/data/mobile': typeof DataMobileRoute
+  '/data/one-click': typeof DataOneClickRoute
+  '/data/pricing': typeof DataPricingRoute
+  '/data/profile': typeof DataProfileRoute
+  '/data/purchases': typeof DataPurchasesRoute
+  '/data/reseller': typeof DataResellerRoute
+  '/data/settings': typeof DataSettingsRoute
+  '/data/showcase': typeof DataShowcaseRoute
+  '/data/super-admin': typeof DataSuperAdminRoute
+  '/data/viewer': typeof DataViewerRoute
+  '/data/wallet': typeof DataWalletRoute
+  '/data/wizard': typeof DataWizardRoute
+  '/growth/admin': typeof GrowthAdminRoute
+  '/growth/campaign-analytics': typeof GrowthCampaignAnalyticsRoute
+  '/growth/campaigns': typeof GrowthCampaignsRoute
+  '/growth/cashier': typeof GrowthCashierRoute
+  '/growth/companies': typeof GrowthCompaniesRoute
+  '/growth/company-detail': typeof GrowthCompanyDetailRoute
+  '/growth/employee-profile': typeof GrowthEmployeeProfileRoute
+  '/growth/employees': typeof GrowthEmployeesRoute
+  '/growth/grow': typeof GrowthGrowRoute
+  '/growth/lead-detail': typeof GrowthLeadDetailRoute
+  '/growth/leads': typeof GrowthLeadsRoute
+  '/growth/payment-history': typeof GrowthPaymentHistoryRoute
+  '/growth/payments': typeof GrowthPaymentsRoute
+  '/growth/portal': typeof GrowthPortalRoute
+  '/growth/product': typeof GrowthProductRoute
+  '/growth/ratings': typeof GrowthRatingsRoute
+  '/growth/reports': typeof GrowthReportsRoute
+  '/growth/reseller-console': typeof GrowthResellerConsoleRoute
+  '/growth/reseller-profile': typeof GrowthResellerProfileRoute
+  '/growth/resellers': typeof GrowthResellersRoute
+  '/growth/seo': typeof GrowthSeoRoute
+  '/growth/settings': typeof GrowthSettingsRoute
+  '/growth/wallet': typeof GrowthWalletRoute
   '/hr/admin': typeof HrAdminRoute
   '/hr/attendance': typeof HrAttendanceRoute
   '/hr/auth': typeof HrAuthRoute
@@ -2507,6 +2939,54 @@ export interface FileRouteTypes {
     | '/creator/trainers'
     | '/creator/video'
     | '/creator/workshops'
+    | '/data/activity'
+    | '/data/activity-analytics'
+    | '/data/ai-api'
+    | '/data/ai-extractor'
+    | '/data/billing'
+    | '/data/browse'
+    | '/data/categories'
+    | '/data/client'
+    | '/data/compare'
+    | '/data/comparison'
+    | '/data/extractors'
+    | '/data/favorites'
+    | '/data/marketplace'
+    | '/data/mobile'
+    | '/data/one-click'
+    | '/data/pricing'
+    | '/data/profile'
+    | '/data/purchases'
+    | '/data/reseller'
+    | '/data/settings'
+    | '/data/showcase'
+    | '/data/super-admin'
+    | '/data/viewer'
+    | '/data/wallet'
+    | '/data/wizard'
+    | '/growth/admin'
+    | '/growth/campaign-analytics'
+    | '/growth/campaigns'
+    | '/growth/cashier'
+    | '/growth/companies'
+    | '/growth/company-detail'
+    | '/growth/employee-profile'
+    | '/growth/employees'
+    | '/growth/grow'
+    | '/growth/lead-detail'
+    | '/growth/leads'
+    | '/growth/payment-history'
+    | '/growth/payments'
+    | '/growth/portal'
+    | '/growth/product'
+    | '/growth/ratings'
+    | '/growth/reports'
+    | '/growth/reseller-console'
+    | '/growth/reseller-profile'
+    | '/growth/resellers'
+    | '/growth/seo'
+    | '/growth/settings'
+    | '/growth/wallet'
     | '/hr/admin'
     | '/hr/attendance'
     | '/hr/auth'
@@ -2766,6 +3246,54 @@ export interface FileRouteTypes {
     | '/creator/trainers'
     | '/creator/video'
     | '/creator/workshops'
+    | '/data/activity'
+    | '/data/activity-analytics'
+    | '/data/ai-api'
+    | '/data/ai-extractor'
+    | '/data/billing'
+    | '/data/browse'
+    | '/data/categories'
+    | '/data/client'
+    | '/data/compare'
+    | '/data/comparison'
+    | '/data/extractors'
+    | '/data/favorites'
+    | '/data/marketplace'
+    | '/data/mobile'
+    | '/data/one-click'
+    | '/data/pricing'
+    | '/data/profile'
+    | '/data/purchases'
+    | '/data/reseller'
+    | '/data/settings'
+    | '/data/showcase'
+    | '/data/super-admin'
+    | '/data/viewer'
+    | '/data/wallet'
+    | '/data/wizard'
+    | '/growth/admin'
+    | '/growth/campaign-analytics'
+    | '/growth/campaigns'
+    | '/growth/cashier'
+    | '/growth/companies'
+    | '/growth/company-detail'
+    | '/growth/employee-profile'
+    | '/growth/employees'
+    | '/growth/grow'
+    | '/growth/lead-detail'
+    | '/growth/leads'
+    | '/growth/payment-history'
+    | '/growth/payments'
+    | '/growth/portal'
+    | '/growth/product'
+    | '/growth/ratings'
+    | '/growth/reports'
+    | '/growth/reseller-console'
+    | '/growth/reseller-profile'
+    | '/growth/resellers'
+    | '/growth/seo'
+    | '/growth/settings'
+    | '/growth/wallet'
     | '/hr/admin'
     | '/hr/attendance'
     | '/hr/auth'
@@ -3025,6 +3553,54 @@ export interface FileRouteTypes {
     | '/creator/trainers'
     | '/creator/video'
     | '/creator/workshops'
+    | '/data/activity'
+    | '/data/activity-analytics'
+    | '/data/ai-api'
+    | '/data/ai-extractor'
+    | '/data/billing'
+    | '/data/browse'
+    | '/data/categories'
+    | '/data/client'
+    | '/data/compare'
+    | '/data/comparison'
+    | '/data/extractors'
+    | '/data/favorites'
+    | '/data/marketplace'
+    | '/data/mobile'
+    | '/data/one-click'
+    | '/data/pricing'
+    | '/data/profile'
+    | '/data/purchases'
+    | '/data/reseller'
+    | '/data/settings'
+    | '/data/showcase'
+    | '/data/super-admin'
+    | '/data/viewer'
+    | '/data/wallet'
+    | '/data/wizard'
+    | '/growth/admin'
+    | '/growth/campaign-analytics'
+    | '/growth/campaigns'
+    | '/growth/cashier'
+    | '/growth/companies'
+    | '/growth/company-detail'
+    | '/growth/employee-profile'
+    | '/growth/employees'
+    | '/growth/grow'
+    | '/growth/lead-detail'
+    | '/growth/leads'
+    | '/growth/payment-history'
+    | '/growth/payments'
+    | '/growth/portal'
+    | '/growth/product'
+    | '/growth/ratings'
+    | '/growth/reports'
+    | '/growth/reseller-console'
+    | '/growth/reseller-profile'
+    | '/growth/resellers'
+    | '/growth/seo'
+    | '/growth/settings'
+    | '/growth/wallet'
     | '/hr/admin'
     | '/hr/attendance'
     | '/hr/auth'
@@ -3276,6 +3852,54 @@ export interface RootRouteChildren {
   CreatorTrainersRoute: typeof CreatorTrainersRoute
   CreatorVideoRoute: typeof CreatorVideoRoute
   CreatorWorkshopsRoute: typeof CreatorWorkshopsRoute
+  DataActivityRoute: typeof DataActivityRoute
+  DataActivityAnalyticsRoute: typeof DataActivityAnalyticsRoute
+  DataAiApiRoute: typeof DataAiApiRoute
+  DataAiExtractorRoute: typeof DataAiExtractorRoute
+  DataBillingRoute: typeof DataBillingRoute
+  DataBrowseRoute: typeof DataBrowseRoute
+  DataCategoriesRoute: typeof DataCategoriesRoute
+  DataClientRoute: typeof DataClientRoute
+  DataCompareRoute: typeof DataCompareRoute
+  DataComparisonRoute: typeof DataComparisonRoute
+  DataExtractorsRoute: typeof DataExtractorsRoute
+  DataFavoritesRoute: typeof DataFavoritesRoute
+  DataMarketplaceRoute: typeof DataMarketplaceRoute
+  DataMobileRoute: typeof DataMobileRoute
+  DataOneClickRoute: typeof DataOneClickRoute
+  DataPricingRoute: typeof DataPricingRoute
+  DataProfileRoute: typeof DataProfileRoute
+  DataPurchasesRoute: typeof DataPurchasesRoute
+  DataResellerRoute: typeof DataResellerRoute
+  DataSettingsRoute: typeof DataSettingsRoute
+  DataShowcaseRoute: typeof DataShowcaseRoute
+  DataSuperAdminRoute: typeof DataSuperAdminRoute
+  DataViewerRoute: typeof DataViewerRoute
+  DataWalletRoute: typeof DataWalletRoute
+  DataWizardRoute: typeof DataWizardRoute
+  GrowthAdminRoute: typeof GrowthAdminRoute
+  GrowthCampaignAnalyticsRoute: typeof GrowthCampaignAnalyticsRoute
+  GrowthCampaignsRoute: typeof GrowthCampaignsRoute
+  GrowthCashierRoute: typeof GrowthCashierRoute
+  GrowthCompaniesRoute: typeof GrowthCompaniesRoute
+  GrowthCompanyDetailRoute: typeof GrowthCompanyDetailRoute
+  GrowthEmployeeProfileRoute: typeof GrowthEmployeeProfileRoute
+  GrowthEmployeesRoute: typeof GrowthEmployeesRoute
+  GrowthGrowRoute: typeof GrowthGrowRoute
+  GrowthLeadDetailRoute: typeof GrowthLeadDetailRoute
+  GrowthLeadsRoute: typeof GrowthLeadsRoute
+  GrowthPaymentHistoryRoute: typeof GrowthPaymentHistoryRoute
+  GrowthPaymentsRoute: typeof GrowthPaymentsRoute
+  GrowthPortalRoute: typeof GrowthPortalRoute
+  GrowthProductRoute: typeof GrowthProductRoute
+  GrowthRatingsRoute: typeof GrowthRatingsRoute
+  GrowthReportsRoute: typeof GrowthReportsRoute
+  GrowthResellerConsoleRoute: typeof GrowthResellerConsoleRoute
+  GrowthResellerProfileRoute: typeof GrowthResellerProfileRoute
+  GrowthResellersRoute: typeof GrowthResellersRoute
+  GrowthSeoRoute: typeof GrowthSeoRoute
+  GrowthSettingsRoute: typeof GrowthSettingsRoute
+  GrowthWalletRoute: typeof GrowthWalletRoute
   HrAdminRoute: typeof HrAdminRoute
   HrAttendanceRoute: typeof HrAttendanceRoute
   HrAuthRoute: typeof HrAuthRoute
@@ -4464,6 +5088,342 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HrAdminRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/growth/wallet': {
+      id: '/growth/wallet'
+      path: '/growth/wallet'
+      fullPath: '/growth/wallet'
+      preLoaderRoute: typeof GrowthWalletRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/growth/settings': {
+      id: '/growth/settings'
+      path: '/growth/settings'
+      fullPath: '/growth/settings'
+      preLoaderRoute: typeof GrowthSettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/growth/seo': {
+      id: '/growth/seo'
+      path: '/growth/seo'
+      fullPath: '/growth/seo'
+      preLoaderRoute: typeof GrowthSeoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/growth/resellers': {
+      id: '/growth/resellers'
+      path: '/growth/resellers'
+      fullPath: '/growth/resellers'
+      preLoaderRoute: typeof GrowthResellersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/growth/reseller-profile': {
+      id: '/growth/reseller-profile'
+      path: '/growth/reseller-profile'
+      fullPath: '/growth/reseller-profile'
+      preLoaderRoute: typeof GrowthResellerProfileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/growth/reseller-console': {
+      id: '/growth/reseller-console'
+      path: '/growth/reseller-console'
+      fullPath: '/growth/reseller-console'
+      preLoaderRoute: typeof GrowthResellerConsoleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/growth/reports': {
+      id: '/growth/reports'
+      path: '/growth/reports'
+      fullPath: '/growth/reports'
+      preLoaderRoute: typeof GrowthReportsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/growth/ratings': {
+      id: '/growth/ratings'
+      path: '/growth/ratings'
+      fullPath: '/growth/ratings'
+      preLoaderRoute: typeof GrowthRatingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/growth/product': {
+      id: '/growth/product'
+      path: '/growth/product'
+      fullPath: '/growth/product'
+      preLoaderRoute: typeof GrowthProductRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/growth/portal': {
+      id: '/growth/portal'
+      path: '/growth/portal'
+      fullPath: '/growth/portal'
+      preLoaderRoute: typeof GrowthPortalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/growth/payments': {
+      id: '/growth/payments'
+      path: '/growth/payments'
+      fullPath: '/growth/payments'
+      preLoaderRoute: typeof GrowthPaymentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/growth/payment-history': {
+      id: '/growth/payment-history'
+      path: '/growth/payment-history'
+      fullPath: '/growth/payment-history'
+      preLoaderRoute: typeof GrowthPaymentHistoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/growth/leads': {
+      id: '/growth/leads'
+      path: '/growth/leads'
+      fullPath: '/growth/leads'
+      preLoaderRoute: typeof GrowthLeadsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/growth/lead-detail': {
+      id: '/growth/lead-detail'
+      path: '/growth/lead-detail'
+      fullPath: '/growth/lead-detail'
+      preLoaderRoute: typeof GrowthLeadDetailRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/growth/grow': {
+      id: '/growth/grow'
+      path: '/growth/grow'
+      fullPath: '/growth/grow'
+      preLoaderRoute: typeof GrowthGrowRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/growth/employees': {
+      id: '/growth/employees'
+      path: '/growth/employees'
+      fullPath: '/growth/employees'
+      preLoaderRoute: typeof GrowthEmployeesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/growth/employee-profile': {
+      id: '/growth/employee-profile'
+      path: '/growth/employee-profile'
+      fullPath: '/growth/employee-profile'
+      preLoaderRoute: typeof GrowthEmployeeProfileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/growth/company-detail': {
+      id: '/growth/company-detail'
+      path: '/growth/company-detail'
+      fullPath: '/growth/company-detail'
+      preLoaderRoute: typeof GrowthCompanyDetailRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/growth/companies': {
+      id: '/growth/companies'
+      path: '/growth/companies'
+      fullPath: '/growth/companies'
+      preLoaderRoute: typeof GrowthCompaniesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/growth/cashier': {
+      id: '/growth/cashier'
+      path: '/growth/cashier'
+      fullPath: '/growth/cashier'
+      preLoaderRoute: typeof GrowthCashierRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/growth/campaigns': {
+      id: '/growth/campaigns'
+      path: '/growth/campaigns'
+      fullPath: '/growth/campaigns'
+      preLoaderRoute: typeof GrowthCampaignsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/growth/campaign-analytics': {
+      id: '/growth/campaign-analytics'
+      path: '/growth/campaign-analytics'
+      fullPath: '/growth/campaign-analytics'
+      preLoaderRoute: typeof GrowthCampaignAnalyticsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/growth/admin': {
+      id: '/growth/admin'
+      path: '/growth/admin'
+      fullPath: '/growth/admin'
+      preLoaderRoute: typeof GrowthAdminRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/data/wizard': {
+      id: '/data/wizard'
+      path: '/data/wizard'
+      fullPath: '/data/wizard'
+      preLoaderRoute: typeof DataWizardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/data/wallet': {
+      id: '/data/wallet'
+      path: '/data/wallet'
+      fullPath: '/data/wallet'
+      preLoaderRoute: typeof DataWalletRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/data/viewer': {
+      id: '/data/viewer'
+      path: '/data/viewer'
+      fullPath: '/data/viewer'
+      preLoaderRoute: typeof DataViewerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/data/super-admin': {
+      id: '/data/super-admin'
+      path: '/data/super-admin'
+      fullPath: '/data/super-admin'
+      preLoaderRoute: typeof DataSuperAdminRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/data/showcase': {
+      id: '/data/showcase'
+      path: '/data/showcase'
+      fullPath: '/data/showcase'
+      preLoaderRoute: typeof DataShowcaseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/data/settings': {
+      id: '/data/settings'
+      path: '/data/settings'
+      fullPath: '/data/settings'
+      preLoaderRoute: typeof DataSettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/data/reseller': {
+      id: '/data/reseller'
+      path: '/data/reseller'
+      fullPath: '/data/reseller'
+      preLoaderRoute: typeof DataResellerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/data/purchases': {
+      id: '/data/purchases'
+      path: '/data/purchases'
+      fullPath: '/data/purchases'
+      preLoaderRoute: typeof DataPurchasesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/data/profile': {
+      id: '/data/profile'
+      path: '/data/profile'
+      fullPath: '/data/profile'
+      preLoaderRoute: typeof DataProfileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/data/pricing': {
+      id: '/data/pricing'
+      path: '/data/pricing'
+      fullPath: '/data/pricing'
+      preLoaderRoute: typeof DataPricingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/data/one-click': {
+      id: '/data/one-click'
+      path: '/data/one-click'
+      fullPath: '/data/one-click'
+      preLoaderRoute: typeof DataOneClickRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/data/mobile': {
+      id: '/data/mobile'
+      path: '/data/mobile'
+      fullPath: '/data/mobile'
+      preLoaderRoute: typeof DataMobileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/data/marketplace': {
+      id: '/data/marketplace'
+      path: '/data/marketplace'
+      fullPath: '/data/marketplace'
+      preLoaderRoute: typeof DataMarketplaceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/data/favorites': {
+      id: '/data/favorites'
+      path: '/data/favorites'
+      fullPath: '/data/favorites'
+      preLoaderRoute: typeof DataFavoritesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/data/extractors': {
+      id: '/data/extractors'
+      path: '/data/extractors'
+      fullPath: '/data/extractors'
+      preLoaderRoute: typeof DataExtractorsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/data/comparison': {
+      id: '/data/comparison'
+      path: '/data/comparison'
+      fullPath: '/data/comparison'
+      preLoaderRoute: typeof DataComparisonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/data/compare': {
+      id: '/data/compare'
+      path: '/data/compare'
+      fullPath: '/data/compare'
+      preLoaderRoute: typeof DataCompareRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/data/client': {
+      id: '/data/client'
+      path: '/data/client'
+      fullPath: '/data/client'
+      preLoaderRoute: typeof DataClientRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/data/categories': {
+      id: '/data/categories'
+      path: '/data/categories'
+      fullPath: '/data/categories'
+      preLoaderRoute: typeof DataCategoriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/data/browse': {
+      id: '/data/browse'
+      path: '/data/browse'
+      fullPath: '/data/browse'
+      preLoaderRoute: typeof DataBrowseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/data/billing': {
+      id: '/data/billing'
+      path: '/data/billing'
+      fullPath: '/data/billing'
+      preLoaderRoute: typeof DataBillingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/data/ai-extractor': {
+      id: '/data/ai-extractor'
+      path: '/data/ai-extractor'
+      fullPath: '/data/ai-extractor'
+      preLoaderRoute: typeof DataAiExtractorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/data/ai-api': {
+      id: '/data/ai-api'
+      path: '/data/ai-api'
+      fullPath: '/data/ai-api'
+      preLoaderRoute: typeof DataAiApiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/data/activity-analytics': {
+      id: '/data/activity-analytics'
+      path: '/data/activity-analytics'
+      fullPath: '/data/activity-analytics'
+      preLoaderRoute: typeof DataActivityAnalyticsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/data/activity': {
+      id: '/data/activity'
+      path: '/data/activity'
+      fullPath: '/data/activity'
+      preLoaderRoute: typeof DataActivityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/creator/workshops': {
       id: '/creator/workshops'
       path: '/creator/workshops'
@@ -5357,6 +6317,54 @@ const rootRouteChildren: RootRouteChildren = {
   CreatorTrainersRoute: CreatorTrainersRoute,
   CreatorVideoRoute: CreatorVideoRoute,
   CreatorWorkshopsRoute: CreatorWorkshopsRoute,
+  DataActivityRoute: DataActivityRoute,
+  DataActivityAnalyticsRoute: DataActivityAnalyticsRoute,
+  DataAiApiRoute: DataAiApiRoute,
+  DataAiExtractorRoute: DataAiExtractorRoute,
+  DataBillingRoute: DataBillingRoute,
+  DataBrowseRoute: DataBrowseRoute,
+  DataCategoriesRoute: DataCategoriesRoute,
+  DataClientRoute: DataClientRoute,
+  DataCompareRoute: DataCompareRoute,
+  DataComparisonRoute: DataComparisonRoute,
+  DataExtractorsRoute: DataExtractorsRoute,
+  DataFavoritesRoute: DataFavoritesRoute,
+  DataMarketplaceRoute: DataMarketplaceRoute,
+  DataMobileRoute: DataMobileRoute,
+  DataOneClickRoute: DataOneClickRoute,
+  DataPricingRoute: DataPricingRoute,
+  DataProfileRoute: DataProfileRoute,
+  DataPurchasesRoute: DataPurchasesRoute,
+  DataResellerRoute: DataResellerRoute,
+  DataSettingsRoute: DataSettingsRoute,
+  DataShowcaseRoute: DataShowcaseRoute,
+  DataSuperAdminRoute: DataSuperAdminRoute,
+  DataViewerRoute: DataViewerRoute,
+  DataWalletRoute: DataWalletRoute,
+  DataWizardRoute: DataWizardRoute,
+  GrowthAdminRoute: GrowthAdminRoute,
+  GrowthCampaignAnalyticsRoute: GrowthCampaignAnalyticsRoute,
+  GrowthCampaignsRoute: GrowthCampaignsRoute,
+  GrowthCashierRoute: GrowthCashierRoute,
+  GrowthCompaniesRoute: GrowthCompaniesRoute,
+  GrowthCompanyDetailRoute: GrowthCompanyDetailRoute,
+  GrowthEmployeeProfileRoute: GrowthEmployeeProfileRoute,
+  GrowthEmployeesRoute: GrowthEmployeesRoute,
+  GrowthGrowRoute: GrowthGrowRoute,
+  GrowthLeadDetailRoute: GrowthLeadDetailRoute,
+  GrowthLeadsRoute: GrowthLeadsRoute,
+  GrowthPaymentHistoryRoute: GrowthPaymentHistoryRoute,
+  GrowthPaymentsRoute: GrowthPaymentsRoute,
+  GrowthPortalRoute: GrowthPortalRoute,
+  GrowthProductRoute: GrowthProductRoute,
+  GrowthRatingsRoute: GrowthRatingsRoute,
+  GrowthReportsRoute: GrowthReportsRoute,
+  GrowthResellerConsoleRoute: GrowthResellerConsoleRoute,
+  GrowthResellerProfileRoute: GrowthResellerProfileRoute,
+  GrowthResellersRoute: GrowthResellersRoute,
+  GrowthSeoRoute: GrowthSeoRoute,
+  GrowthSettingsRoute: GrowthSettingsRoute,
+  GrowthWalletRoute: GrowthWalletRoute,
   HrAdminRoute: HrAdminRoute,
   HrAttendanceRoute: HrAttendanceRoute,
   HrAuthRoute: HrAuthRoute,
@@ -5446,3 +6454,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
