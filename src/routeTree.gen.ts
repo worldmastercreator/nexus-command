@@ -108,6 +108,7 @@ import { Route as PosHeldRouteImport } from './routes/pos.held'
 import { Route as PosFranchisesRouteImport } from './routes/pos.franchises'
 import { Route as PosFinanceRouteImport } from './routes/pos.finance'
 import { Route as PosFeaturesRouteImport } from './routes/pos.features'
+import { Route as PosDashboardRouteImport } from './routes/pos.dashboard'
 import { Route as PosCustomersRouteImport } from './routes/pos.customers'
 import { Route as PosCompaniesRouteImport } from './routes/pos.companies'
 import { Route as PosBrandingRouteImport } from './routes/pos.branding'
@@ -150,6 +151,7 @@ import { Route as MlmPackagesRouteImport } from './routes/mlm.packages'
 import { Route as MlmNetworkRouteImport } from './routes/mlm.network'
 import { Route as MlmMembersRouteImport } from './routes/mlm.members'
 import { Route as MlmIntegrationsRouteImport } from './routes/mlm.integrations'
+import { Route as MlmDashboardRouteImport } from './routes/mlm.dashboard'
 import { Route as MlmCommissionsRouteImport } from './routes/mlm.commissions'
 import { Route as MlmAuditRouteImport } from './routes/mlm.audit'
 import { Route as MlmAnalyticsRouteImport } from './routes/mlm.analytics'
@@ -760,6 +762,11 @@ const PosFeaturesRoute = PosFeaturesRouteImport.update({
   path: '/pos/features',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PosDashboardRoute = PosDashboardRouteImport.update({
+  id: '/pos/dashboard',
+  path: '/pos/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PosCustomersRoute = PosCustomersRouteImport.update({
   id: '/pos/customers',
   path: '/pos/customers',
@@ -968,6 +975,11 @@ const MlmMembersRoute = MlmMembersRouteImport.update({
 const MlmIntegrationsRoute = MlmIntegrationsRouteImport.update({
   id: '/mlm/integrations',
   path: '/mlm/integrations',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MlmDashboardRoute = MlmDashboardRouteImport.update({
+  id: '/mlm/dashboard',
+  path: '/mlm/dashboard',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MlmCommissionsRoute = MlmCommissionsRouteImport.update({
@@ -1729,6 +1741,7 @@ export interface FileRoutesByFullPath {
   '/mlm/analytics': typeof MlmAnalyticsRoute
   '/mlm/audit': typeof MlmAuditRoute
   '/mlm/commissions': typeof MlmCommissionsRoute
+  '/mlm/dashboard': typeof MlmDashboardRoute
   '/mlm/integrations': typeof MlmIntegrationsRoute
   '/mlm/members': typeof MlmMembersRoute
   '/mlm/network': typeof MlmNetworkRoute
@@ -1771,6 +1784,7 @@ export interface FileRoutesByFullPath {
   '/pos/branding': typeof PosBrandingRoute
   '/pos/companies': typeof PosCompaniesRoute
   '/pos/customers': typeof PosCustomersRoute
+  '/pos/dashboard': typeof PosDashboardRoute
   '/pos/features': typeof PosFeaturesRoute
   '/pos/finance': typeof PosFinanceRoute
   '/pos/franchises': typeof PosFranchisesRoute
@@ -1986,6 +2000,7 @@ export interface FileRoutesByTo {
   '/mlm/analytics': typeof MlmAnalyticsRoute
   '/mlm/audit': typeof MlmAuditRoute
   '/mlm/commissions': typeof MlmCommissionsRoute
+  '/mlm/dashboard': typeof MlmDashboardRoute
   '/mlm/integrations': typeof MlmIntegrationsRoute
   '/mlm/members': typeof MlmMembersRoute
   '/mlm/network': typeof MlmNetworkRoute
@@ -2028,6 +2043,7 @@ export interface FileRoutesByTo {
   '/pos/branding': typeof PosBrandingRoute
   '/pos/companies': typeof PosCompaniesRoute
   '/pos/customers': typeof PosCustomersRoute
+  '/pos/dashboard': typeof PosDashboardRoute
   '/pos/features': typeof PosFeaturesRoute
   '/pos/finance': typeof PosFinanceRoute
   '/pos/franchises': typeof PosFranchisesRoute
@@ -2244,6 +2260,7 @@ export interface FileRoutesById {
   '/mlm/analytics': typeof MlmAnalyticsRoute
   '/mlm/audit': typeof MlmAuditRoute
   '/mlm/commissions': typeof MlmCommissionsRoute
+  '/mlm/dashboard': typeof MlmDashboardRoute
   '/mlm/integrations': typeof MlmIntegrationsRoute
   '/mlm/members': typeof MlmMembersRoute
   '/mlm/network': typeof MlmNetworkRoute
@@ -2286,6 +2303,7 @@ export interface FileRoutesById {
   '/pos/branding': typeof PosBrandingRoute
   '/pos/companies': typeof PosCompaniesRoute
   '/pos/customers': typeof PosCustomersRoute
+  '/pos/dashboard': typeof PosDashboardRoute
   '/pos/features': typeof PosFeaturesRoute
   '/pos/finance': typeof PosFinanceRoute
   '/pos/franchises': typeof PosFranchisesRoute
@@ -2503,6 +2521,7 @@ export interface FileRouteTypes {
     | '/mlm/analytics'
     | '/mlm/audit'
     | '/mlm/commissions'
+    | '/mlm/dashboard'
     | '/mlm/integrations'
     | '/mlm/members'
     | '/mlm/network'
@@ -2545,6 +2564,7 @@ export interface FileRouteTypes {
     | '/pos/branding'
     | '/pos/companies'
     | '/pos/customers'
+    | '/pos/dashboard'
     | '/pos/features'
     | '/pos/finance'
     | '/pos/franchises'
@@ -2760,6 +2780,7 @@ export interface FileRouteTypes {
     | '/mlm/analytics'
     | '/mlm/audit'
     | '/mlm/commissions'
+    | '/mlm/dashboard'
     | '/mlm/integrations'
     | '/mlm/members'
     | '/mlm/network'
@@ -2802,6 +2823,7 @@ export interface FileRouteTypes {
     | '/pos/branding'
     | '/pos/companies'
     | '/pos/customers'
+    | '/pos/dashboard'
     | '/pos/features'
     | '/pos/finance'
     | '/pos/franchises'
@@ -3017,6 +3039,7 @@ export interface FileRouteTypes {
     | '/mlm/analytics'
     | '/mlm/audit'
     | '/mlm/commissions'
+    | '/mlm/dashboard'
     | '/mlm/integrations'
     | '/mlm/members'
     | '/mlm/network'
@@ -3059,6 +3082,7 @@ export interface FileRouteTypes {
     | '/pos/branding'
     | '/pos/companies'
     | '/pos/customers'
+    | '/pos/dashboard'
     | '/pos/features'
     | '/pos/finance'
     | '/pos/franchises'
@@ -3266,6 +3290,7 @@ export interface RootRouteChildren {
   MlmAnalyticsRoute: typeof MlmAnalyticsRoute
   MlmAuditRoute: typeof MlmAuditRoute
   MlmCommissionsRoute: typeof MlmCommissionsRoute
+  MlmDashboardRoute: typeof MlmDashboardRoute
   MlmIntegrationsRoute: typeof MlmIntegrationsRoute
   MlmMembersRoute: typeof MlmMembersRoute
   MlmNetworkRoute: typeof MlmNetworkRoute
@@ -3308,6 +3333,7 @@ export interface RootRouteChildren {
   PosBrandingRoute: typeof PosBrandingRoute
   PosCompaniesRoute: typeof PosCompaniesRoute
   PosCustomersRoute: typeof PosCustomersRoute
+  PosDashboardRoute: typeof PosDashboardRoute
   PosFeaturesRoute: typeof PosFeaturesRoute
   PosFinanceRoute: typeof PosFinanceRoute
   PosFranchisesRoute: typeof PosFranchisesRoute
@@ -4032,6 +4058,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PosFeaturesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/pos/dashboard': {
+      id: '/pos/dashboard'
+      path: '/pos/dashboard'
+      fullPath: '/pos/dashboard'
+      preLoaderRoute: typeof PosDashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/pos/customers': {
       id: '/pos/customers'
       path: '/pos/customers'
@@ -4324,6 +4357,13 @@ declare module '@tanstack/react-router' {
       path: '/mlm/integrations'
       fullPath: '/mlm/integrations'
       preLoaderRoute: typeof MlmIntegrationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mlm/dashboard': {
+      id: '/mlm/dashboard'
+      path: '/mlm/dashboard'
+      fullPath: '/mlm/dashboard'
+      preLoaderRoute: typeof MlmDashboardRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/mlm/commissions': {
@@ -5331,6 +5371,7 @@ const rootRouteChildren: RootRouteChildren = {
   MlmAnalyticsRoute: MlmAnalyticsRoute,
   MlmAuditRoute: MlmAuditRoute,
   MlmCommissionsRoute: MlmCommissionsRoute,
+  MlmDashboardRoute: MlmDashboardRoute,
   MlmIntegrationsRoute: MlmIntegrationsRoute,
   MlmMembersRoute: MlmMembersRoute,
   MlmNetworkRoute: MlmNetworkRoute,
@@ -5373,6 +5414,7 @@ const rootRouteChildren: RootRouteChildren = {
   PosBrandingRoute: PosBrandingRoute,
   PosCompaniesRoute: PosCompaniesRoute,
   PosCustomersRoute: PosCustomersRoute,
+  PosDashboardRoute: PosDashboardRoute,
   PosFeaturesRoute: PosFeaturesRoute,
   PosFinanceRoute: PosFinanceRoute,
   PosFranchisesRoute: PosFranchisesRoute,
@@ -5404,13 +5446,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
