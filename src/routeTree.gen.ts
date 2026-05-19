@@ -274,7 +274,7 @@ import { Route as DataExtractorsRouteImport } from './routes/data.extractors'
 import { Route as DataDashboardRouteImport } from './routes/data.dashboard'
 import { Route as DataComparisonRouteImport } from './routes/data.comparison'
 import { Route as DataCompareRouteImport } from './routes/data.compare'
-import { Route as DataClientRouteImport } from './routes/data.client'
+import { Route as DataClientPortalRouteImport } from './routes/data.client-portal'
 import { Route as DataCategoriesRouteImport } from './routes/data.categories'
 import { Route as DataBrowseRouteImport } from './routes/data.browse'
 import { Route as DataBillingRouteImport } from './routes/data.billing'
@@ -1708,9 +1708,9 @@ const DataCompareRoute = DataCompareRouteImport.update({
   path: '/data/compare',
   getParentRoute: () => rootRouteImport,
 } as any)
-const DataClientRoute = DataClientRouteImport.update({
-  id: '/data/client',
-  path: '/data/client',
+const DataClientPortalRoute = DataClientPortalRouteImport.update({
+  id: '/data/client-portal',
+  path: '/data/client-portal',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DataCategoriesRoute = DataCategoriesRouteImport.update({
@@ -2430,7 +2430,7 @@ export interface FileRoutesByFullPath {
   '/data/billing': typeof DataBillingRoute
   '/data/browse': typeof DataBrowseRoute
   '/data/categories': typeof DataCategoriesRoute
-  '/data/client': typeof DataClientRoute
+  '/data/client-portal': typeof DataClientPortalRoute
   '/data/compare': typeof DataCompareRoute
   '/data/comparison': typeof DataComparisonRoute
   '/data/dashboard': typeof DataDashboardRoute
@@ -2805,7 +2805,7 @@ export interface FileRoutesByTo {
   '/data/billing': typeof DataBillingRoute
   '/data/browse': typeof DataBrowseRoute
   '/data/categories': typeof DataCategoriesRoute
-  '/data/client': typeof DataClientRoute
+  '/data/client-portal': typeof DataClientPortalRoute
   '/data/compare': typeof DataCompareRoute
   '/data/comparison': typeof DataComparisonRoute
   '/data/dashboard': typeof DataDashboardRoute
@@ -3181,7 +3181,7 @@ export interface FileRoutesById {
   '/data/billing': typeof DataBillingRoute
   '/data/browse': typeof DataBrowseRoute
   '/data/categories': typeof DataCategoriesRoute
-  '/data/client': typeof DataClientRoute
+  '/data/client-portal': typeof DataClientPortalRoute
   '/data/compare': typeof DataCompareRoute
   '/data/comparison': typeof DataComparisonRoute
   '/data/dashboard': typeof DataDashboardRoute
@@ -3558,7 +3558,7 @@ export interface FileRouteTypes {
     | '/data/billing'
     | '/data/browse'
     | '/data/categories'
-    | '/data/client'
+    | '/data/client-portal'
     | '/data/compare'
     | '/data/comparison'
     | '/data/dashboard'
@@ -3933,7 +3933,7 @@ export interface FileRouteTypes {
     | '/data/billing'
     | '/data/browse'
     | '/data/categories'
-    | '/data/client'
+    | '/data/client-portal'
     | '/data/compare'
     | '/data/comparison'
     | '/data/dashboard'
@@ -4308,7 +4308,7 @@ export interface FileRouteTypes {
     | '/data/billing'
     | '/data/browse'
     | '/data/categories'
-    | '/data/client'
+    | '/data/client-portal'
     | '/data/compare'
     | '/data/comparison'
     | '/data/dashboard'
@@ -4675,7 +4675,7 @@ export interface RootRouteChildren {
   DataBillingRoute: typeof DataBillingRoute
   DataBrowseRoute: typeof DataBrowseRoute
   DataCategoriesRoute: typeof DataCategoriesRoute
-  DataClientRoute: typeof DataClientRoute
+  DataClientPortalRoute: typeof DataClientPortalRoute
   DataCompareRoute: typeof DataCompareRoute
   DataComparisonRoute: typeof DataComparisonRoute
   DataDashboardRoute: typeof DataDashboardRoute
@@ -6728,11 +6728,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DataCompareRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/data/client': {
-      id: '/data/client'
-      path: '/data/client'
-      fullPath: '/data/client'
-      preLoaderRoute: typeof DataClientRouteImport
+    '/data/client-portal': {
+      id: '/data/client-portal'
+      path: '/data/client-portal'
+      fullPath: '/data/client-portal'
+      preLoaderRoute: typeof DataClientPortalRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/data/categories': {
@@ -7684,7 +7684,7 @@ const rootRouteChildren: RootRouteChildren = {
   DataBillingRoute: DataBillingRoute,
   DataBrowseRoute: DataBrowseRoute,
   DataCategoriesRoute: DataCategoriesRoute,
-  DataClientRoute: DataClientRoute,
+  DataClientPortalRoute: DataClientPortalRoute,
   DataCompareRoute: DataCompareRoute,
   DataComparisonRoute: DataComparisonRoute,
   DataDashboardRoute: DataDashboardRoute,

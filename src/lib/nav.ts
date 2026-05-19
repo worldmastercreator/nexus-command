@@ -421,7 +421,7 @@ export const NAV_GROUPS: NavGroup[] = [
       { id: 816, title: "Activity", clone: "Data Vala", path: "/data/activity", icon: Activity },
       { id: 817, title: "Activity Analytics", clone: "Data Vala", path: "/data/activity-analytics", icon: PieChart },
       { id: 818, title: "Comparison Analytics", clone: "Data Vala", path: "/data/comparison", icon: ChartBar },
-      { id: 819, title: "Client Console", clone: "Data Vala", path: "/data/client", icon: UserCircle },
+      { id: 819, title: "Client Console", clone: "Data Vala", path: "/data/client-portal", icon: UserCircle },
       { id: 820, title: "Reseller Console", clone: "Data Vala", path: "/data/reseller", icon: Handshake },
       { id: 821, title: "Mobile App", clone: "Data Vala", path: "/data/mobile", icon: Smartphone },
       { id: 822, title: "Component Showcase", clone: "Data Vala", path: "/data/showcase", icon: Component },
