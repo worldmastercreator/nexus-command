@@ -91,6 +91,72 @@ import { Route as AnalyticsRouteImport } from './routes/analytics'
 import { Route as AiRouteImport } from './routes/ai'
 import { Route as AffiliatesRouteImport } from './routes/affiliates'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ValaTaskRouteImport } from './routes/vala.task'
+import { Route as ValaSystemSettingsRouteImport } from './routes/vala.system-settings'
+import { Route as ValaSuperAdminRouteImport } from './routes/vala.super-admin'
+import { Route as ValaSubDemosRouteImport } from './routes/vala.sub-demos'
+import { Route as ValaSimpleDemoRouteImport } from './routes/vala.simple-demo'
+import { Route as ValaServerManagerRouteImport } from './routes/vala.server-manager'
+import { Route as ValaServerRouteImport } from './routes/vala.server'
+import { Route as ValaSeoRouteImport } from './routes/vala.seo'
+import { Route as ValaSecurityCommandRouteImport } from './routes/vala.security-command'
+import { Route as ValaSecureSystemRouteImport } from './routes/vala.secure-system'
+import { Route as ValaSectorsRouteImport } from './routes/vala.sectors'
+import { Route as ValaSalesSupportRouteImport } from './routes/vala.sales-support'
+import { Route as ValaSafeAssistRouteImport } from './routes/vala.safe-assist'
+import { Route as ValaRndRouteImport } from './routes/vala.rnd'
+import { Route as ValaResellerPortalRouteImport } from './routes/vala.reseller-portal'
+import { Route as ValaResellerRouteImport } from './routes/vala.reseller'
+import { Route as ValaPromiseTrackerRouteImport } from './routes/vala.promise-tracker'
+import { Route as ValaPromiseMgmtRouteImport } from './routes/vala.promise-mgmt'
+import { Route as ValaProductDemoRouteImport } from './routes/vala.product-demo'
+import { Route as ValaProManagerRouteImport } from './routes/vala.pro-manager'
+import { Route as ValaPrimeUserRouteImport } from './routes/vala.prime-user'
+import { Route as ValaPremiumDemoRouteImport } from './routes/vala.premium-demo'
+import { Route as ValaPersonalChatRouteImport } from './routes/vala.personal-chat'
+import { Route as ValaPerformanceRouteImport } from './routes/vala.performance'
+import { Route as ValaNotificationBuzzerRouteImport } from './routes/vala.notification-buzzer'
+import { Route as ValaMasterControlRouteImport } from './routes/vala.master-control'
+import { Route as ValaMasterAdminRouteImport } from './routes/vala.master-admin'
+import { Route as ValaMarketingRouteImport } from './routes/vala.marketing'
+import { Route as ValaLegalRouteImport } from './routes/vala.legal'
+import { Route as ValaLeaderSecurityRouteImport } from './routes/vala.leader-security'
+import { Route as ValaLeadRouteImport } from './routes/vala.lead'
+import { Route as ValaLandingRouteImport } from './routes/vala.landing'
+import { Route as ValaInternalChatRouteImport } from './routes/vala.internal-chat'
+import { Route as ValaInfluencerManagerRouteImport } from './routes/vala.influencer-manager'
+import { Route as ValaInfluencerRouteImport } from './routes/vala.influencer'
+import { Route as ValaIncidentRouteImport } from './routes/vala.incident'
+import { Route as ValaHrRouteImport } from './routes/vala.hr'
+import { Route as ValaHomepageRouteImport } from './routes/vala.homepage'
+import { Route as ValaFranchiseManagerRouteImport } from './routes/vala.franchise-manager'
+import { Route as ValaFranchiseRouteImport } from './routes/vala.franchise'
+import { Route as ValaFinanceRouteImport } from './routes/vala.finance'
+import { Route as ValaEnterpriseControlRouteImport } from './routes/vala.enterprise-control'
+import { Route as ValaEnterpriseRouteImport } from './routes/vala.enterprise'
+import { Route as ValaDeveloperRouteImport } from './routes/vala.developer'
+import { Route as ValaDevManagerRouteImport } from './routes/vala.dev-manager'
+import { Route as ValaDevCommandRouteImport } from './routes/vala.dev-command'
+import { Route as ValaDemoShowcaseRouteImport } from './routes/vala.demo-showcase'
+import { Route as ValaDemoManagerRouteImport } from './routes/vala.demo-manager'
+import { Route as ValaDemoLoginRouteImport } from './routes/vala.demo-login'
+import { Route as ValaDemoDirectoryRouteImport } from './routes/vala.demo-directory'
+import { Route as ValaDemoCredentialsRouteImport } from './routes/vala.demo-credentials'
+import { Route as ValaDemoAccessRouteImport } from './routes/vala.demo-access'
+import { Route as ValaDashboardRouteImport } from './routes/vala.dashboard'
+import { Route as ValaControlRouteImport } from './routes/vala.control'
+import { Route as ValaContinentSuperRouteImport } from './routes/vala.continent-super'
+import { Route as ValaClientSuccessRouteImport } from './routes/vala.client-success'
+import { Route as ValaClientPortalRouteImport } from './routes/vala.client-portal'
+import { Route as ValaCategoryOnboardRouteImport } from './routes/vala.category-onboard'
+import { Route as ValaCareerPortalRouteImport } from './routes/vala.career-portal'
+import { Route as ValaBillingRouteImport } from './routes/vala.billing'
+import { Route as ValaAssistManagerRouteImport } from './routes/vala.assist-manager'
+import { Route as ValaApplyPortalRouteImport } from './routes/vala.apply-portal'
+import { Route as ValaApiManagerRouteImport } from './routes/vala.api-manager'
+import { Route as ValaApiIntegrationRouteImport } from './routes/vala.api-integration'
+import { Route as ValaApiAiRouteImport } from './routes/vala.api-ai'
+import { Route as ValaAiConsoleRouteImport } from './routes/vala.ai-console'
 import { Route as PosSyncRouteImport } from './routes/pos.sync'
 import { Route as PosStaffRouteImport } from './routes/pos.staff'
 import { Route as PosShiftRouteImport } from './routes/pos.shift'
@@ -725,6 +791,336 @@ const AffiliatesRoute = AffiliatesRouteImport.update({
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaTaskRoute = ValaTaskRouteImport.update({
+  id: '/vala/task',
+  path: '/vala/task',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaSystemSettingsRoute = ValaSystemSettingsRouteImport.update({
+  id: '/vala/system-settings',
+  path: '/vala/system-settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaSuperAdminRoute = ValaSuperAdminRouteImport.update({
+  id: '/vala/super-admin',
+  path: '/vala/super-admin',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaSubDemosRoute = ValaSubDemosRouteImport.update({
+  id: '/vala/sub-demos',
+  path: '/vala/sub-demos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaSimpleDemoRoute = ValaSimpleDemoRouteImport.update({
+  id: '/vala/simple-demo',
+  path: '/vala/simple-demo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaServerManagerRoute = ValaServerManagerRouteImport.update({
+  id: '/vala/server-manager',
+  path: '/vala/server-manager',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaServerRoute = ValaServerRouteImport.update({
+  id: '/vala/server',
+  path: '/vala/server',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaSeoRoute = ValaSeoRouteImport.update({
+  id: '/vala/seo',
+  path: '/vala/seo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaSecurityCommandRoute = ValaSecurityCommandRouteImport.update({
+  id: '/vala/security-command',
+  path: '/vala/security-command',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaSecureSystemRoute = ValaSecureSystemRouteImport.update({
+  id: '/vala/secure-system',
+  path: '/vala/secure-system',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaSectorsRoute = ValaSectorsRouteImport.update({
+  id: '/vala/sectors',
+  path: '/vala/sectors',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaSalesSupportRoute = ValaSalesSupportRouteImport.update({
+  id: '/vala/sales-support',
+  path: '/vala/sales-support',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaSafeAssistRoute = ValaSafeAssistRouteImport.update({
+  id: '/vala/safe-assist',
+  path: '/vala/safe-assist',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaRndRoute = ValaRndRouteImport.update({
+  id: '/vala/rnd',
+  path: '/vala/rnd',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaResellerPortalRoute = ValaResellerPortalRouteImport.update({
+  id: '/vala/reseller-portal',
+  path: '/vala/reseller-portal',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaResellerRoute = ValaResellerRouteImport.update({
+  id: '/vala/reseller',
+  path: '/vala/reseller',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaPromiseTrackerRoute = ValaPromiseTrackerRouteImport.update({
+  id: '/vala/promise-tracker',
+  path: '/vala/promise-tracker',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaPromiseMgmtRoute = ValaPromiseMgmtRouteImport.update({
+  id: '/vala/promise-mgmt',
+  path: '/vala/promise-mgmt',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaProductDemoRoute = ValaProductDemoRouteImport.update({
+  id: '/vala/product-demo',
+  path: '/vala/product-demo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaProManagerRoute = ValaProManagerRouteImport.update({
+  id: '/vala/pro-manager',
+  path: '/vala/pro-manager',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaPrimeUserRoute = ValaPrimeUserRouteImport.update({
+  id: '/vala/prime-user',
+  path: '/vala/prime-user',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaPremiumDemoRoute = ValaPremiumDemoRouteImport.update({
+  id: '/vala/premium-demo',
+  path: '/vala/premium-demo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaPersonalChatRoute = ValaPersonalChatRouteImport.update({
+  id: '/vala/personal-chat',
+  path: '/vala/personal-chat',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaPerformanceRoute = ValaPerformanceRouteImport.update({
+  id: '/vala/performance',
+  path: '/vala/performance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaNotificationBuzzerRoute = ValaNotificationBuzzerRouteImport.update({
+  id: '/vala/notification-buzzer',
+  path: '/vala/notification-buzzer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaMasterControlRoute = ValaMasterControlRouteImport.update({
+  id: '/vala/master-control',
+  path: '/vala/master-control',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaMasterAdminRoute = ValaMasterAdminRouteImport.update({
+  id: '/vala/master-admin',
+  path: '/vala/master-admin',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaMarketingRoute = ValaMarketingRouteImport.update({
+  id: '/vala/marketing',
+  path: '/vala/marketing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaLegalRoute = ValaLegalRouteImport.update({
+  id: '/vala/legal',
+  path: '/vala/legal',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaLeaderSecurityRoute = ValaLeaderSecurityRouteImport.update({
+  id: '/vala/leader-security',
+  path: '/vala/leader-security',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaLeadRoute = ValaLeadRouteImport.update({
+  id: '/vala/lead',
+  path: '/vala/lead',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaLandingRoute = ValaLandingRouteImport.update({
+  id: '/vala/landing',
+  path: '/vala/landing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaInternalChatRoute = ValaInternalChatRouteImport.update({
+  id: '/vala/internal-chat',
+  path: '/vala/internal-chat',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaInfluencerManagerRoute = ValaInfluencerManagerRouteImport.update({
+  id: '/vala/influencer-manager',
+  path: '/vala/influencer-manager',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaInfluencerRoute = ValaInfluencerRouteImport.update({
+  id: '/vala/influencer',
+  path: '/vala/influencer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaIncidentRoute = ValaIncidentRouteImport.update({
+  id: '/vala/incident',
+  path: '/vala/incident',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaHrRoute = ValaHrRouteImport.update({
+  id: '/vala/hr',
+  path: '/vala/hr',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaHomepageRoute = ValaHomepageRouteImport.update({
+  id: '/vala/homepage',
+  path: '/vala/homepage',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaFranchiseManagerRoute = ValaFranchiseManagerRouteImport.update({
+  id: '/vala/franchise-manager',
+  path: '/vala/franchise-manager',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaFranchiseRoute = ValaFranchiseRouteImport.update({
+  id: '/vala/franchise',
+  path: '/vala/franchise',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaFinanceRoute = ValaFinanceRouteImport.update({
+  id: '/vala/finance',
+  path: '/vala/finance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaEnterpriseControlRoute = ValaEnterpriseControlRouteImport.update({
+  id: '/vala/enterprise-control',
+  path: '/vala/enterprise-control',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaEnterpriseRoute = ValaEnterpriseRouteImport.update({
+  id: '/vala/enterprise',
+  path: '/vala/enterprise',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaDeveloperRoute = ValaDeveloperRouteImport.update({
+  id: '/vala/developer',
+  path: '/vala/developer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaDevManagerRoute = ValaDevManagerRouteImport.update({
+  id: '/vala/dev-manager',
+  path: '/vala/dev-manager',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaDevCommandRoute = ValaDevCommandRouteImport.update({
+  id: '/vala/dev-command',
+  path: '/vala/dev-command',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaDemoShowcaseRoute = ValaDemoShowcaseRouteImport.update({
+  id: '/vala/demo-showcase',
+  path: '/vala/demo-showcase',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaDemoManagerRoute = ValaDemoManagerRouteImport.update({
+  id: '/vala/demo-manager',
+  path: '/vala/demo-manager',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaDemoLoginRoute = ValaDemoLoginRouteImport.update({
+  id: '/vala/demo-login',
+  path: '/vala/demo-login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaDemoDirectoryRoute = ValaDemoDirectoryRouteImport.update({
+  id: '/vala/demo-directory',
+  path: '/vala/demo-directory',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaDemoCredentialsRoute = ValaDemoCredentialsRouteImport.update({
+  id: '/vala/demo-credentials',
+  path: '/vala/demo-credentials',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaDemoAccessRoute = ValaDemoAccessRouteImport.update({
+  id: '/vala/demo-access',
+  path: '/vala/demo-access',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaDashboardRoute = ValaDashboardRouteImport.update({
+  id: '/vala/dashboard',
+  path: '/vala/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaControlRoute = ValaControlRouteImport.update({
+  id: '/vala/control',
+  path: '/vala/control',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaContinentSuperRoute = ValaContinentSuperRouteImport.update({
+  id: '/vala/continent-super',
+  path: '/vala/continent-super',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaClientSuccessRoute = ValaClientSuccessRouteImport.update({
+  id: '/vala/client-success',
+  path: '/vala/client-success',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaClientPortalRoute = ValaClientPortalRouteImport.update({
+  id: '/vala/client-portal',
+  path: '/vala/client-portal',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaCategoryOnboardRoute = ValaCategoryOnboardRouteImport.update({
+  id: '/vala/category-onboard',
+  path: '/vala/category-onboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaCareerPortalRoute = ValaCareerPortalRouteImport.update({
+  id: '/vala/career-portal',
+  path: '/vala/career-portal',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaBillingRoute = ValaBillingRouteImport.update({
+  id: '/vala/billing',
+  path: '/vala/billing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaAssistManagerRoute = ValaAssistManagerRouteImport.update({
+  id: '/vala/assist-manager',
+  path: '/vala/assist-manager',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaApplyPortalRoute = ValaApplyPortalRouteImport.update({
+  id: '/vala/apply-portal',
+  path: '/vala/apply-portal',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaApiManagerRoute = ValaApiManagerRouteImport.update({
+  id: '/vala/api-manager',
+  path: '/vala/api-manager',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaApiIntegrationRoute = ValaApiIntegrationRouteImport.update({
+  id: '/vala/api-integration',
+  path: '/vala/api-integration',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaApiAiRoute = ValaApiAiRouteImport.update({
+  id: '/vala/api-ai',
+  path: '/vala/api-ai',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ValaAiConsoleRoute = ValaAiConsoleRouteImport.update({
+  id: '/vala/ai-console',
+  path: '/vala/ai-console',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PosSyncRoute = PosSyncRouteImport.update({
@@ -2152,6 +2548,72 @@ export interface FileRoutesByFullPath {
   '/pos/shift': typeof PosShiftRoute
   '/pos/staff': typeof PosStaffRoute
   '/pos/sync': typeof PosSyncRoute
+  '/vala/ai-console': typeof ValaAiConsoleRoute
+  '/vala/api-ai': typeof ValaApiAiRoute
+  '/vala/api-integration': typeof ValaApiIntegrationRoute
+  '/vala/api-manager': typeof ValaApiManagerRoute
+  '/vala/apply-portal': typeof ValaApplyPortalRoute
+  '/vala/assist-manager': typeof ValaAssistManagerRoute
+  '/vala/billing': typeof ValaBillingRoute
+  '/vala/career-portal': typeof ValaCareerPortalRoute
+  '/vala/category-onboard': typeof ValaCategoryOnboardRoute
+  '/vala/client-portal': typeof ValaClientPortalRoute
+  '/vala/client-success': typeof ValaClientSuccessRoute
+  '/vala/continent-super': typeof ValaContinentSuperRoute
+  '/vala/control': typeof ValaControlRoute
+  '/vala/dashboard': typeof ValaDashboardRoute
+  '/vala/demo-access': typeof ValaDemoAccessRoute
+  '/vala/demo-credentials': typeof ValaDemoCredentialsRoute
+  '/vala/demo-directory': typeof ValaDemoDirectoryRoute
+  '/vala/demo-login': typeof ValaDemoLoginRoute
+  '/vala/demo-manager': typeof ValaDemoManagerRoute
+  '/vala/demo-showcase': typeof ValaDemoShowcaseRoute
+  '/vala/dev-command': typeof ValaDevCommandRoute
+  '/vala/dev-manager': typeof ValaDevManagerRoute
+  '/vala/developer': typeof ValaDeveloperRoute
+  '/vala/enterprise': typeof ValaEnterpriseRoute
+  '/vala/enterprise-control': typeof ValaEnterpriseControlRoute
+  '/vala/finance': typeof ValaFinanceRoute
+  '/vala/franchise': typeof ValaFranchiseRoute
+  '/vala/franchise-manager': typeof ValaFranchiseManagerRoute
+  '/vala/homepage': typeof ValaHomepageRoute
+  '/vala/hr': typeof ValaHrRoute
+  '/vala/incident': typeof ValaIncidentRoute
+  '/vala/influencer': typeof ValaInfluencerRoute
+  '/vala/influencer-manager': typeof ValaInfluencerManagerRoute
+  '/vala/internal-chat': typeof ValaInternalChatRoute
+  '/vala/landing': typeof ValaLandingRoute
+  '/vala/lead': typeof ValaLeadRoute
+  '/vala/leader-security': typeof ValaLeaderSecurityRoute
+  '/vala/legal': typeof ValaLegalRoute
+  '/vala/marketing': typeof ValaMarketingRoute
+  '/vala/master-admin': typeof ValaMasterAdminRoute
+  '/vala/master-control': typeof ValaMasterControlRoute
+  '/vala/notification-buzzer': typeof ValaNotificationBuzzerRoute
+  '/vala/performance': typeof ValaPerformanceRoute
+  '/vala/personal-chat': typeof ValaPersonalChatRoute
+  '/vala/premium-demo': typeof ValaPremiumDemoRoute
+  '/vala/prime-user': typeof ValaPrimeUserRoute
+  '/vala/pro-manager': typeof ValaProManagerRoute
+  '/vala/product-demo': typeof ValaProductDemoRoute
+  '/vala/promise-mgmt': typeof ValaPromiseMgmtRoute
+  '/vala/promise-tracker': typeof ValaPromiseTrackerRoute
+  '/vala/reseller': typeof ValaResellerRoute
+  '/vala/reseller-portal': typeof ValaResellerPortalRoute
+  '/vala/rnd': typeof ValaRndRoute
+  '/vala/safe-assist': typeof ValaSafeAssistRoute
+  '/vala/sales-support': typeof ValaSalesSupportRoute
+  '/vala/sectors': typeof ValaSectorsRoute
+  '/vala/secure-system': typeof ValaSecureSystemRoute
+  '/vala/security-command': typeof ValaSecurityCommandRoute
+  '/vala/seo': typeof ValaSeoRoute
+  '/vala/server': typeof ValaServerRoute
+  '/vala/server-manager': typeof ValaServerManagerRoute
+  '/vala/simple-demo': typeof ValaSimpleDemoRoute
+  '/vala/sub-demos': typeof ValaSubDemosRoute
+  '/vala/super-admin': typeof ValaSuperAdminRoute
+  '/vala/system-settings': typeof ValaSystemSettingsRoute
+  '/vala/task': typeof ValaTaskRoute
   '/mlm/sa/backup': typeof MlmSaBackupRoute
   '/mlm/sa/billing': typeof MlmSaBillingRoute
   '/mlm/sa/cron': typeof MlmSaCronRoute
@@ -2461,6 +2923,72 @@ export interface FileRoutesByTo {
   '/pos/shift': typeof PosShiftRoute
   '/pos/staff': typeof PosStaffRoute
   '/pos/sync': typeof PosSyncRoute
+  '/vala/ai-console': typeof ValaAiConsoleRoute
+  '/vala/api-ai': typeof ValaApiAiRoute
+  '/vala/api-integration': typeof ValaApiIntegrationRoute
+  '/vala/api-manager': typeof ValaApiManagerRoute
+  '/vala/apply-portal': typeof ValaApplyPortalRoute
+  '/vala/assist-manager': typeof ValaAssistManagerRoute
+  '/vala/billing': typeof ValaBillingRoute
+  '/vala/career-portal': typeof ValaCareerPortalRoute
+  '/vala/category-onboard': typeof ValaCategoryOnboardRoute
+  '/vala/client-portal': typeof ValaClientPortalRoute
+  '/vala/client-success': typeof ValaClientSuccessRoute
+  '/vala/continent-super': typeof ValaContinentSuperRoute
+  '/vala/control': typeof ValaControlRoute
+  '/vala/dashboard': typeof ValaDashboardRoute
+  '/vala/demo-access': typeof ValaDemoAccessRoute
+  '/vala/demo-credentials': typeof ValaDemoCredentialsRoute
+  '/vala/demo-directory': typeof ValaDemoDirectoryRoute
+  '/vala/demo-login': typeof ValaDemoLoginRoute
+  '/vala/demo-manager': typeof ValaDemoManagerRoute
+  '/vala/demo-showcase': typeof ValaDemoShowcaseRoute
+  '/vala/dev-command': typeof ValaDevCommandRoute
+  '/vala/dev-manager': typeof ValaDevManagerRoute
+  '/vala/developer': typeof ValaDeveloperRoute
+  '/vala/enterprise': typeof ValaEnterpriseRoute
+  '/vala/enterprise-control': typeof ValaEnterpriseControlRoute
+  '/vala/finance': typeof ValaFinanceRoute
+  '/vala/franchise': typeof ValaFranchiseRoute
+  '/vala/franchise-manager': typeof ValaFranchiseManagerRoute
+  '/vala/homepage': typeof ValaHomepageRoute
+  '/vala/hr': typeof ValaHrRoute
+  '/vala/incident': typeof ValaIncidentRoute
+  '/vala/influencer': typeof ValaInfluencerRoute
+  '/vala/influencer-manager': typeof ValaInfluencerManagerRoute
+  '/vala/internal-chat': typeof ValaInternalChatRoute
+  '/vala/landing': typeof ValaLandingRoute
+  '/vala/lead': typeof ValaLeadRoute
+  '/vala/leader-security': typeof ValaLeaderSecurityRoute
+  '/vala/legal': typeof ValaLegalRoute
+  '/vala/marketing': typeof ValaMarketingRoute
+  '/vala/master-admin': typeof ValaMasterAdminRoute
+  '/vala/master-control': typeof ValaMasterControlRoute
+  '/vala/notification-buzzer': typeof ValaNotificationBuzzerRoute
+  '/vala/performance': typeof ValaPerformanceRoute
+  '/vala/personal-chat': typeof ValaPersonalChatRoute
+  '/vala/premium-demo': typeof ValaPremiumDemoRoute
+  '/vala/prime-user': typeof ValaPrimeUserRoute
+  '/vala/pro-manager': typeof ValaProManagerRoute
+  '/vala/product-demo': typeof ValaProductDemoRoute
+  '/vala/promise-mgmt': typeof ValaPromiseMgmtRoute
+  '/vala/promise-tracker': typeof ValaPromiseTrackerRoute
+  '/vala/reseller': typeof ValaResellerRoute
+  '/vala/reseller-portal': typeof ValaResellerPortalRoute
+  '/vala/rnd': typeof ValaRndRoute
+  '/vala/safe-assist': typeof ValaSafeAssistRoute
+  '/vala/sales-support': typeof ValaSalesSupportRoute
+  '/vala/sectors': typeof ValaSectorsRoute
+  '/vala/secure-system': typeof ValaSecureSystemRoute
+  '/vala/security-command': typeof ValaSecurityCommandRoute
+  '/vala/seo': typeof ValaSeoRoute
+  '/vala/server': typeof ValaServerRoute
+  '/vala/server-manager': typeof ValaServerManagerRoute
+  '/vala/simple-demo': typeof ValaSimpleDemoRoute
+  '/vala/sub-demos': typeof ValaSubDemosRoute
+  '/vala/super-admin': typeof ValaSuperAdminRoute
+  '/vala/system-settings': typeof ValaSystemSettingsRoute
+  '/vala/task': typeof ValaTaskRoute
   '/mlm/sa/backup': typeof MlmSaBackupRoute
   '/mlm/sa/billing': typeof MlmSaBillingRoute
   '/mlm/sa/cron': typeof MlmSaCronRoute
@@ -2771,6 +3299,72 @@ export interface FileRoutesById {
   '/pos/shift': typeof PosShiftRoute
   '/pos/staff': typeof PosStaffRoute
   '/pos/sync': typeof PosSyncRoute
+  '/vala/ai-console': typeof ValaAiConsoleRoute
+  '/vala/api-ai': typeof ValaApiAiRoute
+  '/vala/api-integration': typeof ValaApiIntegrationRoute
+  '/vala/api-manager': typeof ValaApiManagerRoute
+  '/vala/apply-portal': typeof ValaApplyPortalRoute
+  '/vala/assist-manager': typeof ValaAssistManagerRoute
+  '/vala/billing': typeof ValaBillingRoute
+  '/vala/career-portal': typeof ValaCareerPortalRoute
+  '/vala/category-onboard': typeof ValaCategoryOnboardRoute
+  '/vala/client-portal': typeof ValaClientPortalRoute
+  '/vala/client-success': typeof ValaClientSuccessRoute
+  '/vala/continent-super': typeof ValaContinentSuperRoute
+  '/vala/control': typeof ValaControlRoute
+  '/vala/dashboard': typeof ValaDashboardRoute
+  '/vala/demo-access': typeof ValaDemoAccessRoute
+  '/vala/demo-credentials': typeof ValaDemoCredentialsRoute
+  '/vala/demo-directory': typeof ValaDemoDirectoryRoute
+  '/vala/demo-login': typeof ValaDemoLoginRoute
+  '/vala/demo-manager': typeof ValaDemoManagerRoute
+  '/vala/demo-showcase': typeof ValaDemoShowcaseRoute
+  '/vala/dev-command': typeof ValaDevCommandRoute
+  '/vala/dev-manager': typeof ValaDevManagerRoute
+  '/vala/developer': typeof ValaDeveloperRoute
+  '/vala/enterprise': typeof ValaEnterpriseRoute
+  '/vala/enterprise-control': typeof ValaEnterpriseControlRoute
+  '/vala/finance': typeof ValaFinanceRoute
+  '/vala/franchise': typeof ValaFranchiseRoute
+  '/vala/franchise-manager': typeof ValaFranchiseManagerRoute
+  '/vala/homepage': typeof ValaHomepageRoute
+  '/vala/hr': typeof ValaHrRoute
+  '/vala/incident': typeof ValaIncidentRoute
+  '/vala/influencer': typeof ValaInfluencerRoute
+  '/vala/influencer-manager': typeof ValaInfluencerManagerRoute
+  '/vala/internal-chat': typeof ValaInternalChatRoute
+  '/vala/landing': typeof ValaLandingRoute
+  '/vala/lead': typeof ValaLeadRoute
+  '/vala/leader-security': typeof ValaLeaderSecurityRoute
+  '/vala/legal': typeof ValaLegalRoute
+  '/vala/marketing': typeof ValaMarketingRoute
+  '/vala/master-admin': typeof ValaMasterAdminRoute
+  '/vala/master-control': typeof ValaMasterControlRoute
+  '/vala/notification-buzzer': typeof ValaNotificationBuzzerRoute
+  '/vala/performance': typeof ValaPerformanceRoute
+  '/vala/personal-chat': typeof ValaPersonalChatRoute
+  '/vala/premium-demo': typeof ValaPremiumDemoRoute
+  '/vala/prime-user': typeof ValaPrimeUserRoute
+  '/vala/pro-manager': typeof ValaProManagerRoute
+  '/vala/product-demo': typeof ValaProductDemoRoute
+  '/vala/promise-mgmt': typeof ValaPromiseMgmtRoute
+  '/vala/promise-tracker': typeof ValaPromiseTrackerRoute
+  '/vala/reseller': typeof ValaResellerRoute
+  '/vala/reseller-portal': typeof ValaResellerPortalRoute
+  '/vala/rnd': typeof ValaRndRoute
+  '/vala/safe-assist': typeof ValaSafeAssistRoute
+  '/vala/sales-support': typeof ValaSalesSupportRoute
+  '/vala/sectors': typeof ValaSectorsRoute
+  '/vala/secure-system': typeof ValaSecureSystemRoute
+  '/vala/security-command': typeof ValaSecurityCommandRoute
+  '/vala/seo': typeof ValaSeoRoute
+  '/vala/server': typeof ValaServerRoute
+  '/vala/server-manager': typeof ValaServerManagerRoute
+  '/vala/simple-demo': typeof ValaSimpleDemoRoute
+  '/vala/sub-demos': typeof ValaSubDemosRoute
+  '/vala/super-admin': typeof ValaSuperAdminRoute
+  '/vala/system-settings': typeof ValaSystemSettingsRoute
+  '/vala/task': typeof ValaTaskRoute
   '/mlm/sa/backup': typeof MlmSaBackupRoute
   '/mlm/sa/billing': typeof MlmSaBillingRoute
   '/mlm/sa/cron': typeof MlmSaCronRoute
@@ -3082,6 +3676,72 @@ export interface FileRouteTypes {
     | '/pos/shift'
     | '/pos/staff'
     | '/pos/sync'
+    | '/vala/ai-console'
+    | '/vala/api-ai'
+    | '/vala/api-integration'
+    | '/vala/api-manager'
+    | '/vala/apply-portal'
+    | '/vala/assist-manager'
+    | '/vala/billing'
+    | '/vala/career-portal'
+    | '/vala/category-onboard'
+    | '/vala/client-portal'
+    | '/vala/client-success'
+    | '/vala/continent-super'
+    | '/vala/control'
+    | '/vala/dashboard'
+    | '/vala/demo-access'
+    | '/vala/demo-credentials'
+    | '/vala/demo-directory'
+    | '/vala/demo-login'
+    | '/vala/demo-manager'
+    | '/vala/demo-showcase'
+    | '/vala/dev-command'
+    | '/vala/dev-manager'
+    | '/vala/developer'
+    | '/vala/enterprise'
+    | '/vala/enterprise-control'
+    | '/vala/finance'
+    | '/vala/franchise'
+    | '/vala/franchise-manager'
+    | '/vala/homepage'
+    | '/vala/hr'
+    | '/vala/incident'
+    | '/vala/influencer'
+    | '/vala/influencer-manager'
+    | '/vala/internal-chat'
+    | '/vala/landing'
+    | '/vala/lead'
+    | '/vala/leader-security'
+    | '/vala/legal'
+    | '/vala/marketing'
+    | '/vala/master-admin'
+    | '/vala/master-control'
+    | '/vala/notification-buzzer'
+    | '/vala/performance'
+    | '/vala/personal-chat'
+    | '/vala/premium-demo'
+    | '/vala/prime-user'
+    | '/vala/pro-manager'
+    | '/vala/product-demo'
+    | '/vala/promise-mgmt'
+    | '/vala/promise-tracker'
+    | '/vala/reseller'
+    | '/vala/reseller-portal'
+    | '/vala/rnd'
+    | '/vala/safe-assist'
+    | '/vala/sales-support'
+    | '/vala/sectors'
+    | '/vala/secure-system'
+    | '/vala/security-command'
+    | '/vala/seo'
+    | '/vala/server'
+    | '/vala/server-manager'
+    | '/vala/simple-demo'
+    | '/vala/sub-demos'
+    | '/vala/super-admin'
+    | '/vala/system-settings'
+    | '/vala/task'
     | '/mlm/sa/backup'
     | '/mlm/sa/billing'
     | '/mlm/sa/cron'
@@ -3391,6 +4051,72 @@ export interface FileRouteTypes {
     | '/pos/shift'
     | '/pos/staff'
     | '/pos/sync'
+    | '/vala/ai-console'
+    | '/vala/api-ai'
+    | '/vala/api-integration'
+    | '/vala/api-manager'
+    | '/vala/apply-portal'
+    | '/vala/assist-manager'
+    | '/vala/billing'
+    | '/vala/career-portal'
+    | '/vala/category-onboard'
+    | '/vala/client-portal'
+    | '/vala/client-success'
+    | '/vala/continent-super'
+    | '/vala/control'
+    | '/vala/dashboard'
+    | '/vala/demo-access'
+    | '/vala/demo-credentials'
+    | '/vala/demo-directory'
+    | '/vala/demo-login'
+    | '/vala/demo-manager'
+    | '/vala/demo-showcase'
+    | '/vala/dev-command'
+    | '/vala/dev-manager'
+    | '/vala/developer'
+    | '/vala/enterprise'
+    | '/vala/enterprise-control'
+    | '/vala/finance'
+    | '/vala/franchise'
+    | '/vala/franchise-manager'
+    | '/vala/homepage'
+    | '/vala/hr'
+    | '/vala/incident'
+    | '/vala/influencer'
+    | '/vala/influencer-manager'
+    | '/vala/internal-chat'
+    | '/vala/landing'
+    | '/vala/lead'
+    | '/vala/leader-security'
+    | '/vala/legal'
+    | '/vala/marketing'
+    | '/vala/master-admin'
+    | '/vala/master-control'
+    | '/vala/notification-buzzer'
+    | '/vala/performance'
+    | '/vala/personal-chat'
+    | '/vala/premium-demo'
+    | '/vala/prime-user'
+    | '/vala/pro-manager'
+    | '/vala/product-demo'
+    | '/vala/promise-mgmt'
+    | '/vala/promise-tracker'
+    | '/vala/reseller'
+    | '/vala/reseller-portal'
+    | '/vala/rnd'
+    | '/vala/safe-assist'
+    | '/vala/sales-support'
+    | '/vala/sectors'
+    | '/vala/secure-system'
+    | '/vala/security-command'
+    | '/vala/seo'
+    | '/vala/server'
+    | '/vala/server-manager'
+    | '/vala/simple-demo'
+    | '/vala/sub-demos'
+    | '/vala/super-admin'
+    | '/vala/system-settings'
+    | '/vala/task'
     | '/mlm/sa/backup'
     | '/mlm/sa/billing'
     | '/mlm/sa/cron'
@@ -3700,6 +4426,72 @@ export interface FileRouteTypes {
     | '/pos/shift'
     | '/pos/staff'
     | '/pos/sync'
+    | '/vala/ai-console'
+    | '/vala/api-ai'
+    | '/vala/api-integration'
+    | '/vala/api-manager'
+    | '/vala/apply-portal'
+    | '/vala/assist-manager'
+    | '/vala/billing'
+    | '/vala/career-portal'
+    | '/vala/category-onboard'
+    | '/vala/client-portal'
+    | '/vala/client-success'
+    | '/vala/continent-super'
+    | '/vala/control'
+    | '/vala/dashboard'
+    | '/vala/demo-access'
+    | '/vala/demo-credentials'
+    | '/vala/demo-directory'
+    | '/vala/demo-login'
+    | '/vala/demo-manager'
+    | '/vala/demo-showcase'
+    | '/vala/dev-command'
+    | '/vala/dev-manager'
+    | '/vala/developer'
+    | '/vala/enterprise'
+    | '/vala/enterprise-control'
+    | '/vala/finance'
+    | '/vala/franchise'
+    | '/vala/franchise-manager'
+    | '/vala/homepage'
+    | '/vala/hr'
+    | '/vala/incident'
+    | '/vala/influencer'
+    | '/vala/influencer-manager'
+    | '/vala/internal-chat'
+    | '/vala/landing'
+    | '/vala/lead'
+    | '/vala/leader-security'
+    | '/vala/legal'
+    | '/vala/marketing'
+    | '/vala/master-admin'
+    | '/vala/master-control'
+    | '/vala/notification-buzzer'
+    | '/vala/performance'
+    | '/vala/personal-chat'
+    | '/vala/premium-demo'
+    | '/vala/prime-user'
+    | '/vala/pro-manager'
+    | '/vala/product-demo'
+    | '/vala/promise-mgmt'
+    | '/vala/promise-tracker'
+    | '/vala/reseller'
+    | '/vala/reseller-portal'
+    | '/vala/rnd'
+    | '/vala/safe-assist'
+    | '/vala/sales-support'
+    | '/vala/sectors'
+    | '/vala/secure-system'
+    | '/vala/security-command'
+    | '/vala/seo'
+    | '/vala/server'
+    | '/vala/server-manager'
+    | '/vala/simple-demo'
+    | '/vala/sub-demos'
+    | '/vala/super-admin'
+    | '/vala/system-settings'
+    | '/vala/task'
     | '/mlm/sa/backup'
     | '/mlm/sa/billing'
     | '/mlm/sa/cron'
@@ -4001,6 +4793,72 @@ export interface RootRouteChildren {
   PosShiftRoute: typeof PosShiftRoute
   PosStaffRoute: typeof PosStaffRoute
   PosSyncRoute: typeof PosSyncRoute
+  ValaAiConsoleRoute: typeof ValaAiConsoleRoute
+  ValaApiAiRoute: typeof ValaApiAiRoute
+  ValaApiIntegrationRoute: typeof ValaApiIntegrationRoute
+  ValaApiManagerRoute: typeof ValaApiManagerRoute
+  ValaApplyPortalRoute: typeof ValaApplyPortalRoute
+  ValaAssistManagerRoute: typeof ValaAssistManagerRoute
+  ValaBillingRoute: typeof ValaBillingRoute
+  ValaCareerPortalRoute: typeof ValaCareerPortalRoute
+  ValaCategoryOnboardRoute: typeof ValaCategoryOnboardRoute
+  ValaClientPortalRoute: typeof ValaClientPortalRoute
+  ValaClientSuccessRoute: typeof ValaClientSuccessRoute
+  ValaContinentSuperRoute: typeof ValaContinentSuperRoute
+  ValaControlRoute: typeof ValaControlRoute
+  ValaDashboardRoute: typeof ValaDashboardRoute
+  ValaDemoAccessRoute: typeof ValaDemoAccessRoute
+  ValaDemoCredentialsRoute: typeof ValaDemoCredentialsRoute
+  ValaDemoDirectoryRoute: typeof ValaDemoDirectoryRoute
+  ValaDemoLoginRoute: typeof ValaDemoLoginRoute
+  ValaDemoManagerRoute: typeof ValaDemoManagerRoute
+  ValaDemoShowcaseRoute: typeof ValaDemoShowcaseRoute
+  ValaDevCommandRoute: typeof ValaDevCommandRoute
+  ValaDevManagerRoute: typeof ValaDevManagerRoute
+  ValaDeveloperRoute: typeof ValaDeveloperRoute
+  ValaEnterpriseRoute: typeof ValaEnterpriseRoute
+  ValaEnterpriseControlRoute: typeof ValaEnterpriseControlRoute
+  ValaFinanceRoute: typeof ValaFinanceRoute
+  ValaFranchiseRoute: typeof ValaFranchiseRoute
+  ValaFranchiseManagerRoute: typeof ValaFranchiseManagerRoute
+  ValaHomepageRoute: typeof ValaHomepageRoute
+  ValaHrRoute: typeof ValaHrRoute
+  ValaIncidentRoute: typeof ValaIncidentRoute
+  ValaInfluencerRoute: typeof ValaInfluencerRoute
+  ValaInfluencerManagerRoute: typeof ValaInfluencerManagerRoute
+  ValaInternalChatRoute: typeof ValaInternalChatRoute
+  ValaLandingRoute: typeof ValaLandingRoute
+  ValaLeadRoute: typeof ValaLeadRoute
+  ValaLeaderSecurityRoute: typeof ValaLeaderSecurityRoute
+  ValaLegalRoute: typeof ValaLegalRoute
+  ValaMarketingRoute: typeof ValaMarketingRoute
+  ValaMasterAdminRoute: typeof ValaMasterAdminRoute
+  ValaMasterControlRoute: typeof ValaMasterControlRoute
+  ValaNotificationBuzzerRoute: typeof ValaNotificationBuzzerRoute
+  ValaPerformanceRoute: typeof ValaPerformanceRoute
+  ValaPersonalChatRoute: typeof ValaPersonalChatRoute
+  ValaPremiumDemoRoute: typeof ValaPremiumDemoRoute
+  ValaPrimeUserRoute: typeof ValaPrimeUserRoute
+  ValaProManagerRoute: typeof ValaProManagerRoute
+  ValaProductDemoRoute: typeof ValaProductDemoRoute
+  ValaPromiseMgmtRoute: typeof ValaPromiseMgmtRoute
+  ValaPromiseTrackerRoute: typeof ValaPromiseTrackerRoute
+  ValaResellerRoute: typeof ValaResellerRoute
+  ValaResellerPortalRoute: typeof ValaResellerPortalRoute
+  ValaRndRoute: typeof ValaRndRoute
+  ValaSafeAssistRoute: typeof ValaSafeAssistRoute
+  ValaSalesSupportRoute: typeof ValaSalesSupportRoute
+  ValaSectorsRoute: typeof ValaSectorsRoute
+  ValaSecureSystemRoute: typeof ValaSecureSystemRoute
+  ValaSecurityCommandRoute: typeof ValaSecurityCommandRoute
+  ValaSeoRoute: typeof ValaSeoRoute
+  ValaServerRoute: typeof ValaServerRoute
+  ValaServerManagerRoute: typeof ValaServerManagerRoute
+  ValaSimpleDemoRoute: typeof ValaSimpleDemoRoute
+  ValaSubDemosRoute: typeof ValaSubDemosRoute
+  ValaSuperAdminRoute: typeof ValaSuperAdminRoute
+  ValaSystemSettingsRoute: typeof ValaSystemSettingsRoute
+  ValaTaskRoute: typeof ValaTaskRoute
   MlmSaBackupRoute: typeof MlmSaBackupRoute
   MlmSaBillingRoute: typeof MlmSaBillingRoute
   MlmSaCronRoute: typeof MlmSaCronRoute
@@ -4587,6 +5445,468 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/task': {
+      id: '/vala/task'
+      path: '/vala/task'
+      fullPath: '/vala/task'
+      preLoaderRoute: typeof ValaTaskRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/system-settings': {
+      id: '/vala/system-settings'
+      path: '/vala/system-settings'
+      fullPath: '/vala/system-settings'
+      preLoaderRoute: typeof ValaSystemSettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/super-admin': {
+      id: '/vala/super-admin'
+      path: '/vala/super-admin'
+      fullPath: '/vala/super-admin'
+      preLoaderRoute: typeof ValaSuperAdminRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/sub-demos': {
+      id: '/vala/sub-demos'
+      path: '/vala/sub-demos'
+      fullPath: '/vala/sub-demos'
+      preLoaderRoute: typeof ValaSubDemosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/simple-demo': {
+      id: '/vala/simple-demo'
+      path: '/vala/simple-demo'
+      fullPath: '/vala/simple-demo'
+      preLoaderRoute: typeof ValaSimpleDemoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/server-manager': {
+      id: '/vala/server-manager'
+      path: '/vala/server-manager'
+      fullPath: '/vala/server-manager'
+      preLoaderRoute: typeof ValaServerManagerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/server': {
+      id: '/vala/server'
+      path: '/vala/server'
+      fullPath: '/vala/server'
+      preLoaderRoute: typeof ValaServerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/seo': {
+      id: '/vala/seo'
+      path: '/vala/seo'
+      fullPath: '/vala/seo'
+      preLoaderRoute: typeof ValaSeoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/security-command': {
+      id: '/vala/security-command'
+      path: '/vala/security-command'
+      fullPath: '/vala/security-command'
+      preLoaderRoute: typeof ValaSecurityCommandRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/secure-system': {
+      id: '/vala/secure-system'
+      path: '/vala/secure-system'
+      fullPath: '/vala/secure-system'
+      preLoaderRoute: typeof ValaSecureSystemRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/sectors': {
+      id: '/vala/sectors'
+      path: '/vala/sectors'
+      fullPath: '/vala/sectors'
+      preLoaderRoute: typeof ValaSectorsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/sales-support': {
+      id: '/vala/sales-support'
+      path: '/vala/sales-support'
+      fullPath: '/vala/sales-support'
+      preLoaderRoute: typeof ValaSalesSupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/safe-assist': {
+      id: '/vala/safe-assist'
+      path: '/vala/safe-assist'
+      fullPath: '/vala/safe-assist'
+      preLoaderRoute: typeof ValaSafeAssistRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/rnd': {
+      id: '/vala/rnd'
+      path: '/vala/rnd'
+      fullPath: '/vala/rnd'
+      preLoaderRoute: typeof ValaRndRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/reseller-portal': {
+      id: '/vala/reseller-portal'
+      path: '/vala/reseller-portal'
+      fullPath: '/vala/reseller-portal'
+      preLoaderRoute: typeof ValaResellerPortalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/reseller': {
+      id: '/vala/reseller'
+      path: '/vala/reseller'
+      fullPath: '/vala/reseller'
+      preLoaderRoute: typeof ValaResellerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/promise-tracker': {
+      id: '/vala/promise-tracker'
+      path: '/vala/promise-tracker'
+      fullPath: '/vala/promise-tracker'
+      preLoaderRoute: typeof ValaPromiseTrackerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/promise-mgmt': {
+      id: '/vala/promise-mgmt'
+      path: '/vala/promise-mgmt'
+      fullPath: '/vala/promise-mgmt'
+      preLoaderRoute: typeof ValaPromiseMgmtRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/product-demo': {
+      id: '/vala/product-demo'
+      path: '/vala/product-demo'
+      fullPath: '/vala/product-demo'
+      preLoaderRoute: typeof ValaProductDemoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/pro-manager': {
+      id: '/vala/pro-manager'
+      path: '/vala/pro-manager'
+      fullPath: '/vala/pro-manager'
+      preLoaderRoute: typeof ValaProManagerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/prime-user': {
+      id: '/vala/prime-user'
+      path: '/vala/prime-user'
+      fullPath: '/vala/prime-user'
+      preLoaderRoute: typeof ValaPrimeUserRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/premium-demo': {
+      id: '/vala/premium-demo'
+      path: '/vala/premium-demo'
+      fullPath: '/vala/premium-demo'
+      preLoaderRoute: typeof ValaPremiumDemoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/personal-chat': {
+      id: '/vala/personal-chat'
+      path: '/vala/personal-chat'
+      fullPath: '/vala/personal-chat'
+      preLoaderRoute: typeof ValaPersonalChatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/performance': {
+      id: '/vala/performance'
+      path: '/vala/performance'
+      fullPath: '/vala/performance'
+      preLoaderRoute: typeof ValaPerformanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/notification-buzzer': {
+      id: '/vala/notification-buzzer'
+      path: '/vala/notification-buzzer'
+      fullPath: '/vala/notification-buzzer'
+      preLoaderRoute: typeof ValaNotificationBuzzerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/master-control': {
+      id: '/vala/master-control'
+      path: '/vala/master-control'
+      fullPath: '/vala/master-control'
+      preLoaderRoute: typeof ValaMasterControlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/master-admin': {
+      id: '/vala/master-admin'
+      path: '/vala/master-admin'
+      fullPath: '/vala/master-admin'
+      preLoaderRoute: typeof ValaMasterAdminRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/marketing': {
+      id: '/vala/marketing'
+      path: '/vala/marketing'
+      fullPath: '/vala/marketing'
+      preLoaderRoute: typeof ValaMarketingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/legal': {
+      id: '/vala/legal'
+      path: '/vala/legal'
+      fullPath: '/vala/legal'
+      preLoaderRoute: typeof ValaLegalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/leader-security': {
+      id: '/vala/leader-security'
+      path: '/vala/leader-security'
+      fullPath: '/vala/leader-security'
+      preLoaderRoute: typeof ValaLeaderSecurityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/lead': {
+      id: '/vala/lead'
+      path: '/vala/lead'
+      fullPath: '/vala/lead'
+      preLoaderRoute: typeof ValaLeadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/landing': {
+      id: '/vala/landing'
+      path: '/vala/landing'
+      fullPath: '/vala/landing'
+      preLoaderRoute: typeof ValaLandingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/internal-chat': {
+      id: '/vala/internal-chat'
+      path: '/vala/internal-chat'
+      fullPath: '/vala/internal-chat'
+      preLoaderRoute: typeof ValaInternalChatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/influencer-manager': {
+      id: '/vala/influencer-manager'
+      path: '/vala/influencer-manager'
+      fullPath: '/vala/influencer-manager'
+      preLoaderRoute: typeof ValaInfluencerManagerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/influencer': {
+      id: '/vala/influencer'
+      path: '/vala/influencer'
+      fullPath: '/vala/influencer'
+      preLoaderRoute: typeof ValaInfluencerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/incident': {
+      id: '/vala/incident'
+      path: '/vala/incident'
+      fullPath: '/vala/incident'
+      preLoaderRoute: typeof ValaIncidentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/hr': {
+      id: '/vala/hr'
+      path: '/vala/hr'
+      fullPath: '/vala/hr'
+      preLoaderRoute: typeof ValaHrRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/homepage': {
+      id: '/vala/homepage'
+      path: '/vala/homepage'
+      fullPath: '/vala/homepage'
+      preLoaderRoute: typeof ValaHomepageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/franchise-manager': {
+      id: '/vala/franchise-manager'
+      path: '/vala/franchise-manager'
+      fullPath: '/vala/franchise-manager'
+      preLoaderRoute: typeof ValaFranchiseManagerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/franchise': {
+      id: '/vala/franchise'
+      path: '/vala/franchise'
+      fullPath: '/vala/franchise'
+      preLoaderRoute: typeof ValaFranchiseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/finance': {
+      id: '/vala/finance'
+      path: '/vala/finance'
+      fullPath: '/vala/finance'
+      preLoaderRoute: typeof ValaFinanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/enterprise-control': {
+      id: '/vala/enterprise-control'
+      path: '/vala/enterprise-control'
+      fullPath: '/vala/enterprise-control'
+      preLoaderRoute: typeof ValaEnterpriseControlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/enterprise': {
+      id: '/vala/enterprise'
+      path: '/vala/enterprise'
+      fullPath: '/vala/enterprise'
+      preLoaderRoute: typeof ValaEnterpriseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/developer': {
+      id: '/vala/developer'
+      path: '/vala/developer'
+      fullPath: '/vala/developer'
+      preLoaderRoute: typeof ValaDeveloperRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/dev-manager': {
+      id: '/vala/dev-manager'
+      path: '/vala/dev-manager'
+      fullPath: '/vala/dev-manager'
+      preLoaderRoute: typeof ValaDevManagerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/dev-command': {
+      id: '/vala/dev-command'
+      path: '/vala/dev-command'
+      fullPath: '/vala/dev-command'
+      preLoaderRoute: typeof ValaDevCommandRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/demo-showcase': {
+      id: '/vala/demo-showcase'
+      path: '/vala/demo-showcase'
+      fullPath: '/vala/demo-showcase'
+      preLoaderRoute: typeof ValaDemoShowcaseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/demo-manager': {
+      id: '/vala/demo-manager'
+      path: '/vala/demo-manager'
+      fullPath: '/vala/demo-manager'
+      preLoaderRoute: typeof ValaDemoManagerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/demo-login': {
+      id: '/vala/demo-login'
+      path: '/vala/demo-login'
+      fullPath: '/vala/demo-login'
+      preLoaderRoute: typeof ValaDemoLoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/demo-directory': {
+      id: '/vala/demo-directory'
+      path: '/vala/demo-directory'
+      fullPath: '/vala/demo-directory'
+      preLoaderRoute: typeof ValaDemoDirectoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/demo-credentials': {
+      id: '/vala/demo-credentials'
+      path: '/vala/demo-credentials'
+      fullPath: '/vala/demo-credentials'
+      preLoaderRoute: typeof ValaDemoCredentialsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/demo-access': {
+      id: '/vala/demo-access'
+      path: '/vala/demo-access'
+      fullPath: '/vala/demo-access'
+      preLoaderRoute: typeof ValaDemoAccessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/dashboard': {
+      id: '/vala/dashboard'
+      path: '/vala/dashboard'
+      fullPath: '/vala/dashboard'
+      preLoaderRoute: typeof ValaDashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/control': {
+      id: '/vala/control'
+      path: '/vala/control'
+      fullPath: '/vala/control'
+      preLoaderRoute: typeof ValaControlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/continent-super': {
+      id: '/vala/continent-super'
+      path: '/vala/continent-super'
+      fullPath: '/vala/continent-super'
+      preLoaderRoute: typeof ValaContinentSuperRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/client-success': {
+      id: '/vala/client-success'
+      path: '/vala/client-success'
+      fullPath: '/vala/client-success'
+      preLoaderRoute: typeof ValaClientSuccessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/client-portal': {
+      id: '/vala/client-portal'
+      path: '/vala/client-portal'
+      fullPath: '/vala/client-portal'
+      preLoaderRoute: typeof ValaClientPortalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/category-onboard': {
+      id: '/vala/category-onboard'
+      path: '/vala/category-onboard'
+      fullPath: '/vala/category-onboard'
+      preLoaderRoute: typeof ValaCategoryOnboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/career-portal': {
+      id: '/vala/career-portal'
+      path: '/vala/career-portal'
+      fullPath: '/vala/career-portal'
+      preLoaderRoute: typeof ValaCareerPortalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/billing': {
+      id: '/vala/billing'
+      path: '/vala/billing'
+      fullPath: '/vala/billing'
+      preLoaderRoute: typeof ValaBillingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/assist-manager': {
+      id: '/vala/assist-manager'
+      path: '/vala/assist-manager'
+      fullPath: '/vala/assist-manager'
+      preLoaderRoute: typeof ValaAssistManagerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/apply-portal': {
+      id: '/vala/apply-portal'
+      path: '/vala/apply-portal'
+      fullPath: '/vala/apply-portal'
+      preLoaderRoute: typeof ValaApplyPortalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/api-manager': {
+      id: '/vala/api-manager'
+      path: '/vala/api-manager'
+      fullPath: '/vala/api-manager'
+      preLoaderRoute: typeof ValaApiManagerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/api-integration': {
+      id: '/vala/api-integration'
+      path: '/vala/api-integration'
+      fullPath: '/vala/api-integration'
+      preLoaderRoute: typeof ValaApiIntegrationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/api-ai': {
+      id: '/vala/api-ai'
+      path: '/vala/api-ai'
+      fullPath: '/vala/api-ai'
+      preLoaderRoute: typeof ValaApiAiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vala/ai-console': {
+      id: '/vala/ai-console'
+      path: '/vala/ai-console'
+      fullPath: '/vala/ai-console'
+      preLoaderRoute: typeof ValaAiConsoleRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/pos/sync': {
@@ -6482,6 +7802,72 @@ const rootRouteChildren: RootRouteChildren = {
   PosShiftRoute: PosShiftRoute,
   PosStaffRoute: PosStaffRoute,
   PosSyncRoute: PosSyncRoute,
+  ValaAiConsoleRoute: ValaAiConsoleRoute,
+  ValaApiAiRoute: ValaApiAiRoute,
+  ValaApiIntegrationRoute: ValaApiIntegrationRoute,
+  ValaApiManagerRoute: ValaApiManagerRoute,
+  ValaApplyPortalRoute: ValaApplyPortalRoute,
+  ValaAssistManagerRoute: ValaAssistManagerRoute,
+  ValaBillingRoute: ValaBillingRoute,
+  ValaCareerPortalRoute: ValaCareerPortalRoute,
+  ValaCategoryOnboardRoute: ValaCategoryOnboardRoute,
+  ValaClientPortalRoute: ValaClientPortalRoute,
+  ValaClientSuccessRoute: ValaClientSuccessRoute,
+  ValaContinentSuperRoute: ValaContinentSuperRoute,
+  ValaControlRoute: ValaControlRoute,
+  ValaDashboardRoute: ValaDashboardRoute,
+  ValaDemoAccessRoute: ValaDemoAccessRoute,
+  ValaDemoCredentialsRoute: ValaDemoCredentialsRoute,
+  ValaDemoDirectoryRoute: ValaDemoDirectoryRoute,
+  ValaDemoLoginRoute: ValaDemoLoginRoute,
+  ValaDemoManagerRoute: ValaDemoManagerRoute,
+  ValaDemoShowcaseRoute: ValaDemoShowcaseRoute,
+  ValaDevCommandRoute: ValaDevCommandRoute,
+  ValaDevManagerRoute: ValaDevManagerRoute,
+  ValaDeveloperRoute: ValaDeveloperRoute,
+  ValaEnterpriseRoute: ValaEnterpriseRoute,
+  ValaEnterpriseControlRoute: ValaEnterpriseControlRoute,
+  ValaFinanceRoute: ValaFinanceRoute,
+  ValaFranchiseRoute: ValaFranchiseRoute,
+  ValaFranchiseManagerRoute: ValaFranchiseManagerRoute,
+  ValaHomepageRoute: ValaHomepageRoute,
+  ValaHrRoute: ValaHrRoute,
+  ValaIncidentRoute: ValaIncidentRoute,
+  ValaInfluencerRoute: ValaInfluencerRoute,
+  ValaInfluencerManagerRoute: ValaInfluencerManagerRoute,
+  ValaInternalChatRoute: ValaInternalChatRoute,
+  ValaLandingRoute: ValaLandingRoute,
+  ValaLeadRoute: ValaLeadRoute,
+  ValaLeaderSecurityRoute: ValaLeaderSecurityRoute,
+  ValaLegalRoute: ValaLegalRoute,
+  ValaMarketingRoute: ValaMarketingRoute,
+  ValaMasterAdminRoute: ValaMasterAdminRoute,
+  ValaMasterControlRoute: ValaMasterControlRoute,
+  ValaNotificationBuzzerRoute: ValaNotificationBuzzerRoute,
+  ValaPerformanceRoute: ValaPerformanceRoute,
+  ValaPersonalChatRoute: ValaPersonalChatRoute,
+  ValaPremiumDemoRoute: ValaPremiumDemoRoute,
+  ValaPrimeUserRoute: ValaPrimeUserRoute,
+  ValaProManagerRoute: ValaProManagerRoute,
+  ValaProductDemoRoute: ValaProductDemoRoute,
+  ValaPromiseMgmtRoute: ValaPromiseMgmtRoute,
+  ValaPromiseTrackerRoute: ValaPromiseTrackerRoute,
+  ValaResellerRoute: ValaResellerRoute,
+  ValaResellerPortalRoute: ValaResellerPortalRoute,
+  ValaRndRoute: ValaRndRoute,
+  ValaSafeAssistRoute: ValaSafeAssistRoute,
+  ValaSalesSupportRoute: ValaSalesSupportRoute,
+  ValaSectorsRoute: ValaSectorsRoute,
+  ValaSecureSystemRoute: ValaSecureSystemRoute,
+  ValaSecurityCommandRoute: ValaSecurityCommandRoute,
+  ValaSeoRoute: ValaSeoRoute,
+  ValaServerRoute: ValaServerRoute,
+  ValaServerManagerRoute: ValaServerManagerRoute,
+  ValaSimpleDemoRoute: ValaSimpleDemoRoute,
+  ValaSubDemosRoute: ValaSubDemosRoute,
+  ValaSuperAdminRoute: ValaSuperAdminRoute,
+  ValaSystemSettingsRoute: ValaSystemSettingsRoute,
+  ValaTaskRoute: ValaTaskRoute,
   MlmSaBackupRoute: MlmSaBackupRoute,
   MlmSaBillingRoute: MlmSaBillingRoute,
   MlmSaCronRoute: MlmSaCronRoute,
