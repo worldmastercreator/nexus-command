@@ -121,7 +121,7 @@ function BossPanel() {
                 const tones = ["text-success", "text-info", "text-warning", "text-ai", "text-primary"];
                 return (
                   <li key={i} className="flex items-center gap-2 border-b border-border/40 pb-1">
-                    <span className="text-muted-foreground">{new Date(Date.now() - i * 7400).toISOString().slice(11, 19)}</span>
+                    <span suppressHydrationWarning className="text-muted-foreground">{`${String((23 - i) % 24).padStart(2,"0")}:${String((59 - i * 3 + 60) % 60).padStart(2,"0")}:${String((42 - i * 7 + 60) % 60).padStart(2,"0")}`}</span>
                     <span className={tones[i % tones.length]}>{["OK", "INF", "WRN", "AI", "REQ"][i % 5]}</span>
                     <span className="truncate text-foreground/80">{["edge", "core", "agent", "queue", "db"][i % 5]} · {["ingest", "scan", "route", "compile", "sync"][i % 5]} · {(91234 - i * 9).toString(16)}</span>
                   </li>
