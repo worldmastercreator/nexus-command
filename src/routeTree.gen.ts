@@ -91,6 +91,31 @@ import { Route as AnalyticsRouteImport } from './routes/analytics'
 import { Route as AiRouteImport } from './routes/ai'
 import { Route as AffiliatesRouteImport } from './routes/affiliates'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as PosSyncRouteImport } from './routes/pos.sync'
+import { Route as PosStaffRouteImport } from './routes/pos.staff'
+import { Route as PosShiftRouteImport } from './routes/pos.shift'
+import { Route as PosSettingsRouteImport } from './routes/pos.settings'
+import { Route as PosRolesRouteImport } from './routes/pos.roles'
+import { Route as PosResellersRouteImport } from './routes/pos.resellers'
+import { Route as PosReportsRouteImport } from './routes/pos.reports'
+import { Route as PosReceiptsRouteImport } from './routes/pos.receipts'
+import { Route as PosProductsRouteImport } from './routes/pos.products'
+import { Route as PosPrinterRouteImport } from './routes/pos.printer'
+import { Route as PosPaymentsRouteImport } from './routes/pos.payments'
+import { Route as PosLicensesRouteImport } from './routes/pos.licenses'
+import { Route as PosInventoryRouteImport } from './routes/pos.inventory'
+import { Route as PosHeldRouteImport } from './routes/pos.held'
+import { Route as PosFranchisesRouteImport } from './routes/pos.franchises'
+import { Route as PosFinanceRouteImport } from './routes/pos.finance'
+import { Route as PosFeaturesRouteImport } from './routes/pos.features'
+import { Route as PosCustomersRouteImport } from './routes/pos.customers'
+import { Route as PosCompaniesRouteImport } from './routes/pos.companies'
+import { Route as PosBrandingRouteImport } from './routes/pos.branding'
+import { Route as PosBillingRouteImport } from './routes/pos.billing'
+import { Route as PosBankingRouteImport } from './routes/pos.banking'
+import { Route as PosAuditRouteImport } from './routes/pos.audit'
+import { Route as PosApiRouteImport } from './routes/pos.api'
+import { Route as PosAgentsRouteImport } from './routes/pos.agents'
 import { Route as PortalUserRouteImport } from './routes/portal.user'
 import { Route as PortalSupportRouteImport } from './routes/portal.support'
 import { Route as PortalSeoRouteImport } from './routes/portal.seo'
@@ -113,6 +138,21 @@ import { Route as PayrollDeductionsRouteImport } from './routes/payroll.deductio
 import { Route as PayrollDashboardRouteImport } from './routes/payroll.dashboard'
 import { Route as PayrollBonusesRouteImport } from './routes/payroll.bonuses'
 import { Route as PayrollAttendanceRouteImport } from './routes/payroll.attendance'
+import { Route as MlmWhiteLabelRouteImport } from './routes/mlm.white-label'
+import { Route as MlmWalletRouteImport } from './routes/mlm.wallet'
+import { Route as MlmSupportRouteImport } from './routes/mlm.support'
+import { Route as MlmSettingsRouteImport } from './routes/mlm.settings'
+import { Route as MlmReportsRouteImport } from './routes/mlm.reports'
+import { Route as MlmRanksRouteImport } from './routes/mlm.ranks'
+import { Route as MlmPoolsRouteImport } from './routes/mlm.pools'
+import { Route as MlmPayoutsRouteImport } from './routes/mlm.payouts'
+import { Route as MlmPackagesRouteImport } from './routes/mlm.packages'
+import { Route as MlmNetworkRouteImport } from './routes/mlm.network'
+import { Route as MlmMembersRouteImport } from './routes/mlm.members'
+import { Route as MlmIntegrationsRouteImport } from './routes/mlm.integrations'
+import { Route as MlmCommissionsRouteImport } from './routes/mlm.commissions'
+import { Route as MlmAuditRouteImport } from './routes/mlm.audit'
+import { Route as MlmAnalyticsRouteImport } from './routes/mlm.analytics'
 import { Route as HrSettingsRouteImport } from './routes/hr.settings'
 import { Route as HrPerformanceRouteImport } from './routes/hr.performance'
 import { Route as HrLeaveRouteImport } from './routes/hr.leave'
@@ -214,6 +254,16 @@ import { Route as AiBuilderRouteImport } from './routes/ai.builder'
 import { Route as AiBotsRouteImport } from './routes/ai.bots'
 import { Route as AiApiRouteImport } from './routes/ai.api'
 import { Route as AiAgentsRouteImport } from './routes/ai.agents'
+import { Route as MlmSaTenantsRouteImport } from './routes/mlm.sa.tenants'
+import { Route as MlmSaSystemRouteImport } from './routes/mlm.sa.system'
+import { Route as MlmSaSecurityRouteImport } from './routes/mlm.sa.security'
+import { Route as MlmSaRevenueRouteImport } from './routes/mlm.sa.revenue'
+import { Route as MlmSaPlanEngineRouteImport } from './routes/mlm.sa.plan-engine'
+import { Route as MlmSaLicensesRouteImport } from './routes/mlm.sa.licenses'
+import { Route as MlmSaGatewaysRouteImport } from './routes/mlm.sa.gateways'
+import { Route as MlmSaCronRouteImport } from './routes/mlm.sa.cron'
+import { Route as MlmSaBillingRouteImport } from './routes/mlm.sa.billing'
+import { Route as MlmSaBackupRouteImport } from './routes/mlm.sa.backup'
 
 const WhiteLabelRoute = WhiteLabelRouteImport.update({
   id: '/white-label',
@@ -625,6 +675,131 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PosSyncRoute = PosSyncRouteImport.update({
+  id: '/pos/sync',
+  path: '/pos/sync',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PosStaffRoute = PosStaffRouteImport.update({
+  id: '/pos/staff',
+  path: '/pos/staff',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PosShiftRoute = PosShiftRouteImport.update({
+  id: '/pos/shift',
+  path: '/pos/shift',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PosSettingsRoute = PosSettingsRouteImport.update({
+  id: '/pos/settings',
+  path: '/pos/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PosRolesRoute = PosRolesRouteImport.update({
+  id: '/pos/roles',
+  path: '/pos/roles',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PosResellersRoute = PosResellersRouteImport.update({
+  id: '/pos/resellers',
+  path: '/pos/resellers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PosReportsRoute = PosReportsRouteImport.update({
+  id: '/pos/reports',
+  path: '/pos/reports',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PosReceiptsRoute = PosReceiptsRouteImport.update({
+  id: '/pos/receipts',
+  path: '/pos/receipts',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PosProductsRoute = PosProductsRouteImport.update({
+  id: '/pos/products',
+  path: '/pos/products',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PosPrinterRoute = PosPrinterRouteImport.update({
+  id: '/pos/printer',
+  path: '/pos/printer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PosPaymentsRoute = PosPaymentsRouteImport.update({
+  id: '/pos/payments',
+  path: '/pos/payments',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PosLicensesRoute = PosLicensesRouteImport.update({
+  id: '/pos/licenses',
+  path: '/pos/licenses',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PosInventoryRoute = PosInventoryRouteImport.update({
+  id: '/pos/inventory',
+  path: '/pos/inventory',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PosHeldRoute = PosHeldRouteImport.update({
+  id: '/pos/held',
+  path: '/pos/held',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PosFranchisesRoute = PosFranchisesRouteImport.update({
+  id: '/pos/franchises',
+  path: '/pos/franchises',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PosFinanceRoute = PosFinanceRouteImport.update({
+  id: '/pos/finance',
+  path: '/pos/finance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PosFeaturesRoute = PosFeaturesRouteImport.update({
+  id: '/pos/features',
+  path: '/pos/features',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PosCustomersRoute = PosCustomersRouteImport.update({
+  id: '/pos/customers',
+  path: '/pos/customers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PosCompaniesRoute = PosCompaniesRouteImport.update({
+  id: '/pos/companies',
+  path: '/pos/companies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PosBrandingRoute = PosBrandingRouteImport.update({
+  id: '/pos/branding',
+  path: '/pos/branding',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PosBillingRoute = PosBillingRouteImport.update({
+  id: '/pos/billing',
+  path: '/pos/billing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PosBankingRoute = PosBankingRouteImport.update({
+  id: '/pos/banking',
+  path: '/pos/banking',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PosAuditRoute = PosAuditRouteImport.update({
+  id: '/pos/audit',
+  path: '/pos/audit',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PosApiRoute = PosApiRouteImport.update({
+  id: '/pos/api',
+  path: '/pos/api',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PosAgentsRoute = PosAgentsRouteImport.update({
+  id: '/pos/agents',
+  path: '/pos/agents',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PortalUserRoute = PortalUserRouteImport.update({
   id: '/portal/user',
   path: '/portal/user',
@@ -733,6 +908,81 @@ const PayrollBonusesRoute = PayrollBonusesRouteImport.update({
 const PayrollAttendanceRoute = PayrollAttendanceRouteImport.update({
   id: '/payroll/attendance',
   path: '/payroll/attendance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MlmWhiteLabelRoute = MlmWhiteLabelRouteImport.update({
+  id: '/mlm/white-label',
+  path: '/mlm/white-label',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MlmWalletRoute = MlmWalletRouteImport.update({
+  id: '/mlm/wallet',
+  path: '/mlm/wallet',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MlmSupportRoute = MlmSupportRouteImport.update({
+  id: '/mlm/support',
+  path: '/mlm/support',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MlmSettingsRoute = MlmSettingsRouteImport.update({
+  id: '/mlm/settings',
+  path: '/mlm/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MlmReportsRoute = MlmReportsRouteImport.update({
+  id: '/mlm/reports',
+  path: '/mlm/reports',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MlmRanksRoute = MlmRanksRouteImport.update({
+  id: '/mlm/ranks',
+  path: '/mlm/ranks',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MlmPoolsRoute = MlmPoolsRouteImport.update({
+  id: '/mlm/pools',
+  path: '/mlm/pools',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MlmPayoutsRoute = MlmPayoutsRouteImport.update({
+  id: '/mlm/payouts',
+  path: '/mlm/payouts',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MlmPackagesRoute = MlmPackagesRouteImport.update({
+  id: '/mlm/packages',
+  path: '/mlm/packages',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MlmNetworkRoute = MlmNetworkRouteImport.update({
+  id: '/mlm/network',
+  path: '/mlm/network',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MlmMembersRoute = MlmMembersRouteImport.update({
+  id: '/mlm/members',
+  path: '/mlm/members',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MlmIntegrationsRoute = MlmIntegrationsRouteImport.update({
+  id: '/mlm/integrations',
+  path: '/mlm/integrations',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MlmCommissionsRoute = MlmCommissionsRouteImport.update({
+  id: '/mlm/commissions',
+  path: '/mlm/commissions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MlmAuditRoute = MlmAuditRouteImport.update({
+  id: '/mlm/audit',
+  path: '/mlm/audit',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MlmAnalyticsRoute = MlmAnalyticsRouteImport.update({
+  id: '/mlm/analytics',
+  path: '/mlm/analytics',
   getParentRoute: () => rootRouteImport,
 } as any)
 const HrSettingsRoute = HrSettingsRouteImport.update({
@@ -1241,6 +1491,56 @@ const AiAgentsRoute = AiAgentsRouteImport.update({
   path: '/agents',
   getParentRoute: () => AiRoute,
 } as any)
+const MlmSaTenantsRoute = MlmSaTenantsRouteImport.update({
+  id: '/mlm/sa/tenants',
+  path: '/mlm/sa/tenants',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MlmSaSystemRoute = MlmSaSystemRouteImport.update({
+  id: '/mlm/sa/system',
+  path: '/mlm/sa/system',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MlmSaSecurityRoute = MlmSaSecurityRouteImport.update({
+  id: '/mlm/sa/security',
+  path: '/mlm/sa/security',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MlmSaRevenueRoute = MlmSaRevenueRouteImport.update({
+  id: '/mlm/sa/revenue',
+  path: '/mlm/sa/revenue',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MlmSaPlanEngineRoute = MlmSaPlanEngineRouteImport.update({
+  id: '/mlm/sa/plan-engine',
+  path: '/mlm/sa/plan-engine',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MlmSaLicensesRoute = MlmSaLicensesRouteImport.update({
+  id: '/mlm/sa/licenses',
+  path: '/mlm/sa/licenses',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MlmSaGatewaysRoute = MlmSaGatewaysRouteImport.update({
+  id: '/mlm/sa/gateways',
+  path: '/mlm/sa/gateways',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MlmSaCronRoute = MlmSaCronRouteImport.update({
+  id: '/mlm/sa/cron',
+  path: '/mlm/sa/cron',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MlmSaBillingRoute = MlmSaBillingRouteImport.update({
+  id: '/mlm/sa/billing',
+  path: '/mlm/sa/billing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MlmSaBackupRoute = MlmSaBackupRouteImport.update({
+  id: '/mlm/sa/backup',
+  path: '/mlm/sa/backup',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -1426,6 +1726,21 @@ export interface FileRoutesByFullPath {
   '/hr/leave': typeof HrLeaveRoute
   '/hr/performance': typeof HrPerformanceRoute
   '/hr/settings': typeof HrSettingsRoute
+  '/mlm/analytics': typeof MlmAnalyticsRoute
+  '/mlm/audit': typeof MlmAuditRoute
+  '/mlm/commissions': typeof MlmCommissionsRoute
+  '/mlm/integrations': typeof MlmIntegrationsRoute
+  '/mlm/members': typeof MlmMembersRoute
+  '/mlm/network': typeof MlmNetworkRoute
+  '/mlm/packages': typeof MlmPackagesRoute
+  '/mlm/payouts': typeof MlmPayoutsRoute
+  '/mlm/pools': typeof MlmPoolsRoute
+  '/mlm/ranks': typeof MlmRanksRoute
+  '/mlm/reports': typeof MlmReportsRoute
+  '/mlm/settings': typeof MlmSettingsRoute
+  '/mlm/support': typeof MlmSupportRoute
+  '/mlm/wallet': typeof MlmWalletRoute
+  '/mlm/white-label': typeof MlmWhiteLabelRoute
   '/payroll/attendance': typeof PayrollAttendanceRoute
   '/payroll/bonuses': typeof PayrollBonusesRoute
   '/payroll/dashboard': typeof PayrollDashboardRoute
@@ -1448,6 +1763,41 @@ export interface FileRoutesByFullPath {
   '/portal/seo': typeof PortalSeoRoute
   '/portal/support': typeof PortalSupportRoute
   '/portal/user': typeof PortalUserRoute
+  '/pos/agents': typeof PosAgentsRoute
+  '/pos/api': typeof PosApiRoute
+  '/pos/audit': typeof PosAuditRoute
+  '/pos/banking': typeof PosBankingRoute
+  '/pos/billing': typeof PosBillingRoute
+  '/pos/branding': typeof PosBrandingRoute
+  '/pos/companies': typeof PosCompaniesRoute
+  '/pos/customers': typeof PosCustomersRoute
+  '/pos/features': typeof PosFeaturesRoute
+  '/pos/finance': typeof PosFinanceRoute
+  '/pos/franchises': typeof PosFranchisesRoute
+  '/pos/held': typeof PosHeldRoute
+  '/pos/inventory': typeof PosInventoryRoute
+  '/pos/licenses': typeof PosLicensesRoute
+  '/pos/payments': typeof PosPaymentsRoute
+  '/pos/printer': typeof PosPrinterRoute
+  '/pos/products': typeof PosProductsRoute
+  '/pos/receipts': typeof PosReceiptsRoute
+  '/pos/reports': typeof PosReportsRoute
+  '/pos/resellers': typeof PosResellersRoute
+  '/pos/roles': typeof PosRolesRoute
+  '/pos/settings': typeof PosSettingsRoute
+  '/pos/shift': typeof PosShiftRoute
+  '/pos/staff': typeof PosStaffRoute
+  '/pos/sync': typeof PosSyncRoute
+  '/mlm/sa/backup': typeof MlmSaBackupRoute
+  '/mlm/sa/billing': typeof MlmSaBillingRoute
+  '/mlm/sa/cron': typeof MlmSaCronRoute
+  '/mlm/sa/gateways': typeof MlmSaGatewaysRoute
+  '/mlm/sa/licenses': typeof MlmSaLicensesRoute
+  '/mlm/sa/plan-engine': typeof MlmSaPlanEngineRoute
+  '/mlm/sa/revenue': typeof MlmSaRevenueRoute
+  '/mlm/sa/security': typeof MlmSaSecurityRoute
+  '/mlm/sa/system': typeof MlmSaSystemRoute
+  '/mlm/sa/tenants': typeof MlmSaTenantsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -1633,6 +1983,21 @@ export interface FileRoutesByTo {
   '/hr/leave': typeof HrLeaveRoute
   '/hr/performance': typeof HrPerformanceRoute
   '/hr/settings': typeof HrSettingsRoute
+  '/mlm/analytics': typeof MlmAnalyticsRoute
+  '/mlm/audit': typeof MlmAuditRoute
+  '/mlm/commissions': typeof MlmCommissionsRoute
+  '/mlm/integrations': typeof MlmIntegrationsRoute
+  '/mlm/members': typeof MlmMembersRoute
+  '/mlm/network': typeof MlmNetworkRoute
+  '/mlm/packages': typeof MlmPackagesRoute
+  '/mlm/payouts': typeof MlmPayoutsRoute
+  '/mlm/pools': typeof MlmPoolsRoute
+  '/mlm/ranks': typeof MlmRanksRoute
+  '/mlm/reports': typeof MlmReportsRoute
+  '/mlm/settings': typeof MlmSettingsRoute
+  '/mlm/support': typeof MlmSupportRoute
+  '/mlm/wallet': typeof MlmWalletRoute
+  '/mlm/white-label': typeof MlmWhiteLabelRoute
   '/payroll/attendance': typeof PayrollAttendanceRoute
   '/payroll/bonuses': typeof PayrollBonusesRoute
   '/payroll/dashboard': typeof PayrollDashboardRoute
@@ -1655,6 +2020,41 @@ export interface FileRoutesByTo {
   '/portal/seo': typeof PortalSeoRoute
   '/portal/support': typeof PortalSupportRoute
   '/portal/user': typeof PortalUserRoute
+  '/pos/agents': typeof PosAgentsRoute
+  '/pos/api': typeof PosApiRoute
+  '/pos/audit': typeof PosAuditRoute
+  '/pos/banking': typeof PosBankingRoute
+  '/pos/billing': typeof PosBillingRoute
+  '/pos/branding': typeof PosBrandingRoute
+  '/pos/companies': typeof PosCompaniesRoute
+  '/pos/customers': typeof PosCustomersRoute
+  '/pos/features': typeof PosFeaturesRoute
+  '/pos/finance': typeof PosFinanceRoute
+  '/pos/franchises': typeof PosFranchisesRoute
+  '/pos/held': typeof PosHeldRoute
+  '/pos/inventory': typeof PosInventoryRoute
+  '/pos/licenses': typeof PosLicensesRoute
+  '/pos/payments': typeof PosPaymentsRoute
+  '/pos/printer': typeof PosPrinterRoute
+  '/pos/products': typeof PosProductsRoute
+  '/pos/receipts': typeof PosReceiptsRoute
+  '/pos/reports': typeof PosReportsRoute
+  '/pos/resellers': typeof PosResellersRoute
+  '/pos/roles': typeof PosRolesRoute
+  '/pos/settings': typeof PosSettingsRoute
+  '/pos/shift': typeof PosShiftRoute
+  '/pos/staff': typeof PosStaffRoute
+  '/pos/sync': typeof PosSyncRoute
+  '/mlm/sa/backup': typeof MlmSaBackupRoute
+  '/mlm/sa/billing': typeof MlmSaBillingRoute
+  '/mlm/sa/cron': typeof MlmSaCronRoute
+  '/mlm/sa/gateways': typeof MlmSaGatewaysRoute
+  '/mlm/sa/licenses': typeof MlmSaLicensesRoute
+  '/mlm/sa/plan-engine': typeof MlmSaPlanEngineRoute
+  '/mlm/sa/revenue': typeof MlmSaRevenueRoute
+  '/mlm/sa/security': typeof MlmSaSecurityRoute
+  '/mlm/sa/system': typeof MlmSaSystemRoute
+  '/mlm/sa/tenants': typeof MlmSaTenantsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -1841,6 +2241,21 @@ export interface FileRoutesById {
   '/hr/leave': typeof HrLeaveRoute
   '/hr/performance': typeof HrPerformanceRoute
   '/hr/settings': typeof HrSettingsRoute
+  '/mlm/analytics': typeof MlmAnalyticsRoute
+  '/mlm/audit': typeof MlmAuditRoute
+  '/mlm/commissions': typeof MlmCommissionsRoute
+  '/mlm/integrations': typeof MlmIntegrationsRoute
+  '/mlm/members': typeof MlmMembersRoute
+  '/mlm/network': typeof MlmNetworkRoute
+  '/mlm/packages': typeof MlmPackagesRoute
+  '/mlm/payouts': typeof MlmPayoutsRoute
+  '/mlm/pools': typeof MlmPoolsRoute
+  '/mlm/ranks': typeof MlmRanksRoute
+  '/mlm/reports': typeof MlmReportsRoute
+  '/mlm/settings': typeof MlmSettingsRoute
+  '/mlm/support': typeof MlmSupportRoute
+  '/mlm/wallet': typeof MlmWalletRoute
+  '/mlm/white-label': typeof MlmWhiteLabelRoute
   '/payroll/attendance': typeof PayrollAttendanceRoute
   '/payroll/bonuses': typeof PayrollBonusesRoute
   '/payroll/dashboard': typeof PayrollDashboardRoute
@@ -1863,6 +2278,41 @@ export interface FileRoutesById {
   '/portal/seo': typeof PortalSeoRoute
   '/portal/support': typeof PortalSupportRoute
   '/portal/user': typeof PortalUserRoute
+  '/pos/agents': typeof PosAgentsRoute
+  '/pos/api': typeof PosApiRoute
+  '/pos/audit': typeof PosAuditRoute
+  '/pos/banking': typeof PosBankingRoute
+  '/pos/billing': typeof PosBillingRoute
+  '/pos/branding': typeof PosBrandingRoute
+  '/pos/companies': typeof PosCompaniesRoute
+  '/pos/customers': typeof PosCustomersRoute
+  '/pos/features': typeof PosFeaturesRoute
+  '/pos/finance': typeof PosFinanceRoute
+  '/pos/franchises': typeof PosFranchisesRoute
+  '/pos/held': typeof PosHeldRoute
+  '/pos/inventory': typeof PosInventoryRoute
+  '/pos/licenses': typeof PosLicensesRoute
+  '/pos/payments': typeof PosPaymentsRoute
+  '/pos/printer': typeof PosPrinterRoute
+  '/pos/products': typeof PosProductsRoute
+  '/pos/receipts': typeof PosReceiptsRoute
+  '/pos/reports': typeof PosReportsRoute
+  '/pos/resellers': typeof PosResellersRoute
+  '/pos/roles': typeof PosRolesRoute
+  '/pos/settings': typeof PosSettingsRoute
+  '/pos/shift': typeof PosShiftRoute
+  '/pos/staff': typeof PosStaffRoute
+  '/pos/sync': typeof PosSyncRoute
+  '/mlm/sa/backup': typeof MlmSaBackupRoute
+  '/mlm/sa/billing': typeof MlmSaBillingRoute
+  '/mlm/sa/cron': typeof MlmSaCronRoute
+  '/mlm/sa/gateways': typeof MlmSaGatewaysRoute
+  '/mlm/sa/licenses': typeof MlmSaLicensesRoute
+  '/mlm/sa/plan-engine': typeof MlmSaPlanEngineRoute
+  '/mlm/sa/revenue': typeof MlmSaRevenueRoute
+  '/mlm/sa/security': typeof MlmSaSecurityRoute
+  '/mlm/sa/system': typeof MlmSaSystemRoute
+  '/mlm/sa/tenants': typeof MlmSaTenantsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -2050,6 +2500,21 @@ export interface FileRouteTypes {
     | '/hr/leave'
     | '/hr/performance'
     | '/hr/settings'
+    | '/mlm/analytics'
+    | '/mlm/audit'
+    | '/mlm/commissions'
+    | '/mlm/integrations'
+    | '/mlm/members'
+    | '/mlm/network'
+    | '/mlm/packages'
+    | '/mlm/payouts'
+    | '/mlm/pools'
+    | '/mlm/ranks'
+    | '/mlm/reports'
+    | '/mlm/settings'
+    | '/mlm/support'
+    | '/mlm/wallet'
+    | '/mlm/white-label'
     | '/payroll/attendance'
     | '/payroll/bonuses'
     | '/payroll/dashboard'
@@ -2072,6 +2537,41 @@ export interface FileRouteTypes {
     | '/portal/seo'
     | '/portal/support'
     | '/portal/user'
+    | '/pos/agents'
+    | '/pos/api'
+    | '/pos/audit'
+    | '/pos/banking'
+    | '/pos/billing'
+    | '/pos/branding'
+    | '/pos/companies'
+    | '/pos/customers'
+    | '/pos/features'
+    | '/pos/finance'
+    | '/pos/franchises'
+    | '/pos/held'
+    | '/pos/inventory'
+    | '/pos/licenses'
+    | '/pos/payments'
+    | '/pos/printer'
+    | '/pos/products'
+    | '/pos/receipts'
+    | '/pos/reports'
+    | '/pos/resellers'
+    | '/pos/roles'
+    | '/pos/settings'
+    | '/pos/shift'
+    | '/pos/staff'
+    | '/pos/sync'
+    | '/mlm/sa/backup'
+    | '/mlm/sa/billing'
+    | '/mlm/sa/cron'
+    | '/mlm/sa/gateways'
+    | '/mlm/sa/licenses'
+    | '/mlm/sa/plan-engine'
+    | '/mlm/sa/revenue'
+    | '/mlm/sa/security'
+    | '/mlm/sa/system'
+    | '/mlm/sa/tenants'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -2257,6 +2757,21 @@ export interface FileRouteTypes {
     | '/hr/leave'
     | '/hr/performance'
     | '/hr/settings'
+    | '/mlm/analytics'
+    | '/mlm/audit'
+    | '/mlm/commissions'
+    | '/mlm/integrations'
+    | '/mlm/members'
+    | '/mlm/network'
+    | '/mlm/packages'
+    | '/mlm/payouts'
+    | '/mlm/pools'
+    | '/mlm/ranks'
+    | '/mlm/reports'
+    | '/mlm/settings'
+    | '/mlm/support'
+    | '/mlm/wallet'
+    | '/mlm/white-label'
     | '/payroll/attendance'
     | '/payroll/bonuses'
     | '/payroll/dashboard'
@@ -2279,6 +2794,41 @@ export interface FileRouteTypes {
     | '/portal/seo'
     | '/portal/support'
     | '/portal/user'
+    | '/pos/agents'
+    | '/pos/api'
+    | '/pos/audit'
+    | '/pos/banking'
+    | '/pos/billing'
+    | '/pos/branding'
+    | '/pos/companies'
+    | '/pos/customers'
+    | '/pos/features'
+    | '/pos/finance'
+    | '/pos/franchises'
+    | '/pos/held'
+    | '/pos/inventory'
+    | '/pos/licenses'
+    | '/pos/payments'
+    | '/pos/printer'
+    | '/pos/products'
+    | '/pos/receipts'
+    | '/pos/reports'
+    | '/pos/resellers'
+    | '/pos/roles'
+    | '/pos/settings'
+    | '/pos/shift'
+    | '/pos/staff'
+    | '/pos/sync'
+    | '/mlm/sa/backup'
+    | '/mlm/sa/billing'
+    | '/mlm/sa/cron'
+    | '/mlm/sa/gateways'
+    | '/mlm/sa/licenses'
+    | '/mlm/sa/plan-engine'
+    | '/mlm/sa/revenue'
+    | '/mlm/sa/security'
+    | '/mlm/sa/system'
+    | '/mlm/sa/tenants'
   id:
     | '__root__'
     | '/'
@@ -2464,6 +3014,21 @@ export interface FileRouteTypes {
     | '/hr/leave'
     | '/hr/performance'
     | '/hr/settings'
+    | '/mlm/analytics'
+    | '/mlm/audit'
+    | '/mlm/commissions'
+    | '/mlm/integrations'
+    | '/mlm/members'
+    | '/mlm/network'
+    | '/mlm/packages'
+    | '/mlm/payouts'
+    | '/mlm/pools'
+    | '/mlm/ranks'
+    | '/mlm/reports'
+    | '/mlm/settings'
+    | '/mlm/support'
+    | '/mlm/wallet'
+    | '/mlm/white-label'
     | '/payroll/attendance'
     | '/payroll/bonuses'
     | '/payroll/dashboard'
@@ -2486,6 +3051,41 @@ export interface FileRouteTypes {
     | '/portal/seo'
     | '/portal/support'
     | '/portal/user'
+    | '/pos/agents'
+    | '/pos/api'
+    | '/pos/audit'
+    | '/pos/banking'
+    | '/pos/billing'
+    | '/pos/branding'
+    | '/pos/companies'
+    | '/pos/customers'
+    | '/pos/features'
+    | '/pos/finance'
+    | '/pos/franchises'
+    | '/pos/held'
+    | '/pos/inventory'
+    | '/pos/licenses'
+    | '/pos/payments'
+    | '/pos/printer'
+    | '/pos/products'
+    | '/pos/receipts'
+    | '/pos/reports'
+    | '/pos/resellers'
+    | '/pos/roles'
+    | '/pos/settings'
+    | '/pos/shift'
+    | '/pos/staff'
+    | '/pos/sync'
+    | '/mlm/sa/backup'
+    | '/mlm/sa/billing'
+    | '/mlm/sa/cron'
+    | '/mlm/sa/gateways'
+    | '/mlm/sa/licenses'
+    | '/mlm/sa/plan-engine'
+    | '/mlm/sa/revenue'
+    | '/mlm/sa/security'
+    | '/mlm/sa/system'
+    | '/mlm/sa/tenants'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -2663,6 +3263,21 @@ export interface RootRouteChildren {
   HrLeaveRoute: typeof HrLeaveRoute
   HrPerformanceRoute: typeof HrPerformanceRoute
   HrSettingsRoute: typeof HrSettingsRoute
+  MlmAnalyticsRoute: typeof MlmAnalyticsRoute
+  MlmAuditRoute: typeof MlmAuditRoute
+  MlmCommissionsRoute: typeof MlmCommissionsRoute
+  MlmIntegrationsRoute: typeof MlmIntegrationsRoute
+  MlmMembersRoute: typeof MlmMembersRoute
+  MlmNetworkRoute: typeof MlmNetworkRoute
+  MlmPackagesRoute: typeof MlmPackagesRoute
+  MlmPayoutsRoute: typeof MlmPayoutsRoute
+  MlmPoolsRoute: typeof MlmPoolsRoute
+  MlmRanksRoute: typeof MlmRanksRoute
+  MlmReportsRoute: typeof MlmReportsRoute
+  MlmSettingsRoute: typeof MlmSettingsRoute
+  MlmSupportRoute: typeof MlmSupportRoute
+  MlmWalletRoute: typeof MlmWalletRoute
+  MlmWhiteLabelRoute: typeof MlmWhiteLabelRoute
   PayrollAttendanceRoute: typeof PayrollAttendanceRoute
   PayrollBonusesRoute: typeof PayrollBonusesRoute
   PayrollDashboardRoute: typeof PayrollDashboardRoute
@@ -2685,6 +3300,41 @@ export interface RootRouteChildren {
   PortalSeoRoute: typeof PortalSeoRoute
   PortalSupportRoute: typeof PortalSupportRoute
   PortalUserRoute: typeof PortalUserRoute
+  PosAgentsRoute: typeof PosAgentsRoute
+  PosApiRoute: typeof PosApiRoute
+  PosAuditRoute: typeof PosAuditRoute
+  PosBankingRoute: typeof PosBankingRoute
+  PosBillingRoute: typeof PosBillingRoute
+  PosBrandingRoute: typeof PosBrandingRoute
+  PosCompaniesRoute: typeof PosCompaniesRoute
+  PosCustomersRoute: typeof PosCustomersRoute
+  PosFeaturesRoute: typeof PosFeaturesRoute
+  PosFinanceRoute: typeof PosFinanceRoute
+  PosFranchisesRoute: typeof PosFranchisesRoute
+  PosHeldRoute: typeof PosHeldRoute
+  PosInventoryRoute: typeof PosInventoryRoute
+  PosLicensesRoute: typeof PosLicensesRoute
+  PosPaymentsRoute: typeof PosPaymentsRoute
+  PosPrinterRoute: typeof PosPrinterRoute
+  PosProductsRoute: typeof PosProductsRoute
+  PosReceiptsRoute: typeof PosReceiptsRoute
+  PosReportsRoute: typeof PosReportsRoute
+  PosResellersRoute: typeof PosResellersRoute
+  PosRolesRoute: typeof PosRolesRoute
+  PosSettingsRoute: typeof PosSettingsRoute
+  PosShiftRoute: typeof PosShiftRoute
+  PosStaffRoute: typeof PosStaffRoute
+  PosSyncRoute: typeof PosSyncRoute
+  MlmSaBackupRoute: typeof MlmSaBackupRoute
+  MlmSaBillingRoute: typeof MlmSaBillingRoute
+  MlmSaCronRoute: typeof MlmSaCronRoute
+  MlmSaGatewaysRoute: typeof MlmSaGatewaysRoute
+  MlmSaLicensesRoute: typeof MlmSaLicensesRoute
+  MlmSaPlanEngineRoute: typeof MlmSaPlanEngineRoute
+  MlmSaRevenueRoute: typeof MlmSaRevenueRoute
+  MlmSaSecurityRoute: typeof MlmSaSecurityRoute
+  MlmSaSystemRoute: typeof MlmSaSystemRoute
+  MlmSaTenantsRoute: typeof MlmSaTenantsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -3263,6 +3913,181 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/pos/sync': {
+      id: '/pos/sync'
+      path: '/pos/sync'
+      fullPath: '/pos/sync'
+      preLoaderRoute: typeof PosSyncRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pos/staff': {
+      id: '/pos/staff'
+      path: '/pos/staff'
+      fullPath: '/pos/staff'
+      preLoaderRoute: typeof PosStaffRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pos/shift': {
+      id: '/pos/shift'
+      path: '/pos/shift'
+      fullPath: '/pos/shift'
+      preLoaderRoute: typeof PosShiftRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pos/settings': {
+      id: '/pos/settings'
+      path: '/pos/settings'
+      fullPath: '/pos/settings'
+      preLoaderRoute: typeof PosSettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pos/roles': {
+      id: '/pos/roles'
+      path: '/pos/roles'
+      fullPath: '/pos/roles'
+      preLoaderRoute: typeof PosRolesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pos/resellers': {
+      id: '/pos/resellers'
+      path: '/pos/resellers'
+      fullPath: '/pos/resellers'
+      preLoaderRoute: typeof PosResellersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pos/reports': {
+      id: '/pos/reports'
+      path: '/pos/reports'
+      fullPath: '/pos/reports'
+      preLoaderRoute: typeof PosReportsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pos/receipts': {
+      id: '/pos/receipts'
+      path: '/pos/receipts'
+      fullPath: '/pos/receipts'
+      preLoaderRoute: typeof PosReceiptsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pos/products': {
+      id: '/pos/products'
+      path: '/pos/products'
+      fullPath: '/pos/products'
+      preLoaderRoute: typeof PosProductsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pos/printer': {
+      id: '/pos/printer'
+      path: '/pos/printer'
+      fullPath: '/pos/printer'
+      preLoaderRoute: typeof PosPrinterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pos/payments': {
+      id: '/pos/payments'
+      path: '/pos/payments'
+      fullPath: '/pos/payments'
+      preLoaderRoute: typeof PosPaymentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pos/licenses': {
+      id: '/pos/licenses'
+      path: '/pos/licenses'
+      fullPath: '/pos/licenses'
+      preLoaderRoute: typeof PosLicensesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pos/inventory': {
+      id: '/pos/inventory'
+      path: '/pos/inventory'
+      fullPath: '/pos/inventory'
+      preLoaderRoute: typeof PosInventoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pos/held': {
+      id: '/pos/held'
+      path: '/pos/held'
+      fullPath: '/pos/held'
+      preLoaderRoute: typeof PosHeldRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pos/franchises': {
+      id: '/pos/franchises'
+      path: '/pos/franchises'
+      fullPath: '/pos/franchises'
+      preLoaderRoute: typeof PosFranchisesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pos/finance': {
+      id: '/pos/finance'
+      path: '/pos/finance'
+      fullPath: '/pos/finance'
+      preLoaderRoute: typeof PosFinanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pos/features': {
+      id: '/pos/features'
+      path: '/pos/features'
+      fullPath: '/pos/features'
+      preLoaderRoute: typeof PosFeaturesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pos/customers': {
+      id: '/pos/customers'
+      path: '/pos/customers'
+      fullPath: '/pos/customers'
+      preLoaderRoute: typeof PosCustomersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pos/companies': {
+      id: '/pos/companies'
+      path: '/pos/companies'
+      fullPath: '/pos/companies'
+      preLoaderRoute: typeof PosCompaniesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pos/branding': {
+      id: '/pos/branding'
+      path: '/pos/branding'
+      fullPath: '/pos/branding'
+      preLoaderRoute: typeof PosBrandingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pos/billing': {
+      id: '/pos/billing'
+      path: '/pos/billing'
+      fullPath: '/pos/billing'
+      preLoaderRoute: typeof PosBillingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pos/banking': {
+      id: '/pos/banking'
+      path: '/pos/banking'
+      fullPath: '/pos/banking'
+      preLoaderRoute: typeof PosBankingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pos/audit': {
+      id: '/pos/audit'
+      path: '/pos/audit'
+      fullPath: '/pos/audit'
+      preLoaderRoute: typeof PosAuditRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pos/api': {
+      id: '/pos/api'
+      path: '/pos/api'
+      fullPath: '/pos/api'
+      preLoaderRoute: typeof PosApiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pos/agents': {
+      id: '/pos/agents'
+      path: '/pos/agents'
+      fullPath: '/pos/agents'
+      preLoaderRoute: typeof PosAgentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/portal/user': {
       id: '/portal/user'
       path: '/portal/user'
@@ -3415,6 +4240,111 @@ declare module '@tanstack/react-router' {
       path: '/payroll/attendance'
       fullPath: '/payroll/attendance'
       preLoaderRoute: typeof PayrollAttendanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mlm/white-label': {
+      id: '/mlm/white-label'
+      path: '/mlm/white-label'
+      fullPath: '/mlm/white-label'
+      preLoaderRoute: typeof MlmWhiteLabelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mlm/wallet': {
+      id: '/mlm/wallet'
+      path: '/mlm/wallet'
+      fullPath: '/mlm/wallet'
+      preLoaderRoute: typeof MlmWalletRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mlm/support': {
+      id: '/mlm/support'
+      path: '/mlm/support'
+      fullPath: '/mlm/support'
+      preLoaderRoute: typeof MlmSupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mlm/settings': {
+      id: '/mlm/settings'
+      path: '/mlm/settings'
+      fullPath: '/mlm/settings'
+      preLoaderRoute: typeof MlmSettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mlm/reports': {
+      id: '/mlm/reports'
+      path: '/mlm/reports'
+      fullPath: '/mlm/reports'
+      preLoaderRoute: typeof MlmReportsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mlm/ranks': {
+      id: '/mlm/ranks'
+      path: '/mlm/ranks'
+      fullPath: '/mlm/ranks'
+      preLoaderRoute: typeof MlmRanksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mlm/pools': {
+      id: '/mlm/pools'
+      path: '/mlm/pools'
+      fullPath: '/mlm/pools'
+      preLoaderRoute: typeof MlmPoolsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mlm/payouts': {
+      id: '/mlm/payouts'
+      path: '/mlm/payouts'
+      fullPath: '/mlm/payouts'
+      preLoaderRoute: typeof MlmPayoutsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mlm/packages': {
+      id: '/mlm/packages'
+      path: '/mlm/packages'
+      fullPath: '/mlm/packages'
+      preLoaderRoute: typeof MlmPackagesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mlm/network': {
+      id: '/mlm/network'
+      path: '/mlm/network'
+      fullPath: '/mlm/network'
+      preLoaderRoute: typeof MlmNetworkRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mlm/members': {
+      id: '/mlm/members'
+      path: '/mlm/members'
+      fullPath: '/mlm/members'
+      preLoaderRoute: typeof MlmMembersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mlm/integrations': {
+      id: '/mlm/integrations'
+      path: '/mlm/integrations'
+      fullPath: '/mlm/integrations'
+      preLoaderRoute: typeof MlmIntegrationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mlm/commissions': {
+      id: '/mlm/commissions'
+      path: '/mlm/commissions'
+      fullPath: '/mlm/commissions'
+      preLoaderRoute: typeof MlmCommissionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mlm/audit': {
+      id: '/mlm/audit'
+      path: '/mlm/audit'
+      fullPath: '/mlm/audit'
+      preLoaderRoute: typeof MlmAuditRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mlm/analytics': {
+      id: '/mlm/analytics'
+      path: '/mlm/analytics'
+      fullPath: '/mlm/analytics'
+      preLoaderRoute: typeof MlmAnalyticsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/hr/settings': {
@@ -4124,6 +5054,76 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AiAgentsRouteImport
       parentRoute: typeof AiRoute
     }
+    '/mlm/sa/tenants': {
+      id: '/mlm/sa/tenants'
+      path: '/mlm/sa/tenants'
+      fullPath: '/mlm/sa/tenants'
+      preLoaderRoute: typeof MlmSaTenantsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mlm/sa/system': {
+      id: '/mlm/sa/system'
+      path: '/mlm/sa/system'
+      fullPath: '/mlm/sa/system'
+      preLoaderRoute: typeof MlmSaSystemRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mlm/sa/security': {
+      id: '/mlm/sa/security'
+      path: '/mlm/sa/security'
+      fullPath: '/mlm/sa/security'
+      preLoaderRoute: typeof MlmSaSecurityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mlm/sa/revenue': {
+      id: '/mlm/sa/revenue'
+      path: '/mlm/sa/revenue'
+      fullPath: '/mlm/sa/revenue'
+      preLoaderRoute: typeof MlmSaRevenueRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mlm/sa/plan-engine': {
+      id: '/mlm/sa/plan-engine'
+      path: '/mlm/sa/plan-engine'
+      fullPath: '/mlm/sa/plan-engine'
+      preLoaderRoute: typeof MlmSaPlanEngineRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mlm/sa/licenses': {
+      id: '/mlm/sa/licenses'
+      path: '/mlm/sa/licenses'
+      fullPath: '/mlm/sa/licenses'
+      preLoaderRoute: typeof MlmSaLicensesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mlm/sa/gateways': {
+      id: '/mlm/sa/gateways'
+      path: '/mlm/sa/gateways'
+      fullPath: '/mlm/sa/gateways'
+      preLoaderRoute: typeof MlmSaGatewaysRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mlm/sa/cron': {
+      id: '/mlm/sa/cron'
+      path: '/mlm/sa/cron'
+      fullPath: '/mlm/sa/cron'
+      preLoaderRoute: typeof MlmSaCronRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mlm/sa/billing': {
+      id: '/mlm/sa/billing'
+      path: '/mlm/sa/billing'
+      fullPath: '/mlm/sa/billing'
+      preLoaderRoute: typeof MlmSaBillingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mlm/sa/backup': {
+      id: '/mlm/sa/backup'
+      path: '/mlm/sa/backup'
+      fullPath: '/mlm/sa/backup'
+      preLoaderRoute: typeof MlmSaBackupRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -4328,6 +5328,21 @@ const rootRouteChildren: RootRouteChildren = {
   HrLeaveRoute: HrLeaveRoute,
   HrPerformanceRoute: HrPerformanceRoute,
   HrSettingsRoute: HrSettingsRoute,
+  MlmAnalyticsRoute: MlmAnalyticsRoute,
+  MlmAuditRoute: MlmAuditRoute,
+  MlmCommissionsRoute: MlmCommissionsRoute,
+  MlmIntegrationsRoute: MlmIntegrationsRoute,
+  MlmMembersRoute: MlmMembersRoute,
+  MlmNetworkRoute: MlmNetworkRoute,
+  MlmPackagesRoute: MlmPackagesRoute,
+  MlmPayoutsRoute: MlmPayoutsRoute,
+  MlmPoolsRoute: MlmPoolsRoute,
+  MlmRanksRoute: MlmRanksRoute,
+  MlmReportsRoute: MlmReportsRoute,
+  MlmSettingsRoute: MlmSettingsRoute,
+  MlmSupportRoute: MlmSupportRoute,
+  MlmWalletRoute: MlmWalletRoute,
+  MlmWhiteLabelRoute: MlmWhiteLabelRoute,
   PayrollAttendanceRoute: PayrollAttendanceRoute,
   PayrollBonusesRoute: PayrollBonusesRoute,
   PayrollDashboardRoute: PayrollDashboardRoute,
@@ -4350,7 +5365,52 @@ const rootRouteChildren: RootRouteChildren = {
   PortalSeoRoute: PortalSeoRoute,
   PortalSupportRoute: PortalSupportRoute,
   PortalUserRoute: PortalUserRoute,
+  PosAgentsRoute: PosAgentsRoute,
+  PosApiRoute: PosApiRoute,
+  PosAuditRoute: PosAuditRoute,
+  PosBankingRoute: PosBankingRoute,
+  PosBillingRoute: PosBillingRoute,
+  PosBrandingRoute: PosBrandingRoute,
+  PosCompaniesRoute: PosCompaniesRoute,
+  PosCustomersRoute: PosCustomersRoute,
+  PosFeaturesRoute: PosFeaturesRoute,
+  PosFinanceRoute: PosFinanceRoute,
+  PosFranchisesRoute: PosFranchisesRoute,
+  PosHeldRoute: PosHeldRoute,
+  PosInventoryRoute: PosInventoryRoute,
+  PosLicensesRoute: PosLicensesRoute,
+  PosPaymentsRoute: PosPaymentsRoute,
+  PosPrinterRoute: PosPrinterRoute,
+  PosProductsRoute: PosProductsRoute,
+  PosReceiptsRoute: PosReceiptsRoute,
+  PosReportsRoute: PosReportsRoute,
+  PosResellersRoute: PosResellersRoute,
+  PosRolesRoute: PosRolesRoute,
+  PosSettingsRoute: PosSettingsRoute,
+  PosShiftRoute: PosShiftRoute,
+  PosStaffRoute: PosStaffRoute,
+  PosSyncRoute: PosSyncRoute,
+  MlmSaBackupRoute: MlmSaBackupRoute,
+  MlmSaBillingRoute: MlmSaBillingRoute,
+  MlmSaCronRoute: MlmSaCronRoute,
+  MlmSaGatewaysRoute: MlmSaGatewaysRoute,
+  MlmSaLicensesRoute: MlmSaLicensesRoute,
+  MlmSaPlanEngineRoute: MlmSaPlanEngineRoute,
+  MlmSaRevenueRoute: MlmSaRevenueRoute,
+  MlmSaSecurityRoute: MlmSaSecurityRoute,
+  MlmSaSystemRoute: MlmSaSystemRoute,
+  MlmSaTenantsRoute: MlmSaTenantsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
