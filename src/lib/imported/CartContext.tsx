@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useCallback } from 'react';
-import type { Product } from '@/lib/marketplaceData';
+import type { Product } from './marketplaceData';
 
 export interface CartItem {
   product: Product;

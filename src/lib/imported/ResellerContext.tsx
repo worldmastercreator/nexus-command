@@ -1,8 +1,8 @@
 import React, { createContext, useContext, useState, useCallback } from 'react';
 import { useAuth } from './AuthContext';
-import { audit } from '@/lib/auditLog';
-import { activity } from '@/lib/activityTimeline';
-import { notify } from '@/lib/notifications';
+import { audit } from './auditLog';
+import { activity } from './activityTimeline';
+import { notify } from './notifications';
 
 export interface ManagedUser {
   id: string;

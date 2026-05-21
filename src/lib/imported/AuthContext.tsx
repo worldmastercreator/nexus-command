@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useCallback } from 'react';
-import { audit } from '@/lib/auditLog';
-import { bootstrapSeed, verifySeededCredentials, ROLE_HOME, type SeedRole } from '@/lib/seedAuth';
+import { audit } from './auditLog';
+import { bootstrapSeed, verifySeededCredentials, ROLE_HOME, type SeedRole } from './seedAuth';
 
 // Run the role/seed bootstrap exactly once at module load.
 bootstrapSeed();
