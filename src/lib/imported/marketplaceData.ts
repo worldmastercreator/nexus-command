@@ -1,9 +1,9 @@
-import educationImg from '@/assets/previews/education-1.jpg';
-import medicalImg from '@/assets/previews/medical-1.jpg';
-import hotelImg from '@/assets/previews/hotel-1.jpg';
-import ecommerceImg from '@/assets/previews/ecommerce-1.jpg';
-import servicesImg from '@/assets/previews/services-1.jpg';
-import manufacturingImg from '@/assets/previews/manufacturing-1.jpg';
+const educationImg = '/previews/education-1.jpg';
+const medicalImg = '/previews/medical-1.jpg';
+const hotelImg = '/previews/hotel-1.jpg';
+const ecommerceImg = '/previews/ecommerce-1.jpg';
+const servicesImg = '/previews/services-1.jpg';
+const manufacturingImg = '/previews/manufacturing-1.jpg';
 
 export interface Product {
   id: string;
