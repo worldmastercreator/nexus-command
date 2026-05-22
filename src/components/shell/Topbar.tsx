@@ -1,5 +1,6 @@
 import { Bell, Command, Search, Globe2, Activity } from "lucide-react";
 import { useEffect, useState } from "react";
+import { RoleSwitcher } from "@/lib/rbac";
 
 export function Topbar({ onOpenCommand }: { onOpenCommand: () => void }) {
   const [time, setTime] = useState<Date | null>(null);
@@ -30,6 +31,7 @@ export function Topbar({ onOpenCommand }: { onOpenCommand: () => void }) {
       </div>
 
       <div className="ml-auto flex items-center gap-3">
+        <RoleSwitcher />
         <div suppressHydrationWarning className="hidden font-mono text-[11px] text-muted-foreground lg:block">
           {time ? `${time.toUTCString().slice(17, 25)} UTC · ${time.toLocaleDateString(undefined, { weekday: "short", day: "2-digit", month: "short" })}` : "—"}
         </div>
