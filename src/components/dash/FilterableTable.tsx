@@ -73,7 +73,7 @@ export function FilterableTable<T extends object>({
               <tr key={i} className="border-b border-border/40 last:border-0 hover:bg-surface-2/40">
                 {columns.map((c) => (
                   <td key={c.key} className={`py-1.5 ${c.align === "right" ? "text-right" : ""} ${c.mono ? "font-mono text-[11px]" : ""}`}>
-                    {c.render ? c.render(r) : String(r[c.key] ?? "")}
+                    {c.render ? c.render(r) : String((r as Record<string, unknown>)[c.key] ?? "")}
                   </td>
                 ))}
               </tr>
