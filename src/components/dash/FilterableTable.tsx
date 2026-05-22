@@ -26,9 +26,10 @@ export function FilterableTable<T extends object>({
   const filtered = useMemo(() => {
     const ql = q.toLowerCase();
     return rows.filter((r) => {
-      if (ql && !columns.some((c) => String(r[c.key] ?? "").toLowerCase().includes(ql))) return false;
+      const rec = r as Record<string, unknown>;
+      if (ql && !columns.some((c) => String(rec[c.key] ?? "").toLowerCase().includes(ql))) return false;
       for (const k in active) {
-        if (active[k] && String(r[k] ?? "") !== active[k]) return false;
+        if (active[k] && String(rec[k] ?? "") !== active[k]) return false;
       }
       return true;
     });
