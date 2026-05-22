@@ -10,6 +10,8 @@ import {
 
 import appCss from "../styles.css?url";
 import { Shell } from "@/components/shell/Shell";
+import { RbacProvider } from "@/lib/rbac";
+import { Toaster } from "@/components/ui/sonner";
 
 function NotFoundComponent() {
   return (
@@ -87,7 +89,10 @@ function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   return (
     <QueryClientProvider client={queryClient}>
-      <Shell />
+      <RbacProvider>
+        <Shell />
+        <Toaster />
+      </RbacProvider>
     </QueryClientProvider>
   );
 }

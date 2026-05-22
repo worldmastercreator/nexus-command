@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WorkflowsRouteImport } from './routes/workflows'
 import { Route as WhiteLabelRouteImport } from './routes/white-label'
 import { Route as WebhooksRouteImport } from './routes/webhooks'
 import { Route as WarRoomRouteImport } from './routes/war-room'
@@ -607,6 +608,11 @@ import { Route as MlmSaCronRouteImport } from './routes/mlm.sa.cron'
 import { Route as MlmSaBillingRouteImport } from './routes/mlm.sa.billing'
 import { Route as MlmSaBackupRouteImport } from './routes/mlm.sa.backup'
 
+const WorkflowsRoute = WorkflowsRouteImport.update({
+  id: '/workflows',
+  path: '/workflows',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const WhiteLabelRoute = WhiteLabelRouteImport.update({
   id: '/white-label',
   path: '/white-label',
@@ -3722,6 +3728,7 @@ export interface FileRoutesByFullPath {
   '/war-room': typeof WarRoomRoute
   '/webhooks': typeof WebhooksRoute
   '/white-label': typeof WhiteLabelRoute
+  '/workflows': typeof WorkflowsRoute
   '/ai/agents': typeof AiAgentsRoute
   '/ai/api': typeof AiApiRoute
   '/ai/bots': typeof AiBotsRoute
@@ -4321,6 +4328,7 @@ export interface FileRoutesByTo {
   '/war-room': typeof WarRoomRoute
   '/webhooks': typeof WebhooksRoute
   '/white-label': typeof WhiteLabelRoute
+  '/workflows': typeof WorkflowsRoute
   '/ai/agents': typeof AiAgentsRoute
   '/ai/api': typeof AiApiRoute
   '/ai/bots': typeof AiBotsRoute
@@ -4921,6 +4929,7 @@ export interface FileRoutesById {
   '/war-room': typeof WarRoomRoute
   '/webhooks': typeof WebhooksRoute
   '/white-label': typeof WhiteLabelRoute
+  '/workflows': typeof WorkflowsRoute
   '/ai/agents': typeof AiAgentsRoute
   '/ai/api': typeof AiApiRoute
   '/ai/bots': typeof AiBotsRoute
@@ -5522,6 +5531,7 @@ export interface FileRouteTypes {
     | '/war-room'
     | '/webhooks'
     | '/white-label'
+    | '/workflows'
     | '/ai/agents'
     | '/ai/api'
     | '/ai/bots'
@@ -6121,6 +6131,7 @@ export interface FileRouteTypes {
     | '/war-room'
     | '/webhooks'
     | '/white-label'
+    | '/workflows'
     | '/ai/agents'
     | '/ai/api'
     | '/ai/bots'
@@ -6720,6 +6731,7 @@ export interface FileRouteTypes {
     | '/war-room'
     | '/webhooks'
     | '/white-label'
+    | '/workflows'
     | '/ai/agents'
     | '/ai/api'
     | '/ai/bots'
@@ -7320,6 +7332,7 @@ export interface RootRouteChildren {
   WarRoomRoute: typeof WarRoomRoute
   WebhooksRoute: typeof WebhooksRoute
   WhiteLabelRoute: typeof WhiteLabelRoute
+  WorkflowsRoute: typeof WorkflowsRoute
   AtelierAdminAuditRoute: typeof AtelierAdminAuditRoute
   AtelierAdminRolesRoute: typeof AtelierAdminRolesRoute
   AtelierAdminUsersRoute: typeof AtelierAdminUsersRoute
@@ -7830,6 +7843,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/workflows': {
+      id: '/workflows'
+      path: '/workflows'
+      fullPath: '/workflows'
+      preLoaderRoute: typeof WorkflowsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/white-label': {
       id: '/white-label'
       path: '/white-label'
@@ -12121,6 +12141,7 @@ const rootRouteChildren: RootRouteChildren = {
   WarRoomRoute: WarRoomRoute,
   WebhooksRoute: WebhooksRoute,
   WhiteLabelRoute: WhiteLabelRoute,
+  WorkflowsRoute: WorkflowsRoute,
   AtelierAdminAuditRoute: AtelierAdminAuditRoute,
   AtelierAdminRolesRoute: AtelierAdminRolesRoute,
   AtelierAdminUsersRoute: AtelierAdminUsersRoute,
