@@ -12,7 +12,7 @@ export interface Column<T> {
   mono?: boolean;
 }
 
-export function FilterableTable<T extends Record<string, unknown>>({
+export function FilterableTable<T extends object>({
   title, kicker, rows, columns, facets, exportName,
 }: {
   title: string; kicker: string;

@@ -73,10 +73,10 @@ export function useEvents(filter?: (e: BusEvent) => boolean, max = 100) {
   return events;
 }
 
-export function exportCsv<T extends Record<string, unknown>>(rows: T[], filename: string) {
+export function exportCsv<T extends object>(rows: T[], filename: string) {
   if (typeof window === "undefined" || rows.length === 0) return;
-  const cols = Object.keys(rows[0]);
-  const csv = [cols.join(","), ...rows.map((r) => cols.map((c) => JSON.stringify(r[c] ?? "")).join(","))].join("\n");
+  const cols = Object.keys(rows[0] as Record<string, unknown>);
+  const csv = [cols.join(","), ...rows.map((r) => cols.map((c) => JSON.stringify((r as Record<string, unknown>)[c] ?? "")).join(","))].join("\n");
   const blob = new Blob([csv], { type: "text/csv;charset=utf-8" });
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
