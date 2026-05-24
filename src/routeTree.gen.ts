@@ -92,6 +92,7 @@ import { Route as AnalyticsRouteImport } from './routes/analytics'
 import { Route as AiRouteImport } from './routes/ai'
 import { Route as AffiliatesRouteImport } from './routes/affiliates'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ControlPanelIndexRouteImport } from './routes/control-panel.index'
 import { Route as ValaTaskRouteImport } from './routes/vala.task'
 import { Route as ValaSystemSettingsRouteImport } from './routes/vala.system-settings'
 import { Route as ValaSuperAdminRouteImport } from './routes/vala.super-admin'
@@ -497,6 +498,7 @@ import { Route as CreatorCertificatesRouteImport } from './routes/creator.certif
 import { Route as CreatorAttendanceRouteImport } from './routes/creator.attendance'
 import { Route as CreatorAssignmentsRouteImport } from './routes/creator.assignments'
 import { Route as CreatorAnalyticsRouteImport } from './routes/creator.analytics'
+import { Route as ControlPanelModuleRouteImport } from './routes/control-panel.$module'
 import { Route as CampaignWireframeRouteImport } from './routes/campaign.wireframe'
 import { Route as CampaignWhiteLabelRouteImport } from './routes/campaign.white-label'
 import { Route as CampaignVotersRouteImport } from './routes/campaign.voters'
@@ -607,6 +609,7 @@ import { Route as MlmSaGatewaysRouteImport } from './routes/mlm.sa.gateways'
 import { Route as MlmSaCronRouteImport } from './routes/mlm.sa.cron'
 import { Route as MlmSaBillingRouteImport } from './routes/mlm.sa.billing'
 import { Route as MlmSaBackupRouteImport } from './routes/mlm.sa.backup'
+import { Route as ControlPanelModuleSubRouteImport } from './routes/control-panel.$module.$sub'
 
 const WorkflowsRoute = WorkflowsRouteImport.update({
   id: '/workflows',
@@ -1021,6 +1024,11 @@ const AffiliatesRoute = AffiliatesRouteImport.update({
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ControlPanelIndexRoute = ControlPanelIndexRouteImport.update({
+  id: '/control-panel/',
+  path: '/control-panel/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ValaTaskRoute = ValaTaskRouteImport.update({
@@ -3093,6 +3101,11 @@ const CreatorAnalyticsRoute = CreatorAnalyticsRouteImport.update({
   path: '/creator/analytics',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ControlPanelModuleRoute = ControlPanelModuleRouteImport.update({
+  id: '/control-panel/$module',
+  path: '/control-panel/$module',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CampaignWireframeRoute = CampaignWireframeRouteImport.update({
   id: '/campaign/wireframe',
   path: '/campaign/wireframe',
@@ -3644,6 +3657,11 @@ const MlmSaBackupRoute = MlmSaBackupRouteImport.update({
   path: '/mlm/sa/backup',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ControlPanelModuleSubRoute = ControlPanelModuleSubRouteImport.update({
+  id: '/$sub',
+  path: '/$sub',
+  getParentRoute: () => ControlPanelModuleRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -3829,6 +3847,7 @@ export interface FileRoutesByFullPath {
   '/campaign/voters': typeof CampaignVotersRoute
   '/campaign/white-label': typeof CampaignWhiteLabelRoute
   '/campaign/wireframe': typeof CampaignWireframeRoute
+  '/control-panel/$module': typeof ControlPanelModuleRouteWithChildren
   '/creator/analytics': typeof CreatorAnalyticsRoute
   '/creator/assignments': typeof CreatorAssignmentsRoute
   '/creator/attendance': typeof CreatorAttendanceRoute
@@ -4234,6 +4253,8 @@ export interface FileRoutesByFullPath {
   '/vala/super-admin': typeof ValaSuperAdminRoute
   '/vala/system-settings': typeof ValaSystemSettingsRoute
   '/vala/task': typeof ValaTaskRoute
+  '/control-panel/': typeof ControlPanelIndexRoute
+  '/control-panel/$module/$sub': typeof ControlPanelModuleSubRoute
   '/mlm/sa/backup': typeof MlmSaBackupRoute
   '/mlm/sa/billing': typeof MlmSaBillingRoute
   '/mlm/sa/cron': typeof MlmSaCronRoute
@@ -4429,6 +4450,7 @@ export interface FileRoutesByTo {
   '/campaign/voters': typeof CampaignVotersRoute
   '/campaign/white-label': typeof CampaignWhiteLabelRoute
   '/campaign/wireframe': typeof CampaignWireframeRoute
+  '/control-panel/$module': typeof ControlPanelModuleRouteWithChildren
   '/creator/analytics': typeof CreatorAnalyticsRoute
   '/creator/assignments': typeof CreatorAssignmentsRoute
   '/creator/attendance': typeof CreatorAttendanceRoute
@@ -4834,6 +4856,8 @@ export interface FileRoutesByTo {
   '/vala/super-admin': typeof ValaSuperAdminRoute
   '/vala/system-settings': typeof ValaSystemSettingsRoute
   '/vala/task': typeof ValaTaskRoute
+  '/control-panel': typeof ControlPanelIndexRoute
+  '/control-panel/$module/$sub': typeof ControlPanelModuleSubRoute
   '/mlm/sa/backup': typeof MlmSaBackupRoute
   '/mlm/sa/billing': typeof MlmSaBillingRoute
   '/mlm/sa/cron': typeof MlmSaCronRoute
@@ -5030,6 +5054,7 @@ export interface FileRoutesById {
   '/campaign/voters': typeof CampaignVotersRoute
   '/campaign/white-label': typeof CampaignWhiteLabelRoute
   '/campaign/wireframe': typeof CampaignWireframeRoute
+  '/control-panel/$module': typeof ControlPanelModuleRouteWithChildren
   '/creator/analytics': typeof CreatorAnalyticsRoute
   '/creator/assignments': typeof CreatorAssignmentsRoute
   '/creator/attendance': typeof CreatorAttendanceRoute
@@ -5435,6 +5460,8 @@ export interface FileRoutesById {
   '/vala/super-admin': typeof ValaSuperAdminRoute
   '/vala/system-settings': typeof ValaSystemSettingsRoute
   '/vala/task': typeof ValaTaskRoute
+  '/control-panel/': typeof ControlPanelIndexRoute
+  '/control-panel/$module/$sub': typeof ControlPanelModuleSubRoute
   '/mlm/sa/backup': typeof MlmSaBackupRoute
   '/mlm/sa/billing': typeof MlmSaBillingRoute
   '/mlm/sa/cron': typeof MlmSaCronRoute
@@ -5632,6 +5659,7 @@ export interface FileRouteTypes {
     | '/campaign/voters'
     | '/campaign/white-label'
     | '/campaign/wireframe'
+    | '/control-panel/$module'
     | '/creator/analytics'
     | '/creator/assignments'
     | '/creator/attendance'
@@ -6037,6 +6065,8 @@ export interface FileRouteTypes {
     | '/vala/super-admin'
     | '/vala/system-settings'
     | '/vala/task'
+    | '/control-panel/'
+    | '/control-panel/$module/$sub'
     | '/mlm/sa/backup'
     | '/mlm/sa/billing'
     | '/mlm/sa/cron'
@@ -6232,6 +6262,7 @@ export interface FileRouteTypes {
     | '/campaign/voters'
     | '/campaign/white-label'
     | '/campaign/wireframe'
+    | '/control-panel/$module'
     | '/creator/analytics'
     | '/creator/assignments'
     | '/creator/attendance'
@@ -6637,6 +6668,8 @@ export interface FileRouteTypes {
     | '/vala/super-admin'
     | '/vala/system-settings'
     | '/vala/task'
+    | '/control-panel'
+    | '/control-panel/$module/$sub'
     | '/mlm/sa/backup'
     | '/mlm/sa/billing'
     | '/mlm/sa/cron'
@@ -6832,6 +6865,7 @@ export interface FileRouteTypes {
     | '/campaign/voters'
     | '/campaign/white-label'
     | '/campaign/wireframe'
+    | '/control-panel/$module'
     | '/creator/analytics'
     | '/creator/assignments'
     | '/creator/attendance'
@@ -7237,6 +7271,8 @@ export interface FileRouteTypes {
     | '/vala/super-admin'
     | '/vala/system-settings'
     | '/vala/task'
+    | '/control-panel/'
+    | '/control-panel/$module/$sub'
     | '/mlm/sa/backup'
     | '/mlm/sa/billing'
     | '/mlm/sa/cron'
@@ -7424,6 +7460,7 @@ export interface RootRouteChildren {
   CampaignVotersRoute: typeof CampaignVotersRoute
   CampaignWhiteLabelRoute: typeof CampaignWhiteLabelRoute
   CampaignWireframeRoute: typeof CampaignWireframeRoute
+  ControlPanelModuleRoute: typeof ControlPanelModuleRouteWithChildren
   CreatorAnalyticsRoute: typeof CreatorAnalyticsRoute
   CreatorAssignmentsRoute: typeof CreatorAssignmentsRoute
   CreatorAttendanceRoute: typeof CreatorAttendanceRoute
@@ -7829,6 +7866,7 @@ export interface RootRouteChildren {
   ValaSuperAdminRoute: typeof ValaSuperAdminRoute
   ValaSystemSettingsRoute: typeof ValaSystemSettingsRoute
   ValaTaskRoute: typeof ValaTaskRoute
+  ControlPanelIndexRoute: typeof ControlPanelIndexRoute
   MlmSaBackupRoute: typeof MlmSaBackupRoute
   MlmSaBillingRoute: typeof MlmSaBillingRoute
   MlmSaCronRoute: typeof MlmSaCronRoute
@@ -8422,6 +8460,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/control-panel/': {
+      id: '/control-panel/'
+      path: '/control-panel'
+      fullPath: '/control-panel/'
+      preLoaderRoute: typeof ControlPanelIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/vala/task': {
@@ -11259,6 +11304,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CreatorAnalyticsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/control-panel/$module': {
+      id: '/control-panel/$module'
+      path: '/control-panel/$module'
+      fullPath: '/control-panel/$module'
+      preLoaderRoute: typeof ControlPanelModuleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/campaign/wireframe': {
       id: '/campaign/wireframe'
       path: '/campaign/wireframe'
@@ -12029,6 +12081,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MlmSaBackupRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/control-panel/$module/$sub': {
+      id: '/control-panel/$module/$sub'
+      path: '/$sub'
+      fullPath: '/control-panel/$module/$sub'
+      preLoaderRoute: typeof ControlPanelModuleSubRouteImport
+      parentRoute: typeof ControlPanelModuleRoute
+    }
   }
 }
 
@@ -12057,6 +12116,17 @@ const AiRouteChildren: AiRouteChildren = {
 }
 
 const AiRouteWithChildren = AiRoute._addFileChildren(AiRouteChildren)
+
+interface ControlPanelModuleRouteChildren {
+  ControlPanelModuleSubRoute: typeof ControlPanelModuleSubRoute
+}
+
+const ControlPanelModuleRouteChildren: ControlPanelModuleRouteChildren = {
+  ControlPanelModuleSubRoute: ControlPanelModuleSubRoute,
+}
+
+const ControlPanelModuleRouteWithChildren =
+  ControlPanelModuleRoute._addFileChildren(ControlPanelModuleRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
@@ -12233,6 +12303,7 @@ const rootRouteChildren: RootRouteChildren = {
   CampaignVotersRoute: CampaignVotersRoute,
   CampaignWhiteLabelRoute: CampaignWhiteLabelRoute,
   CampaignWireframeRoute: CampaignWireframeRoute,
+  ControlPanelModuleRoute: ControlPanelModuleRouteWithChildren,
   CreatorAnalyticsRoute: CreatorAnalyticsRoute,
   CreatorAssignmentsRoute: CreatorAssignmentsRoute,
   CreatorAttendanceRoute: CreatorAttendanceRoute,
@@ -12638,6 +12709,7 @@ const rootRouteChildren: RootRouteChildren = {
   ValaSuperAdminRoute: ValaSuperAdminRoute,
   ValaSystemSettingsRoute: ValaSystemSettingsRoute,
   ValaTaskRoute: ValaTaskRoute,
+  ControlPanelIndexRoute: ControlPanelIndexRoute,
   MlmSaBackupRoute: MlmSaBackupRoute,
   MlmSaBillingRoute: MlmSaBillingRoute,
   MlmSaCronRoute: MlmSaCronRoute,
@@ -12652,13 +12724,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
