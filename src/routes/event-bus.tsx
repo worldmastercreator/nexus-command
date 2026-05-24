@@ -49,7 +49,7 @@ function fmt(n: number) {
   return n.toString();
 }
 
-function EventBusDashboard() {
+export function EventBusDashboard() {
   const throughput = useLiveSeries(60, 7, 320, 80);
   const lagSeries = useLiveSeries(40, 11, 60, 30);
   const partitionFlow = useLiveSeries(24, 23, 180, 60);
