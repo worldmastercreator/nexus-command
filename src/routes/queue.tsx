@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ModuleStub } from "@/components/dash/ModuleStub";
+import { Route as EventBus } from "./event-bus";
 
 export const Route = createFileRoute("/queue")({
-  component: ModuleStub,
+  component: EventBus.options.component!,
 });
