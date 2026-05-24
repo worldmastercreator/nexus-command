@@ -73,7 +73,7 @@ function EventBusDashboard() {
               <button className="flex h-9 items-center gap-1.5 rounded-lg border border-border bg-surface-2/60 px-3 text-[12px] hover:bg-surface-2">
                 <Pause className="h-3.5 w-3.5" /> Pause stream
               </button>
-              <Gated action="ai.publish">
+              <Gated perm="ai.publish">
                 <button className="flex h-9 items-center gap-1.5 rounded-lg bg-primary px-3 text-[12px] font-medium text-primary-foreground hover:opacity-90">
                   <Play className="h-3.5 w-3.5" /> Produce
                 </button>
@@ -167,7 +167,7 @@ function EventBusDashboard() {
                       </div>
                     </td>
                     <td className="px-4 py-2.5 text-right">
-                      <Gated action="webhook.retry">
+                      <Gated perm="webhook.retry">
                         <button className="rounded border border-border bg-surface-2/60 px-2 py-1 font-mono text-[10px] uppercase tracking-wider text-muted-foreground hover:text-foreground">
                           replay
                         </button>
