@@ -1,4 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ModuleStub } from "@/components/dash/ModuleStub";
 
-export const Route = createFileRoute("/erp/marketplace/forums/")({ component: ModuleStub });
+export const Route = createFileRoute("/erp/merchant/discounts/$section")({ component: ModuleStub });
