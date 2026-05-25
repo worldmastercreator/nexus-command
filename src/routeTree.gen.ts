@@ -609,20 +609,20 @@ import { Route as MlmSaGatewaysRouteImport } from './routes/mlm.sa.gateways'
 import { Route as MlmSaCronRouteImport } from './routes/mlm.sa.cron'
 import { Route as MlmSaBillingRouteImport } from './routes/mlm.sa.billing'
 import { Route as MlmSaBackupRouteImport } from './routes/mlm.sa.backup'
+import { Route as ErpSupportSectionRouteImport } from './routes/erp.support.$section'
+import { Route as ErpMerchantSectionRouteImport } from './routes/erp.merchant.$section'
+import { Route as ErpMarketplaceSectionRouteImport } from './routes/erp.marketplace.$section'
+import { Route as ErpCustomerSectionRouteImport } from './routes/erp.customer.$section'
+import { Route as ErpAuthSectionRouteImport } from './routes/erp.auth.$section'
+import { Route as ErpAdminSectionRouteImport } from './routes/erp.admin.$section'
 import { Route as ControlPanelModuleSubRouteImport } from './routes/control-panel.$module.$sub'
-import { Route as ErpSupportRouteImport } from './routes/erp.support.'
-import { Route as ErpMerchantRouteImport } from './routes/erp.merchant.'
-import { Route as ErpMarketplaceRouteImport } from './routes/erp.marketplace.'
-import { Route as ErpCustomerRouteImport } from './routes/erp.customer.'
-import { Route as ErpAuthRouteImport } from './routes/erp.auth.'
-import { Route as ErpAdminRouteImport } from './routes/erp.admin.'
-import { Route as ErpMerchantWebhooksRouteImport } from './routes/erp.merchant.webhooks.'
-import { Route as ErpMerchantProductsRouteImport } from './routes/erp.merchant.products.'
-import { Route as ErpMerchantPricingRouteImport } from './routes/erp.merchant.pricing.'
-import { Route as ErpMerchantDiscountsRouteImport } from './routes/erp.merchant.discounts.'
-import { Route as ErpMarketplaceForumsRouteImport } from './routes/erp.marketplace.forums.'
-import { Route as ErpMarketplaceAuthorRouteImport } from './routes/erp.marketplace.author.'
-import { Route as ErpAdminMarketplaceRouteImport } from './routes/erp.admin.marketplace.'
+import { Route as ErpMerchantWebhooksSectionRouteImport } from './routes/erp.merchant.webhooks.$section'
+import { Route as ErpMerchantProductsSectionRouteImport } from './routes/erp.merchant.products.$section'
+import { Route as ErpMerchantPricingSectionRouteImport } from './routes/erp.merchant.pricing.$section'
+import { Route as ErpMerchantDiscountsSectionRouteImport } from './routes/erp.merchant.discounts.$section'
+import { Route as ErpMarketplaceForumsSectionRouteImport } from './routes/erp.marketplace.forums.$section'
+import { Route as ErpMarketplaceAuthorSectionRouteImport } from './routes/erp.marketplace.author.$section'
+import { Route as ErpAdminMarketplaceSectionRouteImport } from './routes/erp.admin.marketplace.$section'
 
 const WorkflowsRoute = WorkflowsRouteImport.update({
   id: '/workflows',
@@ -3670,76 +3670,83 @@ const MlmSaBackupRoute = MlmSaBackupRouteImport.update({
   path: '/mlm/sa/backup',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ErpSupportSectionRoute = ErpSupportSectionRouteImport.update({
+  id: '/$section',
+  path: '/$section',
+  getParentRoute: () => ErpSupportRoute,
+} as any)
+const ErpMerchantSectionRoute = ErpMerchantSectionRouteImport.update({
+  id: '/$section',
+  path: '/$section',
+  getParentRoute: () => ErpMerchantRoute,
+} as any)
+const ErpMarketplaceSectionRoute = ErpMarketplaceSectionRouteImport.update({
+  id: '/$section',
+  path: '/$section',
+  getParentRoute: () => ErpMarketplaceRoute,
+} as any)
+const ErpCustomerSectionRoute = ErpCustomerSectionRouteImport.update({
+  id: '/$section',
+  path: '/$section',
+  getParentRoute: () => ErpCustomerRoute,
+} as any)
+const ErpAuthSectionRoute = ErpAuthSectionRouteImport.update({
+  id: '/$section',
+  path: '/$section',
+  getParentRoute: () => ErpAuthRoute,
+} as any)
+const ErpAdminSectionRoute = ErpAdminSectionRouteImport.update({
+  id: '/$section',
+  path: '/$section',
+  getParentRoute: () => ErpAdminRoute,
+} as any)
 const ControlPanelModuleSubRoute = ControlPanelModuleSubRouteImport.update({
   id: '/$sub',
   path: '/$sub',
   getParentRoute: () => ControlPanelModuleRoute,
 } as any)
-const ErpSupportRoute = ErpSupportRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => ErpSupportRoute,
-} as any)
-const ErpMerchantRoute = ErpMerchantRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => ErpMerchantRoute,
-} as any)
-const ErpMarketplaceRoute = ErpMarketplaceRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => ErpMarketplaceRoute,
-} as any)
-const ErpCustomerRoute = ErpCustomerRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => ErpCustomerRoute,
-} as any)
-const ErpAuthRoute = ErpAuthRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => ErpAuthRoute,
-} as any)
-const ErpAdminRoute = ErpAdminRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => ErpAdminRoute,
-} as any)
-const ErpMerchantWebhooksRoute = ErpMerchantWebhooksRouteImport.update({
-  id: '/webhooks/',
-  path: '/webhooks/',
-  getParentRoute: () => ErpMerchantRoute,
-} as any)
-const ErpMerchantProductsRoute = ErpMerchantProductsRouteImport.update({
-  id: '/products/',
-  path: '/products/',
-  getParentRoute: () => ErpMerchantRoute,
-} as any)
-const ErpMerchantPricingRoute = ErpMerchantPricingRouteImport.update({
-  id: '/pricing/',
-  path: '/pricing/',
-  getParentRoute: () => ErpMerchantRoute,
-} as any)
-const ErpMerchantDiscountsRoute = ErpMerchantDiscountsRouteImport.update({
-  id: '/discounts/',
-  path: '/discounts/',
-  getParentRoute: () => ErpMerchantRoute,
-} as any)
-const ErpMarketplaceForumsRoute = ErpMarketplaceForumsRouteImport.update({
-  id: '/forums/',
-  path: '/forums/',
-  getParentRoute: () => ErpMarketplaceRoute,
-} as any)
-const ErpMarketplaceAuthorRoute = ErpMarketplaceAuthorRouteImport.update({
-  id: '/author/',
-  path: '/author/',
-  getParentRoute: () => ErpMarketplaceRoute,
-} as any)
-const ErpAdminMarketplaceRoute = ErpAdminMarketplaceRouteImport.update({
-  id: '/marketplace/',
-  path: '/marketplace/',
-  getParentRoute: () => ErpAdminRoute,
-} as any)
+const ErpMerchantWebhooksSectionRoute =
+  ErpMerchantWebhooksSectionRouteImport.update({
+    id: '/webhooks/$section',
+    path: '/webhooks/$section',
+    getParentRoute: () => ErpMerchantRoute,
+  } as any)
+const ErpMerchantProductsSectionRoute =
+  ErpMerchantProductsSectionRouteImport.update({
+    id: '/products/$section',
+    path: '/products/$section',
+    getParentRoute: () => ErpMerchantRoute,
+  } as any)
+const ErpMerchantPricingSectionRoute =
+  ErpMerchantPricingSectionRouteImport.update({
+    id: '/pricing/$section',
+    path: '/pricing/$section',
+    getParentRoute: () => ErpMerchantRoute,
+  } as any)
+const ErpMerchantDiscountsSectionRoute =
+  ErpMerchantDiscountsSectionRouteImport.update({
+    id: '/discounts/$section',
+    path: '/discounts/$section',
+    getParentRoute: () => ErpMerchantRoute,
+  } as any)
+const ErpMarketplaceForumsSectionRoute =
+  ErpMarketplaceForumsSectionRouteImport.update({
+    id: '/forums/$section',
+    path: '/forums/$section',
+    getParentRoute: () => ErpMarketplaceRoute,
+  } as any)
+const ErpMarketplaceAuthorSectionRoute =
+  ErpMarketplaceAuthorSectionRouteImport.update({
+    id: '/author/$section',
+    path: '/author/$section',
+    getParentRoute: () => ErpMarketplaceRoute,
+  } as any)
+const ErpAdminMarketplaceSectionRoute =
+  ErpAdminMarketplaceSectionRouteImport.update({
+    id: '/marketplace/$section',
+    path: '/marketplace/$section',
+    getParentRoute: () => ErpAdminRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -4332,13 +4339,13 @@ export interface FileRoutesByFullPath {
   '/vala/system-settings': typeof ValaSystemSettingsRoute
   '/vala/task': typeof ValaTaskRoute
   '/control-panel/': typeof ControlPanelIndexRoute
-  '/erp/admin/': typeof ErpAdminRoute
-  '/erp/auth/': typeof ErpAuthRoute
-  '/erp/customer/': typeof ErpCustomerRoute
-  '/erp/marketplace/': typeof ErpMarketplaceRoute
-  '/erp/merchant/': typeof ErpMerchantRoute
-  '/erp/support/': typeof ErpSupportRoute
   '/control-panel/$module/$sub': typeof ControlPanelModuleSubRoute
+  '/erp/admin/$section': typeof ErpAdminSectionRoute
+  '/erp/auth/$section': typeof ErpAuthSectionRoute
+  '/erp/customer/$section': typeof ErpCustomerSectionRoute
+  '/erp/marketplace/$section': typeof ErpMarketplaceSectionRoute
+  '/erp/merchant/$section': typeof ErpMerchantSectionRoute
+  '/erp/support/$section': typeof ErpSupportSectionRoute
   '/mlm/sa/backup': typeof MlmSaBackupRoute
   '/mlm/sa/billing': typeof MlmSaBillingRoute
   '/mlm/sa/cron': typeof MlmSaCronRoute
@@ -4349,13 +4356,13 @@ export interface FileRoutesByFullPath {
   '/mlm/sa/security': typeof MlmSaSecurityRoute
   '/mlm/sa/system': typeof MlmSaSystemRoute
   '/mlm/sa/tenants': typeof MlmSaTenantsRoute
-  '/erp/admin/marketplace/': typeof ErpAdminMarketplaceRoute
-  '/erp/marketplace/author/': typeof ErpMarketplaceAuthorRoute
-  '/erp/marketplace/forums/': typeof ErpMarketplaceForumsRoute
-  '/erp/merchant/discounts/': typeof ErpMerchantDiscountsRoute
-  '/erp/merchant/pricing/': typeof ErpMerchantPricingRoute
-  '/erp/merchant/products/': typeof ErpMerchantProductsRoute
-  '/erp/merchant/webhooks/': typeof ErpMerchantWebhooksRoute
+  '/erp/admin/marketplace/$section': typeof ErpAdminMarketplaceSectionRoute
+  '/erp/marketplace/author/$section': typeof ErpMarketplaceAuthorSectionRoute
+  '/erp/marketplace/forums/$section': typeof ErpMarketplaceForumsSectionRoute
+  '/erp/merchant/discounts/$section': typeof ErpMerchantDiscountsSectionRoute
+  '/erp/merchant/pricing/$section': typeof ErpMerchantPricingSectionRoute
+  '/erp/merchant/products/$section': typeof ErpMerchantProductsSectionRoute
+  '/erp/merchant/webhooks/$section': typeof ErpMerchantWebhooksSectionRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -4590,6 +4597,7 @@ export interface FileRoutesByTo {
   '/data/viewer': typeof DataViewerRoute
   '/data/wallet': typeof DataWalletRoute
   '/data/wizard': typeof DataWizardRoute
+  '/erp/admin': typeof ErpAdminRouteWithChildren
   '/erp/admin-ai-assist': typeof ErpAdminAiAssistRoute
   '/erp/admin-api-logs': typeof ErpAdminApiLogsRoute
   '/erp/admin-api-self-test': typeof ErpAdminApiSelfTestRoute
@@ -4670,12 +4678,14 @@ export interface FileRoutesByTo {
   '/erp/admin-trust-scores': typeof ErpAdminTrustScoresRoute
   '/erp/admin-versioning': typeof ErpAdminVersioningRoute
   '/erp/admin-webhooks': typeof ErpAdminWebhooksRoute
+  '/erp/auth': typeof ErpAuthRouteWithChildren
   '/erp/auth-forgot-password': typeof ErpAuthForgotPasswordRoute
   '/erp/auth-login': typeof ErpAuthLoginRoute
   '/erp/auth-register': typeof ErpAuthRegisterRoute
   '/erp/auth-reset-password': typeof ErpAuthResetPasswordRoute
   '/erp/auth-verify-email': typeof ErpAuthVerifyEmailRoute
   '/erp/checkout': typeof ErpCheckoutRoute
+  '/erp/customer': typeof ErpCustomerRouteWithChildren
   '/erp/customer-account': typeof ErpCustomerAccountRoute
   '/erp/customer-dashboard': typeof ErpCustomerDashboardRoute
   '/erp/customer-downloads': typeof ErpCustomerDownloadsRoute
@@ -4686,6 +4696,7 @@ export interface FileRoutesByTo {
   '/erp/customer-privacy': typeof ErpCustomerPrivacyRoute
   '/erp/customer-security': typeof ErpCustomerSecurityRoute
   '/erp/customer-subscriptions': typeof ErpCustomerSubscriptionsRoute
+  '/erp/marketplace': typeof ErpMarketplaceRouteWithChildren
   '/erp/marketplace-author': typeof ErpMarketplaceAuthorRoute
   '/erp/marketplace-author-analytics': typeof ErpMarketplaceAuthorAnalyticsRoute
   '/erp/marketplace-author-badges': typeof ErpMarketplaceAuthorBadgesRoute
@@ -4711,6 +4722,7 @@ export interface FileRoutesByTo {
   '/erp/marketplace-notifications': typeof ErpMarketplaceNotificationsRoute
   '/erp/marketplace-search': typeof ErpMarketplaceSearchRoute
   '/erp/marketplace-wishlist': typeof ErpMarketplaceWishlistRoute
+  '/erp/merchant': typeof ErpMerchantRouteWithChildren
   '/erp/merchant-analytics': typeof ErpMerchantAnalyticsRoute
   '/erp/merchant-api': typeof ErpMerchantApiRoute
   '/erp/merchant-checkout-links': typeof ErpMerchantCheckoutLinksRoute
@@ -4732,6 +4744,7 @@ export interface FileRoutesByTo {
   '/erp/merchant-transactions': typeof ErpMerchantTransactionsRoute
   '/erp/merchant-webhooks': typeof ErpMerchantWebhooksRoute
   '/erp/merchant-webhooks-create': typeof ErpMerchantWebhooksCreateRoute
+  '/erp/support': typeof ErpSupportRouteWithChildren
   '/erp/support-customers': typeof ErpSupportCustomersRoute
   '/erp/support-dashboard': typeof ErpSupportDashboardRoute
   '/erp/support-escalations': typeof ErpSupportEscalationsRoute
@@ -4942,13 +4955,13 @@ export interface FileRoutesByTo {
   '/vala/system-settings': typeof ValaSystemSettingsRoute
   '/vala/task': typeof ValaTaskRoute
   '/control-panel': typeof ControlPanelIndexRoute
-  '/erp/admin': typeof ErpAdminRoute
-  '/erp/auth': typeof ErpAuthRoute
-  '/erp/customer': typeof ErpCustomerRoute
-  '/erp/marketplace': typeof ErpMarketplaceRoute
-  '/erp/merchant': typeof ErpMerchantRoute
-  '/erp/support': typeof ErpSupportRoute
   '/control-panel/$module/$sub': typeof ControlPanelModuleSubRoute
+  '/erp/admin/$section': typeof ErpAdminSectionRoute
+  '/erp/auth/$section': typeof ErpAuthSectionRoute
+  '/erp/customer/$section': typeof ErpCustomerSectionRoute
+  '/erp/marketplace/$section': typeof ErpMarketplaceSectionRoute
+  '/erp/merchant/$section': typeof ErpMerchantSectionRoute
+  '/erp/support/$section': typeof ErpSupportSectionRoute
   '/mlm/sa/backup': typeof MlmSaBackupRoute
   '/mlm/sa/billing': typeof MlmSaBillingRoute
   '/mlm/sa/cron': typeof MlmSaCronRoute
@@ -4959,13 +4972,13 @@ export interface FileRoutesByTo {
   '/mlm/sa/security': typeof MlmSaSecurityRoute
   '/mlm/sa/system': typeof MlmSaSystemRoute
   '/mlm/sa/tenants': typeof MlmSaTenantsRoute
-  '/erp/admin/marketplace': typeof ErpAdminMarketplaceRoute
-  '/erp/marketplace/author': typeof ErpMarketplaceAuthorRoute
-  '/erp/marketplace/forums': typeof ErpMarketplaceForumsRoute
-  '/erp/merchant/discounts': typeof ErpMerchantDiscountsRoute
-  '/erp/merchant/pricing': typeof ErpMerchantPricingRoute
-  '/erp/merchant/products': typeof ErpMerchantProductsRoute
-  '/erp/merchant/webhooks': typeof ErpMerchantWebhooksRoute
+  '/erp/admin/marketplace/$section': typeof ErpAdminMarketplaceSectionRoute
+  '/erp/marketplace/author/$section': typeof ErpMarketplaceAuthorSectionRoute
+  '/erp/marketplace/forums/$section': typeof ErpMarketplaceForumsSectionRoute
+  '/erp/merchant/discounts/$section': typeof ErpMerchantDiscountsSectionRoute
+  '/erp/merchant/pricing/$section': typeof ErpMerchantPricingSectionRoute
+  '/erp/merchant/products/$section': typeof ErpMerchantProductsSectionRoute
+  '/erp/merchant/webhooks/$section': typeof ErpMerchantWebhooksSectionRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -5559,13 +5572,13 @@ export interface FileRoutesById {
   '/vala/system-settings': typeof ValaSystemSettingsRoute
   '/vala/task': typeof ValaTaskRoute
   '/control-panel/': typeof ControlPanelIndexRoute
-  '/erp/admin/': typeof ErpAdminRoute
-  '/erp/auth/': typeof ErpAuthRoute
-  '/erp/customer/': typeof ErpCustomerRoute
-  '/erp/marketplace/': typeof ErpMarketplaceRoute
-  '/erp/merchant/': typeof ErpMerchantRoute
-  '/erp/support/': typeof ErpSupportRoute
   '/control-panel/$module/$sub': typeof ControlPanelModuleSubRoute
+  '/erp/admin/$section': typeof ErpAdminSectionRoute
+  '/erp/auth/$section': typeof ErpAuthSectionRoute
+  '/erp/customer/$section': typeof ErpCustomerSectionRoute
+  '/erp/marketplace/$section': typeof ErpMarketplaceSectionRoute
+  '/erp/merchant/$section': typeof ErpMerchantSectionRoute
+  '/erp/support/$section': typeof ErpSupportSectionRoute
   '/mlm/sa/backup': typeof MlmSaBackupRoute
   '/mlm/sa/billing': typeof MlmSaBillingRoute
   '/mlm/sa/cron': typeof MlmSaCronRoute
@@ -5576,13 +5589,13 @@ export interface FileRoutesById {
   '/mlm/sa/security': typeof MlmSaSecurityRoute
   '/mlm/sa/system': typeof MlmSaSystemRoute
   '/mlm/sa/tenants': typeof MlmSaTenantsRoute
-  '/erp/admin/marketplace/': typeof ErpAdminMarketplaceRoute
-  '/erp/marketplace/author/': typeof ErpMarketplaceAuthorRoute
-  '/erp/marketplace/forums/': typeof ErpMarketplaceForumsRoute
-  '/erp/merchant/discounts/': typeof ErpMerchantDiscountsRoute
-  '/erp/merchant/pricing/': typeof ErpMerchantPricingRoute
-  '/erp/merchant/products/': typeof ErpMerchantProductsRoute
-  '/erp/merchant/webhooks/': typeof ErpMerchantWebhooksRoute
+  '/erp/admin/marketplace/$section': typeof ErpAdminMarketplaceSectionRoute
+  '/erp/marketplace/author/$section': typeof ErpMarketplaceAuthorSectionRoute
+  '/erp/marketplace/forums/$section': typeof ErpMarketplaceForumsSectionRoute
+  '/erp/merchant/discounts/$section': typeof ErpMerchantDiscountsSectionRoute
+  '/erp/merchant/pricing/$section': typeof ErpMerchantPricingSectionRoute
+  '/erp/merchant/products/$section': typeof ErpMerchantProductsSectionRoute
+  '/erp/merchant/webhooks/$section': typeof ErpMerchantWebhooksSectionRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -6177,13 +6190,13 @@ export interface FileRouteTypes {
     | '/vala/system-settings'
     | '/vala/task'
     | '/control-panel/'
-    | '/erp/admin/'
-    | '/erp/auth/'
-    | '/erp/customer/'
-    | '/erp/marketplace/'
-    | '/erp/merchant/'
-    | '/erp/support/'
     | '/control-panel/$module/$sub'
+    | '/erp/admin/$section'
+    | '/erp/auth/$section'
+    | '/erp/customer/$section'
+    | '/erp/marketplace/$section'
+    | '/erp/merchant/$section'
+    | '/erp/support/$section'
     | '/mlm/sa/backup'
     | '/mlm/sa/billing'
     | '/mlm/sa/cron'
@@ -6194,13 +6207,13 @@ export interface FileRouteTypes {
     | '/mlm/sa/security'
     | '/mlm/sa/system'
     | '/mlm/sa/tenants'
-    | '/erp/admin/marketplace/'
-    | '/erp/marketplace/author/'
-    | '/erp/marketplace/forums/'
-    | '/erp/merchant/discounts/'
-    | '/erp/merchant/pricing/'
-    | '/erp/merchant/products/'
-    | '/erp/merchant/webhooks/'
+    | '/erp/admin/marketplace/$section'
+    | '/erp/marketplace/author/$section'
+    | '/erp/marketplace/forums/$section'
+    | '/erp/merchant/discounts/$section'
+    | '/erp/merchant/pricing/$section'
+    | '/erp/merchant/products/$section'
+    | '/erp/merchant/webhooks/$section'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -6435,6 +6448,7 @@ export interface FileRouteTypes {
     | '/data/viewer'
     | '/data/wallet'
     | '/data/wizard'
+    | '/erp/admin'
     | '/erp/admin-ai-assist'
     | '/erp/admin-api-logs'
     | '/erp/admin-api-self-test'
@@ -6515,12 +6529,14 @@ export interface FileRouteTypes {
     | '/erp/admin-trust-scores'
     | '/erp/admin-versioning'
     | '/erp/admin-webhooks'
+    | '/erp/auth'
     | '/erp/auth-forgot-password'
     | '/erp/auth-login'
     | '/erp/auth-register'
     | '/erp/auth-reset-password'
     | '/erp/auth-verify-email'
     | '/erp/checkout'
+    | '/erp/customer'
     | '/erp/customer-account'
     | '/erp/customer-dashboard'
     | '/erp/customer-downloads'
@@ -6531,6 +6547,7 @@ export interface FileRouteTypes {
     | '/erp/customer-privacy'
     | '/erp/customer-security'
     | '/erp/customer-subscriptions'
+    | '/erp/marketplace'
     | '/erp/marketplace-author'
     | '/erp/marketplace-author-analytics'
     | '/erp/marketplace-author-badges'
@@ -6556,6 +6573,7 @@ export interface FileRouteTypes {
     | '/erp/marketplace-notifications'
     | '/erp/marketplace-search'
     | '/erp/marketplace-wishlist'
+    | '/erp/merchant'
     | '/erp/merchant-analytics'
     | '/erp/merchant-api'
     | '/erp/merchant-checkout-links'
@@ -6577,6 +6595,7 @@ export interface FileRouteTypes {
     | '/erp/merchant-transactions'
     | '/erp/merchant-webhooks'
     | '/erp/merchant-webhooks-create'
+    | '/erp/support'
     | '/erp/support-customers'
     | '/erp/support-dashboard'
     | '/erp/support-escalations'
@@ -6787,13 +6806,13 @@ export interface FileRouteTypes {
     | '/vala/system-settings'
     | '/vala/task'
     | '/control-panel'
-    | '/erp/admin'
-    | '/erp/auth'
-    | '/erp/customer'
-    | '/erp/marketplace'
-    | '/erp/merchant'
-    | '/erp/support'
     | '/control-panel/$module/$sub'
+    | '/erp/admin/$section'
+    | '/erp/auth/$section'
+    | '/erp/customer/$section'
+    | '/erp/marketplace/$section'
+    | '/erp/merchant/$section'
+    | '/erp/support/$section'
     | '/mlm/sa/backup'
     | '/mlm/sa/billing'
     | '/mlm/sa/cron'
@@ -6804,13 +6823,13 @@ export interface FileRouteTypes {
     | '/mlm/sa/security'
     | '/mlm/sa/system'
     | '/mlm/sa/tenants'
-    | '/erp/admin/marketplace'
-    | '/erp/marketplace/author'
-    | '/erp/marketplace/forums'
-    | '/erp/merchant/discounts'
-    | '/erp/merchant/pricing'
-    | '/erp/merchant/products'
-    | '/erp/merchant/webhooks'
+    | '/erp/admin/marketplace/$section'
+    | '/erp/marketplace/author/$section'
+    | '/erp/marketplace/forums/$section'
+    | '/erp/merchant/discounts/$section'
+    | '/erp/merchant/pricing/$section'
+    | '/erp/merchant/products/$section'
+    | '/erp/merchant/webhooks/$section'
   id:
     | '__root__'
     | '/'
@@ -7403,13 +7422,13 @@ export interface FileRouteTypes {
     | '/vala/system-settings'
     | '/vala/task'
     | '/control-panel/'
-    | '/erp/admin/'
-    | '/erp/auth/'
-    | '/erp/customer/'
-    | '/erp/marketplace/'
-    | '/erp/merchant/'
-    | '/erp/support/'
     | '/control-panel/$module/$sub'
+    | '/erp/admin/$section'
+    | '/erp/auth/$section'
+    | '/erp/customer/$section'
+    | '/erp/marketplace/$section'
+    | '/erp/merchant/$section'
+    | '/erp/support/$section'
     | '/mlm/sa/backup'
     | '/mlm/sa/billing'
     | '/mlm/sa/cron'
@@ -7420,13 +7439,13 @@ export interface FileRouteTypes {
     | '/mlm/sa/security'
     | '/mlm/sa/system'
     | '/mlm/sa/tenants'
-    | '/erp/admin/marketplace/'
-    | '/erp/marketplace/author/'
-    | '/erp/marketplace/forums/'
-    | '/erp/merchant/discounts/'
-    | '/erp/merchant/pricing/'
-    | '/erp/merchant/products/'
-    | '/erp/merchant/webhooks/'
+    | '/erp/admin/marketplace/$section'
+    | '/erp/marketplace/author/$section'
+    | '/erp/marketplace/forums/$section'
+    | '/erp/merchant/discounts/$section'
+    | '/erp/merchant/pricing/$section'
+    | '/erp/merchant/products/$section'
+    | '/erp/merchant/webhooks/$section'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -12225,6 +12244,48 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MlmSaBackupRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/erp/support/$section': {
+      id: '/erp/support/$section'
+      path: '/$section'
+      fullPath: '/erp/support/$section'
+      preLoaderRoute: typeof ErpSupportSectionRouteImport
+      parentRoute: typeof ErpSupportRoute
+    }
+    '/erp/merchant/$section': {
+      id: '/erp/merchant/$section'
+      path: '/$section'
+      fullPath: '/erp/merchant/$section'
+      preLoaderRoute: typeof ErpMerchantSectionRouteImport
+      parentRoute: typeof ErpMerchantRoute
+    }
+    '/erp/marketplace/$section': {
+      id: '/erp/marketplace/$section'
+      path: '/$section'
+      fullPath: '/erp/marketplace/$section'
+      preLoaderRoute: typeof ErpMarketplaceSectionRouteImport
+      parentRoute: typeof ErpMarketplaceRoute
+    }
+    '/erp/customer/$section': {
+      id: '/erp/customer/$section'
+      path: '/$section'
+      fullPath: '/erp/customer/$section'
+      preLoaderRoute: typeof ErpCustomerSectionRouteImport
+      parentRoute: typeof ErpCustomerRoute
+    }
+    '/erp/auth/$section': {
+      id: '/erp/auth/$section'
+      path: '/$section'
+      fullPath: '/erp/auth/$section'
+      preLoaderRoute: typeof ErpAuthSectionRouteImport
+      parentRoute: typeof ErpAuthRoute
+    }
+    '/erp/admin/$section': {
+      id: '/erp/admin/$section'
+      path: '/$section'
+      fullPath: '/erp/admin/$section'
+      preLoaderRoute: typeof ErpAdminSectionRouteImport
+      parentRoute: typeof ErpAdminRoute
+    }
     '/control-panel/$module/$sub': {
       id: '/control-panel/$module/$sub'
       path: '/$sub'
@@ -12232,95 +12293,53 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ControlPanelModuleSubRouteImport
       parentRoute: typeof ControlPanelModuleRoute
     }
-    '/erp/support/': {
-      id: '/erp/support/'
-      path: '/'
-      fullPath: '/erp/support/'
-      preLoaderRoute: typeof ErpSupportRouteImport
-      parentRoute: typeof ErpSupportRoute
-    }
-    '/erp/merchant/': {
-      id: '/erp/merchant/'
-      path: '/'
-      fullPath: '/erp/merchant/'
-      preLoaderRoute: typeof ErpMerchantRouteImport
+    '/erp/merchant/webhooks/$section': {
+      id: '/erp/merchant/webhooks/$section'
+      path: '/webhooks/$section'
+      fullPath: '/erp/merchant/webhooks/$section'
+      preLoaderRoute: typeof ErpMerchantWebhooksSectionRouteImport
       parentRoute: typeof ErpMerchantRoute
     }
-    '/erp/marketplace/': {
-      id: '/erp/marketplace/'
-      path: '/'
-      fullPath: '/erp/marketplace/'
-      preLoaderRoute: typeof ErpMarketplaceRouteImport
+    '/erp/merchant/products/$section': {
+      id: '/erp/merchant/products/$section'
+      path: '/products/$section'
+      fullPath: '/erp/merchant/products/$section'
+      preLoaderRoute: typeof ErpMerchantProductsSectionRouteImport
+      parentRoute: typeof ErpMerchantRoute
+    }
+    '/erp/merchant/pricing/$section': {
+      id: '/erp/merchant/pricing/$section'
+      path: '/pricing/$section'
+      fullPath: '/erp/merchant/pricing/$section'
+      preLoaderRoute: typeof ErpMerchantPricingSectionRouteImport
+      parentRoute: typeof ErpMerchantRoute
+    }
+    '/erp/merchant/discounts/$section': {
+      id: '/erp/merchant/discounts/$section'
+      path: '/discounts/$section'
+      fullPath: '/erp/merchant/discounts/$section'
+      preLoaderRoute: typeof ErpMerchantDiscountsSectionRouteImport
+      parentRoute: typeof ErpMerchantRoute
+    }
+    '/erp/marketplace/forums/$section': {
+      id: '/erp/marketplace/forums/$section'
+      path: '/forums/$section'
+      fullPath: '/erp/marketplace/forums/$section'
+      preLoaderRoute: typeof ErpMarketplaceForumsSectionRouteImport
       parentRoute: typeof ErpMarketplaceRoute
     }
-    '/erp/customer/': {
-      id: '/erp/customer/'
-      path: '/'
-      fullPath: '/erp/customer/'
-      preLoaderRoute: typeof ErpCustomerRouteImport
-      parentRoute: typeof ErpCustomerRoute
-    }
-    '/erp/auth/': {
-      id: '/erp/auth/'
-      path: '/'
-      fullPath: '/erp/auth/'
-      preLoaderRoute: typeof ErpAuthRouteImport
-      parentRoute: typeof ErpAuthRoute
-    }
-    '/erp/admin/': {
-      id: '/erp/admin/'
-      path: '/'
-      fullPath: '/erp/admin/'
-      preLoaderRoute: typeof ErpAdminRouteImport
-      parentRoute: typeof ErpAdminRoute
-    }
-    '/erp/merchant/webhooks/': {
-      id: '/erp/merchant/webhooks/'
-      path: '/webhooks'
-      fullPath: '/erp/merchant/webhooks/'
-      preLoaderRoute: typeof ErpMerchantWebhooksRouteImport
-      parentRoute: typeof ErpMerchantRoute
-    }
-    '/erp/merchant/products/': {
-      id: '/erp/merchant/products/'
-      path: '/products'
-      fullPath: '/erp/merchant/products/'
-      preLoaderRoute: typeof ErpMerchantProductsRouteImport
-      parentRoute: typeof ErpMerchantRoute
-    }
-    '/erp/merchant/pricing/': {
-      id: '/erp/merchant/pricing/'
-      path: '/pricing'
-      fullPath: '/erp/merchant/pricing/'
-      preLoaderRoute: typeof ErpMerchantPricingRouteImport
-      parentRoute: typeof ErpMerchantRoute
-    }
-    '/erp/merchant/discounts/': {
-      id: '/erp/merchant/discounts/'
-      path: '/discounts'
-      fullPath: '/erp/merchant/discounts/'
-      preLoaderRoute: typeof ErpMerchantDiscountsRouteImport
-      parentRoute: typeof ErpMerchantRoute
-    }
-    '/erp/marketplace/forums/': {
-      id: '/erp/marketplace/forums/'
-      path: '/forums'
-      fullPath: '/erp/marketplace/forums/'
-      preLoaderRoute: typeof ErpMarketplaceForumsRouteImport
+    '/erp/marketplace/author/$section': {
+      id: '/erp/marketplace/author/$section'
+      path: '/author/$section'
+      fullPath: '/erp/marketplace/author/$section'
+      preLoaderRoute: typeof ErpMarketplaceAuthorSectionRouteImport
       parentRoute: typeof ErpMarketplaceRoute
     }
-    '/erp/marketplace/author/': {
-      id: '/erp/marketplace/author/'
-      path: '/author'
-      fullPath: '/erp/marketplace/author/'
-      preLoaderRoute: typeof ErpMarketplaceAuthorRouteImport
-      parentRoute: typeof ErpMarketplaceRoute
-    }
-    '/erp/admin/marketplace/': {
-      id: '/erp/admin/marketplace/'
-      path: '/marketplace'
-      fullPath: '/erp/admin/marketplace/'
-      preLoaderRoute: typeof ErpAdminMarketplaceRouteImport
+    '/erp/admin/marketplace/$section': {
+      id: '/erp/admin/marketplace/$section'
+      path: '/marketplace/$section'
+      fullPath: '/erp/admin/marketplace/$section'
+      preLoaderRoute: typeof ErpAdminMarketplaceSectionRouteImport
       parentRoute: typeof ErpAdminRoute
     }
   }
@@ -12364,13 +12383,13 @@ const ControlPanelModuleRouteWithChildren =
   ControlPanelModuleRoute._addFileChildren(ControlPanelModuleRouteChildren)
 
 interface ErpAdminRouteChildren {
-  ErpAdminRoute: typeof ErpAdminRoute
-  ErpAdminMarketplaceRoute: typeof ErpAdminMarketplaceRoute
+  ErpAdminSectionRoute: typeof ErpAdminSectionRoute
+  ErpAdminMarketplaceSectionRoute: typeof ErpAdminMarketplaceSectionRoute
 }
 
 const ErpAdminRouteChildren: ErpAdminRouteChildren = {
-  ErpAdminRoute: ErpAdminRoute,
-  ErpAdminMarketplaceRoute: ErpAdminMarketplaceRoute,
+  ErpAdminSectionRoute: ErpAdminSectionRoute,
+  ErpAdminMarketplaceSectionRoute: ErpAdminMarketplaceSectionRoute,
 }
 
 const ErpAdminRouteWithChildren = ErpAdminRoute._addFileChildren(
@@ -12378,22 +12397,22 @@ const ErpAdminRouteWithChildren = ErpAdminRoute._addFileChildren(
 )
 
 interface ErpAuthRouteChildren {
-  ErpAuthRoute: typeof ErpAuthRoute
+  ErpAuthSectionRoute: typeof ErpAuthSectionRoute
 }
 
 const ErpAuthRouteChildren: ErpAuthRouteChildren = {
-  ErpAuthRoute: ErpAuthRoute,
+  ErpAuthSectionRoute: ErpAuthSectionRoute,
 }
 
 const ErpAuthRouteWithChildren =
   ErpAuthRoute._addFileChildren(ErpAuthRouteChildren)
 
 interface ErpCustomerRouteChildren {
-  ErpCustomerRoute: typeof ErpCustomerRoute
+  ErpCustomerSectionRoute: typeof ErpCustomerSectionRoute
 }
 
 const ErpCustomerRouteChildren: ErpCustomerRouteChildren = {
-  ErpCustomerRoute: ErpCustomerRoute,
+  ErpCustomerSectionRoute: ErpCustomerSectionRoute,
 }
 
 const ErpCustomerRouteWithChildren = ErpCustomerRoute._addFileChildren(
@@ -12401,15 +12420,15 @@ const ErpCustomerRouteWithChildren = ErpCustomerRoute._addFileChildren(
 )
 
 interface ErpMarketplaceRouteChildren {
-  ErpMarketplaceRoute: typeof ErpMarketplaceRoute
-  ErpMarketplaceAuthorRoute: typeof ErpMarketplaceAuthorRoute
-  ErpMarketplaceForumsRoute: typeof ErpMarketplaceForumsRoute
+  ErpMarketplaceSectionRoute: typeof ErpMarketplaceSectionRoute
+  ErpMarketplaceAuthorSectionRoute: typeof ErpMarketplaceAuthorSectionRoute
+  ErpMarketplaceForumsSectionRoute: typeof ErpMarketplaceForumsSectionRoute
 }
 
 const ErpMarketplaceRouteChildren: ErpMarketplaceRouteChildren = {
-  ErpMarketplaceRoute: ErpMarketplaceRoute,
-  ErpMarketplaceAuthorRoute: ErpMarketplaceAuthorRoute,
-  ErpMarketplaceForumsRoute: ErpMarketplaceForumsRoute,
+  ErpMarketplaceSectionRoute: ErpMarketplaceSectionRoute,
+  ErpMarketplaceAuthorSectionRoute: ErpMarketplaceAuthorSectionRoute,
+  ErpMarketplaceForumsSectionRoute: ErpMarketplaceForumsSectionRoute,
 }
 
 const ErpMarketplaceRouteWithChildren = ErpMarketplaceRoute._addFileChildren(
@@ -12417,19 +12436,19 @@ const ErpMarketplaceRouteWithChildren = ErpMarketplaceRoute._addFileChildren(
 )
 
 interface ErpMerchantRouteChildren {
-  ErpMerchantRoute: typeof ErpMerchantRoute
-  ErpMerchantDiscountsRoute: typeof ErpMerchantDiscountsRoute
-  ErpMerchantPricingRoute: typeof ErpMerchantPricingRoute
-  ErpMerchantProductsRoute: typeof ErpMerchantProductsRoute
-  ErpMerchantWebhooksRoute: typeof ErpMerchantWebhooksRoute
+  ErpMerchantSectionRoute: typeof ErpMerchantSectionRoute
+  ErpMerchantDiscountsSectionRoute: typeof ErpMerchantDiscountsSectionRoute
+  ErpMerchantPricingSectionRoute: typeof ErpMerchantPricingSectionRoute
+  ErpMerchantProductsSectionRoute: typeof ErpMerchantProductsSectionRoute
+  ErpMerchantWebhooksSectionRoute: typeof ErpMerchantWebhooksSectionRoute
 }
 
 const ErpMerchantRouteChildren: ErpMerchantRouteChildren = {
-  ErpMerchantRoute: ErpMerchantRoute,
-  ErpMerchantDiscountsRoute: ErpMerchantDiscountsRoute,
-  ErpMerchantPricingRoute: ErpMerchantPricingRoute,
-  ErpMerchantProductsRoute: ErpMerchantProductsRoute,
-  ErpMerchantWebhooksRoute: ErpMerchantWebhooksRoute,
+  ErpMerchantSectionRoute: ErpMerchantSectionRoute,
+  ErpMerchantDiscountsSectionRoute: ErpMerchantDiscountsSectionRoute,
+  ErpMerchantPricingSectionRoute: ErpMerchantPricingSectionRoute,
+  ErpMerchantProductsSectionRoute: ErpMerchantProductsSectionRoute,
+  ErpMerchantWebhooksSectionRoute: ErpMerchantWebhooksSectionRoute,
 }
 
 const ErpMerchantRouteWithChildren = ErpMerchantRoute._addFileChildren(
@@ -12437,11 +12456,11 @@ const ErpMerchantRouteWithChildren = ErpMerchantRoute._addFileChildren(
 )
 
 interface ErpSupportRouteChildren {
-  ErpSupportRoute: typeof ErpSupportRoute
+  ErpSupportSectionRoute: typeof ErpSupportSectionRoute
 }
 
 const ErpSupportRouteChildren: ErpSupportRouteChildren = {
-  ErpSupportRoute: ErpSupportRoute,
+  ErpSupportSectionRoute: ErpSupportSectionRoute,
 }
 
 const ErpSupportRouteWithChildren = ErpSupportRoute._addFileChildren(
