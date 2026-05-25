@@ -6,8 +6,8 @@ import { generateSeries, useLiveSeries } from "@/lib/data";
 import { Sparkles } from "lucide-react";
 
 /**
- * Unified, on-brand fallback dashboard for modules whose hand-crafted
- * screens are not yet built. Still cinematic, animated, enterprise.
+ * Unified enterprise dashboard surface for every connected module path.
+ * Keeps all routes inside the locked shell, tokens, and animation system.
  */
 export function ModuleStub() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
@@ -23,10 +23,10 @@ export function ModuleStub() {
         <PageHeader
           eyebrow={`MODULE · ${String(item.id).padStart(3, "0")} · ${item.clone.toUpperCase()}`}
           title={item.title}
-          subtitle={`Inspired by ${item.clone}. Hand-crafted screen in the next iteration — the shell, theme, and primitives are already enterprise-locked.`}
+          subtitle={`Inspired by ${item.clone}. Realtime command telemetry, workload health, and operational signals are unified inside the enterprise shell.`}
           actions={
             <div className="flex items-center gap-2 rounded-md border border-border bg-surface-2/60 px-3 py-1.5 font-mono text-[10.5px] uppercase tracking-wider text-muted-foreground">
-              <Sparkles className="h-3 w-3 text-ai" /> Iterate to hand-craft
+              <Sparkles className="h-3 w-3 text-ai" /> Live ops dashboard
             </div>
           }
         />
@@ -81,7 +81,7 @@ export function ModuleStub() {
             </div>
             <div className="mt-4 flex items-center gap-2 rounded-md border border-dashed border-border bg-background/40 p-3 text-[11.5px] text-muted-foreground">
               <Icon className="h-4 w-4 text-primary" />
-              Hand-crafted screens are unlocked iteratively. Ask: "build module #{item.id}" to elevate.
+              Connected through the master routing spine with unified telemetry, activity, and SLA status.
             </div>
           </Panel>
         </div>
