@@ -3,6 +3,7 @@ import { PageHeader, Panel, Metric } from "@/components/dash/primitives";
 import { MultiLine, MiniArea, Bars, Radial } from "@/components/dash/charts";
 import { generateSeries, useLiveSeries } from "@/lib/data";
 import { Package, Plus } from "lucide-react";
+import { ConnectedModules } from "@/components/dash/ConnectedModules";
 
 export const Route = createFileRoute("/products")({
   head: () => ({ meta: [{ title: "Product Manager · AEGIS OS" }] }),
@@ -78,6 +79,8 @@ function ProductsPage() {
           <Panel kicker="CATEGORIES" title="Distribution"><Bars data={generateSeries(12, 18, 60, 22)} color="var(--primary)" h={200} /></Panel>
           <Panel kicker="PRICE BANDS" title="Spread"><Bars data={generateSeries(12, 19, 50, 18)} color="var(--ai)" h={200} /></Panel>
         </div>
+
+        <ConnectedModules ids={[11, 15, 13, 25, 24]} />
       </div>
     </div>
   );

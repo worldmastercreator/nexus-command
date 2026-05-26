@@ -3,6 +3,7 @@ import { PageHeader, Panel, Metric } from "@/components/dash/primitives";
 import { MultiLine, MiniArea, Bars } from "@/components/dash/charts";
 import { generateSeries, useLiveSeries } from "@/lib/data";
 import { PenLine } from "lucide-react";
+import { ConnectedModules } from "@/components/dash/ConnectedModules";
 
 export const Route = createFileRoute("/authors")({
   head: () => ({ meta: [{ title: "Author System · AEGIS OS" }] }),
@@ -58,6 +59,8 @@ function AuthorsPage() {
         </Panel>
 
         <Panel kicker="CATEGORIES" title="Author distribution"><Bars data={generateSeries(12,78,60,22)} color="var(--ai)" h={200} /></Panel>
+
+        <ConnectedModules ids={[11, 18, 15, 19, 23]} />
       </div>
     </div>
   );

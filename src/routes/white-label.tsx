@@ -3,6 +3,7 @@ import { PageHeader, Panel, Metric } from "@/components/dash/primitives";
 import { MultiLine, MiniArea, Radial } from "@/components/dash/charts";
 import { generateSeries, useLiveSeries } from "@/lib/data";
 import { Layers3, Palette, Globe } from "lucide-react";
+import { ConnectedModules } from "@/components/dash/ConnectedModules";
 
 export const Route = createFileRoute("/white-label")({
   head: () => ({ meta: [{ title: "White Label · AEGIS OS" }] }),
@@ -51,6 +52,8 @@ function WhiteLabelPage() {
             ))}
           </tbody></table>
         </Panel>
+
+        <ConnectedModules ids={[22, 21, 17, 24, 13]} />
       </div>
     </div>
   );

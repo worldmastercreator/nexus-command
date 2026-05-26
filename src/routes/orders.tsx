@@ -3,6 +3,7 @@ import { PageHeader, Panel, Metric } from "@/components/dash/primitives";
 import { MultiLine, MiniArea, Bars } from "@/components/dash/charts";
 import { generateSeries, useLiveSeries } from "@/lib/data";
 import { ShoppingCart, Truck, PackageCheck, CircleAlert } from "lucide-react";
+import { ConnectedModules } from "@/components/dash/ConnectedModules";
 
 export const Route = createFileRoute("/orders")({
   head: () => ({ meta: [{ title: "Order Management · AEGIS OS" }] }),
@@ -74,6 +75,8 @@ function OrdersPage() {
           <Panel kicker="CHANNELS" title="Origin mix"><Bars data={generateSeries(10,148,60,22)} color="var(--primary)" h={200} /></Panel>
           <Panel kicker="CARRIERS" title="Shipping mix"><Bars data={generateSeries(10,149,60,18)} color="var(--info)" h={200} /></Panel>
         </div>
+
+        <ConnectedModules ids={[11, 12, 14, 23, 25]} />
       </div>
     </div>
   );

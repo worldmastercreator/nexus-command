@@ -3,6 +3,7 @@ import { PageHeader, Panel, Metric } from "@/components/dash/primitives";
 import { MultiLine, MiniArea, StackedArea } from "@/components/dash/charts";
 import { generateSeries, useLiveSeries } from "@/lib/data";
 import { FileText } from "lucide-react";
+import { ConnectedModules } from "@/components/dash/ConnectedModules";
 
 export const Route = createFileRoute("/books")({
   head: () => ({ meta: [{ title: "Invoice / Books · AEGIS OS" }] }),
@@ -58,6 +59,8 @@ function BooksPage() {
             </tbody>
           </table>
         </Panel>
+
+        <ConnectedModules ids={[13, 14, 25, 24, 16]} />
       </div>
     </div>
   );

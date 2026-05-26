@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader, Panel, Metric } from "@/components/dash/primitives";
 import { MultiLine, MiniArea, Bars } from "@/components/dash/charts";
 import { generateSeries, useLiveSeries } from "@/lib/data";
+import { ConnectedModules } from "@/components/dash/ConnectedModules";
 
 export const Route = createFileRoute("/marketplace")({
   head: () => ({ meta: [{ title: "Marketplace · AEGIS OS" }] }),
@@ -83,6 +84,8 @@ function MarketplacePage() {
             </table>
           </Panel>
         </div>
+
+        <ConnectedModules ids={[12, 18, 14, 15, 19, 25]} />
       </div>
     </div>
   );
