@@ -3,6 +3,7 @@ import { PageHeader, Panel, Metric } from "@/components/dash/primitives";
 import { MultiLine, MiniArea, Radial } from "@/components/dash/charts";
 import { generateSeries, useLiveSeries } from "@/lib/data";
 import { Building2, MapPin } from "lucide-react";
+import { ConnectedModules } from "@/components/dash/ConnectedModules";
 
 export const Route = createFileRoute("/franchise")({
   head: () => ({ meta: [{ title: "Franchise · AEGIS OS" }] }),
@@ -66,6 +67,8 @@ function FranchisePage() {
             </tbody>
           </table>
         </Panel>
+
+        <ConnectedModules ids={[22, 21, 24, 23, 25]} />
       </div>
     </div>
   );

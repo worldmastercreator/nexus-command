@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader, Panel, Metric } from "@/components/dash/primitives";
 import { MultiLine, MiniArea, Bars } from "@/components/dash/charts";
 import { generateSeries, useLiveSeries } from "@/lib/data";
+import { ConnectedModules } from "@/components/dash/ConnectedModules";
 
 export const Route = createFileRoute("/resellers")({
   head: () => ({ meta: [{ title: "Reseller System · AEGIS OS" }] }),
@@ -60,6 +61,8 @@ function ResellersPage() {
         </Panel>
 
         <Panel kicker="REGIONS" title="GMV by territory · 7d"><Bars data={generateSeries(12,58,60,22)} color="var(--market)" h={200} /></Panel>
+
+        <ConnectedModules ids={[18, 19, 20, 11, 17]} />
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ import { PageHeader, Panel, Metric } from "@/components/dash/primitives";
 import { MultiLine, MiniArea, Bars } from "@/components/dash/charts";
 import { generateSeries, useLiveSeries } from "@/lib/data";
 import { Star, Instagram, Youtube, Twitch } from "lucide-react";
+import { ConnectedModules } from "@/components/dash/ConnectedModules";
 
 export const Route = createFileRoute("/influencers")({
   head: () => ({ meta: [{ title: "Influencer Manager · AEGIS OS" }] }),
@@ -57,6 +58,8 @@ function InfluencersPage() {
         </Panel>
 
         <Panel kicker="CATEGORIES" title="Niche distribution"><Bars data={generateSeries(12,98,60,22)} color="var(--market)" h={200} /></Panel>
+
+        <ConnectedModules ids={[19, 16, 11, 24]} />
       </div>
     </div>
   );

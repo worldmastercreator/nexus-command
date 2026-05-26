@@ -3,6 +3,7 @@ import { PageHeader, Panel, Metric } from "@/components/dash/primitives";
 import { MultiLine, MiniArea, Radial } from "@/components/dash/charts";
 import { generateSeries, useLiveSeries } from "@/lib/data";
 import { KeyRound, ShieldCheck, ShieldAlert } from "lucide-react";
+import { ConnectedModules } from "@/components/dash/ConnectedModules";
 
 export const Route = createFileRoute("/licenses")({
   head: () => ({ meta: [{ title: "License Manager · AEGIS OS" }] }),
@@ -52,6 +53,8 @@ function LicensesPage() {
             ))}
           </ul>
         </Panel>
+
+        <ConnectedModules ids={[11, 12, 14, 18, 21]} />
       </div>
     </div>
   );

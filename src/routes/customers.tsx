@@ -3,6 +3,7 @@ import { PageHeader, Panel, Metric } from "@/components/dash/primitives";
 import { MultiLine, MiniArea, Bars, Radial } from "@/components/dash/charts";
 import { generateSeries, useLiveSeries } from "@/lib/data";
 import { UserCircle, Mail, Phone, MessageCircle } from "lucide-react";
+import { ConnectedModules } from "@/components/dash/ConnectedModules";
 
 export const Route = createFileRoute("/customers")({
   head: () => ({ meta: [{ title: "Customer Management · AEGIS OS" }] }),
@@ -67,6 +68,8 @@ function CustomersPage() {
           <Panel kicker="SEGMENTS" title="By plan tier"><Bars data={generateSeries(10,138,60,18)} color="var(--primary)" h={220} /></Panel>
           <Panel kicker="LIFETIME" title="LTV cohorts"><Bars data={generateSeries(10,139,60,22)} color="var(--success)" h={220} /></Panel>
         </div>
+
+        <ConnectedModules ids={[11, 24, 25, 13, 19]} />
       </div>
     </div>
   );

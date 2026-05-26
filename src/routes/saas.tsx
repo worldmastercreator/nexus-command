@@ -3,6 +3,7 @@ import { PageHeader, Panel, Metric } from "@/components/dash/primitives";
 import { MultiLine, MiniArea, Bars } from "@/components/dash/charts";
 import { generateSeries, useLiveSeries } from "@/lib/data";
 import { Boxes } from "lucide-react";
+import { ConnectedModules } from "@/components/dash/ConnectedModules";
 
 export const Route = createFileRoute("/saas")({
   head: () => ({ meta: [{ title: "SaaS Tenants · AEGIS OS" }] }),
@@ -56,6 +57,8 @@ function SaasPage() {
         </Panel>
 
         <Panel kicker="REGIONS" title="Tenants per region"><Bars data={generateSeries(12,118,60,22)} color="var(--ai)" h={200} /></Panel>
+
+        <ConnectedModules ids={[21, 13, 15, 24, 14]} />
       </div>
     </div>
   );

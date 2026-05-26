@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader, Panel, Metric } from "@/components/dash/primitives";
 import { MultiLine, MiniArea, Bars } from "@/components/dash/charts";
 import { generateSeries, useLiveSeries } from "@/lib/data";
+import { ConnectedModules } from "@/components/dash/ConnectedModules";
 
 export const Route = createFileRoute("/payments")({
   head: () => ({ meta: [{ title: "Payments · AEGIS OS" }] }),
@@ -65,6 +66,8 @@ function PaymentsPage() {
             </ul>
           </Panel>
         </div>
+
+        <ConnectedModules ids={[13, 23, 15, 14, 11]} />
       </div>
     </div>
   );
