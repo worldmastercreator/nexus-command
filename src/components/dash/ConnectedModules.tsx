@@ -1,11 +1,11 @@
-import { Link } from "@tanstack/react-router";
 import { ALL_ITEMS } from "@/lib/nav";
 import { Panel } from "@/components/dash/primitives";
 import { Link2 } from "lucide-react";
 
 /**
  * Cross-module wiring strip. Pure presentation — uses existing nav.ts entries
- * to render typed deep-links to related modules inside the locked shell.
+ * to render deep-links to related modules inside the locked shell.
+ * Uses native <a> for arbitrary string paths from nav.ts.
  */
 export function ConnectedModules({ ids, title = "Connected modules" }: { ids: number[]; title?: string }) {
   const items = ids
@@ -18,9 +18,9 @@ export function ConnectedModules({ ids, title = "Connected modules" }: { ids: nu
         {items.map((it) => {
           const Icon = it.icon;
           return (
-            <Link
+            <a
               key={it.id}
-              to={it.path as string}
+              href={it.path}
               className="group inline-flex items-center gap-2 rounded-md border border-border bg-surface-2/60 px-3 py-1.5 text-[11.5px] text-foreground/90 transition hover:border-primary/40 hover:bg-primary/5 hover:text-primary"
             >
               <Icon className="h-3.5 w-3.5 text-primary" />
@@ -29,7 +29,7 @@ export function ConnectedModules({ ids, title = "Connected modules" }: { ids: nu
                 #{String(it.id).padStart(3, "0")} · {it.clone}
               </span>
               <Link2 className="h-3 w-3 text-muted-foreground/60 group-hover:text-primary" />
-            </Link>
+            </a>
           );
         })}
       </div>
