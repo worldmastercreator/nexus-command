@@ -3,6 +3,7 @@ import { PageHeader, Panel, Metric } from "@/components/dash/primitives";
 import { MultiLine, MiniArea, Bars } from "@/components/dash/charts";
 import { generateSeries, useLiveSeries } from "@/lib/data";
 import { ConnectedModules } from "@/components/dash/ConnectedModules";
+import { ModuleLiveTable, fmtMoney, fmtNum } from "@/components/dash/ModuleLiveTable";
 
 export const Route = createFileRoute("/affiliates")({
   head: () => ({ meta: [{ title: "Affiliate System · AEGIS OS" }] }),
@@ -56,6 +57,19 @@ function AffiliatesPage() {
           </Panel>
           <Panel kicker="SOURCE MIX" title="Traffic origin"><Bars data={generateSeries(12,88,60,22)} color="var(--info)" h={220} /></Panel>
         </div>
+
+        <ModuleLiveTable
+          table="mod_affiliates"
+          kicker="LIVE · LOVABLE CLOUD"
+          title="Affiliate network"
+          columns={[
+            { key: "handle", label: "Handle", className: "font-mono text-[11px] text-info" },
+            { key: "tier", label: "Tier", className: "text-muted-foreground" },
+            { key: "clicks", label: "Clicks", align: "right", format: (v) => fmtNum(v) },
+            { key: "conversions", label: "Conv", align: "right", format: (v) => fmtNum(v) },
+            { key: "commission", label: "Commission", align: "right", format: (v) => <span className="text-success">{fmtMoney(v)}</span> },
+          ]}
+        />
 
         <ConnectedModules ids={[16, 20, 11, 24, 14]} />
       </div>

@@ -3,6 +3,7 @@ import { PageHeader, Panel, Metric } from "@/components/dash/primitives";
 import { MultiLine, MiniArea, StackedArea, Radial } from "@/components/dash/charts";
 import { generateSeries, useLiveSeries } from "@/lib/data";
 import { ConnectedModules } from "@/components/dash/ConnectedModules";
+import { ModuleLiveTable, StatusBadge, fmtMoney } from "@/components/dash/ModuleLiveTable";
 
 export const Route = createFileRoute("/billing")({
   head: () => ({ meta: [{ title: "Subscriptions · AEGIS OS" }] }),
@@ -58,6 +59,18 @@ function BillingPage() {
             <MultiLine data={generateSeries(24, 28, 60, 14)} h={200} />
           </Panel>
         </div>
+
+        <ModuleLiveTable
+          table="mod_subscriptions"
+          kicker="LIVE · LOVABLE CLOUD"
+          title="Active subscriptions"
+          columns={[
+            { key: "customer", label: "Customer" },
+            { key: "plan", label: "Plan", className: "text-muted-foreground" },
+            { key: "mrr", label: "MRR", align: "right", format: (v) => <span className="text-success">{fmtMoney(v)}</span> },
+            { key: "status", label: "Status", align: "right", format: (v) => <StatusBadge value={String(v)} /> },
+          ]}
+        />
 
         <ConnectedModules ids={[14, 23, 22, 13, 15]} />
       </div>

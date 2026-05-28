@@ -3,6 +3,7 @@ import { PageHeader, Panel, Metric } from "@/components/dash/primitives";
 import { MultiLine, MiniArea, Bars } from "@/components/dash/charts";
 import { generateSeries, useLiveSeries } from "@/lib/data";
 import { ConnectedModules } from "@/components/dash/ConnectedModules";
+import { ModuleLiveTable, StatusBadge, fmtMoney } from "@/components/dash/ModuleLiveTable";
 
 export const Route = createFileRoute("/resellers")({
   head: () => ({ meta: [{ title: "Reseller System · AEGIS OS" }] }),
@@ -61,6 +62,19 @@ function ResellersPage() {
         </Panel>
 
         <Panel kicker="REGIONS" title="GMV by territory · 7d"><Bars data={generateSeries(12,58,60,22)} color="var(--market)" h={200} /></Panel>
+
+        <ModuleLiveTable
+          table="mod_resellers"
+          kicker="LIVE · LOVABLE CLOUD"
+          title="Reseller partners"
+          columns={[
+            { key: "name", label: "Reseller" },
+            { key: "tier", label: "Tier", className: "font-mono text-[11px] uppercase text-market" },
+            { key: "commission", label: "Comm %", align: "right", format: (v) => `${Number(v).toFixed(0)}%` },
+            { key: "sales", label: "Sales", align: "right", format: (v) => <span className="text-success">{fmtMoney(v)}</span> },
+            { key: "status", label: "Status", align: "right", format: (v) => <StatusBadge value={String(v)} /> },
+          ]}
+        />
 
         <ConnectedModules ids={[18, 19, 20, 11, 17]} />
       </div>

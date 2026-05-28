@@ -3,6 +3,7 @@ import { PageHeader, Panel, Metric } from "@/components/dash/primitives";
 import { MultiLine, MiniArea, Bars } from "@/components/dash/charts";
 import { generateSeries, useLiveSeries } from "@/lib/data";
 import { ConnectedModules } from "@/components/dash/ConnectedModules";
+import { ModuleLiveTable, StatusBadge, fmtMoney } from "@/components/dash/ModuleLiveTable";
 
 export const Route = createFileRoute("/payments")({
   head: () => ({ meta: [{ title: "Payments · AEGIS OS" }] }),
@@ -66,6 +67,19 @@ function PaymentsPage() {
             </ul>
           </Panel>
         </div>
+
+        <ModuleLiveTable
+          table="mod_payments"
+          kicker="LIVE · LOVABLE CLOUD"
+          title="Recent transactions"
+          columns={[
+            { key: "txn_no", label: "Txn", className: "font-mono text-[11px] text-info" },
+            { key: "method", label: "Method", className: "text-muted-foreground" },
+            { key: "currency", label: "Cur", className: "font-mono text-[11px] text-muted-foreground" },
+            { key: "amount", label: "Amount", align: "right", format: (v, r) => `${fmtMoney(v)} ${(r as { currency: string }).currency ?? ""}` },
+            { key: "status", label: "Status", align: "right", format: (v) => <StatusBadge value={String(v)} /> },
+          ]}
+        />
 
         <ConnectedModules ids={[13, 23, 15, 14, 11]} />
       </div>

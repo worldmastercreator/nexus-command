@@ -4,6 +4,7 @@ import { MultiLine, MiniArea, StackedArea } from "@/components/dash/charts";
 import { generateSeries, useLiveSeries } from "@/lib/data";
 import { FileText } from "lucide-react";
 import { ConnectedModules } from "@/components/dash/ConnectedModules";
+import { ModuleLiveTable, StatusBadge, fmtMoney, fmtNum } from "@/components/dash/ModuleLiveTable";
 
 export const Route = createFileRoute("/books")({
   head: () => ({ meta: [{ title: "Invoice / Books · AEGIS OS" }] }),
@@ -59,6 +60,20 @@ function BooksPage() {
             </tbody>
           </table>
         </Panel>
+
+        <ModuleLiveTable
+          table="mod_books"
+          kicker="LIVE · LOVABLE CLOUD"
+          title="Title ledger"
+          columns={[
+            { key: "title", label: "Title" },
+            { key: "author", label: "Author", className: "text-muted-foreground" },
+            { key: "isbn", label: "ISBN", className: "font-mono text-[11px] text-muted-foreground" },
+            { key: "sales", label: "Sales", align: "right", format: (v) => fmtNum(v) },
+            { key: "revenue", label: "Revenue", align: "right", format: (v) => <span className="text-success">{fmtMoney(v)}</span> },
+            { key: "status", label: "Status", align: "right", format: (v) => <StatusBadge value={String(v)} /> },
+          ]}
+        />
 
         <ConnectedModules ids={[13, 14, 25, 24, 16]} />
       </div>

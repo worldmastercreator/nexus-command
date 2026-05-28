@@ -4,6 +4,7 @@ import { MultiLine, MiniArea, Bars } from "@/components/dash/charts";
 import { generateSeries, useLiveSeries } from "@/lib/data";
 import { Star, Instagram, Youtube, Twitch } from "lucide-react";
 import { ConnectedModules } from "@/components/dash/ConnectedModules";
+import { ModuleLiveTable, fmtNum } from "@/components/dash/ModuleLiveTable";
 
 export const Route = createFileRoute("/influencers")({
   head: () => ({ meta: [{ title: "Influencer Manager · AEGIS OS" }] }),
@@ -58,6 +59,19 @@ function InfluencersPage() {
         </Panel>
 
         <Panel kicker="CATEGORIES" title="Niche distribution"><Bars data={generateSeries(12,98,60,22)} color="var(--market)" h={200} /></Panel>
+
+        <ModuleLiveTable
+          table="mod_influencers"
+          kicker="LIVE · LOVABLE CLOUD"
+          title="Creator roster"
+          columns={[
+            { key: "handle", label: "Handle", className: "font-mono text-[11px] text-market" },
+            { key: "platform", label: "Platform", className: "text-muted-foreground" },
+            { key: "followers", label: "Followers", align: "right", format: (v) => fmtNum(v) },
+            { key: "engagement", label: "Engagement", align: "right", format: (v) => <span className="text-ai">{Number(v).toFixed(1)}%</span> },
+            { key: "deals", label: "Deals", align: "right", format: (v) => fmtNum(v) },
+          ]}
+        />
 
         <ConnectedModules ids={[19, 16, 11, 24]} />
       </div>

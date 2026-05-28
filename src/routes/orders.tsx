@@ -4,6 +4,7 @@ import { MultiLine, MiniArea, Bars } from "@/components/dash/charts";
 import { generateSeries, useLiveSeries } from "@/lib/data";
 import { ShoppingCart, Truck, PackageCheck, CircleAlert } from "lucide-react";
 import { ConnectedModules } from "@/components/dash/ConnectedModules";
+import { ModuleLiveTable, StatusBadge, fmtMoney } from "@/components/dash/ModuleLiveTable";
 
 export const Route = createFileRoute("/orders")({
   head: () => ({ meta: [{ title: "Order Management · AEGIS OS" }] }),
@@ -75,6 +76,20 @@ function OrdersPage() {
           <Panel kicker="CHANNELS" title="Origin mix"><Bars data={generateSeries(10,148,60,22)} color="var(--primary)" h={200} /></Panel>
           <Panel kicker="CARRIERS" title="Shipping mix"><Bars data={generateSeries(10,149,60,18)} color="var(--info)" h={200} /></Panel>
         </div>
+
+        <ModuleLiveTable
+          table="mod_orders"
+          kicker="LIVE · LOVABLE CLOUD"
+          title="Order ledger"
+          columns={[
+            { key: "order_no", label: "Order", className: "font-mono text-[11px] text-info" },
+            { key: "customer", label: "Customer" },
+            { key: "product", label: "Product", className: "text-muted-foreground" },
+            { key: "amount", label: "Amount", align: "right", format: (v) => fmtMoney(v) },
+            { key: "status", label: "Status", align: "right", format: (v) => <StatusBadge value={String(v)} /> },
+            { key: "created_at", label: "Created", align: "right", format: (v) => <span className="font-mono text-[11px] text-muted-foreground">{new Date(String(v)).toISOString().slice(0,10)}</span> },
+          ]}
+        />
 
         <ConnectedModules ids={[11, 12, 14, 23, 25]} />
       </div>
