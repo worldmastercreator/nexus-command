@@ -14,7 +14,471 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      mod_affiliates: {
+        Row: {
+          clicks: number
+          commission: number
+          conversions: number
+          created_at: string
+          handle: string
+          id: string
+          tier: string
+        }
+        Insert: {
+          clicks?: number
+          commission?: number
+          conversions?: number
+          created_at?: string
+          handle: string
+          id?: string
+          tier?: string
+        }
+        Update: {
+          clicks?: number
+          commission?: number
+          conversions?: number
+          created_at?: string
+          handle?: string
+          id?: string
+          tier?: string
+        }
+        Relationships: []
+      }
+      mod_authors: {
+        Row: {
+          created_at: string
+          handle: string
+          id: string
+          items: number
+          name: string
+          revenue: number
+          status: string
+        }
+        Insert: {
+          created_at?: string
+          handle: string
+          id?: string
+          items?: number
+          name: string
+          revenue?: number
+          status?: string
+        }
+        Update: {
+          created_at?: string
+          handle?: string
+          id?: string
+          items?: number
+          name?: string
+          revenue?: number
+          status?: string
+        }
+        Relationships: []
+      }
+      mod_books: {
+        Row: {
+          author: string
+          created_at: string
+          id: string
+          isbn: string
+          revenue: number
+          sales: number
+          status: string
+          title: string
+        }
+        Insert: {
+          author: string
+          created_at?: string
+          id?: string
+          isbn: string
+          revenue?: number
+          sales?: number
+          status?: string
+          title: string
+        }
+        Update: {
+          author?: string
+          created_at?: string
+          id?: string
+          isbn?: string
+          revenue?: number
+          sales?: number
+          status?: string
+          title?: string
+        }
+        Relationships: []
+      }
+      mod_customers: {
+        Row: {
+          created_at: string
+          email: string
+          id: string
+          ltv: number
+          name: string
+          plan: string
+          status: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          id?: string
+          ltv?: number
+          name: string
+          plan?: string
+          status?: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          id?: string
+          ltv?: number
+          name?: string
+          plan?: string
+          status?: string
+        }
+        Relationships: []
+      }
+      mod_franchises: {
+        Row: {
+          created_at: string
+          id: string
+          locations: number
+          name: string
+          region: string
+          revenue: number
+          status: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          locations?: number
+          name: string
+          region: string
+          revenue?: number
+          status?: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          locations?: number
+          name?: string
+          region?: string
+          revenue?: number
+          status?: string
+        }
+        Relationships: []
+      }
+      mod_influencers: {
+        Row: {
+          created_at: string
+          deals: number
+          engagement: number
+          followers: number
+          handle: string
+          id: string
+          platform: string
+        }
+        Insert: {
+          created_at?: string
+          deals?: number
+          engagement?: number
+          followers?: number
+          handle: string
+          id?: string
+          platform: string
+        }
+        Update: {
+          created_at?: string
+          deals?: number
+          engagement?: number
+          followers?: number
+          handle?: string
+          id?: string
+          platform?: string
+        }
+        Relationships: []
+      }
+      mod_licenses: {
+        Row: {
+          created_at: string
+          customer: string
+          expires_at: string
+          id: string
+          license_key: string
+          product: string
+          status: string
+        }
+        Insert: {
+          created_at?: string
+          customer: string
+          expires_at?: string
+          id?: string
+          license_key: string
+          product: string
+          status?: string
+        }
+        Update: {
+          created_at?: string
+          customer?: string
+          expires_at?: string
+          id?: string
+          license_key?: string
+          product?: string
+          status?: string
+        }
+        Relationships: []
+      }
+      mod_marketplace: {
+        Row: {
+          author: string
+          category: string
+          created_at: string
+          id: string
+          price: number
+          revenue: number
+          sales: number
+          status: string
+          title: string
+        }
+        Insert: {
+          author: string
+          category: string
+          created_at?: string
+          id?: string
+          price?: number
+          revenue?: number
+          sales?: number
+          status?: string
+          title: string
+        }
+        Update: {
+          author?: string
+          category?: string
+          created_at?: string
+          id?: string
+          price?: number
+          revenue?: number
+          sales?: number
+          status?: string
+          title?: string
+        }
+        Relationships: []
+      }
+      mod_orders: {
+        Row: {
+          amount: number
+          created_at: string
+          customer: string
+          id: string
+          order_no: string
+          product: string
+          status: string
+        }
+        Insert: {
+          amount?: number
+          created_at?: string
+          customer: string
+          id?: string
+          order_no: string
+          product: string
+          status?: string
+        }
+        Update: {
+          amount?: number
+          created_at?: string
+          customer?: string
+          id?: string
+          order_no?: string
+          product?: string
+          status?: string
+        }
+        Relationships: []
+      }
+      mod_payments: {
+        Row: {
+          amount: number
+          created_at: string
+          currency: string
+          id: string
+          method: string
+          status: string
+          txn_no: string
+        }
+        Insert: {
+          amount?: number
+          created_at?: string
+          currency?: string
+          id?: string
+          method: string
+          status?: string
+          txn_no: string
+        }
+        Update: {
+          amount?: number
+          created_at?: string
+          currency?: string
+          id?: string
+          method?: string
+          status?: string
+          txn_no?: string
+        }
+        Relationships: []
+      }
+      mod_products: {
+        Row: {
+          category: string
+          created_at: string
+          id: string
+          name: string
+          price: number
+          refs: number
+          sku: string
+          status: string
+          units: number
+        }
+        Insert: {
+          category: string
+          created_at?: string
+          id?: string
+          name: string
+          price?: number
+          refs?: number
+          sku: string
+          status?: string
+          units?: number
+        }
+        Update: {
+          category?: string
+          created_at?: string
+          id?: string
+          name?: string
+          price?: number
+          refs?: number
+          sku?: string
+          status?: string
+          units?: number
+        }
+        Relationships: []
+      }
+      mod_resellers: {
+        Row: {
+          commission: number
+          created_at: string
+          id: string
+          name: string
+          sales: number
+          status: string
+          tier: string
+        }
+        Insert: {
+          commission?: number
+          created_at?: string
+          id?: string
+          name: string
+          sales?: number
+          status?: string
+          tier?: string
+        }
+        Update: {
+          commission?: number
+          created_at?: string
+          id?: string
+          name?: string
+          sales?: number
+          status?: string
+          tier?: string
+        }
+        Relationships: []
+      }
+      mod_subscriptions: {
+        Row: {
+          created_at: string
+          customer: string
+          id: string
+          mrr: number
+          plan: string
+          renewed_at: string
+          status: string
+        }
+        Insert: {
+          created_at?: string
+          customer: string
+          id?: string
+          mrr?: number
+          plan: string
+          renewed_at?: string
+          status?: string
+        }
+        Update: {
+          created_at?: string
+          customer?: string
+          id?: string
+          mrr?: number
+          plan?: string
+          renewed_at?: string
+          status?: string
+        }
+        Relationships: []
+      }
+      mod_tenants: {
+        Row: {
+          created_at: string
+          id: string
+          mrr: number
+          plan: string
+          seats: number
+          slug: string
+          status: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          mrr?: number
+          plan?: string
+          seats?: number
+          slug: string
+          status?: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          mrr?: number
+          plan?: string
+          seats?: number
+          slug?: string
+          status?: string
+        }
+        Relationships: []
+      }
+      mod_white_label_brands: {
+        Row: {
+          created_at: string
+          domain: string
+          id: string
+          name: string
+          plan: string
+          status: string
+          tenants: number
+        }
+        Insert: {
+          created_at?: string
+          domain: string
+          id?: string
+          name: string
+          plan?: string
+          status?: string
+          tenants?: number
+        }
+        Update: {
+          created_at?: string
+          domain?: string
+          id?: string
+          name?: string
+          plan?: string
+          status?: string
+          tenants?: number
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
