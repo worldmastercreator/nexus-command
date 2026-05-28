@@ -36,6 +36,8 @@ export function Sidebar({ collapsed, onToggle }: { collapsed: boolean; onToggle:
 
       <nav className="scrollbar-thin h-[calc(100vh-3.5rem)] overflow-y-auto px-2 py-3">
         {NAV_GROUPS.map((group) => {
+          const items = group.items.filter((i) => i.built === true);
+          if (items.length === 0) return null;
           const open = openGroups[group.label];
           return (
             <div key={group.label} className="mb-2">
@@ -52,7 +54,7 @@ export function Sidebar({ collapsed, onToggle }: { collapsed: boolean; onToggle:
               )}
               {(open || collapsed) && (
                 <ul className="space-y-0.5">
-                  {group.items.map((item) => {
+                  {items.map((item) => {
                     const Active = pathname === item.path;
                     const Icon = item.icon;
                     return (
