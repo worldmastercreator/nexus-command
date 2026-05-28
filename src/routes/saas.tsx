@@ -4,6 +4,7 @@ import { MultiLine, MiniArea, Bars } from "@/components/dash/charts";
 import { generateSeries, useLiveSeries } from "@/lib/data";
 import { Boxes } from "lucide-react";
 import { ConnectedModules } from "@/components/dash/ConnectedModules";
+import { ModuleLiveTable, StatusBadge, fmtMoney, fmtNum } from "@/components/dash/ModuleLiveTable";
 
 export const Route = createFileRoute("/saas")({
   head: () => ({ meta: [{ title: "SaaS Tenants · AEGIS OS" }] }),
@@ -57,6 +58,19 @@ function SaasPage() {
         </Panel>
 
         <Panel kicker="REGIONS" title="Tenants per region"><Bars data={generateSeries(12,118,60,22)} color="var(--ai)" h={200} /></Panel>
+
+        <ModuleLiveTable
+          table="mod_tenants"
+          kicker="LIVE · LOVABLE CLOUD"
+          title="SaaS tenants"
+          columns={[
+            { key: "slug", label: "Tenant", className: "font-mono text-[11px] text-info" },
+            { key: "plan", label: "Plan", className: "text-muted-foreground" },
+            { key: "seats", label: "Seats", align: "right", format: (v) => fmtNum(v) },
+            { key: "mrr", label: "MRR", align: "right", format: (v) => <span className="text-success">{fmtMoney(v)}</span> },
+            { key: "status", label: "Status", align: "right", format: (v) => <StatusBadge value={String(v)} /> },
+          ]}
+        />
 
         <ConnectedModules ids={[21, 13, 15, 24, 14]} />
       </div>

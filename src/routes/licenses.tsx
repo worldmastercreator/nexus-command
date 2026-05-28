@@ -4,6 +4,7 @@ import { MultiLine, MiniArea, Radial } from "@/components/dash/charts";
 import { generateSeries, useLiveSeries } from "@/lib/data";
 import { KeyRound, ShieldCheck, ShieldAlert } from "lucide-react";
 import { ConnectedModules } from "@/components/dash/ConnectedModules";
+import { ModuleLiveTable, StatusBadge } from "@/components/dash/ModuleLiveTable";
 
 export const Route = createFileRoute("/licenses")({
   head: () => ({ meta: [{ title: "License Manager · AEGIS OS" }] }),
@@ -53,6 +54,19 @@ function LicensesPage() {
             ))}
           </ul>
         </Panel>
+
+        <ModuleLiveTable
+          table="mod_licenses"
+          kicker="LIVE · LOVABLE CLOUD"
+          title="License registry"
+          columns={[
+            { key: "license_key", label: "Key", className: "font-mono text-[11px] text-info" },
+            { key: "product", label: "Product" },
+            { key: "customer", label: "Customer", className: "text-muted-foreground" },
+            { key: "expires_at", label: "Expires", align: "right", format: (v) => <span className="font-mono text-[11px] text-muted-foreground">{new Date(String(v)).toISOString().slice(0,10)}</span> },
+            { key: "status", label: "Status", align: "right", format: (v) => <StatusBadge value={String(v)} /> },
+          ]}
+        />
 
         <ConnectedModules ids={[11, 12, 14, 18, 21]} />
       </div>

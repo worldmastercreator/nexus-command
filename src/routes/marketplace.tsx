@@ -3,6 +3,7 @@ import { PageHeader, Panel, Metric } from "@/components/dash/primitives";
 import { MultiLine, MiniArea, Bars } from "@/components/dash/charts";
 import { generateSeries, useLiveSeries } from "@/lib/data";
 import { ConnectedModules } from "@/components/dash/ConnectedModules";
+import { ModuleLiveTable, StatusBadge, fmtMoney, fmtNum } from "@/components/dash/ModuleLiveTable";
 
 export const Route = createFileRoute("/marketplace")({
   head: () => ({ meta: [{ title: "Marketplace · AEGIS OS" }] }),
@@ -84,6 +85,21 @@ function MarketplacePage() {
             </table>
           </Panel>
         </div>
+
+        <ModuleLiveTable
+          table="mod_marketplace"
+          kicker="LIVE · LOVABLE CLOUD"
+          title="Marketplace listings"
+          columns={[
+            { key: "title", label: "Listing" },
+            { key: "author", label: "Author", className: "text-muted-foreground" },
+            { key: "category", label: "Category", className: "text-muted-foreground" },
+            { key: "price", label: "Price", align: "right", format: (v) => fmtMoney(v) },
+            { key: "sales", label: "Sales", align: "right", format: (v) => fmtNum(v) },
+            { key: "revenue", label: "Revenue", align: "right", format: (v) => <span className="text-success">{fmtMoney(v)}</span> },
+            { key: "status", label: "Status", align: "right", format: (v) => <StatusBadge value={String(v)} /> },
+          ]}
+        />
 
         <ConnectedModules ids={[12, 18, 14, 15, 19, 25]} />
       </div>

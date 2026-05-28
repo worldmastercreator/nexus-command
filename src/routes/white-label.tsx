@@ -4,6 +4,7 @@ import { MultiLine, MiniArea, Radial } from "@/components/dash/charts";
 import { generateSeries, useLiveSeries } from "@/lib/data";
 import { Layers3, Palette, Globe } from "lucide-react";
 import { ConnectedModules } from "@/components/dash/ConnectedModules";
+import { ModuleLiveTable, StatusBadge, fmtNum } from "@/components/dash/ModuleLiveTable";
 
 export const Route = createFileRoute("/white-label")({
   head: () => ({ meta: [{ title: "White Label · AEGIS OS" }] }),
@@ -52,6 +53,19 @@ function WhiteLabelPage() {
             ))}
           </tbody></table>
         </Panel>
+
+        <ModuleLiveTable
+          table="mod_white_label_brands"
+          kicker="LIVE · LOVABLE CLOUD"
+          title="Branded workspaces"
+          columns={[
+            { key: "name", label: "Brand" },
+            { key: "domain", label: "Domain", className: "font-mono text-[11px] text-info" },
+            { key: "plan", label: "Plan", className: "text-muted-foreground" },
+            { key: "tenants", label: "Tenants", align: "right", format: (v) => fmtNum(v) },
+            { key: "status", label: "Status", align: "right", format: (v) => <StatusBadge value={String(v)} /> },
+          ]}
+        />
 
         <ConnectedModules ids={[22, 21, 17, 24, 13]} />
       </div>

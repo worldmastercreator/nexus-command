@@ -4,6 +4,7 @@ import { MultiLine, MiniArea, Bars, Radial } from "@/components/dash/charts";
 import { generateSeries, useLiveSeries } from "@/lib/data";
 import { Package, Plus } from "lucide-react";
 import { ConnectedModules } from "@/components/dash/ConnectedModules";
+import { ModuleLiveTable, StatusBadge, fmtMoney, fmtNum } from "@/components/dash/ModuleLiveTable";
 
 export const Route = createFileRoute("/products")({
   head: () => ({ meta: [{ title: "Product Manager · AEGIS OS" }] }),
@@ -79,6 +80,21 @@ function ProductsPage() {
           <Panel kicker="CATEGORIES" title="Distribution"><Bars data={generateSeries(12, 18, 60, 22)} color="var(--primary)" h={200} /></Panel>
           <Panel kicker="PRICE BANDS" title="Spread"><Bars data={generateSeries(12, 19, 50, 18)} color="var(--ai)" h={200} /></Panel>
         </div>
+
+        <ModuleLiveTable
+          table="mod_products"
+          kicker="LIVE · LOVABLE CLOUD"
+          title="Product catalog"
+          columns={[
+            { key: "sku", label: "SKU", className: "font-mono text-[11px] text-muted-foreground" },
+            { key: "name", label: "Name" },
+            { key: "category", label: "Category", className: "text-muted-foreground" },
+            { key: "price", label: "Price", align: "right", format: (v) => fmtMoney(v) },
+            { key: "units", label: "Units", align: "right", format: (v) => fmtNum(v) },
+            { key: "refs", label: "Refs", align: "right", format: (v) => <span className="text-info">{fmtNum(v)}</span> },
+            { key: "status", label: "Status", align: "right", format: (v) => <StatusBadge value={String(v)} /> },
+          ]}
+        />
 
         <ConnectedModules ids={[11, 15, 13, 25, 24]} />
       </div>

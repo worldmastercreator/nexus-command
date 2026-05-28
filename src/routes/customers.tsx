@@ -4,6 +4,7 @@ import { MultiLine, MiniArea, Bars, Radial } from "@/components/dash/charts";
 import { generateSeries, useLiveSeries } from "@/lib/data";
 import { UserCircle, Mail, Phone, MessageCircle } from "lucide-react";
 import { ConnectedModules } from "@/components/dash/ConnectedModules";
+import { ModuleLiveTable, StatusBadge, fmtMoney } from "@/components/dash/ModuleLiveTable";
 
 export const Route = createFileRoute("/customers")({
   head: () => ({ meta: [{ title: "Customer Management · AEGIS OS" }] }),
@@ -68,6 +69,19 @@ function CustomersPage() {
           <Panel kicker="SEGMENTS" title="By plan tier"><Bars data={generateSeries(10,138,60,18)} color="var(--primary)" h={220} /></Panel>
           <Panel kicker="LIFETIME" title="LTV cohorts"><Bars data={generateSeries(10,139,60,22)} color="var(--success)" h={220} /></Panel>
         </div>
+
+        <ModuleLiveTable
+          table="mod_customers"
+          kicker="LIVE · LOVABLE CLOUD"
+          title="Customer accounts"
+          columns={[
+            { key: "name", label: "Customer" },
+            { key: "email", label: "Email", className: "font-mono text-[11px] text-info" },
+            { key: "plan", label: "Plan", className: "text-muted-foreground" },
+            { key: "ltv", label: "LTV", align: "right", format: (v) => <span className="text-success">{fmtMoney(v)}</span> },
+            { key: "status", label: "Status", align: "right", format: (v) => <StatusBadge value={String(v)} /> },
+          ]}
+        />
 
         <ConnectedModules ids={[11, 24, 25, 13, 19]} />
       </div>
