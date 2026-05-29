@@ -26,7 +26,9 @@ type Props = {
   title: string;
   columns: Col[];
   limit?: number;
+  headerActions?: React.ReactNode;
 };
+
 
 const STATUS_CYCLE: Record<string, string[]> = {
   mod_marketplace: ["ACTIVE", "REVIEW", "DRAFT"],
