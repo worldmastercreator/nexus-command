@@ -298,6 +298,8 @@ function TableBody({ table, columns, limit }: { table: ModuleTable; columns: Col
   );
 }
 
+export function ModuleLiveTable({ table, kicker, title, columns, limit }: Props) {
+  return (
     <Panel
       kicker={kicker}
       title={title}
@@ -308,8 +310,6 @@ function TableBody({ table, columns, limit }: { table: ModuleTable; columns: Col
         </span>
       }
       padded={false}
-    >
-
     >
       <Suspense
         fallback={
@@ -323,3 +323,4 @@ function TableBody({ table, columns, limit }: { table: ModuleTable; columns: Col
     </Panel>
   );
 }
+
