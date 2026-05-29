@@ -89,8 +89,9 @@ function OrdersPage() {
             { key: "product", label: "Product", className: "text-muted-foreground" },
             { key: "amount", label: "Amount", align: "right", format: (v) => fmtMoney(v) },
             { key: "status", label: "Status", align: "right", format: (v) => <StatusBadge value={String(v)} /> },
-            { key: "created_at", label: "Created", align: "right", format: (v) => <span className="font-mono text-[11px] text-muted-foreground">{new Date(String(v)).toISOString().slice(0,10)}</span> },
-          ]}
+          headerActions={<><NewOrderButton /><RefundOrderButton /></>}
+        />
+
         />
 
         <ConnectedModules ids={[11, 12, 14, 23, 25]} />
