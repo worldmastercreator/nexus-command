@@ -317,8 +317,6 @@ export function ModuleLiveTable({ table, kicker, title, columns, limit, headerAc
       padded={false}
     >
 
-      padded={false}
-    >
       <Suspense
         fallback={
           <div className="px-3 py-8 text-center text-[11px] font-mono text-muted-foreground">
