@@ -5,6 +5,8 @@ import { generateSeries, useLiveSeries } from "@/lib/data";
 import { ShoppingCart, Truck, PackageCheck, CircleAlert } from "lucide-react";
 import { ConnectedModules } from "@/components/dash/ConnectedModules";
 import { ModuleLiveTable, StatusBadge, fmtMoney } from "@/components/dash/ModuleLiveTable";
+import { NewOrderButton, RefundOrderButton } from "@/components/dash/ModuleActions";
+
 
 export const Route = createFileRoute("/orders")({
   head: () => ({ meta: [{ title: "Order Management · AEGIS OS" }] }),
