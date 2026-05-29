@@ -39,14 +39,16 @@ export const updateModuleRow = createServerFn({ method: "POST" })
     // Strip server-managed fields
     const { id: _i, created_at: _c, ...safe } = data.patch as Record<string, unknown>;
     return { table: data.table, id: data.id, patch: safe };
-  })
   .handler(async ({ data }) => {
-    const { data: row, error } = await supabaseAdmin
-      .from(data.table)
+    const { data: row, error } = await (supabaseAdmin.from(data.table) as any)
       .update(data.patch)
       .eq("id", data.id)
       .select()
       .single();
+    if (error) throw new Error(error.message);
+    return { row };
+  });
+
     if (error) throw new Error(error.message);
     return { row };
   });
