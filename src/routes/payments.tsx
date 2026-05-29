@@ -4,6 +4,8 @@ import { MultiLine, MiniArea, Bars } from "@/components/dash/charts";
 import { generateSeries, useLiveSeries } from "@/lib/data";
 import { ConnectedModules } from "@/components/dash/ConnectedModules";
 import { ModuleLiveTable, StatusBadge, fmtMoney } from "@/components/dash/ModuleLiveTable";
+import { RefundOrderButton } from "@/components/dash/ModuleActions";
+
 
 export const Route = createFileRoute("/payments")({
   head: () => ({ meta: [{ title: "Payments · AEGIS OS" }] }),
