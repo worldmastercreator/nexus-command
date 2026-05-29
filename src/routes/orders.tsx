@@ -5,6 +5,8 @@ import { generateSeries, useLiveSeries } from "@/lib/data";
 import { ShoppingCart, Truck, PackageCheck, CircleAlert } from "lucide-react";
 import { ConnectedModules } from "@/components/dash/ConnectedModules";
 import { ModuleLiveTable, StatusBadge, fmtMoney } from "@/components/dash/ModuleLiveTable";
+import { NewOrderButton, RefundOrderButton } from "@/components/dash/ModuleActions";
+
 
 export const Route = createFileRoute("/orders")({
   head: () => ({ meta: [{ title: "Order Management · AEGIS OS" }] }),
@@ -89,7 +91,9 @@ function OrdersPage() {
             { key: "status", label: "Status", align: "right", format: (v) => <StatusBadge value={String(v)} /> },
             { key: "created_at", label: "Created", align: "right", format: (v) => <span className="font-mono text-[11px] text-muted-foreground">{new Date(String(v)).toISOString().slice(0,10)}</span> },
           ]}
+          headerActions={<><NewOrderButton /><RefundOrderButton /></>}
         />
+
 
         <ConnectedModules ids={[11, 12, 14, 23, 25]} />
       </div>

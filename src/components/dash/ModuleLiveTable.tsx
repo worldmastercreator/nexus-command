@@ -26,7 +26,9 @@ type Props = {
   title: string;
   columns: Col[];
   limit?: number;
+  headerActions?: React.ReactNode;
 };
+
 
 const STATUS_CYCLE: Record<string, string[]> = {
   mod_marketplace: ["ACTIVE", "REVIEW", "DRAFT"],
@@ -298,19 +300,23 @@ function TableBody({ table, columns, limit }: { table: ModuleTable; columns: Col
   );
 }
 
-export function ModuleLiveTable({ table, kicker, title, columns, limit }: Props) {
+export function ModuleLiveTable({ table, kicker, title, columns, limit, headerActions }: Props) {
   return (
     <Panel
       kicker={kicker}
       title={title}
       action={
-        <span className="inline-flex items-center gap-1.5 rounded border border-success/40 px-1.5 py-0.5">
-          <Radio className="h-3 w-3 animate-pulse text-success" />
-          <span className="font-mono text-[9.5px] uppercase tracking-wider text-success">LIVE</span>
+        <span className="inline-flex items-center gap-2">
+          {headerActions}
+          <span className="inline-flex items-center gap-1.5 rounded border border-success/40 px-1.5 py-0.5">
+            <Radio className="h-3 w-3 animate-pulse text-success" />
+            <span className="font-mono text-[9.5px] uppercase tracking-wider text-success">LIVE</span>
+          </span>
         </span>
       }
       padded={false}
     >
+
       <Suspense
         fallback={
           <div className="px-3 py-8 text-center text-[11px] font-mono text-muted-foreground">

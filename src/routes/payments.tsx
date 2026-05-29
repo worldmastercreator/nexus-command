@@ -4,6 +4,8 @@ import { MultiLine, MiniArea, Bars } from "@/components/dash/charts";
 import { generateSeries, useLiveSeries } from "@/lib/data";
 import { ConnectedModules } from "@/components/dash/ConnectedModules";
 import { ModuleLiveTable, StatusBadge, fmtMoney } from "@/components/dash/ModuleLiveTable";
+import { RefundOrderButton } from "@/components/dash/ModuleActions";
+
 
 export const Route = createFileRoute("/payments")({
   head: () => ({ meta: [{ title: "Payments · AEGIS OS" }] }),
@@ -79,7 +81,9 @@ function PaymentsPage() {
             { key: "amount", label: "Amount", align: "right", format: (v, r) => `${fmtMoney(v)} ${(r as { currency: string }).currency ?? ""}` },
             { key: "status", label: "Status", align: "right", format: (v) => <StatusBadge value={String(v)} /> },
           ]}
+          headerActions={<RefundOrderButton />}
         />
+
 
         <ConnectedModules ids={[13, 23, 15, 14, 11]} />
       </div>

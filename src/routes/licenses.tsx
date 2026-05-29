@@ -5,6 +5,8 @@ import { generateSeries, useLiveSeries } from "@/lib/data";
 import { KeyRound, ShieldCheck, ShieldAlert } from "lucide-react";
 import { ConnectedModules } from "@/components/dash/ConnectedModules";
 import { ModuleLiveTable, StatusBadge } from "@/components/dash/ModuleLiveTable";
+import { RevokeLicenseButton } from "@/components/dash/ModuleActions";
+
 
 export const Route = createFileRoute("/licenses")({
   head: () => ({ meta: [{ title: "License Manager · AEGIS OS" }] }),
@@ -66,7 +68,9 @@ function LicensesPage() {
             { key: "expires_at", label: "Expires", align: "right", format: (v) => <span className="font-mono text-[11px] text-muted-foreground">{new Date(String(v)).toISOString().slice(0,10)}</span> },
             { key: "status", label: "Status", align: "right", format: (v) => <StatusBadge value={String(v)} /> },
           ]}
+          headerActions={<RevokeLicenseButton />}
         />
+
 
         <ConnectedModules ids={[11, 12, 14, 18, 21]} />
       </div>
