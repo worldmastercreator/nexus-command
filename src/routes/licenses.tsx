@@ -5,6 +5,8 @@ import { generateSeries, useLiveSeries } from "@/lib/data";
 import { KeyRound, ShieldCheck, ShieldAlert } from "lucide-react";
 import { ConnectedModules } from "@/components/dash/ConnectedModules";
 import { ModuleLiveTable, StatusBadge } from "@/components/dash/ModuleLiveTable";
+import { RevokeLicenseButton } from "@/components/dash/ModuleActions";
+
 
 export const Route = createFileRoute("/licenses")({
   head: () => ({ meta: [{ title: "License Manager · AEGIS OS" }] }),
