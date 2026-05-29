@@ -50,3 +50,51 @@ export const updateModuleRow = createServerFn({ method: "POST" })
     return { row };
   });
 
+
+export const createOrder = createServerFn({ method: "POST" })
+  .inputValidator((d: { customer: string; product: string; amount: number }) => {
+    if (!d.customer?.trim()) throw new Error("customer required");
+    if (!d.product?.trim()) throw new Error("product required");
+    const amount = Number(d.amount);
+    if (!isFinite(amount) || amount <= 0) throw new Error("amount must be > 0");
+    return { customer: d.customer.trim().slice(0, 120), product: d.product.trim().slice(0, 120), amount };
+  })
+  .handler(async ({ data }) => {
+    const order_no = "ORD-" + Math.random().toString(36).slice(2, 8).toUpperCase();
+    const { data: row, error } = await supabaseAdmin
+      .from("mod_orders")
+      .insert({ order_no, customer: data.customer, product: data.product, amount: data.amount, status: "PAID" })
+      .select().single();
+    if (error) throw new Error(error.message);
+    return { row };
+  });
+
+export const refundOrder = createServerFn({ method: "POST" })
+  .inputValidator((d: { id: string }) => {
+    if (!d.id) throw new Error("id required");
+    return { id: d.id };
+  })
+  .handler(async ({ data }) => {
+    const { data: row, error } = await supabaseAdmin
+      .from("mod_orders")
+      .update({ status: "REFUNDED" })
+      .eq("id", data.id)
+      .select().single();
+    if (error) throw new Error(error.message);
+    return { row };
+  });
+
+export const revokeLicense = createServerFn({ method: "POST" })
+  .inputValidator((d: { id: string }) => {
+    if (!d.id) throw new Error("id required");
+    return { id: d.id };
+  })
+  .handler(async ({ data }) => {
+    const { data: row, error } = await supabaseAdmin
+      .from("mod_licenses")
+      .update({ status: "REVOKED" })
+      .eq("id", data.id)
+      .select().single();
+    if (error) throw new Error(error.message);
+    return { row };
+  });
