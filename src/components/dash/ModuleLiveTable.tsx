@@ -298,18 +298,18 @@ function TableBody({ table, columns, limit }: { table: ModuleTable; columns: Col
   );
 }
 
-export function ModuleLiveTable({ table, kicker, title, columns, limit }: Props) {
-  return (
     <Panel
       kicker={kicker}
-      title={
-        <span className="inline-flex items-center gap-2">
-          {title}
+      title={title}
+      action={
+        <span className="inline-flex items-center gap-1.5 rounded border border-success/40 px-1.5 py-0.5">
           <Radio className="h-3 w-3 animate-pulse text-success" />
           <span className="font-mono text-[9.5px] uppercase tracking-wider text-success">LIVE</span>
         </span>
       }
       padded={false}
+    >
+
     >
       <Suspense
         fallback={
