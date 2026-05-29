@@ -79,8 +79,9 @@ function PaymentsPage() {
             { key: "method", label: "Method", className: "text-muted-foreground" },
             { key: "currency", label: "Cur", className: "font-mono text-[11px] text-muted-foreground" },
             { key: "amount", label: "Amount", align: "right", format: (v, r) => `${fmtMoney(v)} ${(r as { currency: string }).currency ?? ""}` },
-            { key: "status", label: "Status", align: "right", format: (v) => <StatusBadge value={String(v)} /> },
-          ]}
+          headerActions={<RefundOrderButton />}
+        />
+
         />
 
         <ConnectedModules ids={[13, 23, 15, 14, 11]} />
