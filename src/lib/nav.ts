@@ -205,7 +205,7 @@ export const NAV_GROUPS: NavGroup[] = [
       { id: 93, title: "SEO Workspace", clone: "Semrush", path: "/portal/seo", icon: SearchCheck },
       { id: 94, title: "User Portal", clone: "Stripe Portal", path: "/portal/user", icon: UserCog },
       { id: 95, title: "Author Portal", clone: "Gumroad", path: "/portal/author", icon: PenLine },
-      { id: 96, title: "Reseller Portal", clone: "PartnerStack", path: "/portal/reseller", icon: Handshake },
+      { id: 96, title: "Reseller Command Center", clone: "AWS Partner + HubSpot + Salesforce", path: "/portal/reseller", icon: Handshake, built: true },
       { id: 97, title: "Franchise Portal", clone: "GoHighLevel", path: "/portal/franchise", icon: Building2 },
       { id: 98, title: "Affiliate Portal", clone: "Impact", path: "/portal/affiliate", icon: Megaphone },
       { id: 99, title: "Influencer Portal", clone: "Upfluence", path: "/portal/influencer", icon: Star },
