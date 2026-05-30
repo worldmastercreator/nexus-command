@@ -8,7 +8,8 @@ type Row = { id: string; name: string; tier: string; commission: number; sales: 
 export function Leaderboard() {
   const [scope, setScope] = useState<"global" | "country" | "state">("global");
   const { data } = useSuspenseQuery(moduleQueryOptions("mod_resellers"));
-  const rows = ((data ?? []) as Row[]).slice().sort((a, b) => Number(b.sales) - Number(a.sales)).slice(0, 10);
+  const all = ((data as { rows?: unknown[] })?.rows ?? []) as unknown as Row[];
+  const rows = all.slice().sort((a, b) => Number(b.sales) - Number(a.sales)).slice(0, 10);
 
   return (
     <Panel
