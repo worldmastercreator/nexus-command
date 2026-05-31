@@ -196,6 +196,35 @@ import { Route as ShopifyAutomationRouteImport } from './routes/shopify.automati
 import { Route as ShopifyAuditLogRouteImport } from './routes/shopify.audit-log'
 import { Route as ShopifyAppMarketplaceRouteImport } from './routes/shopify.app-marketplace'
 import { Route as ShopifyAnalyticsRouteImport } from './routes/shopify.analytics'
+import { Route as RmTrainingRouteImport } from './routes/rm.training'
+import { Route as RmTerritoryRouteImport } from './routes/rm.territory'
+import { Route as RmSupportRouteImport } from './routes/rm.support'
+import { Route as RmSubResellersRouteImport } from './routes/rm.sub-resellers'
+import { Route as RmSettingsRouteImport } from './routes/rm.settings'
+import { Route as RmRiskRouteImport } from './routes/rm.risk'
+import { Route as RmRenewalsRouteImport } from './routes/rm.renewals'
+import { Route as RmRecruitmentRouteImport } from './routes/rm.recruitment'
+import { Route as RmProfileRouteImport } from './routes/rm.profile'
+import { Route as RmPerformanceRouteImport } from './routes/rm.performance'
+import { Route as RmOrdersRouteImport } from './routes/rm.orders'
+import { Route as RmMarketplaceRouteImport } from './routes/rm.marketplace'
+import { Route as RmLicensesRouteImport } from './routes/rm.licenses'
+import { Route as RmLicenseGateRouteImport } from './routes/rm.license-gate'
+import { Route as RmHrmsRouteImport } from './routes/rm.hrms'
+import { Route as RmHeatmapRouteImport } from './routes/rm.heatmap'
+import { Route as RmFinanceRouteImport } from './routes/rm.finance'
+import { Route as RmDocumentsRouteImport } from './routes/rm.documents'
+import { Route as RmDirectoryRouteImport } from './routes/rm.directory'
+import { Route as RmDealRegistrationRouteImport } from './routes/rm.deal-registration'
+import { Route as RmCustomersRouteImport } from './routes/rm.customers'
+import { Route as RmCrmRouteImport } from './routes/rm.crm'
+import { Route as RmCommunicationsRouteImport } from './routes/rm.communications'
+import { Route as RmCommissionsRouteImport } from './routes/rm.commissions'
+import { Route as RmCommandRouteImport } from './routes/rm.command'
+import { Route as RmBossPanelRouteImport } from './routes/rm.boss-panel'
+import { Route as RmApprovalsRouteImport } from './routes/rm.approvals'
+import { Route as RmApplicationsRouteImport } from './routes/rm.applications'
+import { Route as RmAiCommandRouteImport } from './routes/rm.ai-command'
 import { Route as PosSyncRouteImport } from './routes/pos.sync'
 import { Route as PosStaffRouteImport } from './routes/pos.staff'
 import { Route as PosShiftRouteImport } from './routes/pos.shift'
@@ -1559,6 +1588,151 @@ const ShopifyAppMarketplaceRoute = ShopifyAppMarketplaceRouteImport.update({
 const ShopifyAnalyticsRoute = ShopifyAnalyticsRouteImport.update({
   id: '/shopify/analytics',
   path: '/shopify/analytics',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RmTrainingRoute = RmTrainingRouteImport.update({
+  id: '/rm/training',
+  path: '/rm/training',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RmTerritoryRoute = RmTerritoryRouteImport.update({
+  id: '/rm/territory',
+  path: '/rm/territory',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RmSupportRoute = RmSupportRouteImport.update({
+  id: '/rm/support',
+  path: '/rm/support',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RmSubResellersRoute = RmSubResellersRouteImport.update({
+  id: '/rm/sub-resellers',
+  path: '/rm/sub-resellers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RmSettingsRoute = RmSettingsRouteImport.update({
+  id: '/rm/settings',
+  path: '/rm/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RmRiskRoute = RmRiskRouteImport.update({
+  id: '/rm/risk',
+  path: '/rm/risk',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RmRenewalsRoute = RmRenewalsRouteImport.update({
+  id: '/rm/renewals',
+  path: '/rm/renewals',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RmRecruitmentRoute = RmRecruitmentRouteImport.update({
+  id: '/rm/recruitment',
+  path: '/rm/recruitment',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RmProfileRoute = RmProfileRouteImport.update({
+  id: '/rm/profile',
+  path: '/rm/profile',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RmPerformanceRoute = RmPerformanceRouteImport.update({
+  id: '/rm/performance',
+  path: '/rm/performance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RmOrdersRoute = RmOrdersRouteImport.update({
+  id: '/rm/orders',
+  path: '/rm/orders',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RmMarketplaceRoute = RmMarketplaceRouteImport.update({
+  id: '/rm/marketplace',
+  path: '/rm/marketplace',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RmLicensesRoute = RmLicensesRouteImport.update({
+  id: '/rm/licenses',
+  path: '/rm/licenses',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RmLicenseGateRoute = RmLicenseGateRouteImport.update({
+  id: '/rm/license-gate',
+  path: '/rm/license-gate',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RmHrmsRoute = RmHrmsRouteImport.update({
+  id: '/rm/hrms',
+  path: '/rm/hrms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RmHeatmapRoute = RmHeatmapRouteImport.update({
+  id: '/rm/heatmap',
+  path: '/rm/heatmap',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RmFinanceRoute = RmFinanceRouteImport.update({
+  id: '/rm/finance',
+  path: '/rm/finance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RmDocumentsRoute = RmDocumentsRouteImport.update({
+  id: '/rm/documents',
+  path: '/rm/documents',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RmDirectoryRoute = RmDirectoryRouteImport.update({
+  id: '/rm/directory',
+  path: '/rm/directory',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RmDealRegistrationRoute = RmDealRegistrationRouteImport.update({
+  id: '/rm/deal-registration',
+  path: '/rm/deal-registration',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RmCustomersRoute = RmCustomersRouteImport.update({
+  id: '/rm/customers',
+  path: '/rm/customers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RmCrmRoute = RmCrmRouteImport.update({
+  id: '/rm/crm',
+  path: '/rm/crm',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RmCommunicationsRoute = RmCommunicationsRouteImport.update({
+  id: '/rm/communications',
+  path: '/rm/communications',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RmCommissionsRoute = RmCommissionsRouteImport.update({
+  id: '/rm/commissions',
+  path: '/rm/commissions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RmCommandRoute = RmCommandRouteImport.update({
+  id: '/rm/command',
+  path: '/rm/command',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RmBossPanelRoute = RmBossPanelRouteImport.update({
+  id: '/rm/boss-panel',
+  path: '/rm/boss-panel',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RmApprovalsRoute = RmApprovalsRouteImport.update({
+  id: '/rm/approvals',
+  path: '/rm/approvals',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RmApplicationsRoute = RmApplicationsRouteImport.update({
+  id: '/rm/applications',
+  path: '/rm/applications',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RmAiCommandRoute = RmAiCommandRouteImport.update({
+  id: '/rm/ai-command',
+  path: '/rm/ai-command',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PosSyncRoute = PosSyncRouteImport.update({
@@ -4235,6 +4409,35 @@ export interface FileRoutesByFullPath {
   '/pos/shift': typeof PosShiftRoute
   '/pos/staff': typeof PosStaffRoute
   '/pos/sync': typeof PosSyncRoute
+  '/rm/ai-command': typeof RmAiCommandRoute
+  '/rm/applications': typeof RmApplicationsRoute
+  '/rm/approvals': typeof RmApprovalsRoute
+  '/rm/boss-panel': typeof RmBossPanelRoute
+  '/rm/command': typeof RmCommandRoute
+  '/rm/commissions': typeof RmCommissionsRoute
+  '/rm/communications': typeof RmCommunicationsRoute
+  '/rm/crm': typeof RmCrmRoute
+  '/rm/customers': typeof RmCustomersRoute
+  '/rm/deal-registration': typeof RmDealRegistrationRoute
+  '/rm/directory': typeof RmDirectoryRoute
+  '/rm/documents': typeof RmDocumentsRoute
+  '/rm/finance': typeof RmFinanceRoute
+  '/rm/heatmap': typeof RmHeatmapRoute
+  '/rm/hrms': typeof RmHrmsRoute
+  '/rm/license-gate': typeof RmLicenseGateRoute
+  '/rm/licenses': typeof RmLicensesRoute
+  '/rm/marketplace': typeof RmMarketplaceRoute
+  '/rm/orders': typeof RmOrdersRoute
+  '/rm/performance': typeof RmPerformanceRoute
+  '/rm/profile': typeof RmProfileRoute
+  '/rm/recruitment': typeof RmRecruitmentRoute
+  '/rm/renewals': typeof RmRenewalsRoute
+  '/rm/risk': typeof RmRiskRoute
+  '/rm/settings': typeof RmSettingsRoute
+  '/rm/sub-resellers': typeof RmSubResellersRoute
+  '/rm/support': typeof RmSupportRoute
+  '/rm/territory': typeof RmTerritoryRoute
+  '/rm/training': typeof RmTrainingRoute
   '/shopify/analytics': typeof ShopifyAnalyticsRoute
   '/shopify/app-marketplace': typeof ShopifyAppMarketplaceRoute
   '/shopify/audit-log': typeof ShopifyAuditLogRoute
@@ -4851,6 +5054,35 @@ export interface FileRoutesByTo {
   '/pos/shift': typeof PosShiftRoute
   '/pos/staff': typeof PosStaffRoute
   '/pos/sync': typeof PosSyncRoute
+  '/rm/ai-command': typeof RmAiCommandRoute
+  '/rm/applications': typeof RmApplicationsRoute
+  '/rm/approvals': typeof RmApprovalsRoute
+  '/rm/boss-panel': typeof RmBossPanelRoute
+  '/rm/command': typeof RmCommandRoute
+  '/rm/commissions': typeof RmCommissionsRoute
+  '/rm/communications': typeof RmCommunicationsRoute
+  '/rm/crm': typeof RmCrmRoute
+  '/rm/customers': typeof RmCustomersRoute
+  '/rm/deal-registration': typeof RmDealRegistrationRoute
+  '/rm/directory': typeof RmDirectoryRoute
+  '/rm/documents': typeof RmDocumentsRoute
+  '/rm/finance': typeof RmFinanceRoute
+  '/rm/heatmap': typeof RmHeatmapRoute
+  '/rm/hrms': typeof RmHrmsRoute
+  '/rm/license-gate': typeof RmLicenseGateRoute
+  '/rm/licenses': typeof RmLicensesRoute
+  '/rm/marketplace': typeof RmMarketplaceRoute
+  '/rm/orders': typeof RmOrdersRoute
+  '/rm/performance': typeof RmPerformanceRoute
+  '/rm/profile': typeof RmProfileRoute
+  '/rm/recruitment': typeof RmRecruitmentRoute
+  '/rm/renewals': typeof RmRenewalsRoute
+  '/rm/risk': typeof RmRiskRoute
+  '/rm/settings': typeof RmSettingsRoute
+  '/rm/sub-resellers': typeof RmSubResellersRoute
+  '/rm/support': typeof RmSupportRoute
+  '/rm/territory': typeof RmTerritoryRoute
+  '/rm/training': typeof RmTrainingRoute
   '/shopify/analytics': typeof ShopifyAnalyticsRoute
   '/shopify/app-marketplace': typeof ShopifyAppMarketplaceRoute
   '/shopify/audit-log': typeof ShopifyAuditLogRoute
@@ -5468,6 +5700,35 @@ export interface FileRoutesById {
   '/pos/shift': typeof PosShiftRoute
   '/pos/staff': typeof PosStaffRoute
   '/pos/sync': typeof PosSyncRoute
+  '/rm/ai-command': typeof RmAiCommandRoute
+  '/rm/applications': typeof RmApplicationsRoute
+  '/rm/approvals': typeof RmApprovalsRoute
+  '/rm/boss-panel': typeof RmBossPanelRoute
+  '/rm/command': typeof RmCommandRoute
+  '/rm/commissions': typeof RmCommissionsRoute
+  '/rm/communications': typeof RmCommunicationsRoute
+  '/rm/crm': typeof RmCrmRoute
+  '/rm/customers': typeof RmCustomersRoute
+  '/rm/deal-registration': typeof RmDealRegistrationRoute
+  '/rm/directory': typeof RmDirectoryRoute
+  '/rm/documents': typeof RmDocumentsRoute
+  '/rm/finance': typeof RmFinanceRoute
+  '/rm/heatmap': typeof RmHeatmapRoute
+  '/rm/hrms': typeof RmHrmsRoute
+  '/rm/license-gate': typeof RmLicenseGateRoute
+  '/rm/licenses': typeof RmLicensesRoute
+  '/rm/marketplace': typeof RmMarketplaceRoute
+  '/rm/orders': typeof RmOrdersRoute
+  '/rm/performance': typeof RmPerformanceRoute
+  '/rm/profile': typeof RmProfileRoute
+  '/rm/recruitment': typeof RmRecruitmentRoute
+  '/rm/renewals': typeof RmRenewalsRoute
+  '/rm/risk': typeof RmRiskRoute
+  '/rm/settings': typeof RmSettingsRoute
+  '/rm/sub-resellers': typeof RmSubResellersRoute
+  '/rm/support': typeof RmSupportRoute
+  '/rm/territory': typeof RmTerritoryRoute
+  '/rm/training': typeof RmTrainingRoute
   '/shopify/analytics': typeof ShopifyAnalyticsRoute
   '/shopify/app-marketplace': typeof ShopifyAppMarketplaceRoute
   '/shopify/audit-log': typeof ShopifyAuditLogRoute
@@ -6086,6 +6347,35 @@ export interface FileRouteTypes {
     | '/pos/shift'
     | '/pos/staff'
     | '/pos/sync'
+    | '/rm/ai-command'
+    | '/rm/applications'
+    | '/rm/approvals'
+    | '/rm/boss-panel'
+    | '/rm/command'
+    | '/rm/commissions'
+    | '/rm/communications'
+    | '/rm/crm'
+    | '/rm/customers'
+    | '/rm/deal-registration'
+    | '/rm/directory'
+    | '/rm/documents'
+    | '/rm/finance'
+    | '/rm/heatmap'
+    | '/rm/hrms'
+    | '/rm/license-gate'
+    | '/rm/licenses'
+    | '/rm/marketplace'
+    | '/rm/orders'
+    | '/rm/performance'
+    | '/rm/profile'
+    | '/rm/recruitment'
+    | '/rm/renewals'
+    | '/rm/risk'
+    | '/rm/settings'
+    | '/rm/sub-resellers'
+    | '/rm/support'
+    | '/rm/territory'
+    | '/rm/training'
     | '/shopify/analytics'
     | '/shopify/app-marketplace'
     | '/shopify/audit-log'
@@ -6702,6 +6992,35 @@ export interface FileRouteTypes {
     | '/pos/shift'
     | '/pos/staff'
     | '/pos/sync'
+    | '/rm/ai-command'
+    | '/rm/applications'
+    | '/rm/approvals'
+    | '/rm/boss-panel'
+    | '/rm/command'
+    | '/rm/commissions'
+    | '/rm/communications'
+    | '/rm/crm'
+    | '/rm/customers'
+    | '/rm/deal-registration'
+    | '/rm/directory'
+    | '/rm/documents'
+    | '/rm/finance'
+    | '/rm/heatmap'
+    | '/rm/hrms'
+    | '/rm/license-gate'
+    | '/rm/licenses'
+    | '/rm/marketplace'
+    | '/rm/orders'
+    | '/rm/performance'
+    | '/rm/profile'
+    | '/rm/recruitment'
+    | '/rm/renewals'
+    | '/rm/risk'
+    | '/rm/settings'
+    | '/rm/sub-resellers'
+    | '/rm/support'
+    | '/rm/territory'
+    | '/rm/training'
     | '/shopify/analytics'
     | '/shopify/app-marketplace'
     | '/shopify/audit-log'
@@ -7318,6 +7637,35 @@ export interface FileRouteTypes {
     | '/pos/shift'
     | '/pos/staff'
     | '/pos/sync'
+    | '/rm/ai-command'
+    | '/rm/applications'
+    | '/rm/approvals'
+    | '/rm/boss-panel'
+    | '/rm/command'
+    | '/rm/commissions'
+    | '/rm/communications'
+    | '/rm/crm'
+    | '/rm/customers'
+    | '/rm/deal-registration'
+    | '/rm/directory'
+    | '/rm/documents'
+    | '/rm/finance'
+    | '/rm/heatmap'
+    | '/rm/hrms'
+    | '/rm/license-gate'
+    | '/rm/licenses'
+    | '/rm/marketplace'
+    | '/rm/orders'
+    | '/rm/performance'
+    | '/rm/profile'
+    | '/rm/recruitment'
+    | '/rm/renewals'
+    | '/rm/risk'
+    | '/rm/settings'
+    | '/rm/sub-resellers'
+    | '/rm/support'
+    | '/rm/territory'
+    | '/rm/training'
     | '/shopify/analytics'
     | '/shopify/app-marketplace'
     | '/shopify/audit-log'
@@ -7926,6 +8274,35 @@ export interface RootRouteChildren {
   PosShiftRoute: typeof PosShiftRoute
   PosStaffRoute: typeof PosStaffRoute
   PosSyncRoute: typeof PosSyncRoute
+  RmAiCommandRoute: typeof RmAiCommandRoute
+  RmApplicationsRoute: typeof RmApplicationsRoute
+  RmApprovalsRoute: typeof RmApprovalsRoute
+  RmBossPanelRoute: typeof RmBossPanelRoute
+  RmCommandRoute: typeof RmCommandRoute
+  RmCommissionsRoute: typeof RmCommissionsRoute
+  RmCommunicationsRoute: typeof RmCommunicationsRoute
+  RmCrmRoute: typeof RmCrmRoute
+  RmCustomersRoute: typeof RmCustomersRoute
+  RmDealRegistrationRoute: typeof RmDealRegistrationRoute
+  RmDirectoryRoute: typeof RmDirectoryRoute
+  RmDocumentsRoute: typeof RmDocumentsRoute
+  RmFinanceRoute: typeof RmFinanceRoute
+  RmHeatmapRoute: typeof RmHeatmapRoute
+  RmHrmsRoute: typeof RmHrmsRoute
+  RmLicenseGateRoute: typeof RmLicenseGateRoute
+  RmLicensesRoute: typeof RmLicensesRoute
+  RmMarketplaceRoute: typeof RmMarketplaceRoute
+  RmOrdersRoute: typeof RmOrdersRoute
+  RmPerformanceRoute: typeof RmPerformanceRoute
+  RmProfileRoute: typeof RmProfileRoute
+  RmRecruitmentRoute: typeof RmRecruitmentRoute
+  RmRenewalsRoute: typeof RmRenewalsRoute
+  RmRiskRoute: typeof RmRiskRoute
+  RmSettingsRoute: typeof RmSettingsRoute
+  RmSubResellersRoute: typeof RmSubResellersRoute
+  RmSupportRoute: typeof RmSupportRoute
+  RmTerritoryRoute: typeof RmTerritoryRoute
+  RmTrainingRoute: typeof RmTrainingRoute
   ShopifyAnalyticsRoute: typeof ShopifyAnalyticsRoute
   ShopifyAppMarketplaceRoute: typeof ShopifyAppMarketplaceRoute
   ShopifyAuditLogRoute: typeof ShopifyAuditLogRoute
@@ -9351,6 +9728,209 @@ declare module '@tanstack/react-router' {
       path: '/shopify/analytics'
       fullPath: '/shopify/analytics'
       preLoaderRoute: typeof ShopifyAnalyticsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rm/training': {
+      id: '/rm/training'
+      path: '/rm/training'
+      fullPath: '/rm/training'
+      preLoaderRoute: typeof RmTrainingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rm/territory': {
+      id: '/rm/territory'
+      path: '/rm/territory'
+      fullPath: '/rm/territory'
+      preLoaderRoute: typeof RmTerritoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rm/support': {
+      id: '/rm/support'
+      path: '/rm/support'
+      fullPath: '/rm/support'
+      preLoaderRoute: typeof RmSupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rm/sub-resellers': {
+      id: '/rm/sub-resellers'
+      path: '/rm/sub-resellers'
+      fullPath: '/rm/sub-resellers'
+      preLoaderRoute: typeof RmSubResellersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rm/settings': {
+      id: '/rm/settings'
+      path: '/rm/settings'
+      fullPath: '/rm/settings'
+      preLoaderRoute: typeof RmSettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rm/risk': {
+      id: '/rm/risk'
+      path: '/rm/risk'
+      fullPath: '/rm/risk'
+      preLoaderRoute: typeof RmRiskRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rm/renewals': {
+      id: '/rm/renewals'
+      path: '/rm/renewals'
+      fullPath: '/rm/renewals'
+      preLoaderRoute: typeof RmRenewalsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rm/recruitment': {
+      id: '/rm/recruitment'
+      path: '/rm/recruitment'
+      fullPath: '/rm/recruitment'
+      preLoaderRoute: typeof RmRecruitmentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rm/profile': {
+      id: '/rm/profile'
+      path: '/rm/profile'
+      fullPath: '/rm/profile'
+      preLoaderRoute: typeof RmProfileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rm/performance': {
+      id: '/rm/performance'
+      path: '/rm/performance'
+      fullPath: '/rm/performance'
+      preLoaderRoute: typeof RmPerformanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rm/orders': {
+      id: '/rm/orders'
+      path: '/rm/orders'
+      fullPath: '/rm/orders'
+      preLoaderRoute: typeof RmOrdersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rm/marketplace': {
+      id: '/rm/marketplace'
+      path: '/rm/marketplace'
+      fullPath: '/rm/marketplace'
+      preLoaderRoute: typeof RmMarketplaceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rm/licenses': {
+      id: '/rm/licenses'
+      path: '/rm/licenses'
+      fullPath: '/rm/licenses'
+      preLoaderRoute: typeof RmLicensesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rm/license-gate': {
+      id: '/rm/license-gate'
+      path: '/rm/license-gate'
+      fullPath: '/rm/license-gate'
+      preLoaderRoute: typeof RmLicenseGateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rm/hrms': {
+      id: '/rm/hrms'
+      path: '/rm/hrms'
+      fullPath: '/rm/hrms'
+      preLoaderRoute: typeof RmHrmsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rm/heatmap': {
+      id: '/rm/heatmap'
+      path: '/rm/heatmap'
+      fullPath: '/rm/heatmap'
+      preLoaderRoute: typeof RmHeatmapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rm/finance': {
+      id: '/rm/finance'
+      path: '/rm/finance'
+      fullPath: '/rm/finance'
+      preLoaderRoute: typeof RmFinanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rm/documents': {
+      id: '/rm/documents'
+      path: '/rm/documents'
+      fullPath: '/rm/documents'
+      preLoaderRoute: typeof RmDocumentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rm/directory': {
+      id: '/rm/directory'
+      path: '/rm/directory'
+      fullPath: '/rm/directory'
+      preLoaderRoute: typeof RmDirectoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rm/deal-registration': {
+      id: '/rm/deal-registration'
+      path: '/rm/deal-registration'
+      fullPath: '/rm/deal-registration'
+      preLoaderRoute: typeof RmDealRegistrationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rm/customers': {
+      id: '/rm/customers'
+      path: '/rm/customers'
+      fullPath: '/rm/customers'
+      preLoaderRoute: typeof RmCustomersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rm/crm': {
+      id: '/rm/crm'
+      path: '/rm/crm'
+      fullPath: '/rm/crm'
+      preLoaderRoute: typeof RmCrmRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rm/communications': {
+      id: '/rm/communications'
+      path: '/rm/communications'
+      fullPath: '/rm/communications'
+      preLoaderRoute: typeof RmCommunicationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rm/commissions': {
+      id: '/rm/commissions'
+      path: '/rm/commissions'
+      fullPath: '/rm/commissions'
+      preLoaderRoute: typeof RmCommissionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rm/command': {
+      id: '/rm/command'
+      path: '/rm/command'
+      fullPath: '/rm/command'
+      preLoaderRoute: typeof RmCommandRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rm/boss-panel': {
+      id: '/rm/boss-panel'
+      path: '/rm/boss-panel'
+      fullPath: '/rm/boss-panel'
+      preLoaderRoute: typeof RmBossPanelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rm/approvals': {
+      id: '/rm/approvals'
+      path: '/rm/approvals'
+      fullPath: '/rm/approvals'
+      preLoaderRoute: typeof RmApprovalsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rm/applications': {
+      id: '/rm/applications'
+      path: '/rm/applications'
+      fullPath: '/rm/applications'
+      preLoaderRoute: typeof RmApplicationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rm/ai-command': {
+      id: '/rm/ai-command'
+      path: '/rm/ai-command'
+      fullPath: '/rm/ai-command'
+      preLoaderRoute: typeof RmAiCommandRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/pos/sync': {
@@ -12945,6 +13525,35 @@ const rootRouteChildren: RootRouteChildren = {
   PosShiftRoute: PosShiftRoute,
   PosStaffRoute: PosStaffRoute,
   PosSyncRoute: PosSyncRoute,
+  RmAiCommandRoute: RmAiCommandRoute,
+  RmApplicationsRoute: RmApplicationsRoute,
+  RmApprovalsRoute: RmApprovalsRoute,
+  RmBossPanelRoute: RmBossPanelRoute,
+  RmCommandRoute: RmCommandRoute,
+  RmCommissionsRoute: RmCommissionsRoute,
+  RmCommunicationsRoute: RmCommunicationsRoute,
+  RmCrmRoute: RmCrmRoute,
+  RmCustomersRoute: RmCustomersRoute,
+  RmDealRegistrationRoute: RmDealRegistrationRoute,
+  RmDirectoryRoute: RmDirectoryRoute,
+  RmDocumentsRoute: RmDocumentsRoute,
+  RmFinanceRoute: RmFinanceRoute,
+  RmHeatmapRoute: RmHeatmapRoute,
+  RmHrmsRoute: RmHrmsRoute,
+  RmLicenseGateRoute: RmLicenseGateRoute,
+  RmLicensesRoute: RmLicensesRoute,
+  RmMarketplaceRoute: RmMarketplaceRoute,
+  RmOrdersRoute: RmOrdersRoute,
+  RmPerformanceRoute: RmPerformanceRoute,
+  RmProfileRoute: RmProfileRoute,
+  RmRecruitmentRoute: RmRecruitmentRoute,
+  RmRenewalsRoute: RmRenewalsRoute,
+  RmRiskRoute: RmRiskRoute,
+  RmSettingsRoute: RmSettingsRoute,
+  RmSubResellersRoute: RmSubResellersRoute,
+  RmSupportRoute: RmSupportRoute,
+  RmTerritoryRoute: RmTerritoryRoute,
+  RmTrainingRoute: RmTrainingRoute,
   ShopifyAnalyticsRoute: ShopifyAnalyticsRoute,
   ShopifyAppMarketplaceRoute: ShopifyAppMarketplaceRoute,
   ShopifyAuditLogRoute: ShopifyAuditLogRoute,
@@ -13063,13 +13672,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}

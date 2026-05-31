@@ -479,15 +479,550 @@ export type Database = {
         }
         Relationships: []
       }
+      reseller_applications: {
+        Row: {
+          applicant_name: string
+          city: string | null
+          company: string | null
+          country: string | null
+          created_at: string
+          email: string
+          id: string
+          interview_scheduled_at: string | null
+          kyc_status: string
+          notes: string | null
+          phone: string | null
+          reviewer_id: string | null
+          state: string | null
+          status: string
+          territory_requested: string | null
+          updated_at: string
+        }
+        Insert: {
+          applicant_name: string
+          city?: string | null
+          company?: string | null
+          country?: string | null
+          created_at?: string
+          email: string
+          id?: string
+          interview_scheduled_at?: string | null
+          kyc_status?: string
+          notes?: string | null
+          phone?: string | null
+          reviewer_id?: string | null
+          state?: string | null
+          status?: string
+          territory_requested?: string | null
+          updated_at?: string
+        }
+        Update: {
+          applicant_name?: string
+          city?: string | null
+          company?: string | null
+          country?: string | null
+          created_at?: string
+          email?: string
+          id?: string
+          interview_scheduled_at?: string | null
+          kyc_status?: string
+          notes?: string | null
+          phone?: string | null
+          reviewer_id?: string | null
+          state?: string | null
+          status?: string
+          territory_requested?: string | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      reseller_attendance: {
+        Row: {
+          created_at: string
+          date: string
+          employee_id: string
+          hours: number
+          id: string
+          reseller_id: string
+          status: string
+        }
+        Insert: {
+          created_at?: string
+          date?: string
+          employee_id: string
+          hours?: number
+          id?: string
+          reseller_id: string
+          status?: string
+        }
+        Update: {
+          created_at?: string
+          date?: string
+          employee_id?: string
+          hours?: number
+          id?: string
+          reseller_id?: string
+          status?: string
+        }
+        Relationships: []
+      }
+      reseller_audit_logs: {
+        Row: {
+          action: string
+          actor_id: string | null
+          created_at: string
+          entity_id: string | null
+          entity_type: string | null
+          id: string
+          meta: Json | null
+          reseller_id: string | null
+        }
+        Insert: {
+          action: string
+          actor_id?: string | null
+          created_at?: string
+          entity_id?: string | null
+          entity_type?: string | null
+          id?: string
+          meta?: Json | null
+          reseller_id?: string | null
+        }
+        Update: {
+          action?: string
+          actor_id?: string | null
+          created_at?: string
+          entity_id?: string | null
+          entity_type?: string | null
+          id?: string
+          meta?: Json | null
+          reseller_id?: string | null
+        }
+        Relationships: []
+      }
+      reseller_commissions: {
+        Row: {
+          amount: number
+          created_at: string
+          earned_at: string
+          id: string
+          reseller_id: string
+          source: string
+          status: string
+          type: string
+        }
+        Insert: {
+          amount: number
+          created_at?: string
+          earned_at?: string
+          id?: string
+          reseller_id: string
+          source: string
+          status?: string
+          type?: string
+        }
+        Update: {
+          amount?: number
+          created_at?: string
+          earned_at?: string
+          id?: string
+          reseller_id?: string
+          source?: string
+          status?: string
+          type?: string
+        }
+        Relationships: []
+      }
+      reseller_customers: {
+        Row: {
+          created_at: string
+          customer_name: string
+          email: string | null
+          health_score: number
+          id: string
+          mrr: number
+          plan: string | null
+          reseller_id: string
+          status: string
+        }
+        Insert: {
+          created_at?: string
+          customer_name: string
+          email?: string | null
+          health_score?: number
+          id?: string
+          mrr?: number
+          plan?: string | null
+          reseller_id: string
+          status?: string
+        }
+        Update: {
+          created_at?: string
+          customer_name?: string
+          email?: string | null
+          health_score?: number
+          id?: string
+          mrr?: number
+          plan?: string | null
+          reseller_id?: string
+          status?: string
+        }
+        Relationships: []
+      }
+      reseller_documents: {
+        Row: {
+          created_at: string
+          doc_type: string
+          id: string
+          name: string
+          reseller_id: string
+          status: string
+          url: string | null
+        }
+        Insert: {
+          created_at?: string
+          doc_type: string
+          id?: string
+          name: string
+          reseller_id: string
+          status?: string
+          url?: string | null
+        }
+        Update: {
+          created_at?: string
+          doc_type?: string
+          id?: string
+          name?: string
+          reseller_id?: string
+          status?: string
+          url?: string | null
+        }
+        Relationships: []
+      }
+      reseller_employees: {
+        Row: {
+          created_at: string
+          email: string | null
+          id: string
+          name: string
+          reseller_id: string
+          role: string | null
+          status: string
+        }
+        Insert: {
+          created_at?: string
+          email?: string | null
+          id?: string
+          name: string
+          reseller_id: string
+          role?: string | null
+          status?: string
+        }
+        Update: {
+          created_at?: string
+          email?: string | null
+          id?: string
+          name?: string
+          reseller_id?: string
+          role?: string | null
+          status?: string
+        }
+        Relationships: []
+      }
+      reseller_leads: {
+        Row: {
+          created_at: string
+          email: string | null
+          id: string
+          industry: string | null
+          name: string
+          phone: string | null
+          protected_until: string | null
+          registered_deal: boolean
+          reseller_id: string | null
+          source: string | null
+          status: string
+          territory: string | null
+        }
+        Insert: {
+          created_at?: string
+          email?: string | null
+          id?: string
+          industry?: string | null
+          name: string
+          phone?: string | null
+          protected_until?: string | null
+          registered_deal?: boolean
+          reseller_id?: string | null
+          source?: string | null
+          status?: string
+          territory?: string | null
+        }
+        Update: {
+          created_at?: string
+          email?: string | null
+          id?: string
+          industry?: string | null
+          name?: string
+          phone?: string | null
+          protected_until?: string | null
+          registered_deal?: boolean
+          reseller_id?: string | null
+          source?: string | null
+          status?: string
+          territory?: string | null
+        }
+        Relationships: []
+      }
+      reseller_licenses: {
+        Row: {
+          approval_stage: string
+          approved_at: string | null
+          approved_by: string | null
+          created_at: string
+          customer_name: string
+          expires_at: string | null
+          id: string
+          license_key: string | null
+          product: string
+          reseller_id: string
+        }
+        Insert: {
+          approval_stage?: string
+          approved_at?: string | null
+          approved_by?: string | null
+          created_at?: string
+          customer_name: string
+          expires_at?: string | null
+          id?: string
+          license_key?: string | null
+          product: string
+          reseller_id: string
+        }
+        Update: {
+          approval_stage?: string
+          approved_at?: string | null
+          approved_by?: string | null
+          created_at?: string
+          customer_name?: string
+          expires_at?: string | null
+          id?: string
+          license_key?: string | null
+          product?: string
+          reseller_id?: string
+        }
+        Relationships: []
+      }
+      reseller_orders: {
+        Row: {
+          amount: number
+          created_at: string
+          customer_name: string
+          id: string
+          product: string
+          reseller_id: string
+          status: string
+        }
+        Insert: {
+          amount?: number
+          created_at?: string
+          customer_name: string
+          id?: string
+          product: string
+          reseller_id: string
+          status?: string
+        }
+        Update: {
+          amount?: number
+          created_at?: string
+          customer_name?: string
+          id?: string
+          product?: string
+          reseller_id?: string
+          status?: string
+        }
+        Relationships: []
+      }
+      reseller_payroll: {
+        Row: {
+          created_at: string
+          employee_id: string
+          gross: number
+          id: string
+          net: number
+          period: string
+          reseller_id: string
+          status: string
+        }
+        Insert: {
+          created_at?: string
+          employee_id: string
+          gross?: number
+          id?: string
+          net?: number
+          period: string
+          reseller_id: string
+          status?: string
+        }
+        Update: {
+          created_at?: string
+          employee_id?: string
+          gross?: number
+          id?: string
+          net?: number
+          period?: string
+          reseller_id?: string
+          status?: string
+        }
+        Relationships: []
+      }
+      reseller_performance: {
+        Row: {
+          activity_score: number
+          created_at: string
+          growth_score: number
+          health_score: number
+          id: string
+          period: string
+          reseller_id: string
+          revenue_score: number
+          total_score: number
+        }
+        Insert: {
+          activity_score?: number
+          created_at?: string
+          growth_score?: number
+          health_score?: number
+          id?: string
+          period?: string
+          reseller_id: string
+          revenue_score?: number
+          total_score?: number
+        }
+        Update: {
+          activity_score?: number
+          created_at?: string
+          growth_score?: number
+          health_score?: number
+          id?: string
+          period?: string
+          reseller_id?: string
+          revenue_score?: number
+          total_score?: number
+        }
+        Relationships: []
+      }
+      reseller_renewals: {
+        Row: {
+          amount: number
+          created_at: string
+          customer_name: string
+          due_date: string
+          id: string
+          product: string | null
+          reseller_id: string
+          status: string
+        }
+        Insert: {
+          amount?: number
+          created_at?: string
+          customer_name: string
+          due_date: string
+          id?: string
+          product?: string | null
+          reseller_id: string
+          status?: string
+        }
+        Update: {
+          amount?: number
+          created_at?: string
+          customer_name?: string
+          due_date?: string
+          id?: string
+          product?: string | null
+          reseller_id?: string
+          status?: string
+        }
+        Relationships: []
+      }
+      reseller_territories: {
+        Row: {
+          assigned: number
+          capacity: number
+          city: string | null
+          country: string
+          created_at: string
+          district: string | null
+          id: string
+          industry: string | null
+          reseller_id: string | null
+          state: string | null
+          status: string
+        }
+        Insert: {
+          assigned?: number
+          capacity?: number
+          city?: string | null
+          country: string
+          created_at?: string
+          district?: string | null
+          id?: string
+          industry?: string | null
+          reseller_id?: string | null
+          state?: string | null
+          status?: string
+        }
+        Update: {
+          assigned?: number
+          capacity?: number
+          city?: string | null
+          country?: string
+          created_at?: string
+          district?: string | null
+          id?: string
+          industry?: string | null
+          reseller_id?: string | null
+          state?: string | null
+          status?: string
+        }
+        Relationships: []
+      }
+      user_roles: {
+        Row: {
+          created_at: string
+          id: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          role?: Database["public"]["Enums"]["app_role"]
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      has_role: {
+        Args: {
+          _role: Database["public"]["Enums"]["app_role"]
+          _user_id: string
+        }
+        Returns: boolean
+      }
+      is_boss: { Args: { _user_id: string }; Returns: boolean }
     }
     Enums: {
-      [_ in never]: never
+      app_role: "boss" | "admin" | "reseller_manager" | "reseller" | "user"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -614,6 +1149,8 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      app_role: ["boss", "admin", "reseller_manager", "reseller", "user"],
+    },
   },
 } as const
