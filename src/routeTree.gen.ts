@@ -197,6 +197,7 @@ import { Route as ShopifyAuditLogRouteImport } from './routes/shopify.audit-log'
 import { Route as ShopifyAppMarketplaceRouteImport } from './routes/shopify.app-marketplace'
 import { Route as ShopifyAnalyticsRouteImport } from './routes/shopify.analytics'
 import { Route as RmCommandRouteImport } from './routes/rm.command'
+import { Route as RmApprovalsRouteImport } from './routes/rm.approvals'
 import { Route as PosSyncRouteImport } from './routes/pos.sync'
 import { Route as PosStaffRouteImport } from './routes/pos.staff'
 import { Route as PosShiftRouteImport } from './routes/pos.shift'
@@ -1565,6 +1566,11 @@ const ShopifyAnalyticsRoute = ShopifyAnalyticsRouteImport.update({
 const RmCommandRoute = RmCommandRouteImport.update({
   id: '/rm/command',
   path: '/rm/command',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RmApprovalsRoute = RmApprovalsRouteImport.update({
+  id: '/rm/approvals',
+  path: '/rm/approvals',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PosSyncRoute = PosSyncRouteImport.update({
@@ -4241,6 +4247,7 @@ export interface FileRoutesByFullPath {
   '/pos/shift': typeof PosShiftRoute
   '/pos/staff': typeof PosStaffRoute
   '/pos/sync': typeof PosSyncRoute
+  '/rm/approvals': typeof RmApprovalsRoute
   '/rm/command': typeof RmCommandRoute
   '/shopify/analytics': typeof ShopifyAnalyticsRoute
   '/shopify/app-marketplace': typeof ShopifyAppMarketplaceRoute
@@ -4858,6 +4865,7 @@ export interface FileRoutesByTo {
   '/pos/shift': typeof PosShiftRoute
   '/pos/staff': typeof PosStaffRoute
   '/pos/sync': typeof PosSyncRoute
+  '/rm/approvals': typeof RmApprovalsRoute
   '/rm/command': typeof RmCommandRoute
   '/shopify/analytics': typeof ShopifyAnalyticsRoute
   '/shopify/app-marketplace': typeof ShopifyAppMarketplaceRoute
@@ -5476,6 +5484,7 @@ export interface FileRoutesById {
   '/pos/shift': typeof PosShiftRoute
   '/pos/staff': typeof PosStaffRoute
   '/pos/sync': typeof PosSyncRoute
+  '/rm/approvals': typeof RmApprovalsRoute
   '/rm/command': typeof RmCommandRoute
   '/shopify/analytics': typeof ShopifyAnalyticsRoute
   '/shopify/app-marketplace': typeof ShopifyAppMarketplaceRoute
@@ -6095,6 +6104,7 @@ export interface FileRouteTypes {
     | '/pos/shift'
     | '/pos/staff'
     | '/pos/sync'
+    | '/rm/approvals'
     | '/rm/command'
     | '/shopify/analytics'
     | '/shopify/app-marketplace'
@@ -6712,6 +6722,7 @@ export interface FileRouteTypes {
     | '/pos/shift'
     | '/pos/staff'
     | '/pos/sync'
+    | '/rm/approvals'
     | '/rm/command'
     | '/shopify/analytics'
     | '/shopify/app-marketplace'
@@ -7329,6 +7340,7 @@ export interface FileRouteTypes {
     | '/pos/shift'
     | '/pos/staff'
     | '/pos/sync'
+    | '/rm/approvals'
     | '/rm/command'
     | '/shopify/analytics'
     | '/shopify/app-marketplace'
@@ -7938,6 +7950,7 @@ export interface RootRouteChildren {
   PosShiftRoute: typeof PosShiftRoute
   PosStaffRoute: typeof PosStaffRoute
   PosSyncRoute: typeof PosSyncRoute
+  RmApprovalsRoute: typeof RmApprovalsRoute
   RmCommandRoute: typeof RmCommandRoute
   ShopifyAnalyticsRoute: typeof ShopifyAnalyticsRoute
   ShopifyAppMarketplaceRoute: typeof ShopifyAppMarketplaceRoute
@@ -9371,6 +9384,13 @@ declare module '@tanstack/react-router' {
       path: '/rm/command'
       fullPath: '/rm/command'
       preLoaderRoute: typeof RmCommandRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rm/approvals': {
+      id: '/rm/approvals'
+      path: '/rm/approvals'
+      fullPath: '/rm/approvals'
+      preLoaderRoute: typeof RmApprovalsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/pos/sync': {
@@ -12965,6 +12985,7 @@ const rootRouteChildren: RootRouteChildren = {
   PosShiftRoute: PosShiftRoute,
   PosStaffRoute: PosStaffRoute,
   PosSyncRoute: PosSyncRoute,
+  RmApprovalsRoute: RmApprovalsRoute,
   RmCommandRoute: RmCommandRoute,
   ShopifyAnalyticsRoute: ShopifyAnalyticsRoute,
   ShopifyAppMarketplaceRoute: ShopifyAppMarketplaceRoute,
