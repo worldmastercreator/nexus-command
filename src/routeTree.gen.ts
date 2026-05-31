@@ -196,6 +196,7 @@ import { Route as ShopifyAutomationRouteImport } from './routes/shopify.automati
 import { Route as ShopifyAuditLogRouteImport } from './routes/shopify.audit-log'
 import { Route as ShopifyAppMarketplaceRouteImport } from './routes/shopify.app-marketplace'
 import { Route as ShopifyAnalyticsRouteImport } from './routes/shopify.analytics'
+import { Route as RmCommandRouteImport } from './routes/rm.command'
 import { Route as PosSyncRouteImport } from './routes/pos.sync'
 import { Route as PosStaffRouteImport } from './routes/pos.staff'
 import { Route as PosShiftRouteImport } from './routes/pos.shift'
@@ -1559,6 +1560,11 @@ const ShopifyAppMarketplaceRoute = ShopifyAppMarketplaceRouteImport.update({
 const ShopifyAnalyticsRoute = ShopifyAnalyticsRouteImport.update({
   id: '/shopify/analytics',
   path: '/shopify/analytics',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RmCommandRoute = RmCommandRouteImport.update({
+  id: '/rm/command',
+  path: '/rm/command',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PosSyncRoute = PosSyncRouteImport.update({
@@ -4235,6 +4241,7 @@ export interface FileRoutesByFullPath {
   '/pos/shift': typeof PosShiftRoute
   '/pos/staff': typeof PosStaffRoute
   '/pos/sync': typeof PosSyncRoute
+  '/rm/command': typeof RmCommandRoute
   '/shopify/analytics': typeof ShopifyAnalyticsRoute
   '/shopify/app-marketplace': typeof ShopifyAppMarketplaceRoute
   '/shopify/audit-log': typeof ShopifyAuditLogRoute
@@ -4851,6 +4858,7 @@ export interface FileRoutesByTo {
   '/pos/shift': typeof PosShiftRoute
   '/pos/staff': typeof PosStaffRoute
   '/pos/sync': typeof PosSyncRoute
+  '/rm/command': typeof RmCommandRoute
   '/shopify/analytics': typeof ShopifyAnalyticsRoute
   '/shopify/app-marketplace': typeof ShopifyAppMarketplaceRoute
   '/shopify/audit-log': typeof ShopifyAuditLogRoute
@@ -5468,6 +5476,7 @@ export interface FileRoutesById {
   '/pos/shift': typeof PosShiftRoute
   '/pos/staff': typeof PosStaffRoute
   '/pos/sync': typeof PosSyncRoute
+  '/rm/command': typeof RmCommandRoute
   '/shopify/analytics': typeof ShopifyAnalyticsRoute
   '/shopify/app-marketplace': typeof ShopifyAppMarketplaceRoute
   '/shopify/audit-log': typeof ShopifyAuditLogRoute
@@ -6086,6 +6095,7 @@ export interface FileRouteTypes {
     | '/pos/shift'
     | '/pos/staff'
     | '/pos/sync'
+    | '/rm/command'
     | '/shopify/analytics'
     | '/shopify/app-marketplace'
     | '/shopify/audit-log'
@@ -6702,6 +6712,7 @@ export interface FileRouteTypes {
     | '/pos/shift'
     | '/pos/staff'
     | '/pos/sync'
+    | '/rm/command'
     | '/shopify/analytics'
     | '/shopify/app-marketplace'
     | '/shopify/audit-log'
@@ -7318,6 +7329,7 @@ export interface FileRouteTypes {
     | '/pos/shift'
     | '/pos/staff'
     | '/pos/sync'
+    | '/rm/command'
     | '/shopify/analytics'
     | '/shopify/app-marketplace'
     | '/shopify/audit-log'
@@ -7926,6 +7938,7 @@ export interface RootRouteChildren {
   PosShiftRoute: typeof PosShiftRoute
   PosStaffRoute: typeof PosStaffRoute
   PosSyncRoute: typeof PosSyncRoute
+  RmCommandRoute: typeof RmCommandRoute
   ShopifyAnalyticsRoute: typeof ShopifyAnalyticsRoute
   ShopifyAppMarketplaceRoute: typeof ShopifyAppMarketplaceRoute
   ShopifyAuditLogRoute: typeof ShopifyAuditLogRoute
@@ -9351,6 +9364,13 @@ declare module '@tanstack/react-router' {
       path: '/shopify/analytics'
       fullPath: '/shopify/analytics'
       preLoaderRoute: typeof ShopifyAnalyticsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rm/command': {
+      id: '/rm/command'
+      path: '/rm/command'
+      fullPath: '/rm/command'
+      preLoaderRoute: typeof RmCommandRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/pos/sync': {
@@ -12945,6 +12965,7 @@ const rootRouteChildren: RootRouteChildren = {
   PosShiftRoute: PosShiftRoute,
   PosStaffRoute: PosStaffRoute,
   PosSyncRoute: PosSyncRoute,
+  RmCommandRoute: RmCommandRoute,
   ShopifyAnalyticsRoute: ShopifyAnalyticsRoute,
   ShopifyAppMarketplaceRoute: ShopifyAppMarketplaceRoute,
   ShopifyAuditLogRoute: ShopifyAuditLogRoute,
