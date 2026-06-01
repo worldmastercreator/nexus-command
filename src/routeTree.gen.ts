@@ -254,6 +254,7 @@ import { Route as PosAgentsRouteImport } from './routes/pos.agents'
 import { Route as PortalUserRouteImport } from './routes/portal.user'
 import { Route as PortalSupportRouteImport } from './routes/portal.support'
 import { Route as PortalSeoRouteImport } from './routes/portal.seo'
+import { Route as PortalResellerEmpireRouteImport } from './routes/portal.reseller-empire'
 import { Route as PortalResellerRouteImport } from './routes/portal.reseller'
 import { Route as PortalInfluencerRouteImport } from './routes/portal.influencer'
 import { Route as PortalFranchiseRouteImport } from './routes/portal.franchise'
@@ -1878,6 +1879,11 @@ const PortalSupportRoute = PortalSupportRouteImport.update({
 const PortalSeoRoute = PortalSeoRouteImport.update({
   id: '/portal/seo',
   path: '/portal/seo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortalResellerEmpireRoute = PortalResellerEmpireRouteImport.update({
+  id: '/portal/reseller-empire',
+  path: '/portal/reseller-empire',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PortalResellerRoute = PortalResellerRouteImport.update({
@@ -4380,6 +4386,7 @@ export interface FileRoutesByFullPath {
   '/portal/franchise': typeof PortalFranchiseRoute
   '/portal/influencer': typeof PortalInfluencerRoute
   '/portal/reseller': typeof PortalResellerRoute
+  '/portal/reseller-empire': typeof PortalResellerEmpireRoute
   '/portal/seo': typeof PortalSeoRoute
   '/portal/support': typeof PortalSupportRoute
   '/portal/user': typeof PortalUserRoute
@@ -5025,6 +5032,7 @@ export interface FileRoutesByTo {
   '/portal/franchise': typeof PortalFranchiseRoute
   '/portal/influencer': typeof PortalInfluencerRoute
   '/portal/reseller': typeof PortalResellerRoute
+  '/portal/reseller-empire': typeof PortalResellerEmpireRoute
   '/portal/seo': typeof PortalSeoRoute
   '/portal/support': typeof PortalSupportRoute
   '/portal/user': typeof PortalUserRoute
@@ -5671,6 +5679,7 @@ export interface FileRoutesById {
   '/portal/franchise': typeof PortalFranchiseRoute
   '/portal/influencer': typeof PortalInfluencerRoute
   '/portal/reseller': typeof PortalResellerRoute
+  '/portal/reseller-empire': typeof PortalResellerEmpireRoute
   '/portal/seo': typeof PortalSeoRoute
   '/portal/support': typeof PortalSupportRoute
   '/portal/user': typeof PortalUserRoute
@@ -6318,6 +6327,7 @@ export interface FileRouteTypes {
     | '/portal/franchise'
     | '/portal/influencer'
     | '/portal/reseller'
+    | '/portal/reseller-empire'
     | '/portal/seo'
     | '/portal/support'
     | '/portal/user'
@@ -6963,6 +6973,7 @@ export interface FileRouteTypes {
     | '/portal/franchise'
     | '/portal/influencer'
     | '/portal/reseller'
+    | '/portal/reseller-empire'
     | '/portal/seo'
     | '/portal/support'
     | '/portal/user'
@@ -7608,6 +7619,7 @@ export interface FileRouteTypes {
     | '/portal/franchise'
     | '/portal/influencer'
     | '/portal/reseller'
+    | '/portal/reseller-empire'
     | '/portal/seo'
     | '/portal/support'
     | '/portal/user'
@@ -8245,6 +8257,7 @@ export interface RootRouteChildren {
   PortalFranchiseRoute: typeof PortalFranchiseRoute
   PortalInfluencerRoute: typeof PortalInfluencerRoute
   PortalResellerRoute: typeof PortalResellerRoute
+  PortalResellerEmpireRoute: typeof PortalResellerEmpireRoute
   PortalSeoRoute: typeof PortalSeoRoute
   PortalSupportRoute: typeof PortalSupportRoute
   PortalUserRoute: typeof PortalUserRoute
@@ -10134,6 +10147,13 @@ declare module '@tanstack/react-router' {
       path: '/portal/seo'
       fullPath: '/portal/seo'
       preLoaderRoute: typeof PortalSeoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portal/reseller-empire': {
+      id: '/portal/reseller-empire'
+      path: '/portal/reseller-empire'
+      fullPath: '/portal/reseller-empire'
+      preLoaderRoute: typeof PortalResellerEmpireRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/portal/reseller': {
@@ -13496,6 +13516,7 @@ const rootRouteChildren: RootRouteChildren = {
   PortalFranchiseRoute: PortalFranchiseRoute,
   PortalInfluencerRoute: PortalInfluencerRoute,
   PortalResellerRoute: PortalResellerRoute,
+  PortalResellerEmpireRoute: PortalResellerEmpireRoute,
   PortalSeoRoute: PortalSeoRoute,
   PortalSupportRoute: PortalSupportRoute,
   PortalUserRoute: PortalUserRoute,
@@ -13672,13 +13693,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
