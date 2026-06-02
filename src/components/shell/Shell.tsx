@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Sidebar } from "./Sidebar";
 import { Topbar } from "./Topbar";
 import { CommandPalette } from "./CommandPalette";
+import { ContextSidebar } from "./ContextSidebar";
 
 export function Shell() {
   const [collapsed, setCollapsed] = useState(false);
@@ -32,9 +33,12 @@ export function Shell() {
             ))}
           </div>
         </div>
-        <main className="flex-1">
-          <Outlet />
-        </main>
+        <div className="flex min-w-0 flex-1">
+          <ContextSidebar />
+          <main className="min-w-0 flex-1">
+            <Outlet />
+          </main>
+        </div>
       </div>
       <CommandPalette open={cmdOpen} onClose={() => setCmdOpen(false)} />
     </div>
