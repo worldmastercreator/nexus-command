@@ -93,6 +93,7 @@ import { Route as AnalyticsRouteImport } from './routes/analytics'
 import { Route as AiRouteImport } from './routes/ai'
 import { Route as AffiliatesRouteImport } from './routes/affiliates'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as RmIndexRouteImport } from './routes/rm.index'
 import { Route as ControlPanelIndexRouteImport } from './routes/control-panel.index'
 import { Route as ValaTaskRouteImport } from './routes/vala.task'
 import { Route as ValaSystemSettingsRouteImport } from './routes/vala.system-settings'
@@ -1074,6 +1075,11 @@ const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
+} as any)
+const RmIndexRoute = RmIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => RmRoute,
 } as any)
 const ControlPanelIndexRoute = ControlPanelIndexRouteImport.update({
   id: '/control-panel/',
@@ -4556,6 +4562,7 @@ export interface FileRoutesByFullPath {
   '/vala/system-settings': typeof ValaSystemSettingsRoute
   '/vala/task': typeof ValaTaskRoute
   '/control-panel/': typeof ControlPanelIndexRoute
+  '/rm/': typeof RmIndexRoute
   '/control-panel/$module/$sub': typeof ControlPanelModuleSubRoute
   '/erp/admin/$section': typeof ErpAdminSectionRoute
   '/erp/auth/$section': typeof ErpAuthSectionRoute
@@ -4647,7 +4654,6 @@ export interface FileRoutesByTo {
   '/remote': typeof RemoteRoute
   '/reporting': typeof ReportingRoute
   '/resellers': typeof ResellersRoute
-  '/rm': typeof RmRouteWithChildren
   '/router': typeof RouterRoute
   '/saas': typeof SaasRoute
   '/sales': typeof SalesRoute
@@ -5203,6 +5209,7 @@ export interface FileRoutesByTo {
   '/vala/system-settings': typeof ValaSystemSettingsRoute
   '/vala/task': typeof ValaTaskRoute
   '/control-panel': typeof ControlPanelIndexRoute
+  '/rm': typeof RmIndexRoute
   '/control-panel/$module/$sub': typeof ControlPanelModuleSubRoute
   '/erp/admin/$section': typeof ErpAdminSectionRoute
   '/erp/auth/$section': typeof ErpAuthSectionRoute
@@ -5851,6 +5858,7 @@ export interface FileRoutesById {
   '/vala/system-settings': typeof ValaSystemSettingsRoute
   '/vala/task': typeof ValaTaskRoute
   '/control-panel/': typeof ControlPanelIndexRoute
+  '/rm/': typeof RmIndexRoute
   '/control-panel/$module/$sub': typeof ControlPanelModuleSubRoute
   '/erp/admin/$section': typeof ErpAdminSectionRoute
   '/erp/auth/$section': typeof ErpAuthSectionRoute
@@ -6500,6 +6508,7 @@ export interface FileRouteTypes {
     | '/vala/system-settings'
     | '/vala/task'
     | '/control-panel/'
+    | '/rm/'
     | '/control-panel/$module/$sub'
     | '/erp/admin/$section'
     | '/erp/auth/$section'
@@ -6591,7 +6600,6 @@ export interface FileRouteTypes {
     | '/remote'
     | '/reporting'
     | '/resellers'
-    | '/rm'
     | '/router'
     | '/saas'
     | '/sales'
@@ -7147,6 +7155,7 @@ export interface FileRouteTypes {
     | '/vala/system-settings'
     | '/vala/task'
     | '/control-panel'
+    | '/rm'
     | '/control-panel/$module/$sub'
     | '/erp/admin/$section'
     | '/erp/auth/$section'
@@ -7794,6 +7803,7 @@ export interface FileRouteTypes {
     | '/vala/system-settings'
     | '/vala/task'
     | '/control-panel/'
+    | '/rm/'
     | '/control-panel/$module/$sub'
     | '/erp/admin/$section'
     | '/erp/auth/$section'
@@ -9005,6 +9015,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/rm/': {
+      id: '/rm/'
+      path: '/'
+      fullPath: '/rm/'
+      preLoaderRoute: typeof RmIndexRouteImport
+      parentRoute: typeof RmRoute
     }
     '/control-panel/': {
       id: '/control-panel/'
@@ -12992,6 +13009,7 @@ interface RmRouteChildren {
   RmSupportRoute: typeof RmSupportRoute
   RmTerritoryRoute: typeof RmTerritoryRoute
   RmTrainingRoute: typeof RmTrainingRoute
+  RmIndexRoute: typeof RmIndexRoute
 }
 
 const RmRouteChildren: RmRouteChildren = {
@@ -13024,6 +13042,7 @@ const RmRouteChildren: RmRouteChildren = {
   RmSupportRoute: RmSupportRoute,
   RmTerritoryRoute: RmTerritoryRoute,
   RmTrainingRoute: RmTrainingRoute,
+  RmIndexRoute: RmIndexRoute,
 }
 
 const RmRouteWithChildren = RmRoute._addFileChildren(RmRouteChildren)
