@@ -32,7 +32,7 @@ export function ContextSidebar() {
   if (!group) return null;
 
   return (
-    <aside className="sticky top-0 hidden h-screen w-56 shrink-0 border-r border-border bg-surface/30 xl:block">
+    <aside className="sticky top-0 hidden h-screen w-52 shrink-0 border-r border-border bg-surface/30 lg:block 2xl:w-56">
       <div className="flex h-12 items-center gap-2 border-b border-border px-3">
         <Sparkles className="h-3.5 w-3.5 text-primary" />
         <div className="truncate font-mono text-[10.5px] uppercase tracking-[0.18em] text-foreground">
@@ -42,7 +42,7 @@ export function ContextSidebar() {
           {group.items.length}
         </span>
       </div>
-      <nav className="h-[calc(100vh-3rem)] overflow-y-auto px-2 py-2">
+      <nav className="scrollbar-thin h-[calc(100vh-3rem)] overflow-y-auto px-2 py-2">
         <ul className="space-y-0.5">
           {group.items.map((it) => {
             const active = it.path === activePath;
