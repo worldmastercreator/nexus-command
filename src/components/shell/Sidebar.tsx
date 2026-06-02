@@ -36,7 +36,7 @@ export function Sidebar({ collapsed, onToggle }: { collapsed: boolean; onToggle:
 
       <nav className="scrollbar-thin h-[calc(100vh-3.5rem)] overflow-y-auto px-2 py-3">
         {NAV_GROUPS.map((group) => {
-          const items = group.items.filter((i) => i.built === true);
+          const items = group.items;
           if (items.length === 0) return null;
           const open = openGroups[group.label];
           return (
@@ -76,6 +76,11 @@ export function Sidebar({ collapsed, onToggle }: { collapsed: boolean; onToggle:
                           {!collapsed && (
                             <>
                               <span className="truncate">{item.title}</span>
+                              {!item.built && (
+                                <span className="ml-auto rounded border border-border/70 px-1 py-0.5 font-mono text-[8px] uppercase text-muted-foreground/70">
+                                  view
+                                </span>
+                              )}
                               <span className="ml-auto font-mono text-[9px] text-muted-foreground/70">
                                 {String(item.id).padStart(3, "0")}
                               </span>
