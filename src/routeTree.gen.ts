@@ -27,6 +27,7 @@ import { Route as SearchRouteImport } from './routes/search'
 import { Route as SalesRouteImport } from './routes/sales'
 import { Route as SaasRouteImport } from './routes/saas'
 import { Route as RouterRouteImport } from './routes/router'
+import { Route as RmRouteImport } from './routes/rm'
 import { Route as ResellersRouteImport } from './routes/resellers'
 import { Route as ReportingRouteImport } from './routes/reporting'
 import { Route as RemoteRouteImport } from './routes/remote'
@@ -92,6 +93,7 @@ import { Route as AnalyticsRouteImport } from './routes/analytics'
 import { Route as AiRouteImport } from './routes/ai'
 import { Route as AffiliatesRouteImport } from './routes/affiliates'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as RmIndexRouteImport } from './routes/rm.index'
 import { Route as ControlPanelIndexRouteImport } from './routes/control-panel.index'
 import { Route as ValaTaskRouteImport } from './routes/vala.task'
 import { Route as ValaSystemSettingsRouteImport } from './routes/vala.system-settings'
@@ -744,6 +746,11 @@ const RouterRoute = RouterRouteImport.update({
   path: '/router',
   getParentRoute: () => rootRouteImport,
 } as any)
+const RmRoute = RmRouteImport.update({
+  id: '/rm',
+  path: '/rm',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ResellersRoute = ResellersRouteImport.update({
   id: '/resellers',
   path: '/resellers',
@@ -1068,6 +1075,11 @@ const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
+} as any)
+const RmIndexRoute = RmIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => RmRoute,
 } as any)
 const ControlPanelIndexRoute = ControlPanelIndexRouteImport.update({
   id: '/control-panel/',
@@ -1592,149 +1604,149 @@ const ShopifyAnalyticsRoute = ShopifyAnalyticsRouteImport.update({
   getParentRoute: () => rootRouteImport,
 } as any)
 const RmTrainingRoute = RmTrainingRouteImport.update({
-  id: '/rm/training',
-  path: '/rm/training',
-  getParentRoute: () => rootRouteImport,
+  id: '/training',
+  path: '/training',
+  getParentRoute: () => RmRoute,
 } as any)
 const RmTerritoryRoute = RmTerritoryRouteImport.update({
-  id: '/rm/territory',
-  path: '/rm/territory',
-  getParentRoute: () => rootRouteImport,
+  id: '/territory',
+  path: '/territory',
+  getParentRoute: () => RmRoute,
 } as any)
 const RmSupportRoute = RmSupportRouteImport.update({
-  id: '/rm/support',
-  path: '/rm/support',
-  getParentRoute: () => rootRouteImport,
+  id: '/support',
+  path: '/support',
+  getParentRoute: () => RmRoute,
 } as any)
 const RmSubResellersRoute = RmSubResellersRouteImport.update({
-  id: '/rm/sub-resellers',
-  path: '/rm/sub-resellers',
-  getParentRoute: () => rootRouteImport,
+  id: '/sub-resellers',
+  path: '/sub-resellers',
+  getParentRoute: () => RmRoute,
 } as any)
 const RmSettingsRoute = RmSettingsRouteImport.update({
-  id: '/rm/settings',
-  path: '/rm/settings',
-  getParentRoute: () => rootRouteImport,
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => RmRoute,
 } as any)
 const RmRiskRoute = RmRiskRouteImport.update({
-  id: '/rm/risk',
-  path: '/rm/risk',
-  getParentRoute: () => rootRouteImport,
+  id: '/risk',
+  path: '/risk',
+  getParentRoute: () => RmRoute,
 } as any)
 const RmRenewalsRoute = RmRenewalsRouteImport.update({
-  id: '/rm/renewals',
-  path: '/rm/renewals',
-  getParentRoute: () => rootRouteImport,
+  id: '/renewals',
+  path: '/renewals',
+  getParentRoute: () => RmRoute,
 } as any)
 const RmRecruitmentRoute = RmRecruitmentRouteImport.update({
-  id: '/rm/recruitment',
-  path: '/rm/recruitment',
-  getParentRoute: () => rootRouteImport,
+  id: '/recruitment',
+  path: '/recruitment',
+  getParentRoute: () => RmRoute,
 } as any)
 const RmProfileRoute = RmProfileRouteImport.update({
-  id: '/rm/profile',
-  path: '/rm/profile',
-  getParentRoute: () => rootRouteImport,
+  id: '/profile',
+  path: '/profile',
+  getParentRoute: () => RmRoute,
 } as any)
 const RmPerformanceRoute = RmPerformanceRouteImport.update({
-  id: '/rm/performance',
-  path: '/rm/performance',
-  getParentRoute: () => rootRouteImport,
+  id: '/performance',
+  path: '/performance',
+  getParentRoute: () => RmRoute,
 } as any)
 const RmOrdersRoute = RmOrdersRouteImport.update({
-  id: '/rm/orders',
-  path: '/rm/orders',
-  getParentRoute: () => rootRouteImport,
+  id: '/orders',
+  path: '/orders',
+  getParentRoute: () => RmRoute,
 } as any)
 const RmMarketplaceRoute = RmMarketplaceRouteImport.update({
-  id: '/rm/marketplace',
-  path: '/rm/marketplace',
-  getParentRoute: () => rootRouteImport,
+  id: '/marketplace',
+  path: '/marketplace',
+  getParentRoute: () => RmRoute,
 } as any)
 const RmLicensesRoute = RmLicensesRouteImport.update({
-  id: '/rm/licenses',
-  path: '/rm/licenses',
-  getParentRoute: () => rootRouteImport,
+  id: '/licenses',
+  path: '/licenses',
+  getParentRoute: () => RmRoute,
 } as any)
 const RmLicenseGateRoute = RmLicenseGateRouteImport.update({
-  id: '/rm/license-gate',
-  path: '/rm/license-gate',
-  getParentRoute: () => rootRouteImport,
+  id: '/license-gate',
+  path: '/license-gate',
+  getParentRoute: () => RmRoute,
 } as any)
 const RmHrmsRoute = RmHrmsRouteImport.update({
-  id: '/rm/hrms',
-  path: '/rm/hrms',
-  getParentRoute: () => rootRouteImport,
+  id: '/hrms',
+  path: '/hrms',
+  getParentRoute: () => RmRoute,
 } as any)
 const RmHeatmapRoute = RmHeatmapRouteImport.update({
-  id: '/rm/heatmap',
-  path: '/rm/heatmap',
-  getParentRoute: () => rootRouteImport,
+  id: '/heatmap',
+  path: '/heatmap',
+  getParentRoute: () => RmRoute,
 } as any)
 const RmFinanceRoute = RmFinanceRouteImport.update({
-  id: '/rm/finance',
-  path: '/rm/finance',
-  getParentRoute: () => rootRouteImport,
+  id: '/finance',
+  path: '/finance',
+  getParentRoute: () => RmRoute,
 } as any)
 const RmDocumentsRoute = RmDocumentsRouteImport.update({
-  id: '/rm/documents',
-  path: '/rm/documents',
-  getParentRoute: () => rootRouteImport,
+  id: '/documents',
+  path: '/documents',
+  getParentRoute: () => RmRoute,
 } as any)
 const RmDirectoryRoute = RmDirectoryRouteImport.update({
-  id: '/rm/directory',
-  path: '/rm/directory',
-  getParentRoute: () => rootRouteImport,
+  id: '/directory',
+  path: '/directory',
+  getParentRoute: () => RmRoute,
 } as any)
 const RmDealRegistrationRoute = RmDealRegistrationRouteImport.update({
-  id: '/rm/deal-registration',
-  path: '/rm/deal-registration',
-  getParentRoute: () => rootRouteImport,
+  id: '/deal-registration',
+  path: '/deal-registration',
+  getParentRoute: () => RmRoute,
 } as any)
 const RmCustomersRoute = RmCustomersRouteImport.update({
-  id: '/rm/customers',
-  path: '/rm/customers',
-  getParentRoute: () => rootRouteImport,
+  id: '/customers',
+  path: '/customers',
+  getParentRoute: () => RmRoute,
 } as any)
 const RmCrmRoute = RmCrmRouteImport.update({
-  id: '/rm/crm',
-  path: '/rm/crm',
-  getParentRoute: () => rootRouteImport,
+  id: '/crm',
+  path: '/crm',
+  getParentRoute: () => RmRoute,
 } as any)
 const RmCommunicationsRoute = RmCommunicationsRouteImport.update({
-  id: '/rm/communications',
-  path: '/rm/communications',
-  getParentRoute: () => rootRouteImport,
+  id: '/communications',
+  path: '/communications',
+  getParentRoute: () => RmRoute,
 } as any)
 const RmCommissionsRoute = RmCommissionsRouteImport.update({
-  id: '/rm/commissions',
-  path: '/rm/commissions',
-  getParentRoute: () => rootRouteImport,
+  id: '/commissions',
+  path: '/commissions',
+  getParentRoute: () => RmRoute,
 } as any)
 const RmCommandRoute = RmCommandRouteImport.update({
-  id: '/rm/command',
-  path: '/rm/command',
-  getParentRoute: () => rootRouteImport,
+  id: '/command',
+  path: '/command',
+  getParentRoute: () => RmRoute,
 } as any)
 const RmBossPanelRoute = RmBossPanelRouteImport.update({
-  id: '/rm/boss-panel',
-  path: '/rm/boss-panel',
-  getParentRoute: () => rootRouteImport,
+  id: '/boss-panel',
+  path: '/boss-panel',
+  getParentRoute: () => RmRoute,
 } as any)
 const RmApprovalsRoute = RmApprovalsRouteImport.update({
-  id: '/rm/approvals',
-  path: '/rm/approvals',
-  getParentRoute: () => rootRouteImport,
+  id: '/approvals',
+  path: '/approvals',
+  getParentRoute: () => RmRoute,
 } as any)
 const RmApplicationsRoute = RmApplicationsRouteImport.update({
-  id: '/rm/applications',
-  path: '/rm/applications',
-  getParentRoute: () => rootRouteImport,
+  id: '/applications',
+  path: '/applications',
+  getParentRoute: () => RmRoute,
 } as any)
 const RmAiCommandRoute = RmAiCommandRouteImport.update({
-  id: '/rm/ai-command',
-  path: '/rm/ai-command',
-  getParentRoute: () => rootRouteImport,
+  id: '/ai-command',
+  path: '/ai-command',
+  getParentRoute: () => RmRoute,
 } as any)
 const PosSyncRoute = PosSyncRouteImport.update({
   id: '/pos/sync',
@@ -3994,6 +4006,7 @@ export interface FileRoutesByFullPath {
   '/remote': typeof RemoteRoute
   '/reporting': typeof ReportingRoute
   '/resellers': typeof ResellersRoute
+  '/rm': typeof RmRouteWithChildren
   '/router': typeof RouterRoute
   '/saas': typeof SaasRoute
   '/sales': typeof SalesRoute
@@ -4549,6 +4562,7 @@ export interface FileRoutesByFullPath {
   '/vala/system-settings': typeof ValaSystemSettingsRoute
   '/vala/task': typeof ValaTaskRoute
   '/control-panel/': typeof ControlPanelIndexRoute
+  '/rm/': typeof RmIndexRoute
   '/control-panel/$module/$sub': typeof ControlPanelModuleSubRoute
   '/erp/admin/$section': typeof ErpAdminSectionRoute
   '/erp/auth/$section': typeof ErpAuthSectionRoute
@@ -5195,6 +5209,7 @@ export interface FileRoutesByTo {
   '/vala/system-settings': typeof ValaSystemSettingsRoute
   '/vala/task': typeof ValaTaskRoute
   '/control-panel': typeof ControlPanelIndexRoute
+  '/rm': typeof RmIndexRoute
   '/control-panel/$module/$sub': typeof ControlPanelModuleSubRoute
   '/erp/admin/$section': typeof ErpAdminSectionRoute
   '/erp/auth/$section': typeof ErpAuthSectionRoute
@@ -5287,6 +5302,7 @@ export interface FileRoutesById {
   '/remote': typeof RemoteRoute
   '/reporting': typeof ReportingRoute
   '/resellers': typeof ResellersRoute
+  '/rm': typeof RmRouteWithChildren
   '/router': typeof RouterRoute
   '/saas': typeof SaasRoute
   '/sales': typeof SalesRoute
@@ -5842,6 +5858,7 @@ export interface FileRoutesById {
   '/vala/system-settings': typeof ValaSystemSettingsRoute
   '/vala/task': typeof ValaTaskRoute
   '/control-panel/': typeof ControlPanelIndexRoute
+  '/rm/': typeof RmIndexRoute
   '/control-panel/$module/$sub': typeof ControlPanelModuleSubRoute
   '/erp/admin/$section': typeof ErpAdminSectionRoute
   '/erp/auth/$section': typeof ErpAuthSectionRoute
@@ -5935,6 +5952,7 @@ export interface FileRouteTypes {
     | '/remote'
     | '/reporting'
     | '/resellers'
+    | '/rm'
     | '/router'
     | '/saas'
     | '/sales'
@@ -6490,6 +6508,7 @@ export interface FileRouteTypes {
     | '/vala/system-settings'
     | '/vala/task'
     | '/control-panel/'
+    | '/rm/'
     | '/control-panel/$module/$sub'
     | '/erp/admin/$section'
     | '/erp/auth/$section'
@@ -7136,6 +7155,7 @@ export interface FileRouteTypes {
     | '/vala/system-settings'
     | '/vala/task'
     | '/control-panel'
+    | '/rm'
     | '/control-panel/$module/$sub'
     | '/erp/admin/$section'
     | '/erp/auth/$section'
@@ -7227,6 +7247,7 @@ export interface FileRouteTypes {
     | '/remote'
     | '/reporting'
     | '/resellers'
+    | '/rm'
     | '/router'
     | '/saas'
     | '/sales'
@@ -7782,6 +7803,7 @@ export interface FileRouteTypes {
     | '/vala/system-settings'
     | '/vala/task'
     | '/control-panel/'
+    | '/rm/'
     | '/control-panel/$module/$sub'
     | '/erp/admin/$section'
     | '/erp/auth/$section'
@@ -7874,6 +7896,7 @@ export interface RootRouteChildren {
   RemoteRoute: typeof RemoteRoute
   ReportingRoute: typeof ReportingRoute
   ResellersRoute: typeof ResellersRoute
+  RmRoute: typeof RmRouteWithChildren
   RouterRoute: typeof RouterRoute
   SaasRoute: typeof SaasRoute
   SalesRoute: typeof SalesRoute
@@ -8287,35 +8310,6 @@ export interface RootRouteChildren {
   PosShiftRoute: typeof PosShiftRoute
   PosStaffRoute: typeof PosStaffRoute
   PosSyncRoute: typeof PosSyncRoute
-  RmAiCommandRoute: typeof RmAiCommandRoute
-  RmApplicationsRoute: typeof RmApplicationsRoute
-  RmApprovalsRoute: typeof RmApprovalsRoute
-  RmBossPanelRoute: typeof RmBossPanelRoute
-  RmCommandRoute: typeof RmCommandRoute
-  RmCommissionsRoute: typeof RmCommissionsRoute
-  RmCommunicationsRoute: typeof RmCommunicationsRoute
-  RmCrmRoute: typeof RmCrmRoute
-  RmCustomersRoute: typeof RmCustomersRoute
-  RmDealRegistrationRoute: typeof RmDealRegistrationRoute
-  RmDirectoryRoute: typeof RmDirectoryRoute
-  RmDocumentsRoute: typeof RmDocumentsRoute
-  RmFinanceRoute: typeof RmFinanceRoute
-  RmHeatmapRoute: typeof RmHeatmapRoute
-  RmHrmsRoute: typeof RmHrmsRoute
-  RmLicenseGateRoute: typeof RmLicenseGateRoute
-  RmLicensesRoute: typeof RmLicensesRoute
-  RmMarketplaceRoute: typeof RmMarketplaceRoute
-  RmOrdersRoute: typeof RmOrdersRoute
-  RmPerformanceRoute: typeof RmPerformanceRoute
-  RmProfileRoute: typeof RmProfileRoute
-  RmRecruitmentRoute: typeof RmRecruitmentRoute
-  RmRenewalsRoute: typeof RmRenewalsRoute
-  RmRiskRoute: typeof RmRiskRoute
-  RmSettingsRoute: typeof RmSettingsRoute
-  RmSubResellersRoute: typeof RmSubResellersRoute
-  RmSupportRoute: typeof RmSupportRoute
-  RmTerritoryRoute: typeof RmTerritoryRoute
-  RmTrainingRoute: typeof RmTrainingRoute
   ShopifyAnalyticsRoute: typeof ShopifyAnalyticsRoute
   ShopifyAppMarketplaceRoute: typeof ShopifyAppMarketplaceRoute
   ShopifyAuditLogRoute: typeof ShopifyAuditLogRoute
@@ -8558,6 +8552,13 @@ declare module '@tanstack/react-router' {
       path: '/router'
       fullPath: '/router'
       preLoaderRoute: typeof RouterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rm': {
+      id: '/rm'
+      path: '/rm'
+      fullPath: '/rm'
+      preLoaderRoute: typeof RmRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/resellers': {
@@ -9014,6 +9015,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/rm/': {
+      id: '/rm/'
+      path: '/'
+      fullPath: '/rm/'
+      preLoaderRoute: typeof RmIndexRouteImport
+      parentRoute: typeof RmRoute
     }
     '/control-panel/': {
       id: '/control-panel/'
@@ -9745,206 +9753,206 @@ declare module '@tanstack/react-router' {
     }
     '/rm/training': {
       id: '/rm/training'
-      path: '/rm/training'
+      path: '/training'
       fullPath: '/rm/training'
       preLoaderRoute: typeof RmTrainingRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof RmRoute
     }
     '/rm/territory': {
       id: '/rm/territory'
-      path: '/rm/territory'
+      path: '/territory'
       fullPath: '/rm/territory'
       preLoaderRoute: typeof RmTerritoryRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof RmRoute
     }
     '/rm/support': {
       id: '/rm/support'
-      path: '/rm/support'
+      path: '/support'
       fullPath: '/rm/support'
       preLoaderRoute: typeof RmSupportRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof RmRoute
     }
     '/rm/sub-resellers': {
       id: '/rm/sub-resellers'
-      path: '/rm/sub-resellers'
+      path: '/sub-resellers'
       fullPath: '/rm/sub-resellers'
       preLoaderRoute: typeof RmSubResellersRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof RmRoute
     }
     '/rm/settings': {
       id: '/rm/settings'
-      path: '/rm/settings'
+      path: '/settings'
       fullPath: '/rm/settings'
       preLoaderRoute: typeof RmSettingsRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof RmRoute
     }
     '/rm/risk': {
       id: '/rm/risk'
-      path: '/rm/risk'
+      path: '/risk'
       fullPath: '/rm/risk'
       preLoaderRoute: typeof RmRiskRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof RmRoute
     }
     '/rm/renewals': {
       id: '/rm/renewals'
-      path: '/rm/renewals'
+      path: '/renewals'
       fullPath: '/rm/renewals'
       preLoaderRoute: typeof RmRenewalsRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof RmRoute
     }
     '/rm/recruitment': {
       id: '/rm/recruitment'
-      path: '/rm/recruitment'
+      path: '/recruitment'
       fullPath: '/rm/recruitment'
       preLoaderRoute: typeof RmRecruitmentRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof RmRoute
     }
     '/rm/profile': {
       id: '/rm/profile'
-      path: '/rm/profile'
+      path: '/profile'
       fullPath: '/rm/profile'
       preLoaderRoute: typeof RmProfileRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof RmRoute
     }
     '/rm/performance': {
       id: '/rm/performance'
-      path: '/rm/performance'
+      path: '/performance'
       fullPath: '/rm/performance'
       preLoaderRoute: typeof RmPerformanceRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof RmRoute
     }
     '/rm/orders': {
       id: '/rm/orders'
-      path: '/rm/orders'
+      path: '/orders'
       fullPath: '/rm/orders'
       preLoaderRoute: typeof RmOrdersRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof RmRoute
     }
     '/rm/marketplace': {
       id: '/rm/marketplace'
-      path: '/rm/marketplace'
+      path: '/marketplace'
       fullPath: '/rm/marketplace'
       preLoaderRoute: typeof RmMarketplaceRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof RmRoute
     }
     '/rm/licenses': {
       id: '/rm/licenses'
-      path: '/rm/licenses'
+      path: '/licenses'
       fullPath: '/rm/licenses'
       preLoaderRoute: typeof RmLicensesRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof RmRoute
     }
     '/rm/license-gate': {
       id: '/rm/license-gate'
-      path: '/rm/license-gate'
+      path: '/license-gate'
       fullPath: '/rm/license-gate'
       preLoaderRoute: typeof RmLicenseGateRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof RmRoute
     }
     '/rm/hrms': {
       id: '/rm/hrms'
-      path: '/rm/hrms'
+      path: '/hrms'
       fullPath: '/rm/hrms'
       preLoaderRoute: typeof RmHrmsRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof RmRoute
     }
     '/rm/heatmap': {
       id: '/rm/heatmap'
-      path: '/rm/heatmap'
+      path: '/heatmap'
       fullPath: '/rm/heatmap'
       preLoaderRoute: typeof RmHeatmapRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof RmRoute
     }
     '/rm/finance': {
       id: '/rm/finance'
-      path: '/rm/finance'
+      path: '/finance'
       fullPath: '/rm/finance'
       preLoaderRoute: typeof RmFinanceRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof RmRoute
     }
     '/rm/documents': {
       id: '/rm/documents'
-      path: '/rm/documents'
+      path: '/documents'
       fullPath: '/rm/documents'
       preLoaderRoute: typeof RmDocumentsRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof RmRoute
     }
     '/rm/directory': {
       id: '/rm/directory'
-      path: '/rm/directory'
+      path: '/directory'
       fullPath: '/rm/directory'
       preLoaderRoute: typeof RmDirectoryRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof RmRoute
     }
     '/rm/deal-registration': {
       id: '/rm/deal-registration'
-      path: '/rm/deal-registration'
+      path: '/deal-registration'
       fullPath: '/rm/deal-registration'
       preLoaderRoute: typeof RmDealRegistrationRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof RmRoute
     }
     '/rm/customers': {
       id: '/rm/customers'
-      path: '/rm/customers'
+      path: '/customers'
       fullPath: '/rm/customers'
       preLoaderRoute: typeof RmCustomersRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof RmRoute
     }
     '/rm/crm': {
       id: '/rm/crm'
-      path: '/rm/crm'
+      path: '/crm'
       fullPath: '/rm/crm'
       preLoaderRoute: typeof RmCrmRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof RmRoute
     }
     '/rm/communications': {
       id: '/rm/communications'
-      path: '/rm/communications'
+      path: '/communications'
       fullPath: '/rm/communications'
       preLoaderRoute: typeof RmCommunicationsRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof RmRoute
     }
     '/rm/commissions': {
       id: '/rm/commissions'
-      path: '/rm/commissions'
+      path: '/commissions'
       fullPath: '/rm/commissions'
       preLoaderRoute: typeof RmCommissionsRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof RmRoute
     }
     '/rm/command': {
       id: '/rm/command'
-      path: '/rm/command'
+      path: '/command'
       fullPath: '/rm/command'
       preLoaderRoute: typeof RmCommandRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof RmRoute
     }
     '/rm/boss-panel': {
       id: '/rm/boss-panel'
-      path: '/rm/boss-panel'
+      path: '/boss-panel'
       fullPath: '/rm/boss-panel'
       preLoaderRoute: typeof RmBossPanelRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof RmRoute
     }
     '/rm/approvals': {
       id: '/rm/approvals'
-      path: '/rm/approvals'
+      path: '/approvals'
       fullPath: '/rm/approvals'
       preLoaderRoute: typeof RmApprovalsRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof RmRoute
     }
     '/rm/applications': {
       id: '/rm/applications'
-      path: '/rm/applications'
+      path: '/applications'
       fullPath: '/rm/applications'
       preLoaderRoute: typeof RmApplicationsRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof RmRoute
     }
     '/rm/ai-command': {
       id: '/rm/ai-command'
-      path: '/rm/ai-command'
+      path: '/ai-command'
       fullPath: '/rm/ai-command'
       preLoaderRoute: typeof RmAiCommandRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof RmRoute
     }
     '/pos/sync': {
       id: '/pos/sync'
@@ -12971,6 +12979,74 @@ const AiRouteChildren: AiRouteChildren = {
 
 const AiRouteWithChildren = AiRoute._addFileChildren(AiRouteChildren)
 
+interface RmRouteChildren {
+  RmAiCommandRoute: typeof RmAiCommandRoute
+  RmApplicationsRoute: typeof RmApplicationsRoute
+  RmApprovalsRoute: typeof RmApprovalsRoute
+  RmBossPanelRoute: typeof RmBossPanelRoute
+  RmCommandRoute: typeof RmCommandRoute
+  RmCommissionsRoute: typeof RmCommissionsRoute
+  RmCommunicationsRoute: typeof RmCommunicationsRoute
+  RmCrmRoute: typeof RmCrmRoute
+  RmCustomersRoute: typeof RmCustomersRoute
+  RmDealRegistrationRoute: typeof RmDealRegistrationRoute
+  RmDirectoryRoute: typeof RmDirectoryRoute
+  RmDocumentsRoute: typeof RmDocumentsRoute
+  RmFinanceRoute: typeof RmFinanceRoute
+  RmHeatmapRoute: typeof RmHeatmapRoute
+  RmHrmsRoute: typeof RmHrmsRoute
+  RmLicenseGateRoute: typeof RmLicenseGateRoute
+  RmLicensesRoute: typeof RmLicensesRoute
+  RmMarketplaceRoute: typeof RmMarketplaceRoute
+  RmOrdersRoute: typeof RmOrdersRoute
+  RmPerformanceRoute: typeof RmPerformanceRoute
+  RmProfileRoute: typeof RmProfileRoute
+  RmRecruitmentRoute: typeof RmRecruitmentRoute
+  RmRenewalsRoute: typeof RmRenewalsRoute
+  RmRiskRoute: typeof RmRiskRoute
+  RmSettingsRoute: typeof RmSettingsRoute
+  RmSubResellersRoute: typeof RmSubResellersRoute
+  RmSupportRoute: typeof RmSupportRoute
+  RmTerritoryRoute: typeof RmTerritoryRoute
+  RmTrainingRoute: typeof RmTrainingRoute
+  RmIndexRoute: typeof RmIndexRoute
+}
+
+const RmRouteChildren: RmRouteChildren = {
+  RmAiCommandRoute: RmAiCommandRoute,
+  RmApplicationsRoute: RmApplicationsRoute,
+  RmApprovalsRoute: RmApprovalsRoute,
+  RmBossPanelRoute: RmBossPanelRoute,
+  RmCommandRoute: RmCommandRoute,
+  RmCommissionsRoute: RmCommissionsRoute,
+  RmCommunicationsRoute: RmCommunicationsRoute,
+  RmCrmRoute: RmCrmRoute,
+  RmCustomersRoute: RmCustomersRoute,
+  RmDealRegistrationRoute: RmDealRegistrationRoute,
+  RmDirectoryRoute: RmDirectoryRoute,
+  RmDocumentsRoute: RmDocumentsRoute,
+  RmFinanceRoute: RmFinanceRoute,
+  RmHeatmapRoute: RmHeatmapRoute,
+  RmHrmsRoute: RmHrmsRoute,
+  RmLicenseGateRoute: RmLicenseGateRoute,
+  RmLicensesRoute: RmLicensesRoute,
+  RmMarketplaceRoute: RmMarketplaceRoute,
+  RmOrdersRoute: RmOrdersRoute,
+  RmPerformanceRoute: RmPerformanceRoute,
+  RmProfileRoute: RmProfileRoute,
+  RmRecruitmentRoute: RmRecruitmentRoute,
+  RmRenewalsRoute: RmRenewalsRoute,
+  RmRiskRoute: RmRiskRoute,
+  RmSettingsRoute: RmSettingsRoute,
+  RmSubResellersRoute: RmSubResellersRoute,
+  RmSupportRoute: RmSupportRoute,
+  RmTerritoryRoute: RmTerritoryRoute,
+  RmTrainingRoute: RmTrainingRoute,
+  RmIndexRoute: RmIndexRoute,
+}
+
+const RmRouteWithChildren = RmRoute._addFileChildren(RmRouteChildren)
+
 interface ControlPanelModuleRouteChildren {
   ControlPanelModuleSubRoute: typeof ControlPanelModuleSubRoute
 }
@@ -13133,6 +13209,7 @@ const rootRouteChildren: RootRouteChildren = {
   RemoteRoute: RemoteRoute,
   ReportingRoute: ReportingRoute,
   ResellersRoute: ResellersRoute,
+  RmRoute: RmRouteWithChildren,
   RouterRoute: RouterRoute,
   SaasRoute: SaasRoute,
   SalesRoute: SalesRoute,
@@ -13546,35 +13623,6 @@ const rootRouteChildren: RootRouteChildren = {
   PosShiftRoute: PosShiftRoute,
   PosStaffRoute: PosStaffRoute,
   PosSyncRoute: PosSyncRoute,
-  RmAiCommandRoute: RmAiCommandRoute,
-  RmApplicationsRoute: RmApplicationsRoute,
-  RmApprovalsRoute: RmApprovalsRoute,
-  RmBossPanelRoute: RmBossPanelRoute,
-  RmCommandRoute: RmCommandRoute,
-  RmCommissionsRoute: RmCommissionsRoute,
-  RmCommunicationsRoute: RmCommunicationsRoute,
-  RmCrmRoute: RmCrmRoute,
-  RmCustomersRoute: RmCustomersRoute,
-  RmDealRegistrationRoute: RmDealRegistrationRoute,
-  RmDirectoryRoute: RmDirectoryRoute,
-  RmDocumentsRoute: RmDocumentsRoute,
-  RmFinanceRoute: RmFinanceRoute,
-  RmHeatmapRoute: RmHeatmapRoute,
-  RmHrmsRoute: RmHrmsRoute,
-  RmLicenseGateRoute: RmLicenseGateRoute,
-  RmLicensesRoute: RmLicensesRoute,
-  RmMarketplaceRoute: RmMarketplaceRoute,
-  RmOrdersRoute: RmOrdersRoute,
-  RmPerformanceRoute: RmPerformanceRoute,
-  RmProfileRoute: RmProfileRoute,
-  RmRecruitmentRoute: RmRecruitmentRoute,
-  RmRenewalsRoute: RmRenewalsRoute,
-  RmRiskRoute: RmRiskRoute,
-  RmSettingsRoute: RmSettingsRoute,
-  RmSubResellersRoute: RmSubResellersRoute,
-  RmSupportRoute: RmSupportRoute,
-  RmTerritoryRoute: RmTerritoryRoute,
-  RmTrainingRoute: RmTrainingRoute,
   ShopifyAnalyticsRoute: ShopifyAnalyticsRoute,
   ShopifyAppMarketplaceRoute: ShopifyAppMarketplaceRoute,
   ShopifyAuditLogRoute: ShopifyAuditLogRoute,
@@ -13693,13 +13741,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
