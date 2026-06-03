@@ -79,14 +79,15 @@ export const getRoleDashboard = createServerFn({ method: "GET" })
     const specs = KPI_MAP[data.role];
     const kpis = await Promise.all(specs.map(async (spec) => {
       try {
+        const tbl = supabaseAdmin.from(spec.table as any);
         if (spec.agg === "sum" && spec.col) {
-          let q = supabaseAdmin.from(spec.table).select(spec.col);
+          let q: any = tbl.select(spec.col);
           if (spec.filter) q = q.eq(spec.filter.col, spec.filter.val);
           const { data: rows } = await q;
           const total = (rows ?? []).reduce((a: number, r: any) => a + Number(r[spec.col!] ?? 0), 0);
           return { label: spec.label, value: `${spec.prefix ?? ""}${Math.round(total).toLocaleString()}` };
         }
-        let q = supabaseAdmin.from(spec.table).select("*", { count: "exact", head: true });
+        let q: any = tbl.select("*", { count: "exact", head: true });
         if (spec.filter) q = q.eq(spec.filter.col, spec.filter.val);
         const { count } = await q;
         return { label: spec.label, value: (count ?? 0).toLocaleString() };
