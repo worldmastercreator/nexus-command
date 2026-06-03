@@ -18,6 +18,16 @@ function CustomersPage() {
     <div className="relative">
       <div className="grid-bg pointer-events-none absolute inset-0 opacity-20" />
       <div className="relative space-y-6 p-6">
+        <RoleDashboardKit
+          role="customer"
+          title="Customer Management — 360° Graph"
+          quickActions={[
+            { label: "CRM", to: "/crm" },
+            { label: "Sales", to: "/sales" },
+            { label: "Success", to: "/success" },
+            { label: "Support", to: "/support" },
+          ]}
+        />
         <PageHeader eyebrow="MODULE · 024 · SALESFORCE / HUBSPOT CRM"
           title="Customer Management"
           subtitle="Accounts · contacts · opportunities · journeys · NPS — 360° customer graph."

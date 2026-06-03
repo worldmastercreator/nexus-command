@@ -27,6 +27,16 @@ function FranchisePage() {
     <div className="relative">
       <div className="grid-bg pointer-events-none absolute inset-0 opacity-20" />
       <div className="relative space-y-6 p-6">
+        <RoleDashboardKit
+          role="franchise"
+          title="Franchise System — Global Branches"
+          quickActions={[
+            { label: "Reseller System", to: "/resellers" },
+            { label: "White Label", to: "/white-label" },
+            { label: "Finance", to: "/finance" },
+            { label: "Reports", to: "/reporting" },
+          ]}
+        />
         <PageHeader eyebrow="MODULE · 017 · MULTI-BRANCH FRANCHISE"
           title="Franchise System"
           subtitle="Territories · royalties · compliance · supply — global multi-branch control."

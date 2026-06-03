@@ -32,6 +32,16 @@ function SalesPage() {
     <div className="relative">
       <div className="grid-bg pointer-events-none absolute inset-0 opacity-20" />
       <div className="relative space-y-6 p-6">
+        <RoleDashboardKit
+          role="sales"
+          title="Sales Manager — Pipeline Cockpit"
+          quickActions={[
+            { label: "Open CRM", to: "/crm" },
+            { label: "New Lead", to: "/leads" },
+            { label: "Customers", to: "/customers" },
+            { label: "Forecast", to: "/analytics" },
+          ]}
+        />
         <PageHeader eyebrow="MODULE · 027 · HUBSPOT SALES" title="Sales Manager"
           subtitle="Pipeline · velocity · forecast — revenue intelligence cockpit." />
 

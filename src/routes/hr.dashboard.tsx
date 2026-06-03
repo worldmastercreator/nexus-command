@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader, Panel, Metric } from "@/components/dash/primitives";
 import { MultiLine, MiniArea, Bars, Radial } from "@/components/dash/charts";
 import { generateSeries, useLiveSeries } from "@/lib/data";
+import { RoleDashboardKit } from "@/components/role/RoleDashboardKit";
 
 export const Route = createFileRoute("/hr/dashboard")({
   head: () => ({ meta: [{ title: "People Hub · AEGIS OS" }] }),
@@ -22,11 +23,22 @@ function HRDashboard() {
     <div className="relative">
       <div className="grid-bg pointer-events-none absolute inset-0 opacity-20" />
       <div className="relative space-y-6 p-6">
+        <RoleDashboardKit
+          role="hr"
+          title="People Hub — HR Command"
+          quickActions={[
+            { label: "Employees", to: "/hr/employees" },
+            { label: "Attendance", to: "/hr/attendance" },
+            { label: "Leave", to: "/hr/leave" },
+            { label: "Performance", to: "/hr/performance" },
+          ]}
+        />
         <PageHeader eyebrow="MODULE · 200 · PEOPLE HUB"
           title="HR Dashboard — People Hub"
           subtitle="Workforce telemetry · attendance · leave · performance · documents."
           actions={<button className="rounded-md bg-primary px-3 py-1.5 text-[12px] font-medium text-primary-foreground hover:opacity-90">Run payroll</button>}
         />
+
 
         <div className="grid grid-cols-2 gap-4 lg:grid-cols-5">
           <Metric label="Headcount" value="1,284" delta="+12 mo" tone="primary" spark={<MiniArea data={generateSeries(30, 1, 60, 6)} />} />
