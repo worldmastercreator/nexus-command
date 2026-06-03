@@ -3,6 +3,7 @@ import { PageHeader, Panel, Metric } from "@/components/dash/primitives";
 import { MultiLine, MiniArea, Radial, Bars } from "@/components/dash/charts";
 import { generateSeries, useLiveSeries } from "@/lib/data";
 import { LifeBuoy, Clock, CheckCircle2, AlertCircle } from "lucide-react";
+import { RoleDashboardKit } from "@/components/role/RoleDashboardKit";
 
 export const Route = createFileRoute("/support")({
   head: () => ({ meta: [{ title: "Support · AEGIS OS" }] }),
@@ -22,6 +23,16 @@ function SupportPage() {
     <div className="relative">
       <div className="grid-bg pointer-events-none absolute inset-0 opacity-20" />
       <div className="relative space-y-6 p-6">
+        <RoleDashboardKit
+          role="support"
+          title="Customer Support — Agent Deck"
+          quickActions={[
+            { label: "Tickets", to: "/tickets" },
+            { label: "Knowledge Base", to: "/knowledge" },
+            { label: "Customers", to: "/customers" },
+            { label: "Onboarding", to: "/onboarding" },
+          ]}
+        />
         <PageHeader eyebrow="MODULE · 028 · ZENDESK" title="Customer Support"
           subtitle="Omnichannel queues · SLAs · CSAT — agent command deck." />
 
