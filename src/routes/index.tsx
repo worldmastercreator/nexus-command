@@ -3,6 +3,7 @@ import { PageHeader, Panel, Metric } from "@/components/dash/primitives";
 import { MultiLine, StackedArea, MiniArea, Bars, Radial } from "@/components/dash/charts";
 import { generateSeries, useLiveSeries } from "@/lib/data";
 import { Activity, AlertTriangle, Cpu, Database, Globe2, Radar, Server, Shield, TrendingUp, Users } from "lucide-react";
+import { RoleDashboardKit } from "@/components/role/RoleDashboardKit";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -22,6 +23,16 @@ function BossPanel() {
     <div className="relative">
       <div className="grid-bg pointer-events-none absolute inset-0 opacity-25" />
       <div className="relative space-y-6 p-6">
+        <RoleDashboardKit
+          role="boss"
+          title="Boss Panel — Mission Control"
+          quickActions={[
+            { label: "Open War Room", to: "/war-room" },
+            { label: "Reseller Manager", to: "/rm" },
+            { label: "Global Search", to: "/search" },
+            { label: "Audit Logs", to: "/audit" },
+          ]}
+        />
         <PageHeader
           eyebrow="MODULE · 001 · PALANTIR + DATADOG"
           title="Boss Panel — Mission Control"

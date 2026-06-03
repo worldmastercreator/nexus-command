@@ -3,6 +3,7 @@ import { PageHeader, Panel, Metric } from "@/components/dash/primitives";
 import { MultiLine, MiniArea, Bars } from "@/components/dash/charts";
 import { generateSeries, useLiveSeries } from "@/lib/data";
 import { TrendingUp, Flame, Trophy } from "lucide-react";
+import { RoleDashboardKit } from "@/components/role/RoleDashboardKit";
 
 export const Route = createFileRoute("/sales")({
   head: () => ({ meta: [{ title: "Sales · AEGIS OS" }] }),

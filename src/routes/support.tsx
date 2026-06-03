@@ -3,6 +3,7 @@ import { PageHeader, Panel, Metric } from "@/components/dash/primitives";
 import { MultiLine, MiniArea, Radial, Bars } from "@/components/dash/charts";
 import { generateSeries, useLiveSeries } from "@/lib/data";
 import { LifeBuoy, Clock, CheckCircle2, AlertCircle } from "lucide-react";
+import { RoleDashboardKit } from "@/components/role/RoleDashboardKit";
 
 export const Route = createFileRoute("/support")({
   head: () => ({ meta: [{ title: "Support · AEGIS OS" }] }),
