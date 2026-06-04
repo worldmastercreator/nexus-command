@@ -90,10 +90,12 @@ function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   return (
     <QueryClientProvider client={queryClient}>
-      <RbacProvider>
-        <Shell />
-        <Toaster />
-      </RbacProvider>
+      <I18nProvider>
+        <RbacProvider>
+          <Shell />
+          <Toaster />
+        </RbacProvider>
+      </I18nProvider>
     </QueryClientProvider>
   );
 }
