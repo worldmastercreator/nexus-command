@@ -1,6 +1,7 @@
 import { Bell, Command, Search, Globe2, Activity } from "lucide-react";
 import { useEffect, useState } from "react";
 import { RoleSwitcher } from "@/lib/rbac";
+import { LanguagePicker } from "@/lib/i18n";
 
 export function Topbar({ onOpenCommand }: { onOpenCommand: () => void }) {
   const [time, setTime] = useState<Date | null>(null);
