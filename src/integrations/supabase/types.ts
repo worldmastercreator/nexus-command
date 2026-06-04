@@ -14,6 +14,145 @@ export type Database = {
   }
   public: {
     Tables: {
+      i18n_audit_logs: {
+        Row: {
+          action: string
+          actor_id: string | null
+          created_at: string
+          id: string
+          key_id: string | null
+          language_code: string | null
+          meta: Json | null
+        }
+        Insert: {
+          action: string
+          actor_id?: string | null
+          created_at?: string
+          id?: string
+          key_id?: string | null
+          language_code?: string | null
+          meta?: Json | null
+        }
+        Update: {
+          action?: string
+          actor_id?: string | null
+          created_at?: string
+          id?: string
+          key_id?: string | null
+          language_code?: string | null
+          meta?: Json | null
+        }
+        Relationships: []
+      }
+      i18n_keys: {
+        Row: {
+          created_at: string
+          description: string | null
+          id: string
+          key: string
+          namespace: string
+          source_value: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          description?: string | null
+          id?: string
+          key: string
+          namespace?: string
+          source_value: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          description?: string | null
+          id?: string
+          key?: string
+          namespace?: string
+          source_value?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      i18n_languages: {
+        Row: {
+          code: string
+          created_at: string
+          enabled: boolean
+          is_source: boolean
+          name: string
+          native_name: string
+          rtl: boolean
+        }
+        Insert: {
+          code: string
+          created_at?: string
+          enabled?: boolean
+          is_source?: boolean
+          name: string
+          native_name: string
+          rtl?: boolean
+        }
+        Update: {
+          code?: string
+          created_at?: string
+          enabled?: boolean
+          is_source?: boolean
+          name?: string
+          native_name?: string
+          rtl?: boolean
+        }
+        Relationships: []
+      }
+      i18n_values: {
+        Row: {
+          id: string
+          key_id: string
+          language_code: string
+          reviewed: boolean
+          updated_at: string
+          value: string
+        }
+        Insert: {
+          id?: string
+          key_id: string
+          language_code: string
+          reviewed?: boolean
+          updated_at?: string
+          value: string
+        }
+        Update: {
+          id?: string
+          key_id?: string
+          language_code?: string
+          reviewed?: boolean
+          updated_at?: string
+          value?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "i18n_values_key_id_fkey"
+            columns: ["key_id"]
+            isOneToOne: false
+            referencedRelation: "i18n_keys"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "i18n_values_language_code_fkey"
+            columns: ["language_code"]
+            isOneToOne: false
+            referencedRelation: "i18n_coverage"
+            referencedColumns: ["code"]
+          },
+          {
+            foreignKeyName: "i18n_values_language_code_fkey"
+            columns: ["language_code"]
+            isOneToOne: false
+            referencedRelation: "i18n_languages"
+            referencedColumns: ["code"]
+          },
+        ]
+      }
       mod_affiliates: {
         Row: {
           clicks: number
@@ -1009,7 +1148,21 @@ export type Database = {
       }
     }
     Views: {
-      [_ in never]: never
+      i18n_coverage: {
+        Row: {
+          code: string | null
+          coverage_pct: number | null
+          enabled: boolean | null
+          is_ready: boolean | null
+          is_source: boolean | null
+          name: string | null
+          native_name: string | null
+          rtl: boolean | null
+          total_keys: number | null
+          translated_keys: number | null
+        }
+        Relationships: []
+      }
     }
     Functions: {
       has_role: {

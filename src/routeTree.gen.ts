@@ -50,6 +50,7 @@ import { Route as LawyerRouteImport } from './routes/lawyer'
 import { Route as LawRouteImport } from './routes/law'
 import { Route as KnowledgeRouteImport } from './routes/knowledge'
 import { Route as InfluencersRouteImport } from './routes/influencers'
+import { Route as I18nRouteImport } from './routes/i18n'
 import { Route as HrWorkdayRouteImport } from './routes/hr-workday'
 import { Route as GitRouteImport } from './routes/git'
 import { Route as GeoRouteImport } from './routes/geo'
@@ -859,6 +860,11 @@ const KnowledgeRoute = KnowledgeRouteImport.update({
 const InfluencersRoute = InfluencersRouteImport.update({
   id: '/influencers',
   path: '/influencers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const I18nRoute = I18nRouteImport.update({
+  id: '/i18n',
+  path: '/i18n',
   getParentRoute: () => rootRouteImport,
 } as any)
 const HrWorkdayRoute = HrWorkdayRouteImport.update({
@@ -3984,6 +3990,7 @@ export interface FileRoutesByFullPath {
   '/geo': typeof GeoRoute
   '/git': typeof GitRoute
   '/hr-workday': typeof HrWorkdayRoute
+  '/i18n': typeof I18nRoute
   '/influencers': typeof InfluencersRoute
   '/knowledge': typeof KnowledgeRoute
   '/law': typeof LawRoute
@@ -4632,6 +4639,7 @@ export interface FileRoutesByTo {
   '/geo': typeof GeoRoute
   '/git': typeof GitRoute
   '/hr-workday': typeof HrWorkdayRoute
+  '/i18n': typeof I18nRoute
   '/influencers': typeof InfluencersRoute
   '/knowledge': typeof KnowledgeRoute
   '/law': typeof LawRoute
@@ -5280,6 +5288,7 @@ export interface FileRoutesById {
   '/geo': typeof GeoRoute
   '/git': typeof GitRoute
   '/hr-workday': typeof HrWorkdayRoute
+  '/i18n': typeof I18nRoute
   '/influencers': typeof InfluencersRoute
   '/knowledge': typeof KnowledgeRoute
   '/law': typeof LawRoute
@@ -5930,6 +5939,7 @@ export interface FileRouteTypes {
     | '/geo'
     | '/git'
     | '/hr-workday'
+    | '/i18n'
     | '/influencers'
     | '/knowledge'
     | '/law'
@@ -6578,6 +6588,7 @@ export interface FileRouteTypes {
     | '/geo'
     | '/git'
     | '/hr-workday'
+    | '/i18n'
     | '/influencers'
     | '/knowledge'
     | '/law'
@@ -7225,6 +7236,7 @@ export interface FileRouteTypes {
     | '/geo'
     | '/git'
     | '/hr-workday'
+    | '/i18n'
     | '/influencers'
     | '/knowledge'
     | '/law'
@@ -7874,6 +7886,7 @@ export interface RootRouteChildren {
   GeoRoute: typeof GeoRoute
   GitRoute: typeof GitRoute
   HrWorkdayRoute: typeof HrWorkdayRoute
+  I18nRoute: typeof I18nRoute
   InfluencersRoute: typeof InfluencersRoute
   KnowledgeRoute: typeof KnowledgeRoute
   LawRoute: typeof LawRoute
@@ -8713,6 +8726,13 @@ declare module '@tanstack/react-router' {
       path: '/influencers'
       fullPath: '/influencers'
       preLoaderRoute: typeof InfluencersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/i18n': {
+      id: '/i18n'
+      path: '/i18n'
+      fullPath: '/i18n'
+      preLoaderRoute: typeof I18nRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/hr-workday': {
@@ -13187,6 +13207,7 @@ const rootRouteChildren: RootRouteChildren = {
   GeoRoute: GeoRoute,
   GitRoute: GitRoute,
   HrWorkdayRoute: HrWorkdayRoute,
+  I18nRoute: I18nRoute,
   InfluencersRoute: InfluencersRoute,
   KnowledgeRoute: KnowledgeRoute,
   LawRoute: LawRoute,
@@ -13741,13 +13762,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}

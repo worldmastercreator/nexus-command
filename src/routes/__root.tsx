@@ -12,6 +12,7 @@ import appCss from "../styles.css?url";
 import { Shell } from "@/components/shell/Shell";
 import { RbacProvider } from "@/lib/rbac";
 import { Toaster } from "@/components/ui/sonner";
+import { I18nProvider } from "@/lib/i18n";
 
 function NotFoundComponent() {
   return (
@@ -89,10 +90,12 @@ function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   return (
     <QueryClientProvider client={queryClient}>
-      <RbacProvider>
-        <Shell />
-        <Toaster />
-      </RbacProvider>
+      <I18nProvider>
+        <RbacProvider>
+          <Shell />
+          <Toaster />
+        </RbacProvider>
+      </I18nProvider>
     </QueryClientProvider>
   );
 }
