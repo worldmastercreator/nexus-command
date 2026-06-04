@@ -12,6 +12,7 @@ import appCss from "../styles.css?url";
 import { Shell } from "@/components/shell/Shell";
 import { RbacProvider } from "@/lib/rbac";
 import { Toaster } from "@/components/ui/sonner";
+import { I18nProvider } from "@/lib/i18n";
 
 function NotFoundComponent() {
   return (
