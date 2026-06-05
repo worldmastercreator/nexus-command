@@ -99,3 +99,6 @@ function RootComponent() {
           </AuthProvider>
         </RbacProvider>
       </I18nProvider>
+    </QueryClientProvider>
+  );
+}
