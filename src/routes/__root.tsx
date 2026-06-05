@@ -93,10 +93,9 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       <I18nProvider>
         <RbacProvider>
-          <Shell />
-          <Toaster />
+          <AuthProvider>
+            <Shell />
+            <Toaster />
+          </AuthProvider>
         </RbacProvider>
       </I18nProvider>
-    </QueryClientProvider>
-  );
-}
