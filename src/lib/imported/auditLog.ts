@@ -31,6 +31,7 @@ const STORAGE_KEY = 'saashub_audit_logs';
 const MAX_LOCAL_AUDIT_LOGS = 500;
 
 function loadLocalLogs(): AuditLog[] {
+  if (typeof window === 'undefined') return [];
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     return raw ? (JSON.parse(raw) as AuditLog[]) : [];
@@ -40,7 +41,8 @@ function loadLocalLogs(): AuditLog[] {
 }
 
 function saveLocalLogs(logs: AuditLog[]): void {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(logs.slice(-MAX_LOCAL_AUDIT_LOGS)));
+  if (typeof window === 'undefined') return;
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(logs.slice(-MAX_LOCAL_AUDIT_LOGS))); } catch { /* ignore */ }
 }
 
 // GET /api/v1/reseller/logs
