@@ -2,8 +2,10 @@ import React, { createContext, useContext, useState, useCallback } from 'react';
 import { audit } from './auditLog';
 import { bootstrapSeed, verifySeededCredentials, ROLE_HOME, type SeedRole } from './seedAuth';
 
-// Run the role/seed bootstrap exactly once at module load.
-bootstrapSeed();
+// Run the role/seed bootstrap exactly once at module load (client only).
+if (typeof window !== 'undefined') {
+  bootstrapSeed();
+}
 
 interface AuthUser {
   id: string;
@@ -29,6 +31,7 @@ const AUTH_KEY = 'saashub_auth';
 const SUB_KEY = 'saashub_sub';
 
 function loadAuth(): AuthUser | null {
+  if (typeof window === 'undefined') return null;
   try {
     const raw = localStorage.getItem(AUTH_KEY);
     return raw ? (JSON.parse(raw) as AuthUser) : null;
@@ -38,7 +41,8 @@ function loadAuth(): AuthUser | null {
 }
 
 function loadSub(): boolean {
-  return localStorage.getItem(SUB_KEY) === '1';
+  if (typeof window === 'undefined') return false;
+  try { return localStorage.getItem(SUB_KEY) === '1'; } catch { return false; }
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -46,6 +50,7 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [user, setUser] = useState<AuthUser | null>(loadAuth);
   const [hasSubscription, setHasSubscription] = useState<boolean>(loadSub);
+
 
   const login = useCallback((email: string, _password: string, role: 'user' | 'admin' | 'reseller' = 'user') => {
     const safeEmail = email.trim().toLowerCase();
