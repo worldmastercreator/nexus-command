@@ -11,6 +11,7 @@ import {
 import appCss from "../styles.css?url";
 import { Shell } from "@/components/shell/Shell";
 import { RbacProvider } from "@/lib/rbac";
+import { AuthProvider } from "@/lib/imported/AuthContext";
 import { Toaster } from "@/components/ui/sonner";
 import { I18nProvider } from "@/lib/i18n";
 
