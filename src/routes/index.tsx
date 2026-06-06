@@ -2,11 +2,11 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
   Search, Bell, Globe, Sparkles, ChevronRight, ChevronLeft, Play, Star,
-  Download, Users, ShoppingBag, Trophy, Zap, TrendingUp, Award, MapPin,
-  Bot, GraduationCap, Tv, HelpCircle, ArrowRight, Building2, Hospital,
+  Download, Users, ShoppingBag, Trophy, Zap, TrendingUp, Award,
+  Bot, GraduationCap, Tv, HelpCircle, ArrowRight, Hospital,
   Store, Factory, HardHat, Hotel, Truck, Banknote, Heart, Home as HomeIcon,
   Scale, Landmark, Crown, Briefcase, Handshake, PenTool, BarChart3,
-  Headphones, Plus, Minus, Calendar, ShieldCheck, Layers
+  Headphones, Plus, Minus, Calendar, ShieldCheck, Layers, Cpu
 } from "lucide-react";
 import { products, categories } from "@/lib/imported/marketplaceData";
 
