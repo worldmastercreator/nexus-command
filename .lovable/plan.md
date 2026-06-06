@@ -1,77 +1,54 @@
-# Master Integration & Live-Wiring Plan
+# Software Vala Marketplace — Home Page Build Plan
 
-Goal: turn the merged codebase into one coherent system — master UI bound to real data/logic, single auth, no dead routes, no dummy data.
+## Scope
+Replace the current `/` (home) route content with a full marketplace home page following the locked spec: 20 sections, fixed color system, large premium cards, Netflix/Envato/Apple hybrid feel. UI shell (sidebar/topbar) stays as-is; this is a route-level page build.
 
-Scope is realistic for this stack (TanStack Start + Lovable Cloud). No new backend framework, no Socket.IO server (use Supabase Realtime), no rewrites of working modules.
+## Color System (locked)
+- bg `#050816`, card `#0B1225`, blue `#00D4FF`, purple `#8B5CFF`, gold `#FFD700`, white `#FFFFFF`
+- Add as CSS tokens in `src/styles.css` (scoped class `.mp-home`) so we do not disturb the global AEGIS theme used by other routes.
 
----
+## Layout shell
+- Max width 1600px, content 1480px, padding 24px, section gap 32px
+- Page-local left sidebar (280px sticky glass) + main column. This is **in-page**, separate from the global app sidebar (keeps existing nav untouched).
+- Page-local header strip (80px) with marketplace nav, global search 500px, lang/currency/notif/AI/login/register.
 
-## Phase 1 — Source Inventory (read-only audit)
+## Sections (in order)
+1. Hero banner 420px, 8 slides auto-rotate 15s, left copy + right product mockup
+2. Quick action cards (4 × 160px): Reseller / Vendor / Franchise / Author
+3. Live ecosystem stats (6 animated counters)
+4. Featured Software — Netflix row, 320×220 cards (image 70 / info 30)
+5. Industry Marketplace — 4×3 grid (12 industries) large premium cards
+6. Trending Software — horizontal slider 280×360
+7. Top Selling — horizontal slider 280×360
+8. New Releases — horizontal slider 280×360
+9. AI Software Zone — neon premium grid (6 AI products)
+10. Reseller Opportunity — 3 calculators + leaderboard + trophy wall
+11. Vendor Market — top vendors / revenue / products / stories
+12. Global Map — 650px full-width world map with heat clusters
+13. Success Stories — video cards (4)
+14. Awards Center — 3D trophy wall (5 awards)
+15. Live Activity Wall — realtime feed
+16. Software Vala TV — video library grid
+17. Academy — courses/certifications/training/exams
+18. Partner Ecosystem — 5 partner tiles
+19. FAQ — 3 grouped accordions
+20. Final CTA — 4 actions
++ Footer 420px
 
-Produce `.lovable/audit.md` listing:
-- Every route file under `src/routes/` → status (real page | ModuleStub | alias | dead).
-- Every module in `src/lib/imported/*` → what it exports, who imports it, duplicate detection.
-- Every nav entry in `src/lib/nav.ts` → mapped route, `built` flag accuracy.
-- Auth surfaces found: `AuthContext` (localStorage), `seedAuth`, `roles`, Supabase client. Pick one.
-- Data sources: mock (`marketplaceData`, `mockData`, `productStore`), `apiClient` (BACKEND_ENABLED=false), Supabase. Pick one per module.
+## Data
+- Reuse `src/lib/imported/marketplaceData.ts` (`products`, `categories`) for featured/trending/top/new/industry sections. No new backend needed for v1.
+- Stats / leaderboard / activity feed / awards / videos: in-file mock arrays (clearly typed) — honest mode, no fake DB claims.
+- Global map: lightweight SVG world map with positioned dot clusters (no heavy lib).
 
-Deliverable: a single table mapping `UI page → data source → backend status → action (keep/merge/delete)`.
+## Files
+- `src/routes/index.tsx` — replace with marketplace home (was placeholder/landing).
+- `src/components/marketplace-home/` — one component per section (Hero, QuickActions, Stats, FeaturedRow, IndustryGrid, TrendingSlider, TopSellingSlider, NewReleasesSlider, AIZone, ResellerOpportunity, VendorMarket, GlobalMap, SuccessStories, AwardsWall, ActivityWall, TvLibrary, Academy, PartnerEcosystem, FAQ, FinalCTA, Footer, PageHeader, PageSidebar).
+- `src/styles.css` — append `.mp-home` scoped tokens + utility classes (glass card, hover-lift-8, neon-glow, counter).
 
-## Phase 2 — Pick the Locked Stack (decisions, no code)
+## Out of scope (this slice)
+- Real backend wiring for stats/leaderboard/activity (mocked, labeled).
+- 125-language i18n strings for new copy (English baseline; i18n keys can be added next slice).
+- Functional global search / AI search / currency switcher (UI only).
+- Real video playback (poster + play button placeholders).
 
-Lock-in (subject to your confirmation):
-- **Auth**: Lovable Cloud (Supabase) only. `AuthContext` + `seedAuth` localStorage flow becomes a thin adapter over `supabase.auth`. Roles via `user_roles` table + `has_role()` RPC.
-- **Data**: Supabase tables generated from `src/lib/imported/schema.sql`. `apiClient.BACKEND_ENABLED` removed; all reads/writes go through server functions in `src/lib/*.functions.ts`.
-- **Realtime**: Supabase Realtime channels (no custom websocket server).
-- **Routing**: TanStack file-routes only. `ModuleStub` routes either get a real page or get deleted from `nav.ts`.
-
-## Phase 3 — Cleanup Pass
-
-- Delete duplicate `erp.*` ModuleStub routes that mirror real top-level routes (e.g. `/erp/marketplace*` when `/marketplace` exists).
-- Collapse `control-panel/$module` alias if not used by nav.
-- Remove `src/lib/imported/api.ts` legacy paths once server fns replace them.
-- Single auth provider in `__root.tsx`; delete the localStorage-only `AuthContext` usage paths.
-
-## Phase 4 — Enable Lovable Cloud + Schema
-
-- Enable Cloud.
-- Migrate `schema.sql` to Postgres migrations (rename MySQL types, add RLS + GRANTs, add `user_roles` + `app_role` enum + `has_role()`).
-- Seed minimal demo data for marketplace/products/orders so dashboards render real numbers.
-
-## Phase 5 — Wire Modules 11–25 to Real Data
-
-For each of Marketplace, Products, Billing, Payments, Licenses, Resellers, Franchise, Authors, Affiliates, Influencers, White Label, SaaS, Books, Customers, Orders:
-1. Replace mock arrays with a `useSuspenseQuery` against a `createServerFn` reading from Supabase.
-2. Keep existing `FilterableTable` / `charts` / `ConnectedModules` primitives.
-3. Bind one primary write action per module (create/update) to a real mutation.
-4. Subscribe the KPI strip to a Realtime channel so cards update live.
-
-## Phase 6 — Role-Aware Shell
-
-- `Sidebar` + `Topbar` already locked — filter nav items by `has_role`.
-- Add `_authenticated` layout guard; redirect unauth → `/login`.
-- Login page calls `supabase.auth.signInWithPassword`; seeded demo creds (`seedAuth`) get inserted as real auth users during migration.
-
-## Phase 7 — Validation
-
-- Click-through script (manual or Playwright-light) over every nav entry: expect non-empty render, no console error, at least one real network call.
-- Strip remaining `ModuleStub` usages from `nav.ts` (mark `built: false` or remove).
-- Final `.lovable/audit.md` rerun showing 0 dead routes, 0 duplicate modules.
-
----
-
-## Technical Notes
-
-- No Socket.IO, no Prisma, no custom Express — they don't exist in this template and adding them breaks the Worker runtime.
-- `process.env` only inside `.handler()` of server fns; never at module scope.
-- All new public tables need `GRANT` + RLS in the same migration.
-- Animation engine, color tokens, sidebar/topbar, `ConnectedModules`, `primitives`, `charts`, `FilterableTable` stay as-is — they're the locked design system.
-
----
-
-## Open Questions (please confirm before I build)
-
-1. **Auth migration**: OK to drop the localStorage `AuthContext` and move every login to Supabase Auth? Seeded demo accounts will be recreated as real users.
-2. **Scope of Phase 5**: wire all 15 modules in one pass, or start with Marketplace + Orders + Payments + Customers and iterate?
-3. **Delete vs hide**: should ModuleStub routes that have no real implementation be deleted, or kept hidden from the sidebar until built?
-4. **Realtime**: enable Supabase Realtime on KPI tables now, or defer until after static data is wired?
+Confirm and I'll build it straight through.
