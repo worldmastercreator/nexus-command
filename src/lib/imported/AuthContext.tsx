@@ -48,8 +48,14 @@ function loadSub(): boolean {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [user, setUser] = useState<AuthUser | null>(loadAuth);
-  const [hasSubscription, setHasSubscription] = useState<boolean>(loadSub);
+  const [user, setUser] = useState<AuthUser | null>(null);
+  const [hasSubscription, setHasSubscription] = useState<boolean>(false);
+
+  React.useEffect(() => {
+    setUser(loadAuth());
+    setHasSubscription(loadSub());
+  }, []);
+
 
 
   const login = useCallback((email: string, _password: string, role: 'user' | 'admin' | 'reseller' = 'user') => {
