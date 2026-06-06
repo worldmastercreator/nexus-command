@@ -260,3 +260,79 @@
   100% { transform: translateX(100%); }
 }
 .animate-shimmer { animation: shimmer 2.2s linear infinite; }
+
+/* ============================================================
+   SOFTWARE VALA — Marketplace Home (scoped)
+   ============================================================ */
+.mp-home {
+  --mp-bg: #050816;
+  --mp-card: #0B1225;
+  --mp-card-2: #0F1A33;
+  --mp-blue: #00D4FF;
+  --mp-purple: #8B5CFF;
+  --mp-gold: #FFD700;
+  --mp-white: #FFFFFF;
+  --mp-muted: #8B95B5;
+  --mp-border: rgba(255,255,255,0.08);
+  background: var(--mp-bg);
+  color: var(--mp-white);
+  min-height: 100%;
+}
+.mp-home .mp-wrap { max-width: 1600px; margin: 0 auto; padding: 0 24px; }
+.mp-home .mp-content { max-width: 1480px; margin: 0 auto; }
+.mp-home .mp-card {
+  background: linear-gradient(180deg, var(--mp-card) 0%, var(--mp-card-2) 100%);
+  border: 1px solid var(--mp-border);
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.mp-home .mp-card:hover {
+  transform: translateY(-8px);
+  border-color: color-mix(in oklab, var(--mp-blue) 40%, transparent);
+  box-shadow: 0 20px 60px -20px color-mix(in oklab, var(--mp-blue) 35%, transparent);
+}
+.mp-home .mp-glow-blue { box-shadow: 0 0 40px -8px color-mix(in oklab, var(--mp-blue) 50%, transparent); }
+.mp-home .mp-glow-purple { box-shadow: 0 0 40px -8px color-mix(in oklab, var(--mp-purple) 50%, transparent); }
+.mp-home .mp-glow-gold { box-shadow: 0 0 40px -8px color-mix(in oklab, var(--mp-gold) 50%, transparent); }
+.mp-home .mp-eyebrow { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--mp-blue); }
+.mp-home .mp-h2 { font-size: 28px; font-weight: 700; letter-spacing: -0.02em; color: var(--mp-white); }
+.mp-home .mp-sub { color: var(--mp-muted); font-size: 14px; }
+.mp-home .mp-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 18px; border-radius: 12px; font-weight: 600; font-size: 14px;
+  background: linear-gradient(135deg, var(--mp-blue), var(--mp-purple));
+  color: #050816; transition: transform .2s, box-shadow .2s;
+}
+.mp-home .mp-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 32px -8px color-mix(in oklab, var(--mp-blue) 60%, transparent); }
+.mp-home .mp-btn-ghost {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 18px; border-radius: 12px; font-weight: 500; font-size: 13px;
+  background: rgba(255,255,255,0.04); color: var(--mp-white);
+  border: 1px solid var(--mp-border);
+}
+.mp-home .mp-btn-ghost:hover { background: rgba(255,255,255,0.08); border-color: var(--mp-blue); }
+.mp-home .mp-pill { padding: 4px 10px; border-radius: 999px; font-size: 11px; font-weight: 600; }
+.mp-home .mp-scroll { scrollbar-width: thin; scrollbar-color: var(--mp-purple) transparent; }
+.mp-home .mp-scroll::-webkit-scrollbar { height: 8px; }
+.mp-home .mp-scroll::-webkit-scrollbar-thumb { background: var(--mp-purple); border-radius: 8px; }
+@keyframes mp-pulse-glow {
+  0%,100% { box-shadow: 0 0 0 0 color-mix(in oklab, var(--mp-blue) 50%, transparent); }
+  50% { box-shadow: 0 0 0 12px color-mix(in oklab, var(--mp-blue) 0%, transparent); }
+}
+.mp-home .mp-pulse { animation: mp-pulse-glow 2s ease-in-out infinite; }
+@keyframes mp-shine {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+.mp-home .mp-shine::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(110deg, transparent 30%, rgba(255,255,255,0.12) 50%, transparent 70%);
+  animation: mp-shine 3s linear infinite;
+}
+.mp-home .mp-grid-bg {
+  background-image:
+    linear-gradient(rgba(0,212,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,212,255,0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
