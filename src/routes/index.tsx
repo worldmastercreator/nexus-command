@@ -986,5 +986,3 @@ function PageFooter() {
   );
 }
 
-/* Placeholder for AIZone Cpu icon (avoid unused import warning) */
-import { Cpu } from "lucide-react";
