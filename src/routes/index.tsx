@@ -8,7 +8,7 @@ import {
   Scale, Landmark, Crown, Briefcase, Handshake, PenTool, BarChart3,
   Headphones, Plus, Minus, Calendar, ShieldCheck, Layers, Cpu
 } from "lucide-react";
-import { products, categories } from "@/lib/imported/marketplaceData";
+import { products } from "@/lib/imported/marketplaceData";
 
 export const Route = createFileRoute("/")({
   head: () => ({
