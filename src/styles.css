@@ -727,7 +727,9 @@
   text-align: left;
   text-shadow: 0 2px 12px rgba(0,0,0,.5);
 }
-.mp-poster-art.featured .mp-poster-window { top: 38%; min-height: 104px; }
+.mp-poster-art.featured .mp-poster-window { top: 42%; min-height: 82px; }
+.mp-poster-art.featured .mp-poster-window em { font-size: 24px; }
+.mp-poster-art.featured .mp-poster-bars { display: none; }
 .mp-poster-art.featured .mp-poster-orbit { width: 134px; height: 134px; }
 .mp-ref-feature-poster .mp-poster-art > p,
 .mp-poster-art.featured p { display: none !important; }
