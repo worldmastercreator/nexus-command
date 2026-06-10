@@ -66,7 +66,7 @@ function Hero() {
       </div>
       <article className="mp-ref-feature-poster">
         <PosterVisual product={heroProduct} featured />
-        <div>
+        <div className="mp-ref-feature-info">
           <span>Featured suite</span>
           <strong>{heroProduct.name}</strong>
         </div>
