@@ -1,4 +1,4 @@
-import { Outlet } from "@tanstack/react-router";
+import { Outlet, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Sidebar } from "./Sidebar";
 import { Topbar } from "./Topbar";
@@ -8,6 +8,7 @@ import { ContextSidebar } from "./ContextSidebar";
 export function Shell() {
   const [collapsed, setCollapsed] = useState(false);
   const [cmdOpen, setCmdOpen] = useState(false);
+  const pathname = useRouterState({ select: (state) => state.location.pathname });
 
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
@@ -19,6 +20,10 @@ export function Shell() {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, []);
+
+  if (pathname === "/") {
+    return <Outlet />;
+  }
 
   return (
     <div className="flex min-h-screen w-full bg-background text-foreground">
