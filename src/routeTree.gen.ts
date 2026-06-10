@@ -93,7 +93,6 @@ import { Route as ApiRouteImport } from './routes/api'
 import { Route as AnalyticsRouteImport } from './routes/analytics'
 import { Route as AiRouteImport } from './routes/ai'
 import { Route as AffiliatesRouteImport } from './routes/affiliates'
-import { Route as IndexRouteImport } from './routes/index'
 import { Route as RmIndexRouteImport } from './routes/rm.index'
 import { Route as ControlPanelIndexRouteImport } from './routes/control-panel.index'
 import { Route as ValaTaskRouteImport } from './routes/vala.task'
@@ -1075,11 +1074,6 @@ const AiRoute = AiRouteImport.update({
 const AffiliatesRoute = AffiliatesRouteImport.update({
   id: '/affiliates',
   path: '/affiliates',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const RmIndexRoute = RmIndexRouteImport.update({
@@ -3947,7 +3941,6 @@ const ErpAdminMarketplaceSectionRoute =
   } as any)
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
   '/affiliates': typeof AffiliatesRoute
   '/ai': typeof AiRouteWithChildren
   '/analytics': typeof AnalyticsRoute
@@ -4596,7 +4589,6 @@ export interface FileRoutesByFullPath {
   '/erp/merchant/webhooks/$section': typeof ErpMerchantWebhooksSectionRoute
 }
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute
   '/affiliates': typeof AffiliatesRoute
   '/ai': typeof AiRouteWithChildren
   '/analytics': typeof AnalyticsRoute
@@ -5245,7 +5237,6 @@ export interface FileRoutesByTo {
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
-  '/': typeof IndexRoute
   '/affiliates': typeof AffiliatesRoute
   '/ai': typeof AiRouteWithChildren
   '/analytics': typeof AnalyticsRoute
@@ -5896,7 +5887,6 @@ export interface FileRoutesById {
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    | '/'
     | '/affiliates'
     | '/ai'
     | '/analytics'
@@ -6545,7 +6535,6 @@ export interface FileRouteTypes {
     | '/erp/merchant/webhooks/$section'
   fileRoutesByTo: FileRoutesByTo
   to:
-    | '/'
     | '/affiliates'
     | '/ai'
     | '/analytics'
@@ -7193,7 +7182,6 @@ export interface FileRouteTypes {
     | '/erp/merchant/webhooks/$section'
   id:
     | '__root__'
-    | '/'
     | '/affiliates'
     | '/ai'
     | '/analytics'
@@ -7843,7 +7831,6 @@ export interface FileRouteTypes {
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute
   AffiliatesRoute: typeof AffiliatesRoute
   AiRoute: typeof AiRouteWithChildren
   AnalyticsRoute: typeof AnalyticsRoute
@@ -9027,13 +9014,6 @@ declare module '@tanstack/react-router' {
       path: '/affiliates'
       fullPath: '/affiliates'
       preLoaderRoute: typeof AffiliatesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/rm/': {
@@ -13164,7 +13144,6 @@ const ErpSupportRouteWithChildren = ErpSupportRoute._addFileChildren(
 )
 
 const rootRouteChildren: RootRouteChildren = {
-  IndexRoute: IndexRoute,
   AffiliatesRoute: AffiliatesRoute,
   AiRoute: AiRouteWithChildren,
   AnalyticsRoute: AnalyticsRoute,
@@ -13762,13 +13741,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
