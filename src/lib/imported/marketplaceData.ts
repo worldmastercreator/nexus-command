@@ -37,6 +37,9 @@ const previewImages: Record<string, string> = {
 
 function makeProduct(id: number, name: string, category: string, categorySlug: string, desc: string, price: number, features: string[], modules: string[]): Product {
   const img = previewImages[categorySlug] || educationImg;
+  const ratingSeed = ((id * 37) % 9) / 10;
+  const reviewSeed = 50 + ((id * 83) % 500);
+  const userSeed = 500 + ((id * 1297) % 10000);
   return {
     id: `prod-${id}`,
     name,
@@ -46,9 +49,9 @@ function makeProduct(id: number, name: string, category: string, categorySlug: s
     description: `${name} is a comprehensive ${category.toLowerCase()} solution designed for modern businesses. ${desc} Built with scalability, security, and performance in mind, it handles thousands of concurrent users with ease.`,
     price,
     originalPrice: Math.round(price * 1.4),
-    rating: 4 + Math.random() * 0.9,
-    reviews: 50 + Math.floor(Math.random() * 500),
-    users: 500 + Math.floor(Math.random() * 10000),
+    rating: 4 + ratingSeed,
+    reviews: reviewSeed,
+    users: userSeed,
     thumbnail: img,
     screenshots: [img, img, img, img],
     features,
