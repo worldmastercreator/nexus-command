@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import type { CSSProperties } from "react";
 import { Search, Bell, Globe2, Play, Star, ChevronDown, ShoppingCart, Code2, Building2, Bot, Users, ShieldCheck, ArrowRight } from "lucide-react";
 import { products } from "@/lib/imported/marketplaceData";
 
@@ -131,7 +132,7 @@ function ProductPosterGrid() {
 function PosterVisual({ product, featured = false }: { product: typeof products[number]; featured?: boolean }) {
   const palette = getPosterPalette(product.categorySlug);
   return (
-    <div className={`mp-poster-art ${featured ? 'featured' : ''}`} style={{ '--poster-a': palette[0], '--poster-b': palette[1], '--poster-c': palette[2] } as React.CSSProperties} aria-label={`${product.name} preview`}>
+    <div className={`mp-poster-art ${featured ? 'featured' : ''}`} style={{ '--poster-a': palette[0], '--poster-b': palette[1], '--poster-c': palette[2] } as CSSProperties} aria-label={`${product.name} preview`}>
       <div className="mp-poster-orbit" />
       <div className="mp-poster-window">
         <i /><i /><i />
