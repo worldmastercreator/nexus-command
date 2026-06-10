@@ -64,7 +64,7 @@ function Hero() {
         <button className="mp-ref-play"><Play size={14} fill="currentColor" /> Watch demo</button>
       </div>
       <article className="mp-ref-feature-poster">
-        <img src={heroProduct.thumbnail} alt={`${heroProduct.name} preview`} />
+        <PosterVisual product={heroProduct} featured />
         <div>
           <span>Featured suite</span>
           <strong>{heroProduct.name}</strong>
@@ -112,7 +112,7 @@ function ProductPosterGrid() {
       {productGrid.map((product, index) => (
         <article key={product.id} className="mp-ref-product-card">
           <div className="mp-ref-poster">
-            <img src={product.thumbnail} alt={`${product.name} product preview`} loading={index < 4 ? 'eager' : 'lazy'} />
+            <PosterVisual product={product} />
             <span>{product.status}</span>
           </div>
           <h2>{product.name}</h2>
@@ -126,6 +126,34 @@ function ProductPosterGrid() {
       <div className="mp-ref-more-row"><button>Show more</button></div>
     </section>
   );
+}
+
+function PosterVisual({ product, featured = false }: { product: typeof products[number]; featured?: boolean }) {
+  const palette = getPosterPalette(product.categorySlug);
+  return (
+    <div className={`mp-poster-art ${featured ? 'featured' : ''}`} style={{ '--poster-a': palette[0], '--poster-b': palette[1], '--poster-c': palette[2] } as React.CSSProperties} aria-label={`${product.name} preview`}>
+      <div className="mp-poster-orbit" />
+      <div className="mp-poster-window">
+        <i /><i /><i />
+        <strong>{product.category.split(' ')[0]}</strong>
+        <em>{product.name.split(' ').map((word) => word[0]).join('').slice(0, 3)}</em>
+      </div>
+      <div className="mp-poster-bars"><b /><b /><b /></div>
+      <p>{product.name}</p>
+    </div>
+  );
+}
+
+function getPosterPalette(slug: string) {
+  const palettes: Record<string, [string, string, string]> = {
+    education: ['#2dd4bf', '#2563eb', '#0f172a'],
+    medical: ['#38bdf8', '#ef4444', '#111827'],
+    hotel: ['#f59e0b', '#dc2626', '#18181b'],
+    ecommerce: ['#a855f7', '#ec4899', '#111827'],
+    services: ['#22c55e', '#14b8a6', '#0f172a'],
+    manufacturing: ['#f97316', '#64748b', '#111827'],
+  };
+  return palettes[slug] ?? ['#ff1717', '#64748b', '#101216'];
 }
 
 function MarketplaceFooter() {
