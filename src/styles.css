@@ -348,20 +348,16 @@
   --ref-red: #ff1717;
   --ref-text: #ffffff;
   --ref-muted: rgba(255,255,255,.68);
-  background:
-    linear-gradient(168deg, #ffffff 0 14%, transparent 14.1%),
-    linear-gradient(174deg, transparent 0 74%, #ff0d0d 74.1% 100%),
-    linear-gradient(168deg, transparent 0 20%, #000 20.1% 78%, transparent 78.1%),
-    #ffffff;
+  background: var(--ref-bg);
   color: var(--ref-text);
   font-family: var(--font-sans);
 }
 .mp-stage {
   min-height: 100vh;
-  padding: 70px 24px;
-  display: grid;
-  place-items: center;
+  padding: 0;
+  display: block;
 }
+
 .mp-reference-card {
   width: min(100%, 960px);
   overflow: hidden;
