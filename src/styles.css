@@ -359,13 +359,14 @@
 }
 
 .mp-reference-card {
-  width: min(100%, 960px);
+  width: 100%;
   overflow: hidden;
-  border-radius: 14px;
+  border-radius: 0;
   background: var(--ref-panel);
-  border: 1px solid rgba(255,255,255,.06);
-  box-shadow: 34px 34px 48px rgba(0,0,0,.52), 0 18px 60px rgba(0,0,0,.35);
+  border: none;
+  box-shadow: none;
 }
+
 .mp-ref-nav,
 .mp-ref-footer {
   height: 78px;
