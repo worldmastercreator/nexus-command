@@ -558,7 +558,7 @@
   grid-template-columns: 1fr 1.35fr auto;
   align-items: center;
   gap: 26px;
-  padding: 20px 34px;
+  padding: 26px 64px;
   background: #191b20;
   border-top: 1px solid rgba(255,255,255,.03);
   border-bottom: 1px solid rgba(255,255,255,.04);
@@ -591,7 +591,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  padding: 0 34px;
+  padding: 0 64px;
   background: #111318;
   border-bottom: 1px solid rgba(255,255,255,.06);
 }
@@ -617,9 +617,9 @@
 .mp-ref-search input::placeholder { color: rgba(255,255,255,.34); }
 .mp-ref-products {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px 36px;
-  padding: 28px 34px 38px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px 28px;
+  padding: 48px 64px 64px;
   background: #121419;
 }
 .mp-ref-product-card { min-width: 0; text-align: center; }
