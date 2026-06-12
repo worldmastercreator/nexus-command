@@ -16,7 +16,7 @@ export const Route = createFileRoute("/")({
 });
 
 const heroProduct = products[1];
-const productGrid = products.slice(0, 8);
+const productGrid = products.slice(0, 10);
 
 function HomePage() {
   return (
