@@ -373,26 +373,30 @@
   display: flex;
   align-items: center;
   gap: 34px;
-  padding: 0 34px;
-  background: rgba(14,16,20,.92);
+  padding: 0 64px;
+  background: rgba(10,11,14,.96);
+  border-bottom: 1px solid rgba(255,255,255,.05);
 }
 .mp-ref-logo {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  min-width: 156px;
+  gap: 10px;
+  min-width: 200px;
   color: white;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 15px;
   letter-spacing: .01em;
 }
 .mp-ref-logo-mark {
   display: grid;
   place-items: center;
-  width: 19px;
-  height: 19px;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: var(--ref-red);
   color: white;
 }
+
 .mp-ref-logo b { font-weight: 800; }
 .mp-ref-logo i { color: var(--ref-red); font-style: normal; font-weight: 700; }
 .mp-ref-links,
