@@ -21,7 +21,7 @@ export function Shell() {
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
-  if (pathname === "/") {
+  if (pathname === "/" || pathname === "/login") {
     return <Outlet />;
   }
 
