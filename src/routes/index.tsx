@@ -146,7 +146,6 @@ function HomePage() {
 
         <VendorMarket />
 
-        <GlobalMap />
 
         <SuccessStories />
 
