@@ -44,6 +44,7 @@ import { Route as MonitoringCoreRouteImport } from './routes/monitoring-core'
 import { Route as MonitoringRouteImport } from './routes/monitoring'
 import { Route as MarketplaceRouteImport } from './routes/marketplace'
 import { Route as LogsRouteImport } from './routes/logs'
+import { Route as LoginRouteImport } from './routes/login'
 import { Route as LicensesRouteImport } from './routes/licenses'
 import { Route as LawyerProRouteImport } from './routes/lawyer-pro'
 import { Route as LawyerRouteImport } from './routes/lawyer'
@@ -830,6 +831,11 @@ const MarketplaceRoute = MarketplaceRouteImport.update({
 const LogsRoute = LogsRouteImport.update({
   id: '/logs',
   path: '/logs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LicensesRoute = LicensesRouteImport.update({
@@ -3997,6 +4003,7 @@ export interface FileRoutesByFullPath {
   '/lawyer': typeof LawyerRoute
   '/lawyer-pro': typeof LawyerProRoute
   '/licenses': typeof LicensesRoute
+  '/login': typeof LoginRoute
   '/logs': typeof LogsRoute
   '/marketplace': typeof MarketplaceRoute
   '/monitoring': typeof MonitoringRoute
@@ -4646,6 +4653,7 @@ export interface FileRoutesByTo {
   '/lawyer': typeof LawyerRoute
   '/lawyer-pro': typeof LawyerProRoute
   '/licenses': typeof LicensesRoute
+  '/login': typeof LoginRoute
   '/logs': typeof LogsRoute
   '/marketplace': typeof MarketplaceRoute
   '/monitoring': typeof MonitoringRoute
@@ -5295,6 +5303,7 @@ export interface FileRoutesById {
   '/lawyer': typeof LawyerRoute
   '/lawyer-pro': typeof LawyerProRoute
   '/licenses': typeof LicensesRoute
+  '/login': typeof LoginRoute
   '/logs': typeof LogsRoute
   '/marketplace': typeof MarketplaceRoute
   '/monitoring': typeof MonitoringRoute
@@ -5946,6 +5955,7 @@ export interface FileRouteTypes {
     | '/lawyer'
     | '/lawyer-pro'
     | '/licenses'
+    | '/login'
     | '/logs'
     | '/marketplace'
     | '/monitoring'
@@ -6595,6 +6605,7 @@ export interface FileRouteTypes {
     | '/lawyer'
     | '/lawyer-pro'
     | '/licenses'
+    | '/login'
     | '/logs'
     | '/marketplace'
     | '/monitoring'
@@ -7243,6 +7254,7 @@ export interface FileRouteTypes {
     | '/lawyer'
     | '/lawyer-pro'
     | '/licenses'
+    | '/login'
     | '/logs'
     | '/marketplace'
     | '/monitoring'
@@ -7893,6 +7905,7 @@ export interface RootRouteChildren {
   LawyerRoute: typeof LawyerRoute
   LawyerProRoute: typeof LawyerProRoute
   LicensesRoute: typeof LicensesRoute
+  LoginRoute: typeof LoginRoute
   LogsRoute: typeof LogsRoute
   MarketplaceRoute: typeof MarketplaceRoute
   MonitoringRoute: typeof MonitoringRoute
@@ -8684,6 +8697,13 @@ declare module '@tanstack/react-router' {
       path: '/logs'
       fullPath: '/logs'
       preLoaderRoute: typeof LogsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/licenses': {
@@ -13214,6 +13234,7 @@ const rootRouteChildren: RootRouteChildren = {
   LawyerRoute: LawyerRoute,
   LawyerProRoute: LawyerProRoute,
   LicensesRoute: LicensesRoute,
+  LoginRoute: LoginRoute,
   LogsRoute: LogsRoute,
   MarketplaceRoute: MarketplaceRoute,
   MonitoringRoute: MonitoringRoute,
