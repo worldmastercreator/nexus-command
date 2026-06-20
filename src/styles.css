@@ -1155,3 +1155,26 @@
   100% { transform: translate(-50%, -200%) scale(.8); opacity: 0; }
 }
 
+
+/* ============ EMPTY STATE ============ */
+.sv-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 48px 24px;
+  border: 1px dashed rgba(255,255,255,0.08);
+  border-radius: 16px;
+  background: rgba(11,18,37,0.4);
+  color: rgba(255,255,255,0.55);
+  min-height: 180px;
+}
+.sv-empty-icon {
+  width: 48px; height: 48px;
+  display: grid; place-items: center;
+  border-radius: 12px;
+  background: rgba(0,212,255,0.06);
+  color: rgba(0,212,255,0.7);
+}
+.sv-empty p { font-size: 13px; margin: 0; }
